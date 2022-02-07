@@ -1,0 +1,295 @@
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/SegoeUI/SegoeUI.eot");
+  src: url("../fonts/SegoeUI/SegoeUI.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUI/SegoeUI.woff") format("woff"), url("../fonts/SegoeUI/SegoeUI.ttf") format("truetype"), url("../fonts/SegoeUI/SegoeUI.svg?#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../fonts/Poppins-Medium/Poppins-Medium.eot");
+  src: url("../fonts/Poppins-Medium/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Poppins-Medium/Poppins-Medium.woff") format("woff"),
+  url("../fonts/Poppins-Medium/Poppins-Medium.ttf") format("truetype"),
+  url("../fonts/Poppins-Medium/Poppins-Medium.svg?#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("../fonts/Poppins-Bold/Poppins-Bold.eot");
+  src: url("../fonts/Poppins-Bold/Poppins-Bold.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/Poppins-Bold/Poppins-Bold.woff") format("woff"),
+  url("../fonts/Poppins-Bold/Poppins-Bold.ttf") format("truetype"),
+  url("../fonts/Poppins-Bold/Poppins-Bold.svg?#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font: 16px SegoeUI;
+  color: #fff;
+  overflow-x: hidden; }
+
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table; }
+
+a, a:hover {
+  outline: none;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+img {
+  max-width: 100%; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+/**********/
+.m-auto {
+  margin: auto; }
+
+.no-margin {
+  margin: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.hidden {
+  display: none !important; }
+
+.d-block {
+  display: block; }
+
+.d-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+
+/*--------------------------------------------------------------
+# Main Page
+--------------------------------------------------------------*/
+#subscribePage {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/bg.png") center;
+  background-size: cover;
+  padding: 50px 140px 30px;
+  text-align: center;
+  display: grid;
+  font: 15px "Poppins-Medium";
+}
+#subscribePage .title {
+  margin: 40px auto 8px;
+  font-size: 100px;
+  text-transform: uppercase;
+  font-family: mencken-std;
+}
+#subscribePage span {
+  font-size: 25px;
+}
+.form-box{
+  display: inline-block;
+  margin: 100px auto 0;
+  max-width: 460px;
+  width: 100%;
+}
+.form-box .btn-bg{
+  margin-top: 20px;
+}
+.btn-bg {
+  position: relative;
+  color: #A7AE9E;
+  padding: 21px 15px;
+  font: 20px "Poppins-Bold";
+  text-align: center;
+  border: none;
+  background: #FFFFFF;
+  cursor: pointer;
+  width: 100%;
+  text-transform: capitalize;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  border-radius: 35px;
+}
+
+input {
+  padding: 15px 0;
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
+  font: 21px "Poppins-Medium";
+  color: #FFFFFF;
+  background: transparent; }
+
+input::placeholder {
+  color: #FFFFFF;
+  font-size: 20px;
+  opacity: 1; }
+input:-ms-input-placeholder {
+  color: #FFFFFF; }
+input::-ms-input-placeholder {
+  color: #FFFFFF; }
+.is-invalid {
+    border-bottom: 1px solid #ab2323;;
+}
+.error-msg{
+    display: none;
+}
+.error{
+    display:block;
+    color: #ab2323;
+    text-align: left;
+}
+.social-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.social-list .icon{
+  margin: 0 15px;
+}
+.icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center;
+  background-size: 100%;
+}
+.icon-fb {
+  width: 10px;
+  height: 20px;
+  background-image: url("../img/icons/fb.svg"); }
+.icon-in {
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/icons/insta.svg"); }
+.icon-tw {
+  width: 23px;
+  height: 18px;
+  background-image: url("../img/icons/twitter.svg"); }
+
+.bottom-section{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+@media (max-width: 1400px) {
+  #subscribePage {
+    padding: 30px;
+    font-size: 12px;
+  }
+  #subscribePage .title {
+    margin: 10px auto 8px;
+    font-size: 70px;
+  }
+  #subscribePage span {
+    font-size: 20px;
+  }
+  input {
+    font-size: 18px;
+  }
+  .form-box{
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo{
+    max-width: 125px;
+  }
+  #subscribePage {
+    padding: 20px;
+  }
+  #subscribePage .title {
+    font-size: 40px;
+  }
+  #subscribePage span {
+    font-size: 18px;
+  }
+  .form-box{
+    margin-top: 30px;
+  }
+}
+
+/* This is the space for the spinner to appear, applied to the button */
+.spin {
+    padding-left: 2.5em;
+    display: block;
+}
+
+/* position of the spinner when it appears, you might have to change these values */
+.spin .spinner {
+    right: 60px;
+    top: 20px;
+    width: 2.5em;
+    display: block;
+    position: absolute;
+}
+
+/* spinner animation */
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* The actual spinner element is a pseudo-element */
+.spin .spinner::before {
+    content: "";
+    width: 1.5em; /* Size of the spinner */
+    height: 1.5em; /* Change as desired */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: solid .35em #999; /* Thickness/color of spinner track */
+    border-bottom-color: #555; /* Color of variant spinner piece */
+    animation: .8s linear infinite spinner; /* speed of spinner */
+    transform: translate(-50%, -50%);
+    will-change: transform;
+}
+
+/* optional, but it will affect the size if changed */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
