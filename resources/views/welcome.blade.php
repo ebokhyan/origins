@@ -25,6 +25,7 @@
                     <input id="email" type="email" name="email" required
                            placeholder="Email address"
                            autocomplete="off"
+                           value="{{ old('email') }}"
                            class="@error('email') is-invalid @enderror"/>
                     <p class="error-msg @error('email') error @enderror">
                         {{$errors->first('email')}}
@@ -42,9 +43,9 @@
     <div class="bottom-section">
         <span class="d-block">Follow us on social media</span>
         <div class="social-list">
-            <a href="#" class="icon icon-fb"></a>
-            <a href="#"  class="icon icon-tw"></a>
-            <a href="#"  class="icon icon-in"></a>
+            <a href="{{$settings->facebook}}" target="_blank" class="icon icon-fb"></a>
+            <a href="{{$settings->facebook}}" target="_blank" class="icon icon-tw"></a>
+            <a href="{{$settings->facebook}}" target="_blank" class="icon icon-in"></a>
         </div>
     </div>
 </div>

@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+//Route::get('/', function () {
+//    return view('welcome');
+//})->name('home');
 
+Route::get('/','MainController@getIndex')->name('index');
 Route::post('/subscribe','MainController@subscribe')->name('subscribe');
