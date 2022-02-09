@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicons -->
-    <!--    <link href="img/favicon.ico" rel="icon">-->
+    <!-- <link href="img/favicon.ico" rel="icon">-->
     <link href="{{asset('assets/css/main.css')}}" type="text/css"  rel="stylesheet">
     <title>Origins</title>
 </head>

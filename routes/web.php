@@ -17,5 +17,12 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //})->name('home');
 
-Route::get('/','MainController@getIndex')->name('index');
+//Route::get('/check', function (\App\Services\Newsletter $newsletter) {
+//    $response = $newsletter->getMember();
+//    dd($response);
+//    print_r($response);
+//});
+
+Route::get('/','MainController@getIndex')->name('home');
 Route::post('/subscribe','MainController@subscribe')->name('subscribe');
+
