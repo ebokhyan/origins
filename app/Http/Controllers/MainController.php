@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmailSubscriptionRequest;
 use App\Mail\StartNewProject;
 use App\Mail\Subscribe;
 use App\Models\Project_requests;
@@ -16,7 +17,7 @@ use Illuminate\Validation\ValidationException;
 
 class MainController extends Controller
 {
-//    private $notifiableEmail = "emma@wedo.design"; //dev email
+//  private $notifiableEmail = "emma@wedo.design"; //dev email
     private $notifiableEmail = "info@originswinemag.com";
 
     public function getIndex(){
@@ -25,45 +26,29 @@ class MainController extends Controller
     }
 
 
-    public function subscribe(Request $request, Newsletter $newsletter){
+    public function subscribe(EmailSubscriptionRequest $request, Newsletter $newsletter){
+        // The incoming request is valid...
 
-        $messages = [
-            'email.unique' => "The email has already been registered.",
-        ];
-
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email|unique:subscriptions|max:255',
-        ],$messages);
-
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
-        } else {
+        // Retrieve the validated input data...
+        $validated = $request->validated();
             try{
                 $newsletter->subscribe($request->email);
 
                 Notification::route('mail', $this->notifiableEmail)
-                    ->notify(new \App\Notifications\Subscription($request->email));
+                    ->notify(new \App\Notifications\Subscription($validated->email));
 
                 $subscription = new Subscription();
-                $subscription->email = $request->email;
+                $subscription->email = $validated->email;
                 $subscription -> save();
             }
             catch (\Exception $e){
                 throw ValidationException::withMessages([
-                    'email' => 'This email could not be added to out newsletter list'
+                    'email' => 'This email could not be added to our subscribers list'
                 ]);
             }
 
             return redirect()->back()->with(['success' => 'Request successfully sent!']);
-        }
     }
 
-    public function addAudience($email){
-
-
-
-
-//        $response = $mailchimp->ping->get();
-//        print_r($response);
-    }
+    public function unsubscribe($email){}
 }
