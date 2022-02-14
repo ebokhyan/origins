@@ -116,6 +116,9 @@ h1, h2, h3, h4, h5, h6 {
 #subscribePage span {
   font-size: 25px;
 }
+#subscribePage .bottom-section span {
+    font-size: 15px;
+}
 .form-box{
   display: inline-block;
   margin: 100px auto 0;
@@ -152,7 +155,9 @@ input {
   border-bottom: 1px solid #FFFFFF;
   font: 21px "Poppins-Medium";
   color: #FFFFFF;
-  background: transparent; }
+  background: transparent;
+  border-radius: 0;
+}
 
 input::placeholder {
   color: #FFFFFF;
@@ -165,9 +170,16 @@ input::-ms-input-placeholder {
 .is-invalid {
     border-bottom: 1px solid #ab2323;;
 }
+
+#email {
+    width: 90%;
+    margin: auto;
+}
+
 .error-msg{
     display: none;
 }
+
 .error{
     display:block;
     color: #ab2323;
