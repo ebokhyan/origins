@@ -17,7 +17,7 @@ use Illuminate\Validation\ValidationException;
 
 class MainController extends Controller
 {
-    // private $notifiableEmail = "emma@wedo.design";
+//     private $notifiableEmail = "emma@wedo.design";
     private $notifiableEmail = "info@originswinemag.com";
 
     public function getIndex(){
@@ -37,6 +37,9 @@ class MainController extends Controller
                 Notification::route('mail', $this->notifiableEmail)
                     ->notify(new \App\Notifications\Subscription($request->email));
 
+                Notification::route('mail', $request->email)
+                    ->notify(new \App\Notifications\SuccessfullySubscribed());
+
                 $subscription = new Subscription();
                 $subscription->email = $request->email;
                 $subscription -> save();
@@ -47,7 +50,7 @@ class MainController extends Controller
                 ]);
             }
 
-            return redirect()->back()->with(['success' => 'Request successfully sent!']);
+            return redirect()->back()->with(['success' => 'Thank you for subscribing to Origins Magazine and welcome to our community!']);
     }
 
     public function unsubscribe($email){}

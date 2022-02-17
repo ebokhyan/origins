@@ -36,6 +36,7 @@ class EmailSubscriptionRequest extends FormRequest
     public function messages()
     {
         return [
+            'email.email' => "Invalid email address. Please try again.",
             'email.unique' => "The email has already been registered.",
         ];
     }

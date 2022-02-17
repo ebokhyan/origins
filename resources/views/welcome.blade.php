@@ -17,8 +17,8 @@
     <img src="{{asset('assets/img/logo.svg')}}" alt="Logo Img" class="logo">
     <div class="content">
         <h1 class="title">COMING SOON…!</h1>
+        <span class="d-block">Subscribe and stay up to date.</span>
         @if(!Session::has('success'))
-            <span class="d-block">Subscribe and stay up to date.</span>
             <form id="subscriptionForm" action="{{route('subscribe')}}" method="POST">
                 @csrf
                 <div class="form-box">
@@ -26,18 +26,15 @@
                            placeholder="Email address"
                            autocomplete="off"
                            value="{{ old('email') }}"
-                           class="@error('email') is-invalid @enderror"/>
+                    />
                     <p class="error-msg @error('email') error @enderror">
-                        {{$errors->first('email')}}
+                        <span class="error-icon">!</span> {{$errors->first('email')}}
                     </p>
                     <button class="btn-bg">SIGN ME UP<span class="spinner"></span></button>
                 </div>
             </form>
         @else
-            <span class="d-block">{{Session::get('success')}}</span>
-            <div class="form-box">
-                <a href="{{route('home')}}" class="btn-bg">GO BACK</a>
-            </div>
+            <span class="d-block success-msg">{{Session::get('success')}}</span>
         @endif
     </div>
     <div class="bottom-section">

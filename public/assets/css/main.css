@@ -100,14 +100,36 @@ h1, h2, h3, h4, h5, h6 {
   display: none !important; }
 
 .d-block {
-  display: block; }
+  display: block;
+}
+
+.success-msg {
+    font-size: 30px;
+    margin-top: 150px;
+    max-width: 702px;
+    margin: 150px auto 0;
+    text-align: center;
+}
+.error-icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 12px;
+    color: #FBFCFD;
+    font-size: 15px !important;
+    text-align: center;
+    background: #DD0000;
+    line-height: 20px;
+    position: relative;
+}
 
 .d-flex {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+display: -webkit-box;
+display: -moz-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex; }
 
 
 /*--------------------------------------------------------------
@@ -127,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 40px auto 8px;
   font-size: 100px;
   text-transform: uppercase;
-  font-family: "Mencken-extrabold";
+  font-family: "Mencken-extrald";
 }
 #subscribePage span {
   font-size: 25px;
@@ -197,9 +219,13 @@ input::-ms-input-placeholder {
 }
 
 .error{
-    display:block;
-    color: #ab2323;
-    text-align: left;
+    display: flex;
+    color: #DD0000;
+    text-align: center;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
 }
 .social-list{
   display: flex;

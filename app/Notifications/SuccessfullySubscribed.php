@@ -7,19 +7,17 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class Subscription extends Notification
+class SuccessfullySubscribed extends Notification
 {
     use Queueable;
 
-    private $subscriber;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($email)
+    public function __construct()
     {
-        $this->subscriber = $email;
     }
 
     /**
@@ -42,9 +40,8 @@ class Subscription extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('New Subscription!')
-            ->line('You have a new subscriber to Origins Wine Magazine!')
-            ->line('Email: ' . $this->subscriber);
+            ->subject('Origins Wine Magazine!')
+            ->line('Thank you for subscribing to Origins Magazine and welcome to our community!');
     }
 
     /**
