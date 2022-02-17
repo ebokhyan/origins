@@ -31,26 +31,26 @@ class MainController extends Controller
 
         // Retrieve the validated input data...
         $validated = $request->validated();
-            try{
-                $newsletter->subscribe($request->email);
+        try{
+            $newsletter->subscribe($request->email);
 
-                Notification::route('mail', $this->notifiableEmail)
-                    ->notify(new \App\Notifications\Subscription($request->email));
+            Notification::route('mail', $this->notifiableEmail)
+                ->notify(new \App\Notifications\Subscription($request->email));
 
-                Notification::route('mail', $request->email)
-                    ->notify(new \App\Notifications\SuccessfullySubscribed());
+            Notification::route('mail', '$request->email')
+                ->notify(new \App\Notifications\SuccessfullySubscribed());
 
-                $subscription = new Subscription();
-                $subscription->email = $request->email;
-                $subscription -> save();
-            }
-            catch (\Exception $e){
-                throw ValidationException::withMessages([
-                    'email' => 'This email could not be added to our subscribers list'
-                ]);
-            }
+            $subscription = new Subscription();
+            $subscription->email = $request->email;
+            $subscription -> save();
+        }
+        catch (\Exception $e){
+            throw ValidationException::withMessages([
+                'email' => 'This email could not be added to our subscribers list'
+            ]);
+        }
 
-            return redirect()->back()->with(['success' => 'Thank you for subscribing to Origins Magazine and welcome to our community!']);
+        return redirect()->back()->with(['success' => 'Thank you for subscribing to Origins Magazine and welcome to our community!']);
     }
 
     public function unsubscribe($email){}
