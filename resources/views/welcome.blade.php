@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <!-- Favicons -->
     <!-- <link href="img/favicon.ico" rel="icon">-->
-    <link href="{{asset('assets/css/main.css')}}" type="text/css"  rel="stylesheet"  v=1.01>
+    <link href="{{asset('assets/css/main.css')}}" type="text/css"  rel="stylesheet"  v=1.02>
     <title>Origins</title>
 </head>
 <body>

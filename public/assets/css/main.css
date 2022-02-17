@@ -25,6 +25,22 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+    font-family: "Mencken";
+    src: url("../fonts/mencken.otf");
+    font-weight: normal;
+    font-style: normal; }
+@font-face {
+    font-family: "Mencken-Bold";
+    src: url("../fonts/mencken-bold.otf");
+    font-weight: normal;
+    font-style: normal; }
+@font-face {
+    font-family: "Mencken-extrabold";
+    src: url("../fonts/mencken-extrabold.otf");
+    font-weight: normal;
+    font-style: normal; }
+
 body {
   font: 16px SegoeUI;
   color: #fff;
@@ -111,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 40px auto 8px;
   font-size: 100px;
   text-transform: uppercase;
-  font-family: mencken-std;
+  font-family: "Mencken-extrabold";
 }
 #subscribePage span {
   font-size: 25px;
