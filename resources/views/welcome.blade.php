@@ -45,7 +45,7 @@
         <div class="social-list">
             <a href="{{!is_null($settings) && $settings->facebook ? $settings->facebook : ''}}" target="_blank" class="icon icon-fb"></a>
             <a href="{{!is_null($settings) && $settings->twitter ? $settings->twitter : '' }}" target="_blank" class="icon icon-tw"></a>
-            <a href="{{!is_null($settings) && $settings->linkedin ? $settings->linkedin : '' }}" target="_blank" class="icon icon-in"></a>
+            <a href="{{!is_null($settings) && $settings->instagram ? $settings->instagram : '' }}" target="_blank" class="icon icon-in"></a>
         </div>
     </div>
 </div>

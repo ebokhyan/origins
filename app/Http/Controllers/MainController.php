@@ -17,7 +17,7 @@ use Illuminate\Validation\ValidationException;
 
 class MainController extends Controller
 {
-//  private $notifiableEmail = "emma@wedo.design"; //dev email
+    // private $notifiableEmail = "emma@wedo.design";
     private $notifiableEmail = "info@originswinemag.com";
 
     public function getIndex(){
