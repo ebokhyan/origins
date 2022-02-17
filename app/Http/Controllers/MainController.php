@@ -17,8 +17,8 @@ use Illuminate\Validation\ValidationException;
 
 class MainController extends Controller
 {
-  private $notifiableEmail = "emma@wedo.design"; //dev email
-//    private $notifiableEmail = "info@originswinemag.com";
+    // private $notifiableEmail = "emma@wedo.design";
+    private $notifiableEmail = "info@originswinemag.com";
 
     public function getIndex(){
         $settings = Setting::first();
@@ -42,7 +42,6 @@ class MainController extends Controller
                 $subscription -> save();
             }
             catch (\Exception $e){
-                dd($e);
                 throw ValidationException::withMessages([
                     'email' => 'This email could not be added to our subscribers list'
                 ]);
