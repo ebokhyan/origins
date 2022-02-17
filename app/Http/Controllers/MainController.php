@@ -35,10 +35,10 @@ class MainController extends Controller
                 $newsletter->subscribe($request->email);
 
                 Notification::route('mail', $this->notifiableEmail)
-                    ->notify(new \App\Notifications\Subscription($validated->email));
+                    ->notify(new \App\Notifications\Subscription($request->email));
 
                 $subscription = new Subscription();
-                $subscription->email = $validated->email;
+                $subscription->email = $request->email;
                 $subscription -> save();
             }
             catch (\Exception $e){
