@@ -14,6 +14,11 @@ class Newsletter
 
     public function getMember(){
         return $this->client()->lists->getAllLists();
+
+    }
+    public function getListMembers(){
+        $response = $this->client()->lists->getListMembersInfo(config('services.mailchimp.lists.subscribers'));
+        dd($response);
     }
 
     public function subscribe(string $email){

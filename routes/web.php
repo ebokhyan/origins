@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','MainController@getIndex')->name('home');
 Route::post('/subscribe','MainController@subscribe')->name('subscribe');
+Route::get('/verify-subscription','MainController@verifySubscription')->name('verify-subscribe');
 

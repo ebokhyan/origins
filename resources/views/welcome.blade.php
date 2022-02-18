@@ -14,7 +14,7 @@
 </head>
 <body>
 <div id="subscribePage">
-    <img src="{{asset('assets/img/logo.svg')}}" alt="Logo Img" class="logo">
+{{--    <img src="{{asset('assets/img/logo.svg')}}" alt="Logo Img" class="logo">--}}
     <div class="content">
         <h1 class="title">COMING SOON…!</h1>
         <span class="d-block">Subscribe and stay up to date.</span>
