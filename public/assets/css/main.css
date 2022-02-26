@@ -140,7 +140,7 @@ display: flex; }
   height: 100vh;
   background: url("../img/bg.png") center;
   background-size: cover;
-  padding: 300px 140px 30px;
+  padding: 10vh 140px 30px;
   text-align: center;
   display: grid;
   font: 15px "Poppins-Medium";
@@ -346,4 +346,10 @@ input::-ms-input-placeholder {
 /* optional, but it will affect the size if changed */
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+@media (max-height: 450px) {
+    #subscribePage {
+        overflow: auto;
+    }
 }
