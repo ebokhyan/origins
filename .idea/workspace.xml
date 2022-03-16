@@ -2,12 +2,98 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/originsMagazin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/originsMagazin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/error404.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/error404.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/images/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/images/main_logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/index.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/jquery.fancybox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/MenckenStdHead-Bold/MenckenStdHead-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/MenckenStdHead-Bold/MenckenStdHead-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/MenckenStdHead-Bold/MenckenStdHead-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/MenckenStdHead-ExtraBold/MenckenStdHead-ExtraBold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/MenckenStdHead-ExtraBold/MenckenStdHead-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/MenckenStdHead-ExtraBold/MenckenStdHead-ExtraBold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/MenckenStdHead-Regular/MenckenStdHead-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/MenckenStdHead-Regular/MenckenStdHead-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/MenckenStdHead-Regular/MenckenStdHead-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/PlayfairDisplay-SemiBold/PlayfairDisplay-SemiBold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/PlayfairDisplay-SemiBold/PlayfairDisplay-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/PlayfairDisplay-SemiBold/PlayfairDisplay-SemiBold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-Bold/Poppins-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-Bold/Poppins-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-Bold/Poppins-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-Light/Poppins-Light.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-Light/Poppins-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-Light/Poppins-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-Medium/Poppins-Medium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-Medium/Poppins-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-Medium/Poppins-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-SemiBold/Poppins-SemiBold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-SemiBold/Poppins-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins-SemiBold/Poppins-SemiBold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins/Poppins-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins/Poppins-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/Poppins/Poppins-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/icons/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/icons/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/icons/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/icons/selection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/article_image1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/article_image2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/article_image3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/article_image4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/h_bnner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/main_screen-1440.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/main_screen-1920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/main_screen-960.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/main_screen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/recipe_image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/reward_image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/v_banner.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/wine_image1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/attach.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/autosize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery.fancybox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/jquery.form-validator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/lazysizes.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/masonry.pkgd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/slick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/error404.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/error404/_error404.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/home/_articles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/home/_mainscreen.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/home/_news.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/home/_recipes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/home/_reward.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/main/_extendsEnd.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/main/_extendsStart.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/main/_fonts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/main/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/main/_general.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/main/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/main/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/imports/main/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sass/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/favicons.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TemplatesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TemplatesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Recipe.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,18 +269,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\originsMagazin\public" />
       <recent name="C:\xampp\htdocs\originsMagazin\storage\app\public" />
       <recent name="C:\xampp\htdocs\originsMagazin\resources\views\vendor\notifications" />
       <recent name="C:\xampp\htdocs\originsMagazin\public\assets\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\originsMagazin\resources\views\partials" />
       <recent name="C:\xampp\htdocs\originsMagazin\resources\views\vendor" />
     </key>
   </component>
@@ -237,5 +325,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/home.blade.php</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

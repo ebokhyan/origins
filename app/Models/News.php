@@ -10,7 +10,7 @@ class News extends Model
     use HasFactory;
 
     protected $table = 'news';
-
+    protected $casts = ['created_at' => 'date:d F, Y'];
     /*
     |--------------------------------------------------------------------------
     | SCOPES

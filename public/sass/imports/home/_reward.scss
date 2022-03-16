@@ -1,0 +1,185 @@
+.reward_section {
+    @include mediaFrom($size1200) {
+        margin-top: 80px;
+    }
+    @include mediaRange($size960, $size1200) {
+        margin-top: 60px;
+    }
+    @include mediaRange($size576, $size960) {
+        margin-top: 40px;
+    }
+    @include mediaTo($size576) {
+        margin-top: 25px;
+    }
+}
+
+.reward_block {
+    display: flex;
+    background: $secondColor;
+    .image_block {
+        position: relative;
+        @extend %centeredImage;
+    }
+    .info_block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex: 1;
+        width: 30%;
+    }
+    .inner_title {
+        margin-bottom: 35px;
+    }
+    .description_block {
+        color: rgba($secondTextColor, 0.7);
+        margin-bottom: 50px;
+    }
+    &.image_left {
+        min-height: 475px;
+        .info_block {
+            order: 2;
+            padding: 50px 67px;
+        }
+        .image_block {
+            flex: 0 0 66.3%;
+            max-width: 66.3%;
+        }
+    }
+    &.image_right {
+        min-height: 400px;
+        .image_block {
+            order: 2;
+            flex: 0 0 62.3%;
+            max-width: 62.3%;
+        }
+        .info_block {
+            padding: 50px 70px 50px 95px;
+        }
+    }
+    @include mediaRange($size1440, $size1680) {
+        &.image_left {
+            min-height: 420px;
+            .info_block {
+                order: 2;
+                padding: 45px 55px;
+            }
+            .image_block {
+                flex: 0 0 65%;
+                max-width: 65%;
+            }
+        }
+        &.image_right {
+            min-height: 360px;
+            .image_block {
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
+            .info_block {
+                padding: 45px 55px;
+            }
+        }
+    }
+    @include mediaRange($size1200, $size1440) {
+        &.image_left {
+            min-height: 380px;
+            .info_block {
+                order: 2;
+                padding: 40px;
+            }
+            .image_block {
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
+        }
+        &.image_right {
+            min-height: 320px;
+            .image_block {
+                flex: 0 0 55%;
+                max-width: 55%;
+            }
+            .info_block {
+                padding: 40px;
+            }
+        }
+        .inner_title {
+            margin-bottom: 30px;
+        }
+        .description_block {
+            margin-bottom: 40px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        &.image_left {
+            min-height: 360px;
+            .info_block {
+                order: 2;
+                padding: 35px 20px;
+            }
+            .image_block {
+                flex: 0 0 55%;
+                max-width: 55%;
+            }
+        }
+        &.image_right {
+            min-height: 280px;
+            .image_block {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .info_block {
+                padding: 35px 20px;
+            }
+        }
+        .inner_title {
+            margin-bottom: 25px;
+        }
+        .description_block {
+            margin-bottom: 30px;
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        &.image_left,
+        &.image_right {
+            min-height: 320px;
+            .info_block {
+                padding: 30px 15px;
+            }
+            .image_block {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    }
+    @include mediaTo($size960) {
+        .inner_title,
+        .description_block {
+            margin-bottom: 20px;
+        }
+    }
+    @include mediaTo($size768) {
+        margin: 0 #{-$containerPadding};
+        flex-wrap: wrap;
+        &.image_left,
+        &.image_right {
+            min-height: 0;
+            .info_block {
+                padding: 25px $containerPadding;
+                order: 2;
+                text-align: center;
+                max-width: 360px;
+                margin: 0 auto;
+                align-items: center;
+            }
+            .image_block {
+                @include colSize(12);
+                order: 1;
+                &:before {
+                    display: block;
+                    content: "";
+                    padding-bottom: 60%;
+                }
+            }
+        }
+    }
+}

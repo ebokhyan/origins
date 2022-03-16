@@ -1,0 +1,193 @@
+%standardList {
+	@include standardList();
+}
+
+%standardRowList {
+	@include standardRowList();
+}
+
+%coverLayer {
+	@include coverLayer();
+}
+
+%fixedCover {
+	@include fixCoverLayer;
+}
+
+%verticalRotate {
+	@include transStyle(scaleX(-1));
+}
+
+%horizontalRotate {
+	@include transStyle(scaleY(-1));
+}
+
+%centeredImage {
+	> img {
+		@extend %coverLayer;
+		object-fit: cover;
+	}
+}
+
+%coverVideo {
+	iframe {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
+}
+
+%square {
+	@include overHidden();
+	@extend %centeredImage;
+	@extend %coverVideo;
+	&:before {
+		display: block;
+		content: "";
+		padding-bottom: 100%;
+	}
+}
+
+%almostSquare {
+	@include overHidden();
+	@extend %centeredImage;
+	@extend %coverVideo;
+	&:before {
+		display: block;
+		content: "";
+		padding-bottom: 75%;
+	}
+}
+
+%lessWide {
+	@include overHidden();
+	@extend %centeredImage;
+	@extend %coverVideo;
+	&:before {
+		display: block;
+		content: "";
+		padding-bottom: 62.5%;
+	}
+}
+
+%standardWide {
+	@include overHidden();
+	@extend %centeredImage;
+	@extend %coverVideo;
+	&:before {
+		display: block;
+		content: "";
+		padding-bottom: 56.25%;
+	}
+}
+
+%halfWide {
+	@include overHidden();
+	@extend %centeredImage;
+	@extend %coverVideo;
+	&:before {
+		display: block;
+		content: "";
+		padding-bottom: 50%;
+	}
+}
+
+%superWide {
+	@include overHidden();
+	@extend %centeredImage;
+	@extend %coverVideo;
+	&:before {
+		display: block;
+		content: "";
+		padding-bottom: 25%;
+	}
+}
+
+%standardNarrow {
+	@include overHidden();
+	@extend %centeredImage;
+	&:before {
+		display: block;
+		content: "";
+		padding-bottom: 177.78%;
+	}
+}
+
+%lessNarrow {
+	@include overHidden();
+	@extend %centeredImage;
+	&:before {
+		display: block;
+		content: "";
+		padding-bottom: 133.33%;
+	}
+}
+
+%iconElement {
+	&:before,
+	&:after {
+		font-family: 'icon' !important;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+%noBlink {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+%centerBlock {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+%linkTypeBtn {
+	border: none;
+	padding: 0;
+	background: transparent;
+}
+
+%standardText {
+	font-size: 140%;
+	line-height: 20px;
+}
+
+.standard_text {
+	@extend %standardText;
+}
+
+%newsTitle {
+	color: inherit;
+	font-size: 300%;
+	line-height: 35px;
+	font-family: $playfairSb;
+	@extend %color300;
+	@include mediaRange($size1200, $size1440) {
+		font-size: 280%;
+		line-height: 33px;
+	}
+	@include mediaRange($size960, $size1200) {
+		font-size: 250%;
+		line-height: 29px;
+	}
+	@include mediaRange($size576, $size960) {
+		font-size: 220%;
+		line-height: 25px;
+	}
+	@include mediaTo($size576) {
+		font-size: 200%;
+		line-height: 22px;
+	}
+}

@@ -1,0 +1,476 @@
+.footer {
+    padding-top: 50px;
+    @extend %opacity300;
+    &_actions {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .subscribe_section {
+        @include colSize(6);
+        background: $secondColor;
+        color: $secondTextColor;
+        padding: 100px 0;
+        @include overHidden;
+        .full_ww,
+        .page_container {
+            height: 100%;
+        }
+        .section_inner {
+            width: 625 + $containerPadding;
+            padding-right: $containerPadding;
+            max-width: 50%;
+        }
+    }
+    .join_section {
+        @include colSize(6);
+        background: $siteColor;
+        color: $white;
+        padding: 100px 0;
+        .section_inner {
+            margin: 0 auto;
+            align-items: center;
+            text-align: center;
+            max-width: 532 + 2 * $containerPadding;
+            padding: 0 $containerPadding;
+        }
+        .primary_btn {
+            margin-top: auto;
+        }
+    }
+    .section_inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .description_block {
+        color: inherit;
+        margin-top: 18px;
+        margin-bottom: 50px;
+        opacity: 0.7;
+    }
+    .subscribe_form {
+        width: 100%;
+        margin-top: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        position: relative;
+        label {
+            flex: 1;
+            display: block;
+            margin: 0;
+            max-width: 450px;
+            position: relative;
+        }
+        input {
+            border: none;
+            border-bottom: 1px solid $secondTextColor !important;
+            background: transparent;
+            width: 100%;
+            padding: 0 0 20px;
+            font-size: 250%;
+            line-height: 35px;
+            color: inherit;
+        }
+        @include placeholder {
+            color: inherit;
+        }
+        button {
+            margin-left: 15px;
+            border: none;
+            font-size: 140%;
+            padding: 17px 20px;
+            border-radius: 25px;
+            &:before {
+                display: block;
+            }
+        }
+        .error_hint {
+            position: absolute;
+            left: 0;
+            top: 100%;
+        }
+    }
+    &_logo {
+        border: solid $footerBorderColor;
+        border-width: 2px 0;
+        padding: 15px $containerPadding;
+        text-align: center;
+        margin-top: 30px;
+        img {
+            display: inline-block;
+            vertical-align: top;
+            width: 270px;
+            height: auto;
+            max-width: 100%;;
+        }
+    }
+    .socials_list {
+        justify-content: center;
+        padding: 20px 0;
+        border-bottom: 2px solid $footerBorderColor;
+        a:before {
+            font-size: 2rem;
+        }
+        li {
+            margin: 0 15px;
+        }
+    }
+    &_menu {
+        font-size: 250%;
+        line-height: 33px;
+        padding: 30px 0;
+        border-bottom: 2px solid $footerBorderColor;
+        ul {
+            margin: 0 $rowMargin;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            
+            li {
+                padding: 0 $colPadding;
+            }
+            a {
+                display: block;
+                color: $black;
+                font-family: $titleBoldFont;
+                @include siteColorHover;
+            }
+        }
+    }
+
+    &_bottom {
+        padding: 10px 0;
+        border-bottom: 2px solid;
+        font-size: 120%;
+        line-height: 1.5em;
+        color: $footerBorderColor;
+        font-family: $light;
+        .page_container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .terms_menu {
+        @extend %standardList;
+        display: flex;
+        li {
+            display: flex;
+            align-items: center;
+            &:not(:first-child):before {
+                display: block;
+                content: "|";
+                margin: 0 36px;
+            }
+        }
+        a {
+            display: block;
+            color: inherit;
+            @include siteColorHover;
+        }
+    }
+    @include mediaRange($size1200, $size1440) {
+        padding-top: 45px;
+        &_logo {
+            margin-top: 25px;
+            img {
+                width: 240px;
+            }
+        }
+        &_menu {
+            font-size: 220%;
+            line-height: 30px;
+            padding: 25px 0;
+        }
+        .terms_menu li:not(:first-child):before {
+            margin: 0 30px;
+        }
+        .subscribe_section,
+        .join_section {
+            padding: 85px 0;
+        }
+        .description_block {
+            margin-bottom: 45px;
+        }
+        .subscribe_form {
+            button {
+                font-size: 120%;
+                padding: 14px 18px;
+            }  
+            input {
+                padding-bottom: 18px;
+                font-size: 230%;
+                line-height: 30px;
+            }
+        }
+        
+    }
+    @include mediaRange($size960, $size1200) {
+        padding-top: 40px;
+        &_logo {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            img {
+                width: 210px;
+            }
+        }
+        &_menu {
+            font-size: 180%;
+            line-height: 24px;
+            padding: 20px 0;
+        }
+        .socials_list {
+            padding: 15px 0;
+            a:before {
+                font-size: 1.8rem;
+            }
+            li {
+                margin: 0 14px;
+            }
+        }
+        .terms_menu li:not(:first-child):before {
+            margin: 0 24px;
+        }
+        .subscribe_section,
+        .join_section {
+            padding: 70px 0;
+        }
+        .description_block {
+            margin-bottom: 40px;
+        }
+       
+        .subscribe_form {
+            button {
+                font-size: 110%;
+                padding: 12px 15px;
+            }
+             input {
+                 padding-bottom: 14px;
+                 font-size: 210%;
+                 line-height: 26px;
+             }
+         }
+         
+    }
+    @include mediaRange($size768, $size960) {
+        padding-top: 35px;
+        &_logo {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 15px;
+            img {
+                width: 180px;
+            }
+        }
+        &_menu {
+            padding: 20px 0;
+            font-size: 150%;
+            line-height: 22px;
+            ul li:before {
+                margin: 0 15px;
+            }
+        }
+        .socials_list {
+            padding: 10px 0;
+            a:before {
+                font-size: 1.6rem;
+            }
+            li {
+                margin: 0 13px;
+            }
+        }
+        .terms_menu li:not(:first-child):before {
+            margin: 0 18px;
+        }
+        .subscribe_section,
+        .join_section {
+            padding: 55px 0;
+        }
+        .description_block {
+            margin-top: 16px;
+            margin-bottom: 35px;
+        }
+        .subscribe_form {
+           button {
+                font-size: 90%;
+                padding: 10px 13px;
+            } 
+            input {
+                padding-bottom: 10px;
+                font-size: 190%;
+                line-height: 27px;
+            }
+        }
+        
+    }
+    @include mediaRange($size576, $size768) {
+        &_logo {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+            img {
+                width: 140px;
+            }
+        }
+        &_menu {
+            font-size: 120%;
+            line-height: 15px;
+            padding: 15px 0;
+            ul li:before {
+                margin: 0 10px;
+            }
+        }
+        .socials_list {
+            padding: 8px 0;
+            a:before {
+                font-size: 1.5rem;
+            }
+            li {
+                margin: 0 12px;
+            }
+        }
+        .terms_menu li:not(:first-child):before {
+            margin: 0 15px;
+        }
+        .subscribe_section,
+        .join_section {
+            padding: 40px 0;
+        }
+        .description_block {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+        .subscribe_form {
+           button {
+                font-size: 70%;
+                padding: 8px 10px;
+            } 
+            input {
+                padding-bottom: 8px;
+                font-size: 170%;
+                line-height: 25px;
+            }
+        }
+        
+    }
+    @include mediaTo($size960) {
+        &_menu {
+            position: relative;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            ul li {
+                padding: 0;
+                display: flex;
+                &:not(:first-child):before {
+                    display: block;
+                    content: "|";
+                }
+                &:first-child {
+                    margin-left: auto;
+                }
+                &:last-child {
+                    margin-right: auto;
+                }
+            }
+        }
+        &_bottom {
+            padding: 5px 0;
+        }
+    }
+    @include mediaTo($size768) {
+        padding-bottom: 30px;
+        &_bottom .page_container {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+        .terms_menu {
+            @include colSize(12);
+            margin-bottom: 5px;
+            justify-content: center;
+        }
+        .subscribe_section,
+        .join_section {
+            .page_container {
+                padding: 0;
+            }
+            @include colSize(12);
+            .section_inner {
+                margin: 0 auto;
+                max-width: 440px;
+                width: 100%;
+                text-align: center;
+                padding: 0 $containerPadding;
+            }
+        }
+    }
+    @include mediaTo($size576) {
+        &_logo {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+            img {
+                width: 100px;
+            }
+        }
+
+        &_menu {
+            padding: 10px 0;
+            font-size: 90%;
+            line-height: 12px;
+            ul {
+                li:before {
+                    margin: 0 7px;
+                }
+            }
+        }
+        .socials_list {
+            padding: 5px 0;
+            a:before {
+                font-size: 1.4rem;
+            }
+            li {
+                margin: 0 10px;
+            }
+        }
+        .terms_menu li:not(:first-child):before {
+            margin: 0 10px;
+        }
+        .subscribe_section,
+        .join_section {
+            padding: 25px 0;
+            .section_inner {
+                max-width: 360px;
+            }
+           
+        }
+        .description_block {
+            margin-top: 12px;
+            margin-bottom: 25px;
+        }
+        .subscribe_form {
+            input {
+                padding-bottom: 5px;
+                font-size: 150%;
+                line-height: 23px;
+            }
+            button {
+                font-size: 50%;
+                padding: 5px 7px;
+            }
+        }
+    }
+    @include mediaTo($size480) {
+        .subscribe_section,
+        .join_section {
+            .section_inner {
+                max-width: 320px;
+            }
+           
+        }
+    }
+}

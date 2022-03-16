@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'poppins-medium';
+    src: url('../fonts/Poppins-Medium/Poppins-Medium.eot');
+    src: url('../fonts/Poppins-Medium/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Poppins-Medium/Poppins-Medium.woff') format('woff'),
+         url('../fonts/Poppins-Medium/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.eot');
+    src: url('../fonts/Poppins/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Poppins/Poppins-Regular.woff') format('woff'),
+         url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'poppins-light';
+    src: url('../fonts/Poppins-Light/Poppins-Light.eot');
+    src: url('../fonts/Poppins-Light/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Poppins-Light/Poppins-Light.woff') format('woff'),
+         url('../fonts/Poppins-Light/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('../fonts/Poppins-Bold/Poppins-Bold.eot');
+    src: url('../fonts/Poppins-Bold/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Poppins-Bold/Poppins-Bold.woff') format('woff'),
+         url('../fonts/Poppins-Bold/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'poppins-semibold';
+    src: url('../fonts/Poppins-SemiBold/Poppins-SemiBold.eot');
+    src: url('../fonts/Poppins-SemiBold/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Poppins-SemiBold/Poppins-SemiBold.woff') format('woff'),
+         url('../fonts/Poppins-SemiBold/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'playfair-sb';
+    src: url('../fonts/PlayfairDisplay-SemiBold/PlayfairDisplay-SemiBold.eot');
+    src: url('../fonts/PlayfairDisplay-SemiBold/PlayfairDisplay-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PlayfairDisplay-SemiBold/PlayfairDisplay-SemiBold.woff') format('woff'),
+         url('../fonts/PlayfairDisplay-SemiBold/PlayfairDisplay-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mencken_std_head';
+    src: url('../fonts/MenckenStdHead-Regular/MenckenStdHead-Regular.eot');
+    src: url('../fonts/MenckenStdHead-Regular/MenckenStdHead-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MenckenStdHead-Regular/MenckenStdHead-Regular.woff') format('woff'),
+        url('../fonts/MenckenStdHead-Regular/MenckenStdHead-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mencken_std_head_bold';
+    src: url('../fonts/MenckenStdHead-Bold/MenckenStdHead-Bold.eot');
+    src: url('../fonts/MenckenStdHead-Bold/MenckenStdHead-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MenckenStdHead-Bold/MenckenStdHead-Bold.woff') format('woff'),
+        url('../fonts/MenckenStdHead-Bold/MenckenStdHead-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mencken_std_head_extrabold';
+    src: url('../fonts/MenckenStdHead-ExtraBold/MenckenStdHead-ExtraBold.eot');
+    src: url('../fonts/MenckenStdHead-ExtraBold/MenckenStdHead-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/MenckenStdHead-ExtraBold/MenckenStdHead-ExtraBold.woff') format('woff'),
+        url('../fonts/MenckenStdHead-ExtraBold/MenckenStdHead-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'icon';
+    font-display: 'auto';
+    src: url('../fonts/icons/icomoon.eot?t3ycw1');
+    src: url('../fonts/icons/icomoon.eot?t3ycw1#iefix') format('embedded-opentype'),
+         url('../fonts/icons/icomoon.ttf?t3ycw1') format('truetype'),
+         url('../fonts/icons/icomoon.woff?t3ycw1') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*="icon_"] {
+    @extend %iconElement;
+}
+
+//social icons
+.icon_facebook:before {
+    content: "\e90a";
+}
+.icon_instagram:before {
+    content: "\e90b";
+}
+.icon_linkedin:before {
+    content: "\e90c";
+}
+.icon_twitter:before {
+    content: "\e90d";
+}
+.icon_pinterest:before {
+    content: "\e90e";
+}
+.icon_youtube:before {
+    content: "\e90f";
+}
+.icon_telegram:before {
+    content: "\e91a";
+}
+.icon_ok:before {
+    content: "\e91b";
+}
+.icon_vk:before {
+    content: "\e91c";
+}
+.icon_google:before {
+    content: "\e91d";
+}
+.icon_tiktok:before {
+    content: "\e91e";
+}
+.icon_flickr:before {
+    content: "\e91f";
+}
+
+//other icons
+.icon_down:before {
+    content: "\e901";
+}
+.icon_left:before {
+    content: "\e902";
+}
+.icon_right:before {
+    content: "\e903";
+}
+.icon_close:before {
+    content: "\e904";
+}
+.icon_checked:before {
+    content: "\e905";
+}
+.icon_search:before {
+    content: "\e906";
+}
+.icon_arrow:before {
+    content: "\e907";
+}
+.icon_user:before {
+    content: "\e908";
+}

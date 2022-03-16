@@ -1,0 +1,84 @@
+.main_screen {
+    position: relative;
+    .inner_block {
+        position: absolute;
+        top: 303px;
+        left: 0;
+        width: 100%;
+    }
+    .text_block {
+        font-size: 500%;
+        line-height: 1.3em;
+        font-family: $titleExtraBoldFont;
+        max-width: 1000px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: -203px;
+        position: relative;
+    }
+    @include mediaRange($size1440, $size1680) {
+        img {
+            margin-top: -182px;
+        }
+        .inner_block {
+            top: 240px;
+        }
+    }
+    @include mediaRange($size1200, $size1440) {
+        img {
+            margin-top: -156px;
+        }
+        .inner_block {
+            top: 210px;
+        }
+        .text_block {
+            font-size: 450%;
+            max-width: 900px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        img {
+            margin-top: -128px;
+        }
+        .inner_block {
+            top: 180px;
+        }
+        .text_block {
+            font-size: 450%;
+            max-width: 900px;
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        img {
+            margin-top: -94px;
+        }
+        .inner_block {
+            top: 150px;
+        }
+    }
+    @include mediaRange($size576, $size768) {
+        img {
+            margin-top: -82px;
+        }
+        .inner_block {
+            top: 140px;
+        }
+    }
+    @include mediaTo($size576) {
+        img {
+            margin-top: -80px;
+        }
+        .inner_block {
+            top: 140px;
+        }
+    }
+    @include mediaTo($size960) {
+        .text_block {
+            font-size: 400%;
+            max-width: 800px;
+        }
+    }
+} 

@@ -10,7 +10,7 @@ use Spatie\EloquentSortable\SortableTrait;
 class Article extends Model implements Sortable
 {
     use HasFactory, SortableTrait;
-
+    protected $casts = ['created_at' => 'date:d F, Y'];
     public $sortable = [
         'order_column_name' => 'sort_order',
         'sort_when_creating' => true,
@@ -26,4 +26,5 @@ class Article extends Model implements Sortable
     {
         return $query->where('published', '1')->orderBy('sort_order', 'ASC');
     }
+
 }

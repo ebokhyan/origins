@@ -1,0 +1,276 @@
+.recipes_section {
+    margin-bottom: -25px;
+    @include overHidden;
+    .recipes_list {
+        margin: 25px -30px 0;
+        padding: 0;
+        list-style-type: none;
+        position: relative;
+        &:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        li {
+            width: 50%;
+            float: left;
+            padding: 0 30px;
+            margin: 25px 0;
+            position: relative;
+            &:nth-child(2n+1) {
+                border-right: 1px solid rgba($black,0.1);
+            } 
+            &:nth-child(2n+3):before {
+                @include psevdoAbs;
+                left: 30px;
+                right: -1px;
+                top: -25px;
+                border-top: 1px solid rgba($black,0.1);
+            }
+            &:nth-child(2n+4):before {
+                @include psevdoAbs;
+                left: 0;
+                right: 30px;
+                top: -25px;
+                border-top: 1px solid rgba($black,0.1);
+            }
+        }
+    }
+    .recipe_block {
+        display: flex;
+        .image_block {
+            @include colSize(6);
+            @extend %square;
+        }
+        .info_block {
+            @include colSize(6);
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .date_block {
+            font-size: 150%;
+            line-height: 23px;
+            color: $descriptionColor;
+            margin-bottom: 10px;
+        }
+        .inner_title {
+            @include textOverflow(2, relative);
+            margin-bottom: 10px;
+        }
+        .author_block {
+            font-size: 160%;
+            line-height: 25px;
+            margin-bottom: 15px;
+         }
+         .author_name {
+             color: $siteColor;
+         }
+         .description_block {
+            @include textOverflow(3, relative);
+            margin-bottom: 40px;
+            color: rgba($secondTextColor,0.6);
+         }
+    }
+    @include mediaFrom($size1200) {
+        margin-top: 60px;
+        .reward_block {
+            margin-top: 50px;
+        }
+    }
+    @include mediaRange($size1440, $size1680) {
+        .recipe_block .info_block {
+            padding-left: 30px;
+        }
+    }
+    @include mediaRange($size1200, $size1440) {
+        .recipes_list {
+            margin: 20px -15px;
+            li {
+                padding: 0 15px;
+                margin: 20px 0;
+                &:nth-child(2n+3):before {
+                    @include psevdoAbs;
+                    left: 15px;
+                    top: -20px;
+                }
+                &:nth-child(2n+4):before {
+                    right: 15px;
+                    top: -20px;
+                }
+            }
+        }
+        .recipe_block {
+            .info_block {
+                padding-left: 20px;
+            }
+            .description_block {
+                margin-bottom: 30px;
+            }
+            .author_block {
+                font-size: 150%;
+                line-height: 24px;
+            }
+            .date_block {
+                font-size: 130%;
+                line-height: 19px;
+            }
+        } 
+    }
+    @include mediaRange($size960, $size1200) {
+        margin-top: 45px;
+        .reward_block {
+            margin-top: 40px;
+        }
+        .recipes_list {
+            margin: 15px -10px;
+            li {
+                padding: 0 10px;
+                margin: 15px 0;
+                &:nth-child(2n+3):before {
+                    @include psevdoAbs;
+                    left: 10px;
+                    top: -15px;
+                }
+                &:nth-child(2n+4):before {
+                    right: 10px;
+                    top: -15px;
+                }
+            }
+        }
+        .recipe_block {
+            .info_block {
+                padding-left: 15px;
+            }
+            .description_block {
+                margin-bottom: 20px;
+            }
+            .author_block {
+                font-size: 140%;
+                line-height: 21px;
+            }
+            .date_block {
+                font-size: 120%;
+                line-height: 16px;
+            }
+        } 
+    }
+    @include mediaRange($size576, $size960) {
+        margin-top: 30px;
+        .reward_block {
+            margin-top: 30px;
+            .date_block {
+                font-size: 100%;
+                line-height: 14px;
+            }
+            .author_block {
+                font-size: 120%;
+                line-height: 18px;
+            }
+        }
+    }
+    @include mediaTo($size960) {
+        .recipes_list {
+            margin: 10px -10px;
+            position: relative;
+            &:before {
+                left: 56.75%;
+                top: 0;
+                @include psevdoAbs;
+                height: 100%;
+                border-left: 1px solid rgba($black,0.1);
+            }
+            li {
+                margin: 0;
+                padding: 10px 10px 5px;
+                border: none !important;
+                &:before {
+                    opacity: 0;
+                }
+                &:nth-child(2n) {
+                    float: right;
+                    width: 43.25%;
+                    .recipe_block {
+                        flex-direction: column-reverse;
+                        .info_block {
+                            padding-bottom: 10px;
+                        }
+                        .image_block:before {
+                            padding-bottom: 109.3%;
+                        }
+                        .description_block {
+                            display: none;
+                        }
+                    }
+                }
+                &:nth-child(2n+1) {
+                    width: 56.75%;
+                    .recipe_block {
+                        flex-direction: column;
+                        .info_block {
+                            padding-top: 10px;
+                        }
+                        .image_block:before {
+                            padding-bottom: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .recipe_block {
+            position: relative;
+            .secondary_btn {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+            .image_block {
+                flex: none;
+                max-width: 100%;
+                width: 100%;
+            }
+            .date_block,
+            .inner_title {
+                margin-bottom: 5px;
+            }
+            .author_block {
+                margin-bottom: 10px;
+            }
+            .info_block {
+                padding-left: 0;
+                flex: none;
+                width: 100%;
+                max-width: 100%;
+            }
+            .description_block {
+                margin-bottom: 0;
+            }
+        }
+    }
+    @include mediaTo($size576) {
+        margin-top: 20px;
+        .reward_block {
+            margin-top: 20px;
+        }
+        .recipe_block {
+            .description_block {
+                font-size: 120%;
+                line-height: 15px;
+            }
+            .date_block {
+                font-size: 80%;
+                line-height: 12px;
+            }
+            .author_block {
+                font-size: 100%;
+                line-height: 16px;
+            }
+        } 
+    }
+    
+}

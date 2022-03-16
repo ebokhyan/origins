@@ -1,0 +1,49 @@
+body {
+    height: 100%;
+    overflow: hidden;
+}
+.error_content {
+    width: 100%;
+    height: 100%;
+    @extend %centerBlock;
+    padding: $containerPadding;
+    img {
+        display: inline-block;
+        width: 400px;
+        max-width: 100%;
+        vertical-align: top;
+        margin-bottom: 20px;
+    }
+
+    .standard_text {
+        margin-top: 20px;
+    }
+    .error_block{
+        text-align: center;
+        max-width: 600px;
+        position: relative;
+        z-index: 10;
+    }
+    .page_links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        a {
+            flex: 1;
+            max-width: 220px;
+            margin: 20px $colPadding 0;
+            min-width: 120px;
+        }
+    }
+    .primary_btn,
+    .secondary_btn {
+        @extend %all300;
+        &:hover {
+            background: $secondColor;
+            color: $white;
+            border-color: transparent;
+        }
+        
+    }
+    
+}

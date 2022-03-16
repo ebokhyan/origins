@@ -1,0 +1,210 @@
+.articles_section {
+    @include overHidden;
+    @include mediaFrom($size1200) {
+        margin-top: 80px;
+    }
+    @include mediaRange($size960, $size1200) {
+        margin-top: 60px;
+    }
+    @include mediaRange($size576, $size960) {
+        margin-top: 40px;
+    }
+    @include mediaTo($size576) {
+        margin-top: 20px;
+    }
+}
+
+.articles_list {
+    margin: 0 -35px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        @include colSize(6);
+        padding: 0 35px;
+        margin-top: 50px;
+    }
+    @include mediaRange($size1200, $size1440) {
+        margin: 0 -25px;
+        li {
+            margin-top: 40px;
+            padding: 0 25px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        margin: 0 -15px;
+        li {
+            margin-top: 30px;
+            padding: 0 15px;
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        margin: 0 -10px;
+        li {
+            padding: 0 10px;
+        }
+    }
+    @include mediaRange($size576, $size960) {
+        li {
+            margin-top: 20px;
+        }
+    }
+    @include mediaTo($size768) {
+        margin: 0;
+        li {
+            @include colSize(12);
+            padding: 0;
+        }
+    }
+    @include mediaTo($size576) {
+        padding-top: 10px;
+        li {
+            margin-top: 10px;
+        }
+    }
+}
+
+.article_block {
+    display: flex;
+    flex-wrap: wrap;
+    .image_block {
+        flex: 0 0 51%;
+        max-width: 51%;
+        @extend %lessWide;
+    }
+    img {
+        @extend %all300;
+        @extend %noBlink;
+    }
+    .info_block {
+        flex: 1;
+        width: 50%;
+        padding-left: 45px;
+        padding-top: 15px;
+    }
+    .date_block {
+        font-size: 180%;
+        line-height: 1.5em;
+        color: rgba($descriptionColor,0.71);
+        margin-bottom: 10px;
+    }
+    .title_block {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        a {
+            @include textOverflow(2, relative);
+            max-width: 100%;
+            @extend %newsTitle;
+        }
+    }
+    .author_block {
+       font-size: 160%;
+       line-height: 25px;
+       margin-bottom: 15px;
+    }
+    .author_name {
+        color: $siteColor;
+    }
+    .description_block {
+        color: $secondTextColor;
+        opacity: 0.6;
+        @include textOverflow(3, relative);
+    }
+    &.hovered {
+        a.image_block img {
+            @include transStyle(scale(1.05));
+        }
+        .title_block a {
+            color: $siteColor;
+        }
+    }
+    @include mediaRange($size1440, $size1680) {
+        .info_block {
+            padding-left: 35px;
+        }
+    }
+    @include mediaRange($size1200, $size1440) {
+        .info_block {
+            padding-left: 30px;
+        }
+        .image_block {
+            flex: 0 0 49%;
+            max-width: 49%;
+        }
+        .author_block {
+            font-size: 150%;
+            line-height: 24px;
+        }
+        .date_block {
+            font-size: 160%;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        .info_block {
+            padding-left: 25px;
+            padding-top: 10px;
+        }
+        .image_block {
+            flex: 0 0 47%;
+            max-width: 47%;
+        }
+        .author_block {
+            font-size: 140%;
+            line-height: 21px;
+        }
+        .date_block {
+            font-size: 140%;
+        }
+    }
+    @include mediaRange($size576, $size960) {
+        .info_block {
+            padding-left: 20px;
+        }
+        .image_block {
+            flex: 0 0 45%;
+            max-width: 45%;
+        }
+
+        .author_block {
+            font-size: 120%;
+            line-height: 18px;
+        }
+        .date_block {
+            font-size: 120%;
+        }
+    }
+    @include mediaTo($size960) {
+        .info_block {
+            padding-top: 7px;
+        }
+        .title_block,
+        .date_block {
+            margin-bottom: 5px;
+        }
+        .author_block {
+            margin-bottom: 10px;
+        }
+    }
+    @include mediaTo($size576) {
+        .info_block {
+            padding-left: 15px;
+        }
+        .image_block {
+            flex: 0 0 43%;
+            max-width: 43%;
+        }
+        .author_block {
+            font-size: 100%;
+            line-height: 16px;
+        }
+        .description_block {
+            font-size: 120%;
+            line-height: 15px;
+        }
+        .date_block {
+            font-size: 90%;
+        }
+    }
+}
