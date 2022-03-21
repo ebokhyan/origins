@@ -19,25 +19,29 @@
         <div class="page_container">
             <div class="section_head">
                 <h2 class="section_title">Latest Articles</h2>
-                <a href="{{route('articles')}}" class="view_all">View All</a>
+                <a href="{{route('features')}}" class="view_all">View All</a>
             </div>
             @if(!empty($content['latestArticles']['articles']))
                 <ul class="articles_list">
                     @foreach($content['latestArticles']['articles'] as $article)
                         <li>
                             <div class="article_block">
-                                <a  class="image_block" href="{{route('article',['locale' => 'en', 'slug' => $article['slug']])}}">
+                                <a  class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $article['slug']])}}">
                                     <img src="{{asset('storage/'.$article['image'])}}" width="400" height="250" alt="" title=""/> article title
                                 </a>
+{{--                                @php--}}
+{{--                                dd($article['title']['en']);--}}
+{{--                                @endphp--}}
                                 <div class="info_block">
                                     <div class="date_block">{{$article['created_at']}}</div>
                                     <div class="title_block">
-                                        <a href="{{route('article',['locale' => 'en', 'slug' => $article['slug']])}}">{{$article['title']}}</a>
+{{--                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $article['slug']])}}">{{$article['title']['en']}}</a>--}}
+                                        <a href="#">{{ !empty($article['title']['en']) ? $article['title']['en'] : '' }}</a>
                                     </div>
                                     <div class="author_block">
-                                        By <span class="author_name">{{$article['author']}}</span>
+                                        By <span class="author_name">{{ !empty($article['author']['en']) ? $article['author']['en'] : ""}}</span>
                                     </div>
-                                    <div class="description_block">{{$article['short_description']}}</div>
+                                    <div class="description_block">{{!empty($article['short_description']['en']) ? $article['short_description']['en'] : ''}}</div>
                                 </div>
                             </div>
                         </li>
@@ -49,17 +53,7 @@
     @if(!empty($content['latestArticles']['banner']))
         <div class="reward_section">
             <div class="page_container">
-                <div class="reward_block {{$content['latestRecipes']['banner']->image_position = 'left' ? 'image_left' : 'image_right'}}">
-                    <div class="image_block">
-                        <img src="{{asset('storage/'.$content['latestArticles']['banner']->image)}}" alt="" title="" width="1090" height="475"/>
-                        {{$content['latestArticles']['banner']->title}}
-                    </div>
-                    <div class="info_block">
-                        <div class="inner_title">{{$content['latestArticles']['banner']->title}}</div>
-                    <div class="description_block">Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna…</div>
-                        <a href="{{url($content['latestArticles']['banner']->cta_action)}}" class="primary_btn dark_btn">Explore</a>
-                    </div>
-                </div>
+                <x-banner-component :details="$content['latestArticles']['banner']"></x-banner-component>
             </div>
         </div>
     @endif
@@ -70,7 +64,6 @@
                 <h2 class="section_title">News</h2>
                 <a href="news_listing.php" class="view_all">View All</a>
             </div>
-
             <div class="news_list">
                 @if(!empty($content['latestNews']['news']))
                 <ul>
@@ -92,14 +85,7 @@
                 </ul>
                 @endif
                 @if($content['latestNews']['banner'])
-                <div class="bnner_block">
-                    <a href="#" target="_blank" class="bnner_inner">
-                        <picture>
-                            <source media="(min-width:960px)" srcset="{{asset('storage/'.$content['latestNews']['banner']->image)}}">
-                            <img src="{{asset('storage/'.$content['latestNews']['banner']->image)}}" alt="" title="" width="720" height="90"/>
-                        </picture>
-                    </a>
-                </div>
+                    <x-add-banner-component :details="$content['latestNews']['banner']"></x-add-banner-component>
                 @endif
             </div>
 
@@ -113,18 +99,8 @@
                 <a href="recipes_listing.php" class="view_all">View All</a>
             </div>
             @if(!empty($content['latestRecipes']['banner']))
-                <div class="reward_block {{$content['latestRecipes']['banner']->image_position = 'left' ? 'image_left' : 'image_right'}}">
-                    <div class="image_block">
-                        <img src="{{asset('storage/'.$content['latestRecipes']['banner']->image)}}" alt="" title="" width="1090" height="475"/>
-                    </div>
-                    <div class="info_block">
-                        <div class="inner_title">{{$content['latestRecipes']['banner']->title}}</div>
-                        <div class="description_block">{{$content['latestRecipes']['banner']->short_description}}</div>
-                        <a href="#" class="primary_btn dark_btn">Explore</a>
-                    </div>
-                </div>
+                <x-banner-component :details="$content['latestRecipes']['banner']"></x-banner-component>
             @endif
-
             <ul class="recipes_list">
                 @if(!empty($content['latestRecipes']['recipes']))
                     @foreach($content['latestRecipes']['recipes'] as $recipe)

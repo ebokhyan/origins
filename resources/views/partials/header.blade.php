@@ -11,12 +11,8 @@
             </div>
             <div class="sign_block">
                 <a href="login.php" class="icon_user primary_btn main_btn">Login</a>
-            </div>
-            <ul class="socials_list">
-                <li><a href="https://www.facebook.com/originswinemag" target="_blank" class="icon_facebook">facebook</a></li>
-                <li><a href="https://www.instagram.com/originswinemag/" target="_blank" class="icon_twitter">twitter</a></li>
-                <li><a href="https://twitter.com/origins_mag" target="_blank" class="icon_instagram">instagram</a></li>
-            </ul>
+
+           <x-social-lists></x-social-lists>
             <div class="lg_block">
                 <a href="#">AM</a>
             </div>
@@ -45,8 +41,6 @@
                 </ul>
             </div>
         </div>
-
-
     </div>
 </div>
 

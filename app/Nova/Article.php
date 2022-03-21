@@ -6,6 +6,7 @@ use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Illuminate\Http\Request;
 use Infinety\Filemanager\FilemanagerField;
 use Kongulov\NovaTabTranslatable\NovaTabTranslatable;
+use Kongulov\NovaTabTranslatable\TranslatableTabToRowTrait;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
@@ -18,7 +19,7 @@ use OptimistDigital\NovaSortable\Traits\HasSortableRows;
 
 class Article extends Resource
 {
-    use HasSortableRows;
+    use HasSortableRows,TranslatableTabToRowTrait;
     /**
      * The model the resource corresponds to.
      *
@@ -63,22 +64,32 @@ class Article extends Resource
                 ->separator('-')
                 ->rules('required', 'max:255','alpha_dash')
                 ->hideFromIndex(),
-//            NovaTabTranslatable::make([
+            NovaTabTranslatable::make([
                 Text::make(__('Title'),'title')
                     ->rules('required', 'max:255')
                     ->sortable(),
                 Text::make(__('Author'),'author')
                     ->rules('max:255')
                     ->sortable(),
-                Date::make(__('Date'),'created_at'),
+                Text::make(__('Photographer'),'photographer')
+                    ->rules('max:255')
+                    ->sortable(),
+                Text::make(__('Translator'),'translator')
+                    ->rules('max:255')
+                    ->sortable(),
                 Textarea::make(__('Short description'),'short_description')
                     ->hideFromIndex(),
                 NovaTinyMCE::make(__('Description'),'description')
                     ->hideFromIndex(),
-//            ]),
+            ]),
+            Date::make(__('Date'),'created_at'),
             FilemanagerField::make('Image')
                 ->filterBy('Image')
                 ->displayAsImage(),
+            Boolean::make('Top')
+                ->trueValue('1')
+                ->falseValue('0')
+                ->sortable(),
             Boolean::make('Published')
                 ->trueValue('1')
                 ->falseValue('0')

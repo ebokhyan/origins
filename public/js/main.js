@@ -6,8 +6,8 @@ function isTouchDevice() {
 
 function detectDevice() {
 	if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-		$('body').addClass('ios_device');       
-	};	 
+		$('body').addClass('ios_device');
+	};
 	if(isTouchDevice()) {
 		$('html').addClass('touch');
 	} else {
@@ -149,7 +149,7 @@ function checkForm(e) {
                 return false;
             }
         }
-        
+
     });
     setTimeout(function(){
         if($button.hasClass('checkout_submit') && $('.has-error').length > 0) {
@@ -157,7 +157,7 @@ function checkForm(e) {
         }
     },100)
 
-  
+
 };
 
 function dropToggle(evt) {
@@ -217,7 +217,7 @@ $(document).ready(function(){
 	if($('.validate_btn').length > 0) {
 		checkFields();
 		$('.validate_btn').click(checkForm);
-	};	
+	};
 
 	//drop element open close
 	$('.drop_btn').click(dropToggle);
@@ -244,5 +244,30 @@ $(document).ready(function(){
 	if($('.news_block').length > 0) {
 		comboHover($('.news_block a'), '.news_block');
 	}
+
+    $('form[name="footerSubscriptionForm"]').submit(function (event) {
+        event.preventDefault();
+            var data = $(this).serialize();
+            $.ajax({
+                url: "/subscribe",
+                type: "POST",
+                data: data,
+                success: function (response) {
+                    console.log(response);
+                    $('.required').children()
+                        .removeClass('error')
+                        .remove('#email-error')
+                    if (response.errors) {
+                        if (response.errors.email) {
+                            $("input[name=email]").addClass('error').parent('div').append('<label id="email-error" class="error" for="email">' + response.errors.email + '</label>')
+                        }
+                    }
+                    if (response.success) {
+                        $("#footerSubscriptionForm").trigger("reset");
+                        // $("#successModal").modal('show');
+                    }
+                },
+            })
+    });
 });
 
