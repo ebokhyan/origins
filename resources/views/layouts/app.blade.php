@@ -8,9 +8,13 @@
     <title>Origins Wine</title>
     <link rel="stylesheet" href="{{asset("css/main.css")}}">
     <link rel="stylesheet" href="{{asset("css/index.css")}}">
-    @include('partials.favicons')
+{{--    @include('partials.favicons')--}}
 </head>
 <body>
+
+@if(Arr::exists($content, 'top_ad'))
+    <x-top-banner-component :image="$content['top_ad']"></x-top-banner-component>
+@endif
     @include('partials.header')
     @yield('content')
     @include('partials.footer')

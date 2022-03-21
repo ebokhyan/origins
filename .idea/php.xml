@@ -142,6 +142,8 @@
       <path value="$PROJECT_DIR$/vendor/optimistdigital/nova-locale-field" />
       <path value="$PROJECT_DIR$/vendor/optimistdigital/nova-page-manager" />
       <path value="$PROJECT_DIR$/vendor/infinety-es/nova-filemanager" />
+      <path value="$PROJECT_DIR$/vendor/kongulov/nova-tab-translatable" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-translatable" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
