@@ -35,9 +35,9 @@
     </div>
 
     <ul class="socials_list">
-        <li><a href="https://www.facebook.com" target="_blank" class="icon_facebook">facebook</a></li>
-        <li><a href="https://www.twitter.com" target="_blank" class="icon_twitter">twitter</a></li>
-        <li><a href="https://www.instagram.com" target="_blank" class="icon_instagram">instagram</a></li>
+        <li><a href="https://www.facebook.com/originswinemag/" target="_blank" class="icon_facebook">facebook</a></li>
+        <li><a href="https://twitter.com/origins_magm" target="_blank" class="icon_twitter">twitter</a></li>
+        <li><a href="https://www.instagram.com/originswinemag/" target="_blank" class="icon_instagram">instagram</a></li>
     </ul>
 
     <div class="footer_menu">
