@@ -11,7 +11,7 @@ use Spatie\Translatable\HasTranslations;
 class Article extends Model implements Sortable
 {
     use HasFactory, SortableTrait,HasTranslations;
-    public $translatable = ['title', 'author', 'photographer', 'translator', 'short_description','description',];
+    public $translatable = ['title', 'author', 'photographer', 'translator', 'short_description','description','seo_title','seo_description'];
     protected $casts = ['created_at' => 'date:d F, Y'];
     public $sortable = [
         'order_column_name' => 'sort_order',
@@ -27,6 +27,11 @@ class Article extends Model implements Sortable
     public function scopePublished($query)
     {
         return $query->where('published', '1')->orderBy('sort_order', 'ASC');
+    }
+
+    public function scopeTop($query)
+    {
+        return $query->published()->where('top', '1')->orderBy('sort_order', 'ASC');
     }
 
 }

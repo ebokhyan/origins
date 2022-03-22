@@ -60,9 +60,7 @@
         .date_block {
             margin-right: 100px;
             white-space: nowrap;
-            font-size: 150%;
-            line-height: 23px;
-            color: $descriptionColor;
+           @extend %standardDate;
             margin-top: 25px;
         }
         .title_block {
@@ -72,14 +70,6 @@
             a {
                 @include textOverflow(3,relative);
                @extend %newsTitle;
-            }
-        }
-        &.hovered {
-            a.image_block img {
-                @include transStyle(scale(1.05));
-            }
-            .title_block a {
-                color: $siteColor;
             }
         }
     }
@@ -116,8 +106,6 @@
                 margin-right: 0;
             }
             .date_block {
-                font-size: 130%;
-                line-height: 19px;
                 margin-top: 15px;
             }
             .title_block {
@@ -146,8 +134,6 @@
                 margin-right: 0;
             }
             .date_block {
-                font-size: 120%;
-                line-height: 16px;
                 margin-top: 10px;
             }
             .title_block {
@@ -201,16 +187,5 @@
             }
         }
     }
-    @include mediaRange($size576, $size960) {
-        .news_block .date_block {
-            font-size: 100%;
-            line-height: 14px;
-        }
-    }
-    @include mediaTo($size576) {
-        .news_block .date_block {
-            font-size: 80%;
-            line-height: 12px;
-        }
-    }
 }
+

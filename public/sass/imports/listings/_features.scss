@@ -1,0 +1,370 @@
+.top_features {
+    @include overHidden;
+    .features_list ul {
+        margin: 0 -25px;
+        padding: 30px 0 0;
+        list-style-type: none;
+        &:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        li {
+            padding: 20px 25px 0;
+            float: left;
+            &:first-child {
+                width: 66.67%;   
+                .image_block:before {
+                    padding-bottom: 65.8%;
+                }
+                .date_block {
+                    margin-top: 15px;
+                    font-size: 220%;
+                    @include mediaRange($size1200, $size1440) {
+                        font-size: 200%;
+                    }
+                    @include mediaRange($size960, $size1200) {
+                        font-size: 160%;
+                    }
+                    @include mediaRange($size576, $size960) {
+                        font-size: 120%;
+                        margin-top: 10px;
+                    }
+                    @include mediaTo($size576) {
+                        font-size: 80%;
+                        margin-top: 10px;
+                    }
+                }
+                .title_block {
+                    a {
+                        @include textOverflow(1, relative);
+                        font-size: 370%;
+                        @include mediaRange($size1200, $size1440) {
+                            font-size: 320%;
+                        }
+                        @include mediaRange($size960, $size1200) {
+                            font-size: 280%;
+                        }
+                        @include mediaRange($size576, $size960) {
+                            font-size: 240%;
+                        }
+                        @include mediaTo($size576) {
+                            font-size: 200%;
+                            -webkit-line-clamp: 2;
+                        }
+                    }            
+                }
+                .author_block {
+                    margin-top: 10px;
+                    font-size: 180%;
+                    @include mediaRange($size1200, $size1440) {
+                        font-size: 160%;
+                    }
+                    @include mediaRange($size960, $size1200) {
+                        font-size: 140%;
+                    }
+                    @include mediaRange($size576, $size960) {
+                        font-size: 120%;
+                        margin-top: 5px;
+                    }
+                    @include mediaTo($size576) {
+                        font-size: 100%;
+                        margin-top: 5px;
+                    }
+                }
+                .description_block {
+                    margin-top: 20px;
+                    @include mediaTo($size960) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            &:not(:first-child) {
+                width: 33.33%;
+                .image_block:before {
+                    padding-bottom: 50%;
+                }
+                .date_block {
+                    margin-top: 10px;
+                    font-size: 180%;
+                    @include mediaRange($size1200, $size1440) {
+                        font-size: 150%;
+                    }
+                    @include mediaRange($size960, $size1200) {
+                        font-size: 120%;
+                    }
+                    @include mediaRange($size576, $size960) {
+                        font-size: 100%;
+                    }
+                    @include mediaTo($size576) {
+                        font-size: 80%;
+                    }
+                }
+                .title_block {
+                    a {
+                        @include textOverflow(2, relative);
+                        @extend %newsTitle;
+                        
+                    }                
+                }
+                .author_block {
+                    margin-top: 5px;
+                    font-size: 160%;
+                    @include mediaRange($size1200, $size1440) {
+                        font-size: 140%;
+                    }
+                    @include mediaRange($size960, $size1200) {
+                        font-size: 130%;
+                    }
+                    @include mediaRange($size576, $size960) {
+                        font-size: 120%;
+                    }
+                    @include mediaTo($size576) {
+                        font-size: 100%;
+                    }
+                }
+                .description_block {
+                    margin-top: 10px;
+                    @include mediaTo($size768) {
+                        -webkit-line-clamp: 3;
+                    }
+                }
+            }
+        }
+    }
+    .feature_block {
+        .image_block {
+            display: block;
+            @include overHidden;
+            @extend %centeredImage;
+            &:before {
+                display: block;
+                content: "";
+            }
+            img {
+                @extend %noBlink;
+                @extend %all300;
+            }
+        }
+        .date_block {
+            display: block;
+            color: $descriptionColor;
+            line-height: 1.5em;
+            opacity: 0.71;
+        }
+        .title_block {
+            margin-top: 5px;
+            a {
+                color: inherit;
+                @extend %color300;
+                line-height: 1.16em;
+                font-family: $playfairSb;
+            }
+        }
+        .author_block {
+            line-height: 1.5em;
+        }
+        .description_block {
+            @include textOverflow(2,relative);
+            color: rgba($descriptionColor, 0.6);
+        }
+    }
+    @include mediaRange($size1200, $size1440) {
+        .features_list ul {
+            margin: 0 -20px;
+            padding-top: 20px;
+            li {
+                padding: 20px 20px 0;
+            }
+        }
+        
+        
+    }
+    @include mediaRange($size960, $size1200) {
+        .features_list ul {
+            margin: 0 -15px;
+            padding-top: 15px;
+            li {
+                padding: 20px 15px 0;
+            }
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        .features_list ul {
+            margin: 0 -10px;
+            padding-top: 10px;
+            li {
+                padding: 20px 10px 0;
+            }
+        }
+    }
+    @include mediaTo($size768) {
+        .features_list ul {
+            margin: 0;
+            padding-top: 0;
+            li {
+                padding: 10px 0 0;
+                &:first-child {
+                    width: 100%;
+                }
+                &:not(:first-child) {
+                    width: 100%;
+                    .feature_block {
+                        display: flex;
+                    }
+                    .image_block {
+                        flex: 0 0 42.85%;
+                        max-width: 42.85%;
+                        margin-right: 15px;
+                        &:before {
+                            padding-bottom: 62.5%;
+                        }
+                    }
+                    .info_block {
+                        flex: 1;
+                        width: 50%;
+                    }
+                    .date_block {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    @include mediaTo($size576) {
+        .description_block {
+            font-size: 120%;
+            line-height: 15px;
+        }
+    }
+}
+
+.latest_features {
+    .features_list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul {
+        @extend %standardList;
+        flex: 1;
+        width: 50%;
+        max-width: 1221px;
+        margin-right: 20px;
+    }
+    li {
+        &:not(:first-child) {
+            border-top: 1px solid;
+            padding-top: 40px;
+            margin-top: 40px;
+        }
+    }
+    .feature_block {
+        display: flex;
+    }
+    .image_block {
+        order: 2;
+        flex: 0 0 32%;
+        max-width: 32%;
+        margin: 0 20px;
+        @extend %lessWide;
+    }
+    .info_block {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        max-width: 721px;
+        margin-right: auto;
+    }
+    .date_block {
+        @extend %standardDate;
+    }
+    .title_block {
+        margin-top: 10px;
+        a {
+            @include textOverflow(2, relative);
+            @extend %newsTitle;
+
+        }
+    }
+    .description_block {
+        margin-top: 15px;
+        @extend %standardDescription;
+    }
+    .author_block {
+        margin-top: 20px;
+        @extend %standardAuthor;
+        order: 2;
+    }
+    @include mediaFrom($size1200) {
+        margin-top: 50px;
+        .features_list {
+            padding-top: 80px;
+        }
+    }
+    @include mediaTo($size1200) {
+        .image_block {
+            margin-right: 0;
+        }
+    }
+    @include mediaTo($size960) {
+        ul {
+            margin-right: 0;
+        }
+        .author_block {
+            order: unset;
+            margin-top: 5px;
+        }
+        .title_block {
+            margin-top: 5px;
+        }
+        .description_block {
+            margin-top: 10px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        margin-top: 40px;
+        .features_list {
+            padding-top: 50px;
+        }
+        
+        li:not(:first-child) {
+            margin-top: 30px;
+            padding-top: 30px;
+        }
+    }
+    @include mediaRange($size576, $size960) {
+        margin-top: 30px;
+        .features_list {
+            padding-top: 20px;
+        }
+        li:not(:first-child) {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+        .image_block {
+            flex: 0 0 37.5%;
+            max-width: 37.5%;
+        }
+    }
+    @include mediaTo($size576) {
+        margin-top: 20px;
+        .features_list {
+            padding-top: 10px;
+        }
+        li:not(:first-child) {
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+        .image_block {
+            flex: 0 0 42.85%;
+            max-width: 42.85%;
+        }
+        .info_block {
+            margin-right: 15px;
+        }
+        .description_block {
+            font-size: 120%;
+            line-height: 15px;
+        }
+    }
+}

@@ -191,3 +191,57 @@
 		line-height: 22px;
 	}
 }
+
+%standardDate {
+	font-size: 150%;
+	line-height: 23px;
+	color: $descriptionColor;
+	opacity: 0.71;
+	@include mediaRange($size1200, $size1440) {
+		font-size: 130%;
+		line-height: 19px;
+	}
+	@include mediaRange($size960, $size1200) {
+		font-size: 120%;
+		line-height: 16px;
+	}
+	@include mediaRange($size576, $size960) {
+        font-size: 100%;
+        line-height: 14px;
+    }
+    @include mediaTo($size576) {
+        font-size: 80%;
+        line-height: 12px;
+    }
+}
+
+%standardDescription {
+	color: $secondTextColor;
+	opacity: 0.6;
+	@include textOverflow(3, relative);
+	@include mediaTo($size576) {
+		font-size: 120%;
+		line-height: 18px;
+	}
+}
+
+%standardAuthor {
+	font-size: 160%;
+    line-height: 25px;
+	@include mediaRange($size1200, $size1440) {
+		font-size: 150%;
+		line-height: 24px;
+	}
+	@include mediaRange($size960, $size1200) {
+		font-size: 140%;
+		line-height: 21px;
+	}
+	@include mediaRange($size576, $size960) {
+		font-size: 120%;
+		line-height: 18px;
+	}
+	@include mediaTo($size576) {
+		font-size: 100%;
+		line-height: 16px;
+	}
+}

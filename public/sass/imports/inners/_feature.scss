@@ -1,0 +1,504 @@
+.feature_inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    .article_col {
+        flex: 1;
+        max-width: 1190px;
+        width: 50%;
+        &:after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+    .details_block {
+        float: left;
+        width: 320px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+        font-size: 220%;
+        line-height: 30px;
+    }
+    .details_title {
+        font-size: 100%;
+        line-height: inherit;
+        margin: 0;
+        font-family: $semibold;
+        font-weight: 500;
+        color: inherit;
+    }
+    .details_list {
+        margin: 0;
+        padding: 10px 0 0;
+        list-style-type: none;
+        opacity: 0.4;
+        li {
+            padding-top: 15px;
+        }
+    }
+    .share_btns {
+        margin-top: 30px;
+    }
+    @include mediaRange($size960, $size1200) {
+        padding: 30px 0;
+        .details_block {
+            width: 280px;
+            margin-right: 80px;
+            margin-bottom: 40px;
+            font-size: 200%;
+            line-height: 27px;
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        padding: 20px 0;
+        .details_block {
+            width: 240px;
+            margin-right: 60px;
+            margin-bottom: 30px;
+            font-size: 170%;
+            line-height: 22px;
+        }
+        .details_list {
+            padding-top: 5px;
+            li {
+                padding-top: 10px;
+            }
+        }
+        .share_btns {
+            margin-top: 20px;
+        }
+    }
+    @include mediaRange($size576, $size768) {
+        padding: 10px 0;
+        .details_block {
+            width: 180px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            font-size: 140%;
+            line-height: 20px;
+        }
+        .details_list {
+            padding-top: 5px;
+            li {
+                padding-top: 10px;
+            }
+        }
+        .share_btns {
+            margin-top: 20px;
+        }
+    }
+    @include mediaTo($size576) {
+        padding: 0;
+        .details_block {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+            font-size: 120%;
+            line-height: 18px;
+        }
+        .details_list {
+            padding-top: 0;
+            li {
+                padding-top: 5px;
+            }
+        }
+        .share_btns {
+            margin-top: 10px;
+        }
+    }
+}
+
+.right_col {
+    flex: 0 0 300px;
+    max-width: 300px;
+    margin-left: 20px;
+    .col_subtitle {
+        font-size: 250%;
+        line-height: 34px;
+        color: $siteColor;
+        font-family: $semibold;
+        margin: 0;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $secondTextColor;
+    }
+    .stories_list {
+        @extend %standardList;
+        li {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba($secondTextColor, 0.3);
+        }
+        .title_block {
+            display: flex;
+            justify-content: flex-start;
+            
+            a {
+                color: inherit;
+                @include textOverflow(2, relative);
+                font-size: 240%;
+                line-height: 31px;
+                @include siteColorHover;
+                font-family: $titleExtraBoldFont;
+                max-width: 250px;
+            }
+        }
+        .date_block {
+            font-size: 180%;
+            line-height: 1.5em;
+            color: $descriptionColor;
+            opacity: 0.4;
+            margin-top: 20px;
+        }
+    }
+    .vertical_bnners:not(:first-child) {
+        margin-top: 140px;
+    }
+}
+
+.article_content {
+    font-size: 220%;
+    line-height: 30px;
+    img {
+        height: auto !important;
+        max-width: 100%;
+        margin: 40px 0;
+        &[style*="float: right"],
+        &[style*="float:right"] {
+            margin-left: 30px;
+            margin-top: 0;
+        }
+        &[style*="float: left"],
+        &[style*="float:left"] {
+            margin-right: 30px;
+            margin-top: 0;
+        }
+        + h2,
+        + h3,
+        &:not([style*="float"]) + .styled_block {
+            margin-top: 0;
+        }
+        
+    }
+    h2 {
+        font-size: 127.3%;
+        margin: 40px 0 30px;
+        font-family: $semibold;
+        font-weight: 500;
+        line-height: inherit;
+        color: inherit;
+    }
+    h3 {
+        font-size: 100%;
+        line-height: inherit;
+        margin: 40px 0 20px;
+        font-family: $semibold;
+        font-weight: 500;
+        color: inherit;
+    }
+    .styled_block {
+        font-family: $semibold;
+        font-style: italic;
+        color: $siteColor;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 40px 0;
+        line-height: 1.33em;
+        &:before,
+        &:after {
+            display: block;
+            content: "";
+            min-width: 45px;
+            height: 45px;
+            background: url('images/quotes.svg') no-repeat;
+            background-size: 100% auto;
+        }
+        &:before {
+            margin-right: 25px;
+        }
+        &:after {
+            margin-left: 25px;
+            @extend %verticalRotate;
+        }
+        @include mediaFrom($size1440) {
+            font-size: 4.5rem;
+        }
+        @include mediaRange($size1200, $size1440) {
+            font-size: 4.0rem;
+        }
+        @include mediaRange($size960, $size1200) {
+            font-size: 3.5rem;
+        }
+        @include mediaRange($size768, $size960) {
+            font-size: 3.0rem;
+        }
+        @include mediaRange($size576, $size768) {
+            font-size: 2.5rem;
+        }
+        @include mediaTo($size576) {
+            font-size: 2.0rem;
+        }
+    }
+}
+
+.similar_features {
+    .features_list {
+        padding-top: 50px;
+        ul {
+            margin: 0 -12px;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li {
+            @include colSize(4);
+            padding: 0 12px;
+        }
+        .image_block {
+            display: block;
+            @include overHidden;
+            @extend %centeredImage;
+            &:before {
+                padding-bottom: 47.2%;
+                display: block;
+                content: "";
+            }
+
+        }
+        .date_block {
+            font-size: 180%;
+            line-height: 1.5em;
+            color: $descriptionColor;
+            opacity: 0.71;
+            margin-top: 20px;
+        }
+        .title_block {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+            a {
+                @include textOverflow(2, relative);
+                max-width: 100%;
+                @extend %newsTitle;
+            }
+        }
+        .author_block {
+           @extend %standardAuthor;
+           margin-top: 5px;
+        }
+        .description_block {
+            margin-top: 15px;
+            color: $secondTextColor;
+            opacity: 0.6;
+            @include textOverflow(2, relative);
+        }
+        @include mediaRange($size1200, $size1440) {
+            padding-top: 40px;
+            .date_block {
+                font-size: 160%;
+            }
+        }
+        @include mediaRange($size960, $size1200) {
+            padding-top: 30px;
+            .date_block {
+                font-size: 140%;
+            }
+        }
+        @include mediaRange($size576, $size960) {
+            padding-top: 20px;
+            .date_block {
+                font-size: 120%;
+            }
+        }
+        @include mediaTo($size960) {
+            ul {
+                margin: 0 -5px;
+            }
+            li {
+                padding: 0 5px;
+            }
+            .title_block {
+                margin-top: 5px;
+            }
+            .date_block {
+                margin-top: 10px;
+            }
+            .description_block {
+                -webkit-line-clamp: 3;
+            }
+        }
+        @include mediaTo($size576) {
+            padding-top: 0;
+            .description_block {
+                font-size: 120%;
+                line-height: 15px;
+            }
+            .date_block {
+                font-size: 80%;
+            }
+            li {
+                @include colSize(12);
+                padding-top: 15px;
+            }
+        }
+    }
+   
+}
+
+@include mediaRange($size1200, $size1440) {
+    .right_col {
+        flex: 0 0 240px;
+        max-width: 240px;
+        .col_subtitle {
+            font-size: 220%;
+            line-height: 30px;
+        }
+        .stories_list {
+            li {
+                padding: 15px 0;
+            }
+            .title_block a {
+                font-size: 200%;
+                line-height: 27px;
+            }
+            .date_block {
+                font-size: 160%;
+                line-height: 20px;
+                margin-top: 15px;
+            }
+        }
+        .vertical_bnners:not(:first-child) {
+            margin-top: 100px;
+        }
+    }
+    .article_content {
+        font-size: 200%;
+        line-height: 28px;
+        img {
+            &[style*="float: right"],
+            &[style*="float:right"] {
+                max-width: 66.67%;
+            }
+            &[style*="float: left"],
+            &[style*="float:left"] {
+                max-width: 66.67%;
+            } 
+        }
+    }
+}
+
+@include mediaRange($size960, $size1200) {
+    .right_col {
+        flex: 0 0 180px;
+        max-width: 180px;
+        .col_subtitle {
+            font-size: 200%;
+            line-height: 27px;
+            padding-bottom: 10px;;
+        }
+        .stories_list {
+            li {
+                padding: 10px 0;
+            }
+            .title_block a {
+                font-size: 180%;
+                line-height: 24px;
+            }
+            .date_block {
+                font-size: 130%;
+                line-height: 17px;
+                margin-top: 10px;
+            }
+        }
+        .vertical_bnners:not(:first-child) {
+            margin-top: 60px;
+        }
+    }
+    .article_content {
+        font-size: 180%;
+        line-height: 25px;
+        img {
+            margin: 30px 0;
+            &[style*="float: right"],
+            &[style*="float:right"] {
+                margin-left: 20px;
+                max-width: 60%;
+            }
+            &[style*="float: left"],
+            &[style*="float:left"] {
+                margin-right: 20px;
+                max-width: 60%;
+            } 
+        }
+        h2 {
+            margin: 30px 0 25px;
+        }
+        h3 {
+            margin: 30px 0 20px;
+        }
+        .styled_block {
+            margin: 30px 0;
+            &:before,
+            &:after {
+                min-width: 40px;
+            }
+            &:before {
+                margin-right: 20px;
+            }
+            &:after {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+@include mediaTo($size960) {
+    .right_col {
+        display: none;
+    }
+    .article_content {
+        font-size: 160%;
+        line-height: 22px;
+        img {
+            margin: 20px 0;
+            &[style*="float: right"],
+            &[style*="float:right"] {
+                margin-left: 0;
+                max-width: 100%;
+                float: none !important;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            &[style*="float: left"],
+            &[style*="float:left"] {
+                margin-right: 0;
+                max-width: 100%;
+                float: none !important;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            } 
+        }
+        h2 {
+            margin: 20px 0;
+        }
+        h3 {
+            margin: 20px 0 15px;
+        }
+        .styled_block {
+            margin: 20px 0;
+            &:before,
+            &:after {
+                min-width: 26px;
+            }
+            &:before {
+                margin-right: 10px;
+            }
+            &:after {
+                margin-left: 10px;
+            }
+        }
+    }
+}

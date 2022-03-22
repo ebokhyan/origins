@@ -24,6 +24,7 @@ return [
 
     'templates' => [
         \App\Nova\Templates\HomeTemplate::class,
+        \App\Nova\Templates\FeaturesTemplate::class,
     ],
 
 

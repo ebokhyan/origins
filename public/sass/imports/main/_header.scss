@@ -23,6 +23,8 @@
         a {
             display: block;
             @include opacityHover;
+            font-size: 0;
+            line-height: 0;
         }
         img {
             display: block;

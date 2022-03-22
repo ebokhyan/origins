@@ -393,6 +393,7 @@ a.bnner_inner {
     display: inline-block;
     vertical-align: top;
     @include opacityHover;
+    font-size: 0;
 }
 .top_bnner {
     position: relative;
@@ -478,16 +479,275 @@ a.bnner_inner {
     }
 }
 
+.vertical_bnners {
+    margin-left: auto;
+    flex: 0 0 300px;
+    max-width: 300px;
+    .bnner_inner + .bnner_inner {
+        margin-top: 40px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    @include mediaRange($size1200, $size1440) {
+        flex: 0 0 240px;
+        max-width: 240px;
+        .bnner_inner + .bnner_inner {
+            margin-top: 30px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        flex: 0 0 180px;
+        max-width: 180px;
+        .bnner_inner + .bnner_inner {
+            margin-top: 20px;
+        }
+    }
+    @include mediaTo($size960) {
+        display: none;
+    }
+}
+
+.horizontal_bnner {
+    position: relative;
+    overflow: hidden;
+    z-index: 101;
+    text-align: center;
+    .bnner_inner {
+        margin: 0 auto;
+        img {
+            display: inline-block;
+            vertical-align: top;
+            max-width: 100%;
+            height: 90px;
+            object-fit: cover;
+        }
+    }
+    + div {
+        margin-top: 0;
+    }
+    @include mediaFrom($size1440) {
+        padding: 50px 15px;
+    }
+    @include mediaRange($size1200, $size1440) {
+        padding: 45px 15px;
+        .bnner_inner img {
+            height: 80px;
+        }
+
+    }
+    @include mediaRange($size960, $size1200) {
+        padding: 30px 15px;
+        .bnner_inner img {
+            height: 70px;
+        }
+    }
+
+    @include mediaRange($size768, $size960) {
+        padding: 25px 15px;
+        .bnner_inner img {
+            height: 60px;
+        }
+    }
+    @include mediaRange($size576, $size768) {
+        padding: 20px 15px;
+        .bnner_inner img {
+            height: 55px;
+        }
+    }
+    @include mediaTo($size576) {
+        padding: 15px;
+        .bnner_inner img {
+            height: 50px;
+        }
+    }
+}
+
+.inner_search {
+    display: flex;
+    @include placeholder {
+        color: rgba($secondTextColor, 0.6);
+    }
+    label {
+        display: block;
+        flex: 1;
+        width: 50%;
+    }
+    input {
+        border: none;
+        background: transparent;
+        color: inherit;     
+        width: 100%;       
+    }
+    button {
+        @extend %linkTypeBtn;
+        @include siteColorHover;
+        font-size: 240%;
+        &:before {
+            display: block;
+        }
+    }
+}
+
+.page_head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    .inner_search {
+        border-bottom: 1px solid $footerBorderColor;
+        align-items: center;
+        padding: 0 40px;
+        margin-left: 24px;
+        flex: 0 0 33.33%;
+        max-width: 333px;
+        
+        input {
+            font-size: 160%;
+            line-height: 20px;
+            padding: 10px 0;
+        }
+        button {
+            margin-left: 24px;
+            color: inherit;
+        }
+    }
+    @include mediaFrom($size1440) {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    @include mediaRange($size1200, $size1440) {
+        padding-top: 60px;
+        padding-bottom: 35px;
+        .inner_search {
+            padding: 0 30px;
+            input {
+                font-size: 150%;
+                line-height: 24px;
+                padding: 8px 0;
+            }
+            button {
+                font-size: 200%;
+                margin-left: 16px;
+            }
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        padding-top: 45px;
+        padding-bottom: 30px;
+        .inner_search {
+            padding: 0 20px;
+            input {
+                font-size: 140%;
+                line-height: 20px;
+                padding: 7px 0;
+            }
+            button {
+                padding: 2px; 
+                font-size: 180%;
+                margin-left: 14px;
+            }
+        }
+    }
+    @include mediaRange($size576, $size960) {
+        padding-top: 30px;
+        padding-bottom: 25px;
+        .inner_search {
+            padding: 0 10px;
+            input {
+                font-size: 120%;
+                line-height: 18px;
+                padding: 5px 0;
+            }
+            button {
+                padding: 3px; 
+                font-size: 140%;
+                margin-left: 12px;
+            }
+        }
+    }
+    @include mediaTo($size576) {
+        padding-top: 15px;
+        padding-bottom: 20px;
+        .inner_search {
+            padding: 0;
+            input {
+                font-size: 100%;
+                line-height: 16px;
+                padding: 3px 0;
+            }
+            button {
+                padding: 5px; 
+                font-size: 100%;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.page_title {
+    font-family: $titleExtraBoldFont;
+    margin: 0;
+    color: inherit;
+    line-height: 1.3em;
+    @include mediaFrom($size1440) {
+        font-size: 600%;
+    }
+    @include mediaRange($size1200, $size1440) {
+        font-size: 540%;
+    }
+    @include mediaRange($size960, $size1200) {
+        font-size: 480%;
+    }
+    @include mediaRange($size768, $size960) {
+        font-size: 420%;
+    }
+    @include mediaRange($size576, $size768) {
+        font-size: 360%;
+    }
+    @include mediaTo($size576) {
+        font-size: 300%;
+    }
+}
+
 .section_head {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: solid $black;
     border-width: 1px 0;
+    .inner_search {
+        margin-left: 100px;
+        flex: 1;
+        width: 30%;
+        max-width: 333px;
+        margin-right: auto;
+        label {
+            order: 2;
+        }
+        input {
+            padding: 0;
+            font-size: 250%;
+            line-height: 35px;
+            font-family: $playfairSb;
+        }
+        button {
+            margin-right: 20px;
+            color: rgba($secondTextColor, 0.6);
+        }
+    }
     @include mediaFrom($size1200) {
         padding: 21px 0;
         .view_all {
             margin: 0 40px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        .inner_search {
+            input {
+                font-size: 220%;
+                line-height: 31px;
+            }
         }
     }
     @include mediaRange($size576, $size1200) {
@@ -495,11 +755,33 @@ a.bnner_inner {
         .view_all {
             margin: 0 25px;
         }
+        .inner_search {
+            margin-left: 80px;
+            button {
+                font-size: 210%;
+                margin-right: 12px;
+            }
+        }
+    }
+    @include mediaTo($size960) {
+        .inner_search {
+            input {
+                font-size: 200%;
+                line-height: 27px;
+            }
+        }
     }
     @include mediaTo($size576) {
         padding: 7px 0;
         .view_all {
             margin: 0 10px;
+        }
+        .inner_search {
+            margin-left: 60px;
+            button {
+                font-size: 180%;
+                margin-right: 15px;
+            }
         }
     }
 }
@@ -507,9 +789,13 @@ a.bnner_inner {
 .section_title {
     margin: 0;
     font-family: $playfairSb;
-    @include mediaFrom($size960) {
+    @include mediaFrom($size1200) {
         font-size: 250%;
         line-height: 35px;
+    }
+    @include mediaRange($size960, $size1200) {
+        font-size: 220%;
+        line-height: 31px;
     }
     @include mediaTo($size960) {
         font-size: 200%;
@@ -565,4 +851,120 @@ a.banner_inner,
 .image_block {
     font-size: 0;
     line-height: 0;
+}
+
+a.image_block {
+    img {
+        @extend %all300;
+        @extend %noBlink;
+    }
+}
+    
+.hovered {
+    a.image_block img {
+        @include transStyle(scale(1.05));
+    }
+    .title_block a {
+        color: $siteColor !important;
+    }
+}
+
+.author_block .author_name {
+    color: $siteColor;
+}
+
+.share_btns {
+    height: 45px;
+    .at-share-btn-elements {
+        display: flex;
+        margin: 0 -5px;
+        .at-share-btn {
+            color: $textColor !important;
+            margin: 0 5px !important;
+            @include transStyle(none !important);
+            border: 1px solid!important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            padding: 0;
+            @extend %all300;
+            .at-icon-wrapper {
+                width: 26px !important;
+                height: 26px !important;
+                line-height: 1em !important;
+            }
+            svg {
+                color: inherit;
+                width: 100% !important;
+                height: 100% !important;
+                path {
+                    fill: currentColor;
+                }
+            }
+            &:hover {
+                color: $siteColor !important;
+            }
+            
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        height: 39px;
+        .at-share-btn-elements {
+            .at-share-btn {
+                width: 39px;
+                height: 39px;
+                .at-icon-wrapper {
+                    width: 20px !important;
+                    height: 20px !important;
+                }
+            }
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        height: 33px;
+        .at-share-btn-elements {
+            margin: 0 -4px;
+            .at-share-btn {
+                margin: 0 4px !important;
+                width: 33px;
+                height: 33px;
+                .at-icon-wrapper {
+                    width: 18px !important;
+                    height: 18px !important;
+                }
+            }
+        }
+    }
+    @include mediaRange($size576, $size768) {
+        height: 27px;
+        .at-share-btn-elements {
+            margin: 0 -3px;
+            .at-share-btn {
+                margin: 0 3px !important;
+                width: 27px;
+                height: 27px;
+                .at-icon-wrapper {
+                    width: 16px !important;
+                    height: 16px !important;
+                }
+            }
+        }
+    }
+    @include mediaTo($size576) {
+        height: 21px;
+        .at-share-btn-elements {
+            margin: 0 -2px 0 -3px;
+            .at-share-btn {
+                margin: 0 2px 0 3px !important;
+                width: 21px;
+                height: 21px;
+                .at-icon-wrapper {
+                    width: 14px !important;
+                    height: 14px !important;
+                }
+            }
+        }
+    }
 }

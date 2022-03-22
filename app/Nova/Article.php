@@ -99,14 +99,14 @@ class Article extends Resource
 
     public function seoFields(){
         return [
-//            NovaTabTranslatable::make([
+            NovaTabTranslatable::make([
                 Text::make(__('Title'), 'seo_title')
                     ->hideFromIndex(),
                 Text::make(__('Description'), 'seo_description')
                     ->hideFromIndex(),
-                Image::make(__('Image'), 'seo_image')
-                    ->hideFromIndex(),
-//            ])
+            ]),
+            Image::make(__('Image'), 'seo_image')
+            ->hideFromIndex(),
         ];
     }
 

@@ -86,7 +86,8 @@
     .date_block {
         font-size: 180%;
         line-height: 1.5em;
-        color: rgba($descriptionColor,0.71);
+        color: $descriptionColor;
+        opacity: 0.71;
         margin-bottom: 10px;
     }
     .title_block {
@@ -100,25 +101,11 @@
         }
     }
     .author_block {
-       font-size: 160%;
-       line-height: 25px;
+       @extend %standardAuthor;
        margin-bottom: 15px;
     }
-    .author_name {
-        color: $siteColor;
-    }
     .description_block {
-        color: $secondTextColor;
-        opacity: 0.6;
-        @include textOverflow(3, relative);
-    }
-    &.hovered {
-        a.image_block img {
-            @include transStyle(scale(1.05));
-        }
-        .title_block a {
-            color: $siteColor;
-        }
+        @extend %standardDescription;
     }
     @include mediaRange($size1440, $size1680) {
         .info_block {
@@ -133,10 +120,6 @@
             flex: 0 0 49%;
             max-width: 49%;
         }
-        .author_block {
-            font-size: 150%;
-            line-height: 24px;
-        }
         .date_block {
             font-size: 160%;
         }
@@ -149,10 +132,6 @@
         .image_block {
             flex: 0 0 47%;
             max-width: 47%;
-        }
-        .author_block {
-            font-size: 140%;
-            line-height: 21px;
         }
         .date_block {
             font-size: 140%;
@@ -167,10 +146,6 @@
             max-width: 45%;
         }
 
-        .author_block {
-            font-size: 120%;
-            line-height: 18px;
-        }
         .date_block {
             font-size: 120%;
         }
@@ -194,10 +169,6 @@
         .image_block {
             flex: 0 0 43%;
             max-width: 43%;
-        }
-        .author_block {
-            font-size: 100%;
-            line-height: 16px;
         }
         .description_block {
             font-size: 120%;

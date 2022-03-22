@@ -1,0 +1,461 @@
+.recipe_inner {
+    .share_btns {
+        margin-top: 20px;
+        padding-top: 30px;
+        border-top: 1px solid;
+        .at-share-btn-elements {
+            justify-content: center;
+        }
+    }
+    @include mediaFrom($size1440) {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        ~ .latest_recipes { 
+            padding-top: 80px;
+        }
+    }
+    @include mediaRange($size1200, $size1440) {
+        padding-top: 60px;
+        padding-bottom: 35px;
+        ~ .latest_recipes { 
+            padding-top: 70px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        padding-top: 45px;
+        padding-bottom: 30px;
+        ~ .latest_recipes { 
+            padding-top: 60px;
+        }
+        .share_btns {
+            padding-top: 20px;
+        }
+    }
+    @include mediaRange($size576, $size960) {
+        padding-top: 30px;
+        padding-bottom: 25px;
+        ~ .latest_recipes { 
+            padding-top: 50px;
+        }
+    }
+    @include mediaTo($size960) {
+        .share_btns {
+            margin-left: -$containerPadding;
+            margin-right: -$containerPadding;
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+    }
+    @include mediaTo($size576) {
+        padding-top: 15px;
+        padding-bottom: 20px;
+        ~ .latest_recipes { 
+            padding-top: 40px;
+        }
+    }
+}
+
+.recipe_main {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    .image_block {
+        @include colSize(6);
+        padding-right: 20px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .info_block {
+        flex: 0 0 50%;
+        max-width: 800px;
+        width: 50%;
+        padding-left: 20px;
+        margin-left: auto;
+    }
+    .author_block {
+        font-size: 170%;
+        line-height: 20px;
+        margin-top: 15px;
+        font-family: $light;
+    }
+    .category_block {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        background: $flagColor;
+        color: $white;
+        padding: 8px 13px;
+        margin-top: 15px;
+        font-size: 150%;
+        line-height: 20px;
+        &:before,
+        &:after {
+            @include psevdoAbs;
+            left: 100%;
+            width: 20px;
+            height: 18px;
+            border-style: solid;
+            border-width: 9px 10px ;
+        }
+        &:before {
+            top: 0;
+            border-color: $flagColor transparent transparent $flagColor;
+        }
+        &:after {
+            bottom: 0;
+            border-color: transparent transparent $flagColor $flagColor;
+        }
+    }
+    .stats_list {
+        border: solid $black;
+        border-width: 1px 0;
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-top: 30px;
+        padding: 14px 0;
+        ul {
+            @extend %standardList;
+            white-space: nowrap;
+            display: flex;
+            font-size: 200%;
+            line-height: 1.5em;
+            li {
+                padding: 5px 20px;
+                display: flex;
+                &:not(:first-child) {
+                    border-left: 1px solid;
+                }
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+        .stat_type {
+            font-family: $medium;
+            padding-right: 20px;
+        }
+        .stat_info {
+            color: $siteColor;
+        }
+    }
+    .text_block {
+        font-size: 200%;
+        line-height: 28px;
+        font-family: $light;
+        margin-top: 20px;
+        color: $descriptionColor;
+    }
+    @include mediaFrom($size1440) {
+        .inner_title {
+            font-size: 400%;
+        }
+    }
+    @include mediaRange($size1200,$size1440) {
+        .image_block {
+            padding-right: 15px;
+        }
+        .info_block {
+            padding-left: 15px;
+        }
+        .stats_list {
+            margin-top: 25px;
+            padding: 13px 0;
+            ul {
+
+                font-size: 180%;
+            }
+        }
+        .text_block {
+            font-size: 180%;
+            line-height: 25px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        .author_block {
+            font-size: 150%;
+            line-height: 19px;
+        }
+        .image_block {
+            padding-right: 10px;
+        }
+        .info_block {
+            padding-left: 10px;
+        }
+        .stats_list {
+            margin-top: 20px;
+            padding: 12px 0;
+            ul {
+                font-size: 160%;
+                li {
+                    padding: 3px 15px;
+                }
+            }
+            .stat_type {
+                padding-right: 15px;
+            }
+        }
+        .text_block {
+            font-size: 160%;
+            line-height: 22px;
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        .author_block {
+            font-size: 130%;
+            line-height: 18px;
+        }
+        
+    }
+    @include mediaRange($size576, $size768) {
+        .author_block {
+            font-size: 120%;
+            line-height: 17px;
+        }
+    }
+    @include mediaTo($size960) {
+        flex-wrap: wrap;
+        .author_block {
+            margin-top: 10px;
+        }
+        .image_block {
+            padding-right: 0;
+            flex: 1;
+            min-width: 100%;
+            max-width: 100vw;
+            margin-left: -$containerPadding;
+            margin-right: -$containerPadding;
+        }
+        .info_block {
+            @include colSize(12);
+            padding-left: 0;
+            margin-top: 10px;
+        }
+        .category_block {
+            position: absolute;
+            left: -$containerPadding;
+            top: 25px;
+            margin-top: 0;
+        }
+        .inner_title {
+            max-width: 80%;
+            min-width: 270px;
+        }
+        .stats_list {
+            margin-top: 15px;
+            padding: 11px 0;
+            ul {
+                font-size: 150%;
+                line-height: 20px;
+                li {
+                    padding: 0 10px;
+                }
+            }
+            .stat_type {
+                padding-right: 10px;
+            }
+            .stat_info {
+                padding-right: 5px;
+            }
+        }
+        .text_block {
+            font-size: 130%;
+            line-height: 18px;
+            margin-top: 15px;
+        }
+    }
+    @include mediaTo($size576) {
+        .inner_title {
+            font-size: 240%;
+        }
+        .author_block {
+            font-size: 100%;
+            line-height: 16px;
+        }
+    }
+}
+
+.ingredients {
+    margin-top: 50px;
+    &_list {
+        @extend %standardList;
+        padding-top: 15px;
+        @include colCount(2);
+        @include colGap(55px);
+        font-size: 220%;
+        line-height: 31px;
+        li {
+            display: inline-flex;
+            vertical-align: top;
+            padding-top: 15px;
+            width: 100%;
+            align-items: flex-start;
+        }
+        .type_block {
+            display: flex;
+            justify-content: space-between;
+            color: $siteColor;
+            flex: 0 0 120px;
+            max-width: 120px;
+            margin-right: 25px;
+        }
+        .info_block {
+            flex: 1;
+            width: 50%;
+        }
+    }
+    @include mediaRange($size1200, $size1440) {
+        margin-top: 40px;
+        &_list {
+            font-size: 200%;
+            line-height: 28px;
+            @include colGap(40px);
+            .type_block {
+                max-width: 110px;
+                flex: 0 0 110px;
+                margin-right: 20px;
+            }
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        margin-top: 30px;
+        &_list {
+            font-size: 180%;
+            line-height: 25px;
+            @include colGap(30px);
+            .type_block {
+                flex: 0 0 100px;
+                max-width: 100px;
+                margin-right: 15px;
+            }
+        }
+        
+    }
+    @include mediaTo($size960) {
+        margin-top: 20px;
+        &_list {
+            font-size: 160%;
+            line-height: 23px;
+            @include colCount(1);
+            li {
+                padding-top: 10px;
+            }
+            .type_block {
+                flex: 0 0 90px;
+                max-width: 90px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.instructions {
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .image_block {
+        flex: 0 0 50%;
+        max-width: 795px;
+        padding-left: 20px;
+        order: 2;
+        img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+    }
+    .info_block {
+        flex: 0 0 50%;
+        max-width: 795px;
+        padding-right: 20px;
+    }
+    .text_block {
+        font-size: 250%;
+        line-height: 37px;
+        padding-top: 50px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: decimal;
+            list-style-position: inside; 
+            li:not(:last-child):after {
+                display: block;
+                font-size: inherit;
+                line-height: inherit;
+                content: ".";
+                color: transparent;
+            }
+        }
+    }
+    @include mediaRange($size1200,$size1440) {
+        .image_block {
+            padding-left: 15px;
+        }
+        .info_block {
+            padding-right: 15px;
+        }
+        .text_block {
+            font-size: 220%;
+            line-height: 31px;
+            padding-top: 40px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        .image_block {
+            padding-left: 10px;
+        }
+        .info_block {
+            padding-right: 10px;
+        }
+        .text_block {
+            font-size: 180%;
+            line-height: 25px;
+            padding-top: 30px;
+        }
+    }
+        
+    @include mediaTo($size960) {
+        margin-top: 40px;
+        position: relative;
+        flex-wrap: wrap;
+        .image_block {
+            flex: 1;
+            min-width: 50px;
+            max-width: 100vw;
+            margin-left: -$containerPadding;
+            margin-right: -$containerPadding;
+            order: unset;
+            margin-bottom: 15px;
+            padding-left: 0;
+        }
+        .info_block {
+            @include colSize(12);
+            padding-right: 0;
+        }
+        .section_head {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .text_block {
+            font-size: 150%;
+            line-height: 19px;
+            padding-top: 0;
+        }
+    }
+    @include mediaRange($size576, $size960) {
+        padding-top: 70px;
+    }
+    @include mediaTo($size576) {
+        padding-top: 53px;
+    }
+}
