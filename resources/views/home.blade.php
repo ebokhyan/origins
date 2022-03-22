@@ -29,9 +29,6 @@
                                 <a  class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $article['slug']])}}">
                                     <img src="{{asset('storage/'.$article['image'])}}" width="400" height="250" alt="" title=""/> article title
                                 </a>
-{{--                                @php--}}
-{{--                                dd($article['title']['en']);--}}
-{{--                                @endphp--}}
                                 <div class="info_block">
                                     <div class="date_block">{{$article['created_at']}}</div>
                                     <div class="title_block">

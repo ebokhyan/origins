@@ -8,14 +8,14 @@
                 @if(!empty($topFeatures[0]))
                 <li>
                     <div class="feature_block">
-                        <a class="image_block" href="feature_inner.php">
+                        <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[0]['slug']])}}">
                             <img src="{{asset('storage/'.$topFeatures[0]['image'])}}" width="1088" height="716" alt="" title=""/>
                             article title
                         </a>
                         <div class="info_block">
                             <div class="date_block">{{$topFeatures[0]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="feature_inner.php">{{$topFeatures[0]['title']['en']}}</a>
+                                <a href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[0]['slug']])}}">{{$topFeatures[0]['title']['en']}}</a>
                             </div>
                             <div class="author_block">
                                 By <span class="author_name">{{$topFeatures[0]['author']['en']}}</span>
@@ -29,14 +29,14 @@
                 @if(!empty($topFeatures[1]))
                 <li>
                     <div class="feature_block">
-                        <a class="image_block" href="feature_inner.php">
+                        <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[1]['slug']])}}">
                             <img src="{{asset('storage/'.$topFeatures[1]['image'])}}" width="500" height="250" alt="" title=""/>
                             article title
                         </a>
                         <div class="info_block">
                             <div class="date_block">{{$topFeatures[1]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="feature_inner.php">{{$topFeatures[1]['title']['en']}}</a>
+                                <a href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[1]['slug']])}}">{{$topFeatures[1]['title']['en']}}</a>
                             </div>
                             <div class="author_block">
                                 By <span class="author_name">{{$topFeatures[1]['author']['en']}}</span>
@@ -49,14 +49,14 @@
                 @if(!empty($topFeatures[2]))
                 <li>
                     <div class="feature_block">
-                        <a class="image_block" href="feature_inner.php">
+                        <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[2]['slug']])}}">
                             <img src="{{asset('storage/'.$topFeatures[2]['image'])}}" width="500" height="250" alt="" title=""/>
                             article title
                         </a>
                         <div class="info_block">
                             <div class="date_block">{{$topFeatures[2]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="feature_inner.php">{{$topFeatures[2]['title']['en']}}.</a>
+                                <a href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[2]['slug']])}}">{{$topFeatures[2]['title']['en']}}.</a>
                             </div>
                             <div class="author_block">
                                 By <span class="author_name">{{$topFeatures[2]['author']['en']}}</span>

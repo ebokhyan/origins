@@ -110,4 +110,18 @@ class TemplatesController extends Controller
         }
         return response()->json(['status' => 'page_not_found'], 404);
     }
+
+    public function getFeature($slug){
+        $topFeatures = Article::top()->latest()->take(4)->get()->toArray();
+        $feature = Article::published()->where('slug',$slug)->first();
+        $adds = Ad::published()->where('features','1')->get()->toArray();
+        $similarFeatures = Article::published()
+            ->whereIn('id', json_decode($feature->similar))
+            ->latest()
+            ->take(4)
+            ->get()
+            ->makeHidden(['published','updated_at','sort_order'])
+            ->toArray();
+        return view('feature_inner', ['content' => $feature, 'topFeatures' => $topFeatures,'similarFeatures' => $similarFeatures, 'adds' => $adds]);
+    }
 }

@@ -52,6 +52,10 @@ class Ad extends Resource
             FilemanagerField::make('Image')
                 ->filterBy('Image')
                 ->displayAsImage(),
+            Boolean::make('Show on features inner page','features')
+                ->trueValue('1')
+                ->falseValue('0')
+                ->sortable(),
             Boolean::make('Published')
                 ->trueValue('1')
                 ->falseValue('0')

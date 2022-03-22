@@ -15,6 +15,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Panel;
+use OptimistDigital\MultiselectField\Multiselect;
 use OptimistDigital\NovaSortable\Traits\HasSortableRows;
 
 class Article extends Resource
@@ -90,6 +91,9 @@ class Article extends Resource
                 ->trueValue('1')
                 ->falseValue('0')
                 ->sortable(),
+            Multiselect::make(__('Similar features'),'similar')
+                ->options($this->getFeatures())
+                ->max(3),
             Boolean::make('Published')
                 ->trueValue('1')
                 ->falseValue('0')
@@ -109,6 +113,7 @@ class Article extends Resource
             ->hideFromIndex(),
         ];
     }
+
 
     /**
      * Get the cards available for the request.
@@ -152,5 +157,10 @@ class Article extends Resource
     public function actions(Request $request)
     {
         return [];
+    }
+
+    public function getFeatures(){
+        $features = \App\Models\Article::published()->pluck('title', 'id');
+        return $features;
     }
 }

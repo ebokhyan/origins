@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/feature_inner.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TemplatesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TemplatesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Ad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/latest-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/latest-features-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,18 +194,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\originsMagazin\public\images" />
       <recent name="C:\xampp\htdocs\originsMagazin\public" />
       <recent name="C:\xampp\htdocs\originsMagazin\app\Http" />
       <recent name="C:\xampp\htdocs\originsMagazin\storage\app\public" />
       <recent name="C:\xampp\htdocs\originsMagazin\resources\views\vendor\notifications" />
-      <recent name="C:\xampp\htdocs\originsMagazin\public\assets\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\originsMagazin\app\View\Composers" />
@@ -231,7 +236,7 @@
       <workItem from="1645081396911" duration="30840000" />
       <workItem from="1645881968448" duration="735000" />
       <workItem from="1647592431742" duration="6470000" />
-      <workItem from="1647848522219" duration="23186000" />
+      <workItem from="1647848522219" duration="27723000" />
     </task>
     <servers />
   </component>
