@@ -11,7 +11,7 @@
             </div>
             <div class="sign_block">
                 <a href="login.php" class="icon_user primary_btn main_btn">Login</a>
-            </div>
+
            <x-social-lists></x-social-lists>
             <div class="lg_block">
                 <a href="#">AM</a>
