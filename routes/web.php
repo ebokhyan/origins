@@ -16,7 +16,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-Route::get('/home','TemplatesController@getHome')->name('home');
+Route::get('/home','TemplatesController@getHome')->name('main-home');
 Route::get('/features','TemplatesController@getFeatures')->name('features');
 Route::get('/features/{slug}','TemplatesController@getFeature')->name('feature');
 

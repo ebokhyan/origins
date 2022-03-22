@@ -5,13 +5,11 @@
                 <span></span>
             </button>
             <div class="main_logo">
-                <?php if( strpos($_SERVER['SCRIPT_FILENAME'], 'index.php') == false):?> <a href="index.php"><?php endif?>
-                    <img width="303" height="99" src="css/images/main_logo.svg" alt="" title=""/>
-                    <?php if( strpos($_SERVER['SCRIPT_FILENAME'], 'index.php') == false):?> </a><?php endif?>
+                    <a href="{{route('main-home')}}"> <img width="303" height="99" src="{{asset("css/images/main_logo.svg")}}" alt="" title=""/></a>
             </div>
             <div class="sign_block">
                 <a href="login.php" class="icon_user primary_btn main_btn">Login</a>
-
+            </div>
            <x-social-lists></x-social-lists>
             <div class="lg_block">
                 <a href="#">AM</a>
@@ -29,7 +27,7 @@
         <div class="menu_block">
             <div class="menu_inner">
                 <ul class="main_menu">
-                    <li><a href="features_listing.php">Features</a></li>
+                    <li><a href="{{route('features')}}">Features</a></li>
                     <li><a href="news_listing.php">News</a></li>
                     <li><a href="recipes_listing.php">Recipes</a></li>
                     <li><a href="wines.php">Wines</a></li>

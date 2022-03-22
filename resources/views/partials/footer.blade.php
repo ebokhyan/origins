@@ -56,7 +56,7 @@
     <div class="footer_menu">
         <div class="page_container">
             <ul>
-                <li><a href="features_listing.php">Features</a></li>
+                <li><a href="{{route('features')}}">Features</a></li>
                 <li><a href="news_listing.php">News</a></li>
                 <li><a href="recipes_listing.php">Recipes</a></li>
                 <li><a href="wines.php">Wines</a></li>
