@@ -38,14 +38,7 @@
                             @endforeach
                         </ul>
                     @endif
-
                     <x-vertical-banner-component :banners="$adds"></x-vertical-banner-component>
-{{--                    <div class="vertical_bnners">--}}
-{{--                        <a href="#" target="_blank" class="bnner_inner">--}}
-{{--                            <img src="images/v_banner.jpg" alt="" title="" width="300" height="600"/>--}}
-{{--                            banner title--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
                 </div>
             </div>
             @if(!empty($similarFeatures))
@@ -75,60 +68,6 @@
                                 </div>
                             </li>
                         @endforeach
-{{--                        <li>--}}
-{{--                            <div class="feature_block">--}}
-{{--                                <a  class="image_block" href="feature_inner.php">--}}
-{{--                                    <img src="images/article_image2.jpg" width="530" height="250" alt="" title=""/>--}}
-{{--                                    article title--}}
-{{--                                </a>--}}
-{{--                                <div class="info_block">--}}
-{{--                                    <div class="date_block">18 March, 2021</div>--}}
-{{--                                    <div class="title_block">--}}
-{{--                                        <a href="feature_inner.php">Lorem ipsum dolor sit amet.</a>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="author_block">--}}
-{{--                                        By <span class="author_name">Tina B.</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <div class="feature_block">--}}
-{{--                                <a  class="image_block" href="feature_inner.php">--}}
-{{--                                    <img src="images/article_image3.jpg" width="530" height="250" alt="" title=""/>--}}
-{{--                                    article title--}}
-{{--                                </a>--}}
-{{--                                <div class="info_block">--}}
-{{--                                    <div class="date_block">18 March, 2021</div>--}}
-{{--                                    <div class="title_block">--}}
-{{--                                        <a href="feature_inner.php">Lorem ipsum dolor sit amet.</a>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="author_block">--}}
-{{--                                        By <span class="author_name">Tina B.</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <div class="feature_block">--}}
-{{--                                <a  class="image_block" href="feature_inner.php">--}}
-{{--                                    <img src="images/article_image3.jpg" width="530" height="250" alt="" title=""/>--}}
-{{--                                    article title--}}
-{{--                                </a>--}}
-{{--                                <div class="info_block">--}}
-{{--                                    <div class="date_block">18 March, 2021</div>--}}
-{{--                                    <div class="title_block">--}}
-{{--                                        <a href="feature_inner.php">Lorem ipsum dolor sit amet.</a>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="author_block">--}}
-{{--                                        By <span class="author_name">Tina B.</span>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
                     </ul>
                 </div>
             </div>

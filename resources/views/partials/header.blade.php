@@ -28,7 +28,7 @@
             <div class="menu_inner">
                 <ul class="main_menu">
                     <li><a href="{{route('features')}}">Features</a></li>
-                    <li><a href="news_listing.php">News</a></li>
+                    <li><a href="{{route('news')}}">News</a></li>
                     <li><a href="recipes_listing.php">Recipes</a></li>
                     <li><a href="wines.php">Wines</a></li>
                     <li><a href="guides.php">Guides</a></li>

@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class LatestFeaturesComponent extends Component
+class LatestComponent extends Component
 {
     public $articles;
     public $banners;
@@ -26,6 +26,6 @@ class LatestFeaturesComponent extends Component
      */
     public function render()
     {
-        return view('components.latest-features-component');
+        return view('components.latest-component');
     }
 }

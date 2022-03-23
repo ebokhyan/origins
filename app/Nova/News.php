@@ -5,6 +5,8 @@ namespace App\Nova;
 use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Illuminate\Http\Request;
 use Infinety\Filemanager\FilemanagerField;
+use Kongulov\NovaTabTranslatable\NovaTabTranslatable;
+use Kongulov\NovaTabTranslatable\TranslatableTabToRowTrait;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
@@ -14,9 +16,12 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
+use OptimistDigital\MultiselectField\Multiselect;
+use OptimistDigital\NovaSortable\Traits\HasSortableRows;
 
 class News extends Resource
 {
+    use HasSortableRows,TranslatableTabToRowTrait;
     /**
      * The model the resource corresponds to.
      *
@@ -60,16 +65,39 @@ class News extends Resource
             Slug::make(__('Slug'),'slug')
                 ->separator('-')
                 ->rules('required', 'max:255','alpha_dash')
-                ->from('title')
                 ->hideFromIndex(),
-//            NovaTabTranslatable::make([
-            Text::make(__('Title'),'title')
-                ->rules('required', 'max:255')
-                ->sortable(),
+            NovaTabTranslatable::make([
+                Text::make(__('Title'),'title')
+                    ->rules('required', 'max:255')
+                    ->sortable(),
+                Text::make(__('Author'),'author')
+                    ->rules('max:255')
+                    ->sortable(),
+                Text::make(__('Photographer'),'photographer')
+                    ->rules('max:255')
+                    ->sortable()
+                    ->hideFromIndex(),
+                Text::make(__('Translator'),'translator')
+                    ->rules('max:255')
+                    ->sortable()
+                    ->hideFromIndex(),
+                Textarea::make(__('Short description'),'short_description')
+                    ->hideFromIndex(),
+                NovaTinyMCE::make(__('Description'),'description')
+                    ->hideFromIndex(),
+            ]),
+            Date::make(__('Date'),'created_at'),
             FilemanagerField::make('Image')
                 ->filterBy('Image')
                 ->displayAsImage(),
-            Date::make(__('Created at'),'created_at')
+            Boolean::make('Top')
+                ->trueValue('1')
+                ->falseValue('0')
+                ->sortable(),
+            Multiselect::make(__('Similar news'),'similar')
+                ->options($this->getNews())
+                ->max(3)
+                ->reorderable()
                 ->hideFromIndex(),
             Boolean::make('Published')
                 ->trueValue('1')
@@ -80,14 +108,14 @@ class News extends Resource
 
     public function seoFields(){
         return [
-//            NovaTabTranslatable::make([
+            NovaTabTranslatable::make([
             Text::make(__('Title'), 'seo_title')
                 ->hideFromIndex(),
             Text::make(__('Description'), 'seo_description')
                 ->hideFromIndex(),
+            ]),
             Image::make(__('Image'), 'seo_image')
                 ->hideFromIndex(),
-//            ])
         ];
     }
     /**
@@ -133,4 +161,10 @@ class News extends Resource
     {
         return [];
     }
+
+    public function getNews(){
+        $news = \App\Models\News::published()->pluck('title', 'id');
+        return $news;
+    }
+
 }

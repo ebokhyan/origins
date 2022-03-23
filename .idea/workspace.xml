@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/feature_inner.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TemplatesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TemplatesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Ad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Nova/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/latest-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/latest-features-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Templates/FeaturesTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Templates/FeaturesTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/LatestFeaturesComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/LatestComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/TopFeaturesComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/TopFeaturesComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/nova-page-manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/nova-page-manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/latest-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/feature_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/feature_inner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/features.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/features.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +245,7 @@
       <workItem from="1645081396911" duration="30840000" />
       <workItem from="1645881968448" duration="735000" />
       <workItem from="1647592431742" duration="6470000" />
-      <workItem from="1647848522219" duration="27723000" />
+      <workItem from="1647848522219" duration="35551000" />
     </task>
     <servers />
   </component>

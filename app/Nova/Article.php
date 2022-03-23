@@ -93,7 +93,8 @@ class Article extends Resource
                 ->sortable(),
             Multiselect::make(__('Similar features'),'similar')
                 ->options($this->getFeatures())
-                ->max(3),
+                ->max(3)
+                ->reorderable(),
             Boolean::make('Published')
                 ->trueValue('1')
                 ->falseValue('0')

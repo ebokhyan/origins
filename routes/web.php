@@ -19,6 +19,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 Route::get('/home','TemplatesController@getHome')->name('main-home');
 Route::get('/features','TemplatesController@getFeatures')->name('features');
 Route::get('/features/{slug}','TemplatesController@getFeature')->name('feature');
+Route::get('/news','TemplatesController@getNews')->name('news');
 
 Route::get('/','MainController@getIndex')->name('home');
 Route::post('/subscribe','MainController@subscribe')->name('subscribe');

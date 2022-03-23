@@ -81,11 +81,7 @@ class TemplatesController extends Controller
                 ->toArray();
             $latestFeatures = Article::published()
                 ->whereNotIn('id', json_decode($content['data']->top_features))
-                ->latest()
-                ->take(4)
-                ->get()
-                ->makeHidden(['published','updated_at','sort_order'])
-                ->toArray();
+                ->paginate(6);
             $verticalBanners = Ad::published()
                 ->whereIn('id',json_decode($content['data']->vertical_adds))
                 ->get()
@@ -107,6 +103,54 @@ class TemplatesController extends Controller
                 ],
             ];
             return view('features', ['content' => $content]);
+        }
+        return response()->json(['status' => 'page_not_found'], 404);
+    }
+
+    public function getNews(){
+        $content = nova_page_manager_get_page_by_path('news', null, 'en');
+        if($content){
+            $topNews= News::top()
+                ->whereIn('id',json_decode($content['data']->top_news))
+                ->get()
+                ->makeHidden(['published','updated_at','sort_order'])
+                ->toArray();
+            $addBanner = Ad::published()
+                ->where('id',$content['data']->horizontal_ad)
+                ->first()
+                ->makeHidden(['published','created_at','updated_at','sort_order'])
+                ->toArray();
+            $latest3News = News::published()
+                ->whereNotIn('id', json_decode($content['data']->top_news))
+                ->take(3)
+                ->get();
+            $latestNews = News::published()
+                ->whereNotIn('id', json_decode($content['data']->top_news))
+                ->whereNotIn('id', $latest3News->pluck('id'))
+                ->skip(3)
+                ->paginate(6);
+            $verticalBanners = Ad::published()
+                ->whereIn('id',json_decode($content['data']->vertical_adds))
+                ->get()
+                ->makeHidden(['published','created_at','updated_at','sort_order'])
+                ->toArray();
+            $content = [
+                'slug' => $content['slug'],
+                'template' => $content['template'],
+                'seo' => [
+                    'title' => $content['seo_title'],
+                    'description' => $content['seo_description'],
+                    'image' => $content['seo_image'],
+                ],
+                'topNews' => $topNews,
+                'banner' => $addBanner,
+                'latestNews' => [
+                    'latest3' => $latest3News,
+                    'news' => $latestNews,
+                    'banners' => $verticalBanners,
+                ],
+            ];
+            return view('news', ['content' => $content]);
         }
         return response()->json(['status' => 'page_not_found'], 404);
     }

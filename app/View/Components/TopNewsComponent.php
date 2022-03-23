@@ -4,18 +4,20 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class TopFeaturesComponent extends Component
+class TopNewsComponent extends Component
 {
-    public $topFeatures;
+    public $topNews;
+    public $latest;
     public $banner;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($topFeatures,$banner)
+    public function __construct($topNews,$banner,$latest)
     {
-        $this->topFeatures = $topFeatures;
+        $this->topNews = $topNews;
+        $this->latest = $latest;
         $this->banner = $banner;
     }
 
@@ -26,6 +28,6 @@ class TopFeaturesComponent extends Component
      */
     public function render()
     {
-        return view('components.top-features-component');
+        return view('components.top-news-component');
     }
 }
