@@ -31,7 +31,12 @@
                             @foreach($top as $item)
                                 <li>
                                     <div class="title_block">
-                                        <a href="{{route($type,['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
+                                        @if($type == 'news_inner')
+                                            <a href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}
+                                        @else
+                                            <a href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}
+                                        @endif
+                                        </a>
                                     </div>
                                     <div class="date_block">{{$item['created_at']}}</div>
                                 </li>
@@ -51,14 +56,22 @@
                         @foreach($similar as $item)
                             <li>
                                 <div class="feature_block">
-                                    <a  class="image_block" href="{{route($type,['locale' => 'en', 'slug' => $item['slug']])}}">
+                                    @if($type == 'news_inner')
+                                        <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">
+                                    @else
+                                        <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">
+                                    @endif
                                         <img src="{{asset('storage/'.$item['image'])}}" width="530" height="250" alt="" title=""/>
                                         article title
                                     </a>
                                     <div class="info_block">
                                         <div class="date_block">{{$item['created_at']}}</div>
                                         <div class="title_block">
-                                            <a href="{{route($type,['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
+                                            @if($type == 'news_inner')
+                                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
+                                            @else
+                                                <a href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
+                                            @endif
                                         </div>
                                         <div class="author_block">
                                             By <span class="author_name">{{$item['author']['en']}}</span>

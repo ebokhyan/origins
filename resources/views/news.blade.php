@@ -17,7 +17,7 @@
                                       :banner="$content['banner']"
                                       :latest="$content['latestNews']['latest3']">
                 </x-top-news-component>
-                <x-latest-component :type="'news'"
+                <x-latest-component :type="'news_inner'"
                                     :items="$content['latestNews']['news']"
                                     :banners="$content['latestNews']['banners']">
                 </x-latest-component>

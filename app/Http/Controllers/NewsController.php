@@ -75,7 +75,7 @@ class NewsController extends Controller
                 ->makeHidden(['published','updated_at','sort_order'])
                 ->toArray();
             return view('feature_news_inner', [
-                'type' => 'news',
+                'type' => 'news_inner',
                 'content' => $news,
                 'top' => !empty($topNews) ? $topNews : [],
                 'similar' => !empty($similarNews) ? $similarNews : [],

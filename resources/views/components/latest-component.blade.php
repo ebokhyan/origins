@@ -15,14 +15,22 @@
                 @foreach($items as $item)
                     <li>
                         <div class="feature_block">
-                            <a class="image_block" href="{{route($type,['locale' => 'en', 'slug' => $item->slug])}}">
+                            @if($type == 'news_inner')
+                                <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $item->slug])}}">
+                            @else
+                                <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $item->slug])}}">
+                            @endif
                                 <img src="{{asset('storage/'.$item->image)}}" width="390" height="250" alt="" title=""/>
                                 article title
-                            </a>
+                                </a>
                             <div class="info_block">
                                 <div class="date_block">{{$item->date}}</div>
                                 <div class="title_block">
-                                    <a href="{{route($type,['locale' => 'en', 'slug' => $item->slug])}}">{{@$item->title}}</a>
+                                    @if($type == 'news_inner')
+                                        <a href="{{route('news_inner',['locale' => 'en', 'slug' => $item->slug])}}">{{@$item->title}}</a>
+                                    @else
+                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $item->slug])}}">{{@$item->title}}</a>
+                                    @endif
                                 </div>
                                 <div class="author_block">
                                     By <span class="author_name">{{@$item->author}}</span>
