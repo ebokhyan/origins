@@ -7,16 +7,14 @@ use Illuminate\View\Component;
 class TopFeaturesComponent extends Component
 {
     public $topFeatures;
-    public $banner;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($topFeatures,$banner)
+    public function __construct($topFeatures)
     {
         $this->topFeatures = $topFeatures;
-        $this->banner = $banner;
     }
 
     /**

@@ -173,6 +173,6 @@ class TemplatesController extends Controller
             ->get()
             ->makeHidden(['published','updated_at','sort_order'])
             ->toArray();
-        return view('feature_inner', ['content' => $feature, 'topFeatures' => $topFeatures,'similarFeatures' => $similarFeatures, 'adds' => $adds]);
+        return view('feature_news_inner', ['content' => $feature, 'topFeatures' => $topFeatures,'similarFeatures' => $similarFeatures, 'adds' => $adds]);
     }
 }

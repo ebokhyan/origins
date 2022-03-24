@@ -21,6 +21,7 @@
                 <h2 class="section_title">Latest Articles</h2>
                 <a href="{{route('features')}}" class="view_all">View All</a>
             </div>
+
             @if(!empty($content['latestArticles']['articles']))
                 <ul class="articles_list">
                     @foreach($content['latestArticles']['articles'] as $article)
@@ -47,6 +48,7 @@
             @endif
         </div>
     </div>
+
     @if(!empty($content['latestArticles']['banner']))
         <div class="reward_section">
             <div class="page_container">
@@ -61,6 +63,7 @@
                 <h2 class="section_title">News</h2>
                 <a href="news_listing.php" class="view_all">View All</a>
             </div>
+
             <div class="news_list">
                 @if(!empty($content['latestNews']['news']))
                 <ul>
@@ -70,7 +73,7 @@
                                 <div class="info_block">
                                     <div class="date_block">{{$news['created_at']}}</div>
                                     <div class="title_block">
-                                        <a href="news_inner.php">{{$news['title']}}</a></div>
+                                        <a href="news_inner.php">{{$news['title']['en']}}</a></div>
                                 </div>
                                 <a href="news_inner.php" class="image_block">
                                     <img src="{{asset('storage/'.$news['image'])}}" alt="" title="" width="316" height="140"/>
@@ -81,6 +84,7 @@
                     @endforeach
                 </ul>
                 @endif
+
                 @if($content['latestNews']['banner'])
                     <x-add-banner-component :details="$content['latestNews']['banner']"></x-add-banner-component>
                 @endif

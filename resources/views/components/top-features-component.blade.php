@@ -1,7 +1,9 @@
+
     <div class="top_features">
         <div class="section_head">
             <h2 class="section_title">Wine, Food & People</h2>
         </div>
+
         @if(!empty($topFeatures))
         <div class="features_list">
             <ul>
