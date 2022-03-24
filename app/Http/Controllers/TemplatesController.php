@@ -133,7 +133,7 @@ class TemplatesController extends Controller
                 ->whereNotIn('id', $topNews_array)
                 ->whereNotIn('id', $latest3News->pluck('id'))
                 ->skip(3)
-                ->paginate(6);
+                ->paginate(4);
             if(isset($content['data']->vertical_adds)){
                 $verticalBanners = Ad::published()
                     ->whereIn('id',json_decode($content['data']->vertical_adds))
