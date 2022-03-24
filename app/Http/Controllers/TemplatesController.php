@@ -109,7 +109,7 @@ class TemplatesController extends Controller
 
     public function getNews(){
         $content = nova_page_manager_get_page_by_path('news', null, 'en');
-        $topNews_array = $content['data']->top_news ? json_decode($content['data']->top_news) : [];
+        $topNews_array = !empty($content['data']->top_news) ? json_decode($content['data']->top_news) : [];
         $addBanner = [];
         if($content){
             $topNews= News::top()
