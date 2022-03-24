@@ -79,7 +79,9 @@
             @endif
         </ul>
         @endif
-        <x-horizontal-banner-component :banner="$banner"></x-horizontal-banner-component>
+        @if($banner)
+            <x-horizontal-banner-component :banner="$banner"></x-horizontal-banner-component>
+        @endif
         @if(!empty($latest))
             <ul class="bottom_list">
                 @foreach($latest as $key => $news)
@@ -121,36 +123,6 @@
                         </li>
                     @endswitch
                 @endforeach
-                {{--            <li>--}}
-                {{--                <div class="news_block">--}}
-                {{--                    <a  class="image_block" href="news_inner.php">--}}
-                {{--                        <img src="images/article_image2.jpg" width="395" height="300" alt="" title=""/>--}}
-                {{--                        article title--}}
-                {{--                    </a>--}}
-                {{--                    <div class="info_block">--}}
-                {{--                        <div class="date_block">18 March, 2021</div>--}}
-                {{--                        <div class="title_block">--}}
-                {{--                            <a href="news_inner.php">Lorem ipsum dolor sit amet.</a>--}}
-                {{--                        </div>--}}
-                {{--                        <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
-                {{--            </li>--}}
-                {{--            <li>--}}
-                {{--                <div class="news_block">--}}
-                {{--                    <a  class="image_block" href="news_inner.php">--}}
-                {{--                        <img src="images/article_image3.jpg" width="345" height="300" alt="" title=""/>--}}
-                {{--                        article title--}}
-                {{--                    </a>--}}
-                {{--                    <div class="info_block">--}}
-                {{--                        <div class="date_block">18 March, 2021</div>--}}
-                {{--                        <div class="title_block">--}}
-                {{--                            <a href="news_inner.php">Lorem ipsum dolor sit amet.</a>--}}
-                {{--                        </div>--}}
-                {{--                        <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
-                {{--            </li>--}}
             </ul>
         @endif
     </div>
