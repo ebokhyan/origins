@@ -3,6 +3,7 @@
         <h2 class="section_title">Top News &#38; Spotlights</h2>
     </div>
     <div class="news_list">
+        @if(!empty($topNews))
         <ul class="top_list">
             @if(!empty($topNews[0]))
                 <li>
@@ -77,7 +78,7 @@
                 </li>
             @endif
         </ul>
-
+        @endif
         <x-horizontal-banner-component :banner="$banner"></x-horizontal-banner-component>
         @if(!empty($latest))
             <ul class="bottom_list">
