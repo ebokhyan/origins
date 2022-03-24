@@ -111,6 +111,7 @@ class TemplatesController extends Controller
         $content = nova_page_manager_get_page_by_path('news', null, 'en');
         $topNews_array = !empty($content['data']->top_news) ? json_decode($content['data']->top_news) : [];
         $addBanner = [];
+        $verticalBanners = [];
         if($content){
             $topNews= News::top()
                 ->whereIn('id',$topNews_array)
