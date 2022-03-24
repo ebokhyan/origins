@@ -13,10 +13,12 @@
                     <button type="submit" class="icon_search" aria-label="search"></button>
                 </form>
             </div>
-
            <x-top-features-component :topFeatures="$content['topFeatures']"></x-top-features-component>
            <x-horizontal_banner-component :banner="$content['banner']"></x-horizontal_banner-component>
-           <x-latest-component :articles="$content['latestFeatures']['articles']" :banners="$content['latestFeatures']['banners']"></x-latest-component>
+           <x-latest-component :type="'features'"
+                               :items="$content['latestFeatures']['articles']"
+                               :banners="$content['latestFeatures']['banners']">
+           </x-latest-component>
         </div>
     </div>
 </div>

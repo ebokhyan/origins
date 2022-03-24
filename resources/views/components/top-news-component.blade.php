@@ -8,7 +8,7 @@
             @if(!empty($topNews[0]))
                 <li>
                     <div class="news_block">
-                        <a class="image_block" href="news_inner.php">
+                        <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[0]['slug']])}}">
                             <img src="{{asset('storage/'.$topNews[0]['image'])}}" width="750" height="519" alt=""
                                  title=""/>
                             article title
@@ -16,7 +16,7 @@
                         <div class="info_block">
                             <div class="date_block">{{$topNews[0]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="news_inner.php">{{$topNews[0]['title']['en']}}</a>
+                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[0]['slug']])}}">{{$topNews[0]['title']['en']}}</a>
                             </div>
                             <div class="description_block">{{$topNews[0]['short_description']['en']}}</div>
                         </div>
@@ -26,7 +26,7 @@
             @if(!empty($topNews[1]))
                 <li>
                     <div class="news_block">
-                        <a class="image_block" href="news_inner.php">
+                        <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[1]['slug']])}}">
                             <img src="{{asset('storage/'.$topNews[1]['image'])}}" width="393" height="519" alt=""
                                  title=""/>
                             article title
@@ -34,7 +34,7 @@
                         <div class="info_block">
                             <div class="date_block">{{$topNews[1]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="news_inner.php">{{$topNews[1]['title']['en']}}</a>
+                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[1]['slug']])}}">{{$topNews[1]['title']['en']}}</a>
                             </div>
                             <div class="description_block">{{$topNews[1]['short_description']['en']}}</div>
                         </div>
@@ -44,7 +44,7 @@
             @if(!empty($topNews[2]))
                 <li>
                     <div class="news_block">
-                        <a class="image_block" href="news_inner.php">
+                        <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[2]['slug']])}}">
                             <img src="{{asset('storage/'.$topNews[2]['image'])}}" width="345" height="122" alt=""
                                  title=""/>
                             article title
@@ -52,7 +52,7 @@
                         <div class="info_block">
                             <div class="date_block">{{$topNews[2]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="news_inner.php">{{$topNews[2]['title']['en']}}</a>
+                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[2]['slug']])}}">{{$topNews[2]['title']['en']}}</a>
                             </div>
                             <div class="description_block">{{$topNews[2]['short_description']['en']}}</div>
                         </div>
@@ -62,7 +62,7 @@
             @if(!empty($topNews[3]))
                 <li>
                     <div class="news_block">
-                        <a class="image_block" href="news_inner.php">
+                        <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[3]['slug']])}}">
                             <img src="{{asset('storage/'.$topNews[3]['image'])}}" width="345" height="122" alt=""
                                  title=""/>
                             article title
@@ -70,7 +70,7 @@
                         <div class="info_block">
                             <div class="date_block">{{$topNews[3]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="news_inner.php">{{$topNews[3]['title']['en']}}</a>
+                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[3]['slug']])}}">{{$topNews[3]['title']['en']}}</a>
                             </div>
                             <div class="description_block">{{$topNews[3]['short_description']['en']}}</div>
                         </div>
@@ -89,7 +89,7 @@
                         @case(0)
                         <li>
                             <div class="news_block">
-                                <a class="image_block" href="news_inner.php">
+                                <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $news->slug])}}">
                                     <img src="{{asset('storage/'.$news->image)}}" width="750" height="300" alt=""
                                          title=""/>
                                     article title
@@ -97,7 +97,7 @@
                                 <div class="info_block">
                                     <div class="date_block">{{$news->date}}</div>
                                     <div class="title_block">
-                                        <a href="news_inner.php">{{$news->title}}</a>
+                                        <a href="{{route('news_inner',['locale' => 'en', 'slug' => $news->slug])}}">{{$news->title}}</a>
                                     </div>
                                     <div class="description_block">{{$news->short_descrtion}}</div>
                                 </div>
@@ -107,7 +107,7 @@
                         @default
                         <li>
                             <div class="news_block">
-                                <a class="image_block" href="news_inner.php">
+                                <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $news->slug])}}">
                                     <img src="{{asset('storage/'.$news->image)}}" width="395" height="300" alt=""
                                          title=""/>
                                     article title
@@ -115,7 +115,7 @@
                                 <div class="info_block">
                                     <div class="date_block">{{$news->date}}</div>
                                     <div class="title_block">
-                                        <a href="news_inner.php">{{$news->title}}</a>
+                                        <a href="{{route('news_inner',['locale' => 'en', 'slug' => $news->slug])}}">{{$news->title}}</a>
                                     </div>
                                     <div class="description_block">{{$news->short_descrtion}}</div>
                                 </div>

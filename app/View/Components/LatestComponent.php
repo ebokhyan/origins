@@ -6,16 +6,18 @@ use Illuminate\View\Component;
 
 class LatestComponent extends Component
 {
-    public $articles;
+    public $type;
+    public $items;
     public $banners;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($articles, $banners)
+    public function __construct($type, $items, $banners)
     {
-        $this->articles = $articles;
+        $this->type = $type;
+        $this->items = $items;
         $this->banners  = $banners;
     }
 

@@ -16,10 +16,11 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-Route::get('/home','TemplatesController@getHome')->name('main-home');
-Route::get('/features','TemplatesController@getFeatures')->name('features');
-Route::get('/features/{slug}','TemplatesController@getFeature')->name('feature');
-Route::get('/news','TemplatesController@getNews')->name('news');
+Route::get('/home','HomeController@getHome')->name('main-home');
+Route::get('/features','FeaturesController@getFeatures')->name('features');
+Route::get('/features/{slug}','FeaturesController@getFeature')->name('feature');
+Route::get('/news','NewsController@getNews')->name('news');
+Route::get('/news/{slug}','NewsController@getNewsBySlug')->name('news_inner');
 
 Route::get('/','MainController@getIndex')->name('home');
 Route::post('/subscribe','MainController@subscribe')->name('subscribe');

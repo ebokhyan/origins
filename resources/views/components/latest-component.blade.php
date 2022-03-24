@@ -9,25 +9,25 @@
             <button type="submit" class="icon_search" aria-label="search"></button>
         </form>
     </div>
-    @if(!empty($articles))
+    @if(!empty($items))
         <div class="features_list">
             <ul>
-                @foreach($articles as $article)
+                @foreach($items as $item)
                     <li>
                         <div class="feature_block">
-                            <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $article->slug])}}">
-                                <img src="{{asset('storage/'.$article->image)}}" width="390" height="250" alt="" title=""/>
+                            <a class="image_block" href="{{route($type,['locale' => 'en', 'slug' => $item->slug])}}">
+                                <img src="{{asset('storage/'.$item->image)}}" width="390" height="250" alt="" title=""/>
                                 article title
                             </a>
                             <div class="info_block">
-                                <div class="date_block">{{$article->date}}</div>
+                                <div class="date_block">{{$item->date}}</div>
                                 <div class="title_block">
-                                    <a href="{{route('feature',['locale' => 'en', 'slug' => $article->slug])}}">{{@$article->title}}</a>
+                                    <a href="{{route($type,['locale' => 'en', 'slug' => $item->slug])}}">{{@$item->title}}</a>
                                 </div>
                                 <div class="author_block">
-                                    By <span class="author_name">{{@$article->author}}</span>
+                                    By <span class="author_name">{{@$item->author}}</span>
                                 </div>
-                                <div class="description_block">{{@$article->short_description}}</div>
+                                <div class="description_block">{{@$item->short_description}}</div>
                             </div>
                         </div>
                     </li>

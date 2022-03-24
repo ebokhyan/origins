@@ -25,15 +25,15 @@
                     </div>
                 </div>
                 <div class="right_col">
-                    @if(!empty($topFeatures))
+                    @if(!empty($top))
                         <div class="col_subtitle">Top Stories</div>
                         <ul class="stories_list">
-                            @foreach($topFeatures as $feature)
+                            @foreach($top as $item)
                                 <li>
                                     <div class="title_block">
-                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $feature['slug']])}}">{{$feature['title']['en']}}</a>
+                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
                                     </div>
-                                    <div class="date_block">{{$feature['created_at']}}</div>
+                                    <div class="date_block">{{$item['created_at']}}</div>
                                 </li>
                             @endforeach
                         </ul>
@@ -41,29 +41,29 @@
                     <x-vertical-banner-component :banners="$adds"></x-vertical-banner-component>
                 </div>
             </div>
-            @if(!empty($similarFeatures))
+            @if(!empty($similar))
             <div class="similar_features">
                 <div class="section_head">
                     <h2 class="section_title">Similar Stories</h2>
                 </div>
                 <div class="features_list">
                     <ul>
-                        @foreach($similarFeatures as $feature)
+                        @foreach($similar as $item)
                             <li>
                                 <div class="feature_block">
-                                    <a  class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $feature['slug']])}}">
-                                        <img src="{{asset('storage/'.$feature['image'])}}" width="530" height="250" alt="" title=""/>
+                                    <a  class="image_block" href="{{route($type,['locale' => 'en', 'slug' => $item['slug']])}}">
+                                        <img src="{{asset('storage/'.$item['image'])}}" width="530" height="250" alt="" title=""/>
                                         article title
                                     </a>
                                     <div class="info_block">
-                                        <div class="date_block">{{$feature['created_at']}}</div>
+                                        <div class="date_block">{{$item['created_at']}}</div>
                                         <div class="title_block">
-                                            <a href="feature_inner.php">{{$feature['title']['en']}}</a>
+                                            <a href="{{route($type,['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
                                         </div>
                                         <div class="author_block">
-                                            By <span class="author_name">{{$feature['author']['en']}}</span>
+                                            By <span class="author_name">{{$item['author']['en']}}</span>
                                         </div>
-                                        <div class="description_block">{{$feature['short_description']['en']}}</div>
+                                        <div class="description_block">{{$item['short_description']['en']}}</div>
                                     </div>
                                 </div>
                             </li>
