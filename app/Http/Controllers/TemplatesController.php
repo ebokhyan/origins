@@ -109,31 +109,37 @@ class TemplatesController extends Controller
 
     public function getNews(){
         $content = nova_page_manager_get_page_by_path('news', null, 'en');
+        $topNews_array = $content['data']->top_news ? json_decode($content['data']->top_news) : [];
+        $addBanner = [];
         if($content){
             $topNews= News::top()
-                ->whereIn('id',json_decode($content['data']->top_news))
+                ->whereIn('id',$topNews_array)
                 ->get()
                 ->makeHidden(['published','updated_at','sort_order'])
-                ->toArray();
-            $addBanner = Ad::published()
-                ->where('id',$content['data']->horizontal_ad)
-                ->first()
-                ->makeHidden(['published','created_at','updated_at','sort_order'])
-                ->toArray();
+                    ->toArray();
+            if($content['data']->horizontal_ad){
+                $addBanner = Ad::published()
+                    ->where('id',$content['data']->horizontal_ad)
+                    ->first()
+                    ->makeHidden(['published','created_at','updated_at','sort_order'])
+                    ->toArray();
+            }
             $latest3News = News::published()
-                ->whereNotIn('id', json_decode($content['data']->top_news))
+                ->whereNotIn('id', $topNews_array)
                 ->take(3)
                 ->get();
             $latestNews = News::published()
-                ->whereNotIn('id', json_decode($content['data']->top_news))
+                ->whereNotIn('id', $topNews_array)
                 ->whereNotIn('id', $latest3News->pluck('id'))
                 ->skip(3)
                 ->paginate(6);
-            $verticalBanners = Ad::published()
-                ->whereIn('id',json_decode($content['data']->vertical_adds))
-                ->get()
-                ->makeHidden(['published','created_at','updated_at','sort_order'])
-                ->toArray();
+            if($content['data']->vertical_adds){
+                $verticalBanners = Ad::published()
+                    ->whereIn('id',json_decode($content['data']->vertical_adds))
+                    ->get()
+                    ->makeHidden(['published','created_at','updated_at','sort_order'])
+                    ->toArray();
+            }
             $content = [
                 'slug' => $content['slug'],
                 'template' => $content['template'],
