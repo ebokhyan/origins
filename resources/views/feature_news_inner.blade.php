@@ -31,7 +31,7 @@
                             @foreach($top as $item)
                                 <li>
                                     <div class="title_block">
-                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
+                                        <a href="{{route($type,['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
                                     </div>
                                     <div class="date_block">{{$item['created_at']}}</div>
                                 </li>
