@@ -2,22 +2,23 @@
 
 namespace App\Nova;
 
+use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Illuminate\Http\Request;
 use Infinety\Filemanager\FilemanagerField;
+use Kongulov\NovaTabTranslatable\NovaTabTranslatable;
+use Kongulov\NovaTabTranslatable\TranslatableTabToRowTrait;
 use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Panel;
 use OptimistDigital\NovaSortable\Traits\HasSortableRows;
 
 class Recipe extends Resource
 {
-    use HasSortableRows;
+    use HasSortableRows,TranslatableTabToRowTrait;
     /**
      * The model the resource corresponds to.
      *
@@ -58,25 +59,40 @@ class Recipe extends Resource
 
     public function generalFields(){
         return [
-
             Slug::make(__('Slug'),'slug')
                 ->separator('-')
                 ->rules('required', 'max:255','alpha_dash')
                 ->from('title')
                 ->hideFromIndex(),
-//            NovaTabTranslatable::make([
-            Text::make(__('Title'),'title')
-                ->rules('required', 'max:255')
-                ->sortable(),
-            Text::make(__('Author'),'author')
-                ->rules('required', 'max:255')
-                ->sortable(),
+            NovaTabTranslatable::make([
+                Text::make(__('Title'),'title')
+                    ->rules('required')
+                    ->sortable(),
+                Text::make(__('Author'),'author')
+                    ->rules('required', 'max:255')
+                    ->sortable(),
+                Textarea::make(__('Short description'),'short_description')
+                    ->hideFromIndex(),
+                NovaTinyMCE::make(__('Description'),'description')
+                    ->hideFromIndex(),
+                Text::make(__('Cooks in'),'cooks_in')
+                    ->hideFromIndex(),
+                Text::make(__('Difficulty'),'difficulty')
+                    ->hideFromIndex(),
+                Text::make(__('Type'),'type')
+                    ->hideFromIndex(),
+                NovaTinyMCE::make(__('Ingredient'),'ingredients')
+                    ->hideFromIndex(),
+                NovaTinyMCE::make(__('Instruction'),'instruction')
+                    ->hideFromIndex(),
+            ]),
             FilemanagerField::make('Image')
                 ->filterBy('Image')
                 ->displayAsImage(),
-            Date::make(__('Created at'),'created_at')
+            FilemanagerField::make('Instruction image','instruction_image')
+                ->filterBy('Image')
                 ->hideFromIndex(),
-            Textarea::make(__('Short description'),'short_description')
+            Text::make(__('Saves'),'saves')
                 ->hideFromIndex(),
             Boolean::make('Published')
                 ->trueValue('1')
@@ -87,14 +103,14 @@ class Recipe extends Resource
 
     public function seoFields(){
         return [
-//            NovaTabTranslatable::make([
+            NovaTabTranslatable::make([
             Text::make(__('Title'), 'seo_title')
                 ->hideFromIndex(),
             Text::make(__('Description'), 'seo_description')
                 ->hideFromIndex(),
+            ]),
             Image::make(__('Image'), 'seo_image')
                 ->hideFromIndex(),
-//            ])
         ];
     }
 
