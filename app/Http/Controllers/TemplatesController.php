@@ -117,7 +117,7 @@ class TemplatesController extends Controller
                 ->get()
                 ->makeHidden(['published','updated_at','sort_order'])
                     ->toArray();
-            if($content['data']->horizontal_ad){
+            if(isset($content['data']->horizontal_ad)){
                 $addBanner = Ad::published()
                     ->where('id',$content['data']->horizontal_ad)
                     ->first()
@@ -133,7 +133,7 @@ class TemplatesController extends Controller
                 ->whereNotIn('id', $latest3News->pluck('id'))
                 ->skip(3)
                 ->paginate(6);
-            if($content['data']->vertical_adds){
+            if(isset($content['data']->vertical_adds)){
                 $verticalBanners = Ad::published()
                     ->whereIn('id',json_decode($content['data']->vertical_adds))
                     ->get()
