@@ -89,7 +89,7 @@ class Recipe extends Resource
                 NovaTinyMCE::make(__('Instruction'),'instruction')
                     ->hideFromIndex(),
             ]),
-            FilemanagerField::make('Image (536 x 500)')
+            FilemanagerField::make('Image (536 x 500)', "image")
                 ->filterBy('Image')
                 ->displayAsImage(),
             FilemanagerField::make('Inner Image (800 x 360)','inner_main_image')
