@@ -72,8 +72,8 @@
     <div class="footer_bottom">
         <div class="page_container">
             <ul class="terms_menu">
-                <li><a href="terms.php">TERMS OF SERVICE</a></li>
-                <li><a href="policy.php">PRIVACY POLICY</a></li>
+                <li><a href="{{route('term')}}">TERMS OF SERVICE</a></li>
+                <li><a href="{{route('policy')}}">PRIVACY POLICY</a></li>
             </ul>
             <div class="copyrights">COPYRIGHT ©2022 | ORIGINS</div>
         </div>

@@ -23,6 +23,8 @@ Route::get('/news','NewsController@getNews')->name('news');
 Route::get('/news/{slug}','NewsController@getNewsBySlug')->name('news_inner');
 Route::get('/recipes','RecipesController@getRecipes')->name('recipes');
 Route::get('/recipes/{slug}','RecipesController@getRecipeBySlug')->name('recipes.inner');
+Route::get('/terms','MainController@getTerm')->name('term');
+Route::get('/policy','MainController@getPolicy')->name('policy');
 
 Route::get('/','MainController@getIndex')->name('home');
 Route::post('/subscribe','MainController@subscribe')->name('subscribe');

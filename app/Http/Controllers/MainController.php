@@ -97,4 +97,13 @@ class MainController extends Controller
     }
 
     public function unsubscribe($email){}
+
+
+    public function getTerm() {
+        return view('terms');
+    }
+
+    public function getPolicy() {
+        return view('policy');
+    }
 }
