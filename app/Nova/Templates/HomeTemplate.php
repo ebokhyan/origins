@@ -23,7 +23,7 @@ class HomeTemplate extends Template
     public function fields(Request $request): array
     {
         return [
-            FilemanagerField::make('Main banner image large','main_banner_image_1440')
+            FilemanagerField::make('Main banner image large ','main_banner_image_1440')
                 ->filterBy('Image')
                 ->displayAsImage(),
             FilemanagerField::make('Main banner image medium','main_banner_image_960')

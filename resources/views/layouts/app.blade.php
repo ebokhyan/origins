@@ -12,7 +12,7 @@
 </head>
 <body>
 
-@if(Arr::exists($content, 'top_ad'))
+@if(isset($content) && Arr::exists($content, 'top_ad'))
     <x-top-banner-component :image="$content['top_ad']"></x-top-banner-component>
 @endif
     @include('partials.header')

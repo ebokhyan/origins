@@ -249,11 +249,22 @@ $(document).ready(function(){
 		comboHover($('.feature_block a'), '.feature_block');
 	}
 
+	if($('.member_article').length > 0) {
+		comboHover($('.member_article a'), '.member_article');
+	}
+
+	if($('.guide_block').length > 0) {
+		comboHover($('.guide_block a'), '.guide_block');
+	}
+
 	$('.inner_search button').click(function(e){
 		if(!$(this).parent().find('input').val()) {
 			e.preventDefault();
 			$(this).parent().find('input').focus();
 		}
 	})
+
+	$('.popup_btn').click(openPopup);
+	$('.popup_close').click(closePopup);
 });
 

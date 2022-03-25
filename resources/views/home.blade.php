@@ -97,7 +97,7 @@
         <div class="page_container">
             <div class="section_head">
                 <h2 class="section_title">Recipes</h2>
-                <a href="recipes_listing.php" class="view_all">View All</a>
+                <a href="{{route('recipes')}}" class="view_all">View All</a>
             </div>
             @if(!empty($content['latestRecipes']['banner']))
                 <x-banner-component :details="$content['latestRecipes']['banner']"></x-banner-component>
@@ -112,10 +112,12 @@
                                 </div>
                                 <div class="info_block">
                                     <div class="date_block">{{$recipe['created_at']}}</div>
-                                    <div class="inner_title">{{$recipe['title']}}</div>
-                                    <div class="author_block">By <span class="author_name">{{$recipe['author']}}</span></div>
-                                    <div class="description_block">{{$recipe['short_description']}}</div>
-                                    <a href="recipe_inner.php" class="secondary_btn light_btn">View Recipe</a>
+                                    <div class="inner_title">{{@$recipe['title']['en']}}</div>
+                                    @if(isset($recipe['author']['en']))
+                                        <div class="author_block">By <span class="author_name">{{@$recipe['author']['en']}}</span></div>
+                                    @endif
+                                    <div class="description_block">{{@$recipe['short_description']['en']}}</div>
+                                    <a href="{{url('recipes/'.$recipe['slug'])}}" class="secondary_btn light_btn">View Recipe</a>
                                 </div>
                             </div>
                         </li>

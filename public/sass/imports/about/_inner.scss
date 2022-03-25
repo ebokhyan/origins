@@ -1,0 +1,445 @@
+.about_main {
+    border-top: 1px solid;
+    padding-top: 40px;
+    &:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+    .image_block {
+        float: right;
+        width: 50%;
+        margin-left: 30px;
+        margin-bottom: 50px;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .info_block {
+        padding-top: 27px;
+        font-size: 250%;
+        line-height: 37px;
+    }
+    @include mediaRange($size1200,$size1440) {
+        .info_block {
+            font-size: 220%;
+            line-height: 31px;
+            padding-top: 20px;
+        } 
+    }
+    @include mediaRange($size960, $size1200) {
+        padding-top: 30px;
+        .info_block {
+            font-size: 200%;
+            line-height: 28px;
+            padding-top: 10px;
+        }
+        .image_block {
+            margin-left: 20px;
+            margin-bottom: 40px;
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        .info_block {
+            font-size: 180%;
+            line-height: 25px;
+        }
+    }
+    @include mediaTo($size960) {
+        padding-top: 20px;
+        .info_block {
+            padding-top: 20px;
+        }
+        .image_block {
+            float: none;
+            width: 100vw;
+            margin: 0 #{-$containerPadding};
+        }
+    }
+    @include mediaTo($size768) {
+        .info_block {
+            font-size: 160%;
+            line-height: 22px;
+        }
+    }
+}
+
+.staff_section {
+    .member_name {
+        font-size: 270%;
+        line-height: 1.33em;
+        font-family: $playfairSb;
+        color: inherit;
+        &.popup_btn {
+            @extend %linkTypeBtn;
+            @include siteColorHover;
+            text-align: left;
+        }
+    }
+    @include mediaFrom($size1440) {
+        padding-top: 80px;
+
+    }
+    @include mediaRange($size1200, $size1440) {
+        padding-top: 60px;
+        .member_name {
+            font-size: 250%;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        padding-top: 45px;
+        .member_name {
+            font-size: 220%;
+        }
+    }
+    @include mediaRange($size576, $size960) {
+        padding-top: 30px;
+        
+
+    }
+    @include mediaTo($size960) {
+        .member_name {
+            font-size: 200%;
+        }
+    }
+    @include mediaTo($size576) {
+        padding-top: 15px;
+
+    }
+}
+
+.sponsors_section {
+    margin-top: 50px;
+    @include mediaRange($size1200, $size1440) {
+        margin-top: 40px;
+    }
+    @include mediaRange($size960, $size1200) {
+        margin-top: 30px;
+    }
+    @include mediaTo($size960) {
+        margin-top: 20px;
+    }
+}
+
+.sponsors_list {
+    margin: 0 -8px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        @include colSize(3);
+        padding: 50px 8px 0;
+    }
+    .sponsor_block {
+        display: block;
+        @include overHidden;
+        padding-bottom: 50%;
+        font-size: 0;
+        line-height: 0;
+        img {
+            @extend %coverLayer;
+            @extend %noBlink;
+            @extend %all300;
+            object-fit: contain;
+        }
+    }
+    a.sponsor_block:hover img {
+        @include transStyle(scale(1.2));
+    }
+    @include mediaRange($size1200, $size1440) {
+        li {
+            padding-top: 40px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        margin: 0 -10px;
+        li {
+            padding: 30px 10px 0;
+        }
+
+    }
+    @include mediaRange($size576,$size960) {
+        li {
+            @include colSize(4);
+        }
+    }
+    @include mediaTo($size960) {
+        margin: 0 -11px;
+        li {
+            padding: 20px 11px 0;
+        }
+    }
+    @include mediaTo($size576) {
+        li {
+            @include colSize(6);
+        }
+    }
+}
+
+.managament_staff {
+    > ul {
+        display: flex;
+        margin: 0 -6px;
+        padding: 0;
+        list-style-type: none;
+        flex-wrap: wrap;
+        > li {
+            @include colSize(3);
+            padding: 0 6px;
+            margin-top: 50px;
+            position: relative;
+        }
+    }
+    .image_block {
+        @include overHidden;
+        padding-bottom: 125%;
+        @extend %centeredImage;
+        margin-bottom: 20px;
+    }
+    .info_block {
+        &:after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+    }
+    .socials_list {
+        float: right;
+        @extend %standardList;
+        display: flex;
+        padding-left: 30px;
+        a:before {
+            font-size: 2.1rem;
+        }
+        li {
+            margin-right: 30px;
+            padding: 8px 0;
+        }
+    }
+   
+    .member_post {
+        margin-top: 10px;
+        font-size: 220%;
+        color: $descriptionColor;
+        opacity: 0.71;
+        line-height: 31px;
+    }
+    @include mediaRange($size1200, $size1440) {
+        > ul > li {
+            margin-top: 40px;
+        }
+        .member_post {
+            font-size: 200%;
+            line-height: 27px;
+        }
+        .socials_list {
+            li {
+                margin-right: 24px;
+                padding: 7px 0;
+            }
+            a:before {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        > ul > li {
+            margin-top: 30px;
+        }
+        .member_post {
+            font-size: 160%;
+            line-height: 22px;
+        }
+        .socials_list {
+            li {
+                margin-right: 16px;
+                padding: 6px 0;
+            }
+            a:before {
+                font-size: 1.4rem;
+            }
+        }
+        .image_block {
+            margin-bottom: 15px;
+        }
+    }
+
+    @include mediaTo($size960) {
+        > ul {
+            margin: 0 -10px;
+            align-items: flex-start;
+            > li {
+                margin-top: 20px;
+                @include colSize(6);
+                padding: 0 10px;
+            }
+        }
+        .member_post {
+            font-size: 140%;
+            line-height: 21px;
+            margin-top: 5px;
+            padding-right: 60px;
+        }
+        .socials_list {
+            position: absolute;
+            right: 10px;
+            bottom: 6px;
+            z-index: 2;
+            li {
+                margin-right: 12px;
+                padding: 0;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            a:before {
+                font-size: 1rem;
+            }
+        }
+        .image_block{
+            padding-bottom: 103.125%;
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+.coworkers {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    border-top: 1px solid;
+    .sub_team {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        &:not(:first-child) {
+            .team_name:before {
+                @include psevdoAbs();
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                height: 60%;
+                border-left: 1px solid $gray70;
+            }
+            .members_list:before {
+                @include psevdoAbs();
+                left: 0;
+                top: 20px;
+                bottom: 0;
+                border-left: 1px solid $gray70;
+            }
+        }
+    }
+    .team_name {
+        border-bottom: 1px solid;
+        display: flex;
+        align-items: center;
+        padding: 21px 50px;
+        font-size: 250%;
+        line-height: 33px;
+        font-family: $playfairSb;
+        position: relative;
+    }
+    .members_list {
+        @extend %standardList;
+        position: relative;
+        flex: 1;
+        li {
+            padding: 0 50px 50px;
+            &:first-child {
+                padding-top: 50px;
+            }
+        }
+    }
+    
+    @include mediaRange($size1200, $size1440) {
+        margin-top: 40px;
+        .team_name {
+            font-size: 240%;
+            line-height: 31px;
+            padding: 15px 30px;
+        }
+        .members_list li {
+            padding: 0 40px 30px;
+            &:first-child {
+                padding-top: 40px;
+            }
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        margin-top: 30px;
+        .team_name {
+            font-size: 220%;
+            line-height: 29px;
+            padding: 12px 20px;
+        }
+        .members_list li {
+            padding: 0 30px 20px;
+            &:first-child {
+                padding-top: 30px;
+            }
+        }
+    }
+    @include mediaTo($size960) {
+        margin-top: 20px;
+        flex-direction: column;
+        border-top: none;
+        .team_name {
+            font-size: 200%;
+            line-height: 27px;
+            padding: 7px 0;
+            border-top: 1px solid;
+            &:before {
+                display: none !important;
+            }
+        }
+        .members_list {
+            padding: 20px 0;
+            margin: 0 -10px;
+            @include colCount(2);
+            &::before {
+                display: none !important;
+            }
+            li {
+                padding: 0 10px 20px;
+                display: inline-block;
+                vertical-align: top;
+                width: 100%;
+                &:first-child {
+                    padding-top: 0;
+                }
+            }
+        }
+        .sub_team:last-child .members_list {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.bnners_group {
+    margin: 50px -15px 0;
+    display: flex;
+    justify-content: space-between;
+    @include mediaRange($size1200, $size1440) {
+        margin-top: 40px;
+    }
+    @include mediaRange($size960, $size1200) {
+        margin-top: 30px;
+    }
+    @include mediaTo($size960) {
+        display: none;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        .horizontal_bnner {
+            @include colSize(12);
+        }
+    }
+}
+
+
+

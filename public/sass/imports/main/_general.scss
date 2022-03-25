@@ -19,6 +19,16 @@ body {
     -webkit-overflow-scrolling: touch;
     min-height: 100%;
     font-family: $regular;
+    @include popupBody($white, 0, 0.5s);
+    &.popup_opened {
+        .header,
+        .content,
+        .footer {
+            filter: blur(20px) opacity(0.31);
+        }
+    }
+    
+    
 }
 
 *,
@@ -965,6 +975,184 @@ a.image_block {
                     height: 14px !important;
                 }
             }
+        }
+    }
+}
+
+
+.popup_close {
+    font-size: 140%;
+    @extend %linkTypeBtn;
+    color: $descriptionColor;
+    @include siteColorHover;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    &:before {
+        display: block;
+    }
+    @include mediaRange($size960, $size1200) {
+        top: 40px;
+        right: 40px;
+        font-size: 130%;
+    }
+    @include mediaRange($size768, $size960) {
+        top: 30px;
+        right: 30px;
+        font-size: 120%;
+    }
+    @include mediaTo($size768) {
+        top: 20px;
+        right: 20px;
+        font-size: 110%;
+    }
+}
+
+.standard_textpage {
+    color: $secondTextColor;
+    border-top: 1px solid;
+    img {
+        height: auto !important;
+        max-width: 100%;
+        margin: 40px 0;
+        &[style*="float: right"],
+        &[style*="float:right"] {
+            margin-left: 30px;
+            margin-top: 0;
+        }
+        &[style*="float: left"],
+        &[style*="float:left"] {
+            margin-right: 30px;
+            margin-top: 0;
+        }
+        + h2,
+        + h3,
+        &:not([style*="float"]) + .styled_block {
+            margin-top: 0;
+        }
+        
+    }
+    h2 {
+        line-height: 1.35em;
+        font-family: $semibold;
+        font-weight: 500;
+        color: inherit;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    a {
+        color: inherit;
+        text-decoration: underline;
+        @include standardHover;
+    }
+    ul {
+        margin: 20px 0 27px;
+        font-size: 88%;
+        line-height: 1.73em;
+        padding-left: 20px;
+    }
+    @include mediaFrom($size1440) {
+        font-size: 250%;
+        line-height: 35px;
+        padding-top: 50px;
+        h2 {
+            font-size: 120%;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+    }
+    @include mediaTo($size1440) {
+        h2 {
+            font-size: 125%;
+        }
+    }
+    
+    @include mediaRange($size1200,$size1440) {
+        font-size: 220%;
+        line-height: 31px; 
+        padding-top: 45px;
+        h2 {
+            margin-top: 45px;
+            margin-bottom: 35px;
+        }
+        img {
+            &[style*="float: right"],
+            &[style*="float:right"] {
+                max-width: 66.67%;
+            }
+            &[style*="float: left"],
+            &[style*="float:left"] {
+                max-width: 66.67%;
+            } 
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        font-size: 200%;
+        line-height: 28px;
+        padding-top: 40px;
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        img {
+            margin: 30px 0;
+            &[style*="float: right"],
+            &[style*="float:right"] {
+                margin-left: 20px;
+                max-width: 60%;
+            }
+            &[style*="float: left"],
+            &[style*="float:left"] {
+                margin-right: 20px;
+                max-width: 60%;
+            } 
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        font-size: 180%;
+        line-height: 25px;
+        padding-top: 35px;
+        h2 {
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+    }
+    @include mediaTo($size960) {
+        ul {
+            margin: 15px 0;
+            font-size: 81.25%;
+            line-height: 1.54em;
+        }
+        img {
+            margin: 20px 0;
+            &[style*="float: right"],
+            &[style*="float:right"] {
+                margin-left: 0;
+                max-width: 100%;
+                float: none !important;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            &[style*="float: left"],
+            &[style*="float:left"] {
+                margin-right: 0;
+                max-width: 100%;
+                float: none !important;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            } 
+        }
+    }
+    @include mediaTo($size768) {
+        font-size: 160%;
+        line-height: 22px;
+        padding-top: 30px;
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
         }
     }
 }

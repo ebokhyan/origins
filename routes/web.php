@@ -21,6 +21,8 @@ Route::get('/features','FeaturesController@getFeatures')->name('features');
 Route::get('/features/{slug}','FeaturesController@getFeature')->name('feature');
 Route::get('/news','NewsController@getNews')->name('news');
 Route::get('/news/{slug}','NewsController@getNewsBySlug')->name('news_inner');
+Route::get('/recipes','RecipesController@getRecipes')->name('recipes');
+Route::get('/recipes/{slug}','RecipesController@getRecipeBySlug')->name('recipes.inner');
 
 Route::get('/','MainController@getIndex')->name('home');
 Route::post('/subscribe','MainController@subscribe')->name('subscribe');

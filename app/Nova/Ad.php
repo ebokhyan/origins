@@ -49,7 +49,7 @@ class Ad extends Resource
             Text::make(__('Title'),'title')
                 ->rules('required', 'max:255')
                 ->sortable(),
-            FilemanagerField::make('Image')
+            FilemanagerField::make('Image (300 x 600)')
                 ->filterBy('Image')
                 ->displayAsImage(),
             Boolean::make('Show on features inner page','features')

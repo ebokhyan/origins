@@ -26,6 +26,7 @@ return [
         \App\Nova\Templates\HomeTemplate::class,
         \App\Nova\Templates\FeaturesTemplate::class,
         \App\Nova\Templates\NewsTemplate::class,
+        \App\Nova\Templates\RecipesTemplate::class,
     ],
 
 

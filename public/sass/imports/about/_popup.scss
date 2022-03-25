@@ -1,0 +1,346 @@
+.popup_block {
+    @include popupBlock(0.5s);
+}
+
+.member_popup {
+    .popup_inner {
+        @include popupInner($containerPadding);
+    }
+    .popup_container {
+        @include popupContainer($white, 1640px, 0);
+        position: relative;
+        box-shadow: 0 3px 6px rgba($black,0.16);
+        display: flex;
+    }
+    .member_image {
+        flex: 0 0 38.4%;
+        max-width: 38.4%;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .member_info {
+        padding: 70px;
+        flex: 1;
+        width: 50%;
+    }
+    .member_name {
+        font-size: 550%;
+        line-height: 74px;
+        font-family: $playfairSb;
+        margin-bottom: 15px;
+    }
+    .member_post {
+        font-size: 300%;
+        line-height: 42px;
+        color: $descriptionColor;
+        opacity: 0.7;
+        margin-bottom: 15px;
+    }
+    .socials_list {
+        @extend %standardList;
+        display: flex;
+        li {
+            margin-right: 32px;
+        }
+        a:before {
+            display: block;
+            font-size: 2.2rem;
+        }
+    }
+    .about_member {
+        margin-top: 40px;
+        font-size: 180%;
+        line-height: 25px;
+    }
+    @include mediaRange($size1200, $size1440) {
+        .member_name {
+            font-size: 480%;
+            line-height: 62px;
+        }
+        .member_post {
+            font-size: 260%;
+            line-height: 34px;
+        }
+        .member_info {
+            padding: 60px 50px;
+        }
+        .socials_list {
+            li {
+                margin-right: 28px;
+            }
+            a:before {
+                font-size: 2rem;
+            }
+        }
+        .about_member {
+            margin-top: 30px;
+            font-size: 160%;
+            line-height: 22px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        .member_name {
+            font-size: 400%;
+            line-height: 52px;
+            margin-bottom: 10px;
+        }
+        .member_post {
+            font-size: 220%;
+            line-height: 31px;
+            margin-bottom: 10px;
+        }
+        .member_info {
+            padding: 50px 40px;
+        }
+        .socials_list {
+            li {
+                margin-right: 24px;
+            }
+            a:before {
+                font-size: 1.8rem;
+            }
+        }
+        .about_member {
+            margin-top: 25px;
+            font-size: 150%;
+            line-height: 21px;
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        .member_name {
+            font-size: 300%;
+            line-height: 39px;
+            margin-bottom: 10px;
+        }
+        .member_post {
+            font-size: 180%;
+            line-height: 25px;
+            margin-bottom: 10px;
+        }
+        .member_info {
+            padding: 50px 30px;
+        }
+        .socials_list {
+            li {
+                margin-right: 20px;
+            }
+            a:before {
+                font-size: 1.6rem;
+            }
+        }
+        .about_member {
+            margin-top: 20px;
+            font-size: 140%;
+            line-height: 20px;
+        }
+    }
+    @include mediaTo($size768) {
+        .popup_container {
+            flex-wrap: wrap;
+        }
+        .member_image {
+            @include colSize(12);
+            box-shadow: 0 3px 6px rgba($black,0.16);
+            img {
+                height: 75vw;
+                object-fit: cover;
+            }
+        }
+        .member_name {
+            font-size: 200%;
+            line-height: 27px;
+            margin-bottom: 5px;
+        }
+        .member_post {
+            font-size: 140%;
+            line-height: 21px;
+            margin-bottom: 0px;
+            float: left;
+        }
+        .member_info {
+            padding: 15px 30px;
+
+        }
+        .socials_list {
+            float: right;
+            li {
+                margin-right: 0;
+                margin-left: 20px;
+            }
+            a:before {
+                font-size: 1.4rem;
+            }
+        }
+        .about_member {
+            font-size: 130%;
+            line-height: 18px;
+            &:before {
+                display: block;
+                content: "";
+                margin: 15px -30px;
+                border-top: 1px solid $secondTextColor;
+            }
+        }
+    }
+}
+
+.member_articles {
+    margin-top: 30px;
+    
+    ul {
+        @extend %standardList;
+        display: flex;
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin: 0 -5px;
+    }
+    li {
+        @include colSize(4);
+        padding: 30px 5px 10px;
+    }
+    .image_block {
+        display: block;
+        @include overHidden;
+        @extend %centeredImage;
+        &:before {
+            display: block;
+            content: "";
+            padding-bottom: 35.7%;
+        }
+        img {
+            @extend %noBlink;
+            @extend %all300;
+        }
+    }
+    .date_block {
+        margin-top: 10px;
+        color: $descriptionColor;
+        opacity: 0.71;
+        line-height: 16px;
+    }
+    .title_block {
+        margin-top: 5px;
+        display: flex;
+        justify-content: flex-start;
+        a {
+            color: inherit;
+            max-width: 225px;
+            @extend %color300;
+            @include textOverflow(2,relative);
+            font-size: 170%;
+            line-height: 20px;
+            font-family: $playfairSb;
+        }
+    }
+    .description_block {
+        margin-top: 9px;
+        font-size: 90%;
+        line-height: 12px;
+        color: $descriptionColor;
+        opacity: 0.71;
+        max-width: 240px;
+        @include textOverflow(2, relative);
+    }
+    @include mediaRange($size1200, $size1440) {
+        .title_block {
+            a {
+                font-size: 150%;
+                line-height: 19px;
+            }          
+        }
+        .date_block {
+            font-size: 90%;
+            line-height: 14px;
+        }
+        .description_block {
+            font-size: 80%;
+            line-height: 11px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        margin-top: 25px;
+        li {
+            padding-top: 25px;
+        }
+        .title_block {
+            a {
+                font-size: 140%;
+                line-height: 18px;
+            }          
+        }
+        .date_block {
+            font-size: 80%;
+            line-height: 13px;
+        }
+        .description_block {
+            font-size: 70%;
+            line-height: 10px;
+        }
+    }
+    @include mediaRange($size768, $size960) {
+        margin-top: 20px;
+        li {
+            padding-top: 20px;
+        }
+        .title_block {
+            margin-top: 4px;
+            a {
+                font-size: 120%;
+                line-height: 16px;
+            }          
+        }
+        .date_block {
+            margin-top: 7px;
+            font-size: 70%;
+            line-height: 12px;
+        }
+        .description_block {
+            font-size: 60%;
+            line-height: 10px;
+            margin-top: 6px;
+        }
+    }
+    @include mediaTo($size768) {
+        margin-top: 15px;
+        .section_head {
+            margin-left: -30px;
+            margin-right: -30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        ul {
+            margin: 0 -9px;
+        }
+        li {
+            padding: 15px 9px 10px;
+        }
+        .description_block {
+            display: none;
+        }
+        .title_block {
+            margin-top: 3px;
+            a {
+                font-size: 100%;
+                line-height: 13px;
+            }          
+        }
+        .date_block {
+            margin-top: 5px;
+            font-size: 60%;
+            line-height: 10px;
+        }
+    }
+    @include mediaTo($size576) {
+        li {
+            @include colSize(6);
+        }
+    }
+}
+
+.web .member_articles ul {
+    @include customScroll(auto, 6px, thin, 0, 0, $grayE5, $siteColor);
+}

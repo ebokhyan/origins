@@ -10,6 +10,7 @@ use Kongulov\NovaTabTranslatable\TranslatableTabToRowTrait;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\KeyValue;
 use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
@@ -81,17 +82,23 @@ class Recipe extends Resource
                     ->hideFromIndex(),
                 Text::make(__('Type'),'type')
                     ->hideFromIndex(),
-                NovaTinyMCE::make(__('Ingredient'),'ingredients')
-                    ->hideFromIndex(),
+                KeyValue::make('Ingredient','ingredients')
+                    ->keyLabel('Portion')
+                    ->valueLabel('Ingredient')
+                    ->actionText('Add ingredient'),
                 NovaTinyMCE::make(__('Instruction'),'instruction')
                     ->hideFromIndex(),
             ]),
-            FilemanagerField::make('Image')
+            FilemanagerField::make('Image (536 x 500)')
                 ->filterBy('Image')
                 ->displayAsImage(),
-            FilemanagerField::make('Instruction image','instruction_image')
+            FilemanagerField::make('Inner Image (800 x 360)','inner_main_image')
                 ->filterBy('Image')
-                ->hideFromIndex(),
+                ->displayAsImage(),
+            FilemanagerField::make('Instruction image (775 x 1023)','instruction_image')
+                ->filterBy('Image')
+                ->hideFromIndex()
+                ->displayAsImage(),
             Text::make(__('Saves'),'saves')
                 ->hideFromIndex(),
             Boolean::make('Published')
