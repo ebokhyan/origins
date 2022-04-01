@@ -86,7 +86,7 @@ class News extends Resource
                     ->hideFromIndex(),
             ]),
             Date::make(__('Date'),'created_at'),
-            FilemanagerField::make('Image (750 x 520)')
+            FilemanagerField::make('Image (750 x 520)','image')
                 ->filterBy('Image')
                 ->displayAsImage(),
             Boolean::make('Top')

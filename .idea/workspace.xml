@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/partials/google_analitics.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Ad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/News.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +238,8 @@
       <workItem from="1645881968448" duration="735000" />
       <workItem from="1647592431742" duration="6470000" />
       <workItem from="1647848522219" duration="61757000" />
-      <workItem from="1648726536373" duration="461000" />
+      <workItem from="1648726536373" duration="1124000" />
+      <workItem from="1648797522872" duration="311000" />
     </task>
     <servers />
   </component>

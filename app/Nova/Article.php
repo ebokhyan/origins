@@ -84,7 +84,7 @@ class Article extends Resource
                     ->hideFromIndex(),
             ]),
             Date::make(__('Date'),'created_at'),
-            FilemanagerField::make('Image (1088 x 716)')
+            FilemanagerField::make('Image (1088 x 716)','image')
                 ->filterBy('Image')
                 ->displayAsImage(),
             Boolean::make('Top')
