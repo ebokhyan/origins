@@ -19,12 +19,25 @@ body {
     -webkit-overflow-scrolling: touch;
     min-height: 100%;
     font-family: $regular;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    &[style*="background-image"]:after {
+        @include fixCoverLayer;
+        content: "";
+        background-image: url('images/gradient_layer.svg');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
     @include popupBody($white, 0, 0.5s);
     &.popup_opened {
         .header,
         .content,
-        .footer {
+        .footer,
+        .top_bnner {
             filter: blur(20px) opacity(0.31);
+            -webkit-filter: blur(20px) opacity(0.31);
         }
     }
     
@@ -110,11 +123,33 @@ button {
     display: none;
 }
 .error_hint {
-    display: block;
-    max-height: 0;
-    @extend %all300;
+    display: none;
+    position: absolute;
     overflow: hidden;
     color: $error;
+    bottom: 24px;
+    right: 10px;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    @extend %color300;
+    &:after {
+        @extend %centerBlock;
+        content: "!";
+         background: $errorIcon;
+         width: 20px;
+         height: 20px;
+         border-radius: 50%;
+         color: $white;
+         font-size: 1.2rem;
+         margin-left: auto;
+         cursor: pointer;
+    }
+    &:hover {
+        color: $error;
+        font-size: 150%;
+        line-height: 22px;
+    }
 }
 .help-block.form-error {
     display: none !important;
@@ -122,33 +157,179 @@ button {
 .has-error {
     .error_hint,
     ~ .error_hint {
-        max-height: 60px;
+        display: block;
    }
-   &:before {
-       @extend %centerBlock;
-       content: "!";
-        background: $error;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        color: $white;
-        font-size: 120%;
-        position: absolute;
-        top: 5px;
-        right: 10px;
-   }
+   
 }
 
 .field_block {
     position: relative;
+    margin-bottom: 40px;
+    label {
+        display: block;
+        margin: 0;
+        font-weight: normal;
+        position: relative;
+        &.textarea_block + .error_hint {
+            bottom: 100%;
+            margin-bottom: -25px;
+        }
+    }
+    @include placeholder {
+        color: inherit;
+        opacity: 0.6;
+    }
     input,
     textarea {
         width: 100%;
-
+        border: none;
+        border-bottom: 1px solid $black !important;
+        color: inherit;
+        font-size: 200%;
+        line-height: 1.5em;
+        font-family: $regular;
+        padding: 0 40px 20px 0;
+        background: transparent;
+   }
+   .checkbox_label + .error_hint {
+       bottom: 50%;
+       margin-bottom: -10px;
+   }
+   input[type="checkbox"] {
+       @extend %maskedInput;
+       &:checked + .check_btn:before {
+           border-width: 10px;
+           @extend %all300;
+       }
+   }
+   .check_btn {
+       display: block;
+       font-size: 160%;
+       line-height: 25px;
+       font-family: $light;
+       color: $secondTextColor;
+       position: relative;
+       @extend %textUnSelect;
+       cursor: pointer;
+       @include siteColorHover;
+       padding-left: 40px;
+       text-align: left;
+       &:before {
+           @include psevdoAbs;
+           min-width: 20px;
+           height: 20px;
+           border-radius: 50%;
+           border: 1px solid;
+           left: 0;
+           top: 3px;
+       }
+       a {
+           color: inherit;
+           @include siteColorHover;
+           text-decoration: underline;
+       }
    }
     textarea {
         resize: none;
         display: block;
+   }
+   @include mediaRange($size960, $size1200) {
+        margin-bottom: 36px;
+        input,
+        textarea {
+            font-size: 180%;
+            padding-bottom: 18px;
+        }
+        .error_hint {
+            bottom: 22px;
+            &:hover {
+                font-size: 140%;
+            }
+        }
+        input[type="checkbox"] {
+            &:checked + .check_btn:before {
+                border-width: 8px;
+            }
+        }
+        .check_btn {
+            font-size: 140%;
+            line-height: 20px;
+            padding-left: 30px;
+            &:before {
+                min-width: 16px;
+                height: 16px;
+            }
+        }
+   }
+   @include mediaRange($size576, $size960) {
+        margin-bottom: 32px;
+        input,
+        textarea {
+            font-size: 160%;
+            padding-bottom: 16px;
+        }
+        .error_hint {
+            bottom: 20px;
+            &:hover {
+                font-size: 130%;
+            }
+        }
+        input[type="checkbox"] {
+            &:checked + .check_btn:before {
+                border-width: 6px;
+            }
+        }
+        .check_btn {
+            font-size: 120%;
+            line-height: 18px;
+            padding-left: 22px;
+            &:before {
+                min-width: 12px;
+                height: 12px;
+            }
+        }
+   }
+   @include mediaTo($size576) {
+       margin-bottom: 28px;
+        input,
+        textarea {
+            font-size: 140%;
+            padding-bottom: 14px;
+        }
+        .error_hint {
+            bottom: 18px;
+            &:after {
+                width: 18px;
+                height: 18px;
+            }
+            &:hover {
+                font-size: 120%;
+            }
+        }
+        input[type="checkbox"] {
+            &:checked + .check_btn:before {
+                border-width: 5px;
+            }
+            &[data-validation] + .check_btn {
+                margin-right: 40px;
+            }
+        }
+        .check_btn {
+            font-size: 110%;
+            line-height: 16px;
+            margin-left: -18px;
+            padding-left: 22px;
+            &:before {
+                min-width: 10px;
+                height: 10px;
+            }
+        }
+        .checkbox_label + .error_hint {
+            margin-bottom: -8px;
+        }
+        label.textarea_block + .error_hint {
+            margin-bottom: -20px;
+        }
    }
 }
 .cb {
@@ -980,33 +1161,7 @@ a.image_block {
 }
 
 
-.popup_close {
-    font-size: 140%;
-    @extend %linkTypeBtn;
-    color: $descriptionColor;
-    @include siteColorHover;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    &:before {
-        display: block;
-    }
-    @include mediaRange($size960, $size1200) {
-        top: 40px;
-        right: 40px;
-        font-size: 130%;
-    }
-    @include mediaRange($size768, $size960) {
-        top: 30px;
-        right: 30px;
-        font-size: 120%;
-    }
-    @include mediaTo($size768) {
-        top: 20px;
-        right: 20px;
-        font-size: 110%;
-    }
-}
+
 
 .standard_textpage {
     color: $secondTextColor;
@@ -1153,6 +1308,63 @@ a.image_block {
         h2 {
             margin-top: 30px;
             margin-bottom: 15px;
+        }
+    }
+}
+
+.content .terms_menu {
+    ul {
+        @extend %standardList;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 200%;
+        line-height: 1.5em;
+        border-top: 1px solid $black;
+    }
+    li {
+        padding: 30px 0 40px;
+        &:not(:first-child) {
+            margin-left: 40px;
+        }
+    }
+    a {
+        color: $black;
+        display: block;
+        font-family: $medium;
+        @include siteColorHover;
+    }
+    @include mediaRange($size960, $size1200) {
+        li {
+            padding: 20px 0 35px;
+        }
+        ul {
+            font-size: 160%;
+        }
+    }
+    @include mediaRange($size576, $size960) {
+        li {
+            padding: 15px 0 30px;
+            &:not(:first-child) {
+                margin-left: 35px;
+            }
+        }
+        ul {
+            font-size: 120%;
+        }
+    }
+    @include mediaTo($size576) {
+        li {
+            padding: 10px 0 25px;
+            &:not(:first-child) {
+                margin-left: 30px;
+            }
+        }
+        ul {
+            font-size: 100%;
+            line-height: 1.6em;
+        }
+        a {
+            font-family: $regular;
         }
     }
 }

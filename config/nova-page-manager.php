@@ -27,6 +27,8 @@ return [
         \App\Nova\Templates\FeaturesTemplate::class,
         \App\Nova\Templates\NewsTemplate::class,
         \App\Nova\Templates\RecipesTemplate::class,
+        \App\Nova\Templates\PrivacyTemplate::class,
+        \App\Nova\Templates\AboutUsTemplate::class,
     ],
 
 

@@ -1,4 +1,5 @@
 var $mobileSize = 768;
+var passwordConfirm = null;
 
 function isTouchDevice() {
 	return 'ontouchstart' in document.documentElement;
@@ -6,8 +7,8 @@ function isTouchDevice() {
 
 function detectDevice() {
 	if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-		$('body').addClass('ios_device');       
-	};	 
+		$('body').addClass('ios_device');
+	};
 	if(isTouchDevice()) {
 		$('html').addClass('touch');
 	} else {
@@ -97,11 +98,11 @@ function focusEmptySearch(evt) {
 function checkFields() {
     $('form input').change(function() {
         if ($(this).val().length > 0) {
-            $(this).parent().find('.individual_hint').show();
-            $(this).parent().find('.standard_hint').hide();
+            $(this).parent().next('.error_hint').find('.individual_hint').show();
+            $(this).parent().next('.error_hint').find('.standard_hint').hide();
         } else {
-            $(this).parent().find('.individual_hint').hide();
-            $(this).parent().find('.standard_hint').show();
+            $(this).parent().next('.error_hint').find('.individual_hint').hide();
+            $(this).parent().next('.error_hint').find('.standard_hint').show();
         }
 
         if($('.confirm_field').length > 0) {
@@ -149,7 +150,7 @@ function checkForm(e) {
                 return false;
             }
         }
-        
+
     });
     setTimeout(function(){
         if($button.hasClass('checkout_submit') && $('.has-error').length > 0) {
@@ -157,7 +158,7 @@ function checkForm(e) {
         }
     },100)
 
-  
+
 };
 
 function dropToggle(evt) {
@@ -190,14 +191,29 @@ function detectCallPosibillity() {
 
 function openPopup(evt) {
     evt.preventDefault();
-    $('body').addClass('popup_opened');
-    var popupName = '.' + $(this).data('popup');
-    $(popupName).addClass('showed');
+    const id = $(this).data('popup');
+    const type = $(this).data('type');
+    const token = $("input[name='_token']").val();
+    $.ajax({
+        method: "POST",
+        url: "get-info",
+        data: { _token: token, id: id, type: type }
+    })
+    .done(function( response) {
+        if(response.error == undefined){
+            $('body').addClass('popup_opened');
+            $('#popup-content').html(response);
+        }
+    });
 }
 
 function closePopup() {
     $('body').removeClass('popup_opened');
+	if($('.popup_block.showed').hasClass('subscribe_popup')) {
+		document.cookie = "visited=true;path=/";
+	};
     $('.popup_block').removeClass('showed');
+    $('#popup-content').html('');
 }
 
 
@@ -217,7 +233,7 @@ $(document).ready(function(){
 	if($('.validate_btn').length > 0) {
 		checkFields();
 		$('.validate_btn').click(checkForm);
-	};	
+	};
 
 	//drop element open close
 	$('.drop_btn').click(dropToggle);
@@ -265,6 +281,17 @@ $(document).ready(function(){
 	})
 
 	$('.popup_btn').click(openPopup);
-	$('.popup_close').click(closePopup);
+    $(document).on('click', '.popup_close',closePopup);
+
+
+	if(!document.cookie.toString().includes('visited=true') && $('.subscribe_popup').length > 0) {
+		setTimeout(function(){
+			$('body').addClass('popup_opened');
+			$('.popup_block').removeClass('showed');
+			$('.subscribe_popup').addClass('showed');
+		},$('.subscribe_popup').data('delay'));
+	} else {
+		$('.subscribe_popup').remove();
+	}
 });
 

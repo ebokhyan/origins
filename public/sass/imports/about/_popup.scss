@@ -1,16 +1,51 @@
 .popup_block {
-    @include popupBlock(0.5s);
+    @include popupBlock(1s);
+    z-index: 999;
+}
+
+.popup_inner {
+    @include popupInner($containerPadding);
+}
+
+.popup_container {
+    position: relative;
+    box-shadow: 0 3px 6px rgba($black,0.16);
+    display: flex;
+}
+
+.popup_close {
+    font-size: 140%;
+    @extend %linkTypeBtn;
+    color: $descriptionColor;
+    @include siteColorHover;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 20;
+    &:before {
+        display: block;
+    }
+    @include mediaRange($size960, $size1200) {
+        top: 40px;
+        right: 40px;
+        font-size: 130%;
+    }
+    @include mediaRange($size768, $size960) {
+        top: 30px;
+        right: 30px;
+        font-size: 120%;
+    }
+    @include mediaTo($size768) {
+        top: 20px;
+        right: 20px;
+        font-size: 110%;
+    }
 }
 
 .member_popup {
-    .popup_inner {
-        @include popupInner($containerPadding);
-    }
     .popup_container {
         @include popupContainer($white, 1640px, 0);
-        position: relative;
-        box-shadow: 0 3px 6px rgba($black,0.16);
-        display: flex;
+        
     }
     .member_image {
         flex: 0 0 38.4%;
@@ -343,4 +378,261 @@
 
 .web .member_articles ul {
     @include customScroll(auto, 6px, thin, 0, 0, $grayE5, $siteColor);
+}
+
+.subscribe_popup {
+    .popup_container {
+        @include popupContainer($white, 1200px, 0);
+    }
+    .image_block {
+        @include colSize(6);
+        padding-right: 50px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .subscribe_form {
+        padding: 100px 80px 80px 50px;
+        @include colSize(6);
+        .description_block {
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+    }
+    
+    .form_fields {
+        margin-top: 50px;
+    }
+    .btn_block {
+        padding-top: 10px;
+        button {
+            margin-left: auto;
+            margin-right: -16px;
+            border: none;
+            background: $siteColor;
+            color: $white;
+            border-radius: 25px;
+            padding: 12px 16px;
+            font-size: 160%;
+            @include standardBgHover;
+            &:before {
+                display: block;
+            }
+            
+        }
+    }
+
+    .subscribe_status {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: $white;
+        z-index: 5;
+        text-align: center;
+        padding: 150px 80px 40px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:not(.showed) {
+            display: none;
+        }
+        .icon_checked,
+        .icon_close {
+            @extend %centerBlock;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            color: $white;
+            font-size: 260%;
+            margin: 0 auto 80px;
+        }
+        .icon_checked {
+            background: $siteColor;
+        }
+        .icon_close {
+            background: $error;
+        }
+        .inner_title {
+            margin-bottom: 50px;
+        }
+        .description_block {
+            opacity: 0.6;
+            margin-bottom: 50px;
+        }
+        .home_btn {
+            display: inline-block;
+            vertical-align: top;
+            text-decoration: underline;
+            font-size: 150%;
+            line-height: 22px;
+            @include standardHover;
+            margin-top: auto;
+        }
+    }
+    @include mediaTo($size960) {
+        .inner_title {
+            font-size: 300%;
+        }
+        .description_block {
+            font-size: 150%;
+            line-height: 22px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        .subscribe_form {
+            padding: 80px 40px;
+            .description_block {
+                margin-top: 18px;
+            }
+        }
+        .form_fields {
+            margin-top: 44px;
+        }
+        .btn_block {
+            padding-top: 8px;
+            button {
+            margin-right: -15px;
+            padding: 11px 15px;
+            font-size: 140%;
+            }
+        }
+        .image_block {
+            padding-right: 40px;
+        }
+        .subscribe_status {
+            padding: 120px 40px 40px;
+            .inner_title,
+            .description_block {
+                margin-bottom: 45px;
+            }
+            .icon_checked,
+            .icon_close {
+                margin-bottom: 70px;
+                width: 76px;
+                height: 76px;
+                font-size: 220%;
+            }
+        }
+        
+    }
+    @include mediaRange($size576, $size960) {
+        .subscribe_form {
+            padding: 65px 30px;
+            .description_block {
+                margin-top: 16px;
+            }
+        }
+        .form_fields {
+            margin-top: 38px;
+        }
+        .btn_block {
+            padding-top: 6px;
+            button {
+            margin-right: -13px;
+            padding: 10px 13px;
+            font-size: 120%;
+            }
+        }
+        .image_block {
+            padding-right: 30px;
+        }
+        .subscribe_status {
+            padding: 100px 30px 35px;
+            .inner_title,
+            .description_block {
+                margin-bottom: 40px;
+            }
+            .icon_checked,
+            .icon_close {
+                margin-bottom: 60px;
+                width: 66px;
+                height: 66px;
+                font-size: 180%;
+            }
+        }
+        
+    }
+    @include mediaTo($size768) {
+        .popup_container {
+            max-width: 480px;
+        }
+        .image_block {
+            display: none;
+        }
+        .subscribe_form {
+            @include colSize(12);
+        }
+        .subscribe_status {
+            left: 0;
+            width: 100%;
+        }
+    }
+    @include mediaTo($size576) {
+        .subscribe_form {
+            padding: 50px 20px;
+            .description_block {
+                margin-top: 12px;
+            }
+        }
+        .form_fields {
+            margin-top: 32px;
+        }
+        .btn_block {
+            padding-top: 4px;
+            button {
+            margin-right: 0;
+            padding: 9px 11px;
+            font-size: 100%;
+            }
+        }
+        .subscribe_status {
+            padding: 80px 20px 30px;
+            .inner_title,
+            .description_block {
+                margin-bottom: 30px;
+            }
+            .icon_checked,
+            .icon_close {
+                margin-bottom: 50px;
+                width: 56px;
+                height: 56px;
+                font-size: 160%;
+            }
+        }
+        
+    }
+}
+
+
+
+@keyframes loaderRotate {
+    to {
+        @include transStyle(rotate(360deg));
+    }
+}
+
+button.loading {
+    position: relative;
+    pointer-events: none;
+    @extend %textUnSelect;
+    color: transparent !important;
+    &:after {
+        color: $white;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: inherit;
+        border: 1px dashed;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -10px;
+        animation: loaderRotate 2s infinite linear;
+    }
 }

@@ -20,6 +20,10 @@
     @yield('content')
     @include('partials.footer')
 
+@if(Route::currentRouteName() == 'about')
+    <div id="popup-content"></div>
+@endif
+
     <script src="{{asset("js/jquery-3.6.0.min.js")}}"></script>
     <script src="{{asset("js/jquery.form-validator.js")}}"></script>
     <script src="{{asset("js/main.js")}}"></script>

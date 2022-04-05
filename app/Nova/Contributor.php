@@ -8,17 +8,12 @@ use Infinety\Filemanager\FilemanagerField;
 use Kongulov\NovaTabTranslatable\NovaTabTranslatable;
 use Kongulov\NovaTabTranslatable\TranslatableTabToRowTrait;
 use Laravel\Nova\Fields\Boolean;
-use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
-use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Fields\Textarea;
-use Laravel\Nova\Panel;
 use OptimistDigital\MultiselectField\Multiselect;
 use OptimistDigital\NovaSortable\Traits\HasSortableRows;
 
-class News extends Resource
+class Contributor extends Resource
 {
     use HasSortableRows,TranslatableTabToRowTrait;
     /**
@@ -26,14 +21,14 @@ class News extends Resource
      *
      * @var string
      */
-    public static $model = \App\Models\News::class;
+    public static $model = \App\Models\Contributor::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'full_name';
 
     /**
      * The columns that should be searched.
@@ -41,7 +36,7 @@ class News extends Resource
      * @var array
      */
     public static $search = [
-        'id',
+        'id','full_name'
     ];
 
     /**
@@ -54,46 +49,24 @@ class News extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            new Panel(__('General'), $this->generalFields()),
-            new Panel(__('SEO'), $this->seoFields()),
-        ];
-    }
-    public function generalFields(){
-        return [
-            Slug::make(__('Slug'),'slug')
-                ->separator('-')
-                ->rules('required', 'max:255','alpha_dash')
-                ->hideFromIndex(),
             NovaTabTranslatable::make([
-                Text::make(__('Title'),'title')
+                Text::make(__('Full name'),'full_name')
                     ->rules('required', 'max:255')
                     ->sortable(),
-                Text::make(__('Author'),'author')
+                Text::make(__('Position'),'position')
                     ->rules('max:255')
                     ->sortable(),
-                Text::make(__('Photographer'),'photographer')
-                    ->rules('max:255')
-                    ->sortable()
-                    ->hideFromIndex(),
-                Text::make(__('Translator'),'translator')
-                    ->rules('max:255')
-                    ->sortable()
-                    ->hideFromIndex(),
-                Textarea::make(__('Short description'),'short_description')
-                    ->hideFromIndex(),
-                NovaTinyMCE::make(__('Description'),'description')
+                NovaTinyMCE::make(__('Biography'),'bio')
                     ->hideFromIndex(),
             ]),
-            Date::make(__('Date'),'created_at'),
-            FilemanagerField::make('Image (750 x 520)','image')
+            FilemanagerField::make('Image (680 x 880)','image')
                 ->filterBy('Image')
                 ->displayAsImage(),
-            Boolean::make('Top')
-                ->trueValue('1')
-                ->falseValue('0')
-                ->sortable(),
-            Multiselect::make(__('Similar news'),'similar')
-                ->options($this->getNews())
+            Text::make(__('Facebook'),'facebook')->hideFromIndex(),
+            Text::make(__('Instagram'),'instagram')->hideFromIndex(),
+            Text::make(__('Twitter'),'twitter')->hideFromIndex(),
+            Multiselect::make(__('Similar stories'),'similar')
+                ->options($this->getArticles())
                 ->max(3)
                 ->reorderable()
                 ->hideFromIndex(),
@@ -104,18 +77,6 @@ class News extends Resource
         ];
     }
 
-    public function seoFields(){
-        return [
-            NovaTabTranslatable::make([
-            Text::make(__('Title'), 'seo_title')
-                ->hideFromIndex(),
-            Text::make(__('Description'), 'seo_description')
-                ->hideFromIndex(),
-            ]),
-            Image::make(__('Image'), 'seo_image')
-                ->hideFromIndex(),
-        ];
-    }
     /**
      * Get the cards available for the request.
      *
@@ -160,9 +121,8 @@ class News extends Resource
         return [];
     }
 
-    public function getNews(){
-        $news = \App\Models\News::published()->pluck('title', 'id');
-        return $news;
+    public function getArticles(){
+        $articles = \App\Models\Article::published()->pluck('title', 'id');
+        return $articles;
     }
-
 }
