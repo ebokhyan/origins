@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2022_03_24_120628_add_columns_recipes_tbl.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2022_03_24_120628_add_columns_recipes_tbl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about_us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/add-banner-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/add-banner-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/banner-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/banner-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/top-news-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-news-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipes.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -253,7 +239,7 @@
       <workItem from="1648726536373" duration="1124000" />
       <workItem from="1648797522872" duration="1216000" />
       <workItem from="1648799272839" duration="742000" />
-      <workItem from="1649057389226" duration="29397000" />
+      <workItem from="1649057389226" duration="29880000" />
     </task>
     <servers />
   </component>

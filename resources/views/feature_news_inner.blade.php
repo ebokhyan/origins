@@ -74,9 +74,9 @@
                                             @endif
                                         </div>
                                         <div class="author_block">
-                                            By <span class="author_name">{{$item['author']['en']}}</span>
+                                            By <span class="author_name">{{@$item['author']['en']}}</span>
                                         </div>
-                                        <div class="description_block">{{$item['short_description']['en']}}</div>
+                                        <div class="description_block">{{@$item['short_description']['en']}}</div>
                                     </div>
                                 </div>
                             </li>
