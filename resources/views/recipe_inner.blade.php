@@ -20,7 +20,7 @@
                             <ul>
                                 <li>
                                     <div class="stat_type">Serves</div>
-                                    <div class="stat_info">{{$recipe->saves}}</div>
+                                    <div class="stat_info">{{$recipe->serves}}</div>
                                 </li>
                                 <li>
                                     <div class="stat_type">Cooks in</div>
