@@ -20,9 +20,9 @@
                                 <a href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[0]['slug']])}}">{{$topFeatures[0]['title']['en']}}</a>
                             </div>
                             <div class="author_block">
-                                By <span class="author_name">{{$topFeatures[0]['author']['en']}}</span>
+                                By <span class="author_name">{{@$topFeatures[0]['author']['en']}}</span>
                             </div>
-                            <div class="description_block">{{$topFeatures[0]['short_description']['en']}}
+                            <div class="description_block">{{@$topFeatures[0]['short_description']['en']}}
                             </div>
                         </div>
                     </div>
@@ -38,12 +38,12 @@
                         <div class="info_block">
                             <div class="date_block">{{$topFeatures[1]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[1]['slug']])}}">{{$topFeatures[1]['title']['en']}}</a>
+                                <a href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[1]['slug']])}}">{{@$topFeatures[1]['title']['en']}}</a>
                             </div>
                             <div class="author_block">
-                                By <span class="author_name">{{$topFeatures[1]['author']['en']}}</span>
+                                By <span class="author_name">{{@$topFeatures[1]['author']['en']}}</span>
                             </div>
-                            <div class="description_block">{{$topFeatures[1]['short_description']['en']}}</div>
+                            <div class="description_block">{{@$topFeatures[1]['short_description']['en']}}</div>
                         </div>
                     </div>
                 </li>
@@ -58,12 +58,12 @@
                         <div class="info_block">
                             <div class="date_block">{{$topFeatures[2]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[2]['slug']])}}">{{$topFeatures[2]['title']['en']}}.</a>
+                                <a href="{{route('feature',['locale' => 'en', 'slug' => $topFeatures[2]['slug']])}}">{{@$topFeatures[2]['title']['en']}}.</a>
                             </div>
                             <div class="author_block">
-                                By <span class="author_name">{{$topFeatures[2]['author']['en']}}</span>
+                                By <span class="author_name">{{@$topFeatures[2]['author']['en']}}</span>
                             </div>
-                            <div class="description_block">{{$topFeatures[2]['short_description']['en']}}</div>
+                            <div class="description_block">{{@$topFeatures[2]['short_description']['en']}}</div>
                         </div>
                     </div>
                 </li>

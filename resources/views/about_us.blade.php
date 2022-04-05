@@ -51,7 +51,6 @@
                                 <ul class="members_list">
                                     @foreach($content['contributors'] as $contributor)
                                     <li><button class="member_name popup_btn" data-popup="{{$contributor->id}}" data-type="contributor">{{$contributor->full_name}}</button></li>
-{{--                                    <li><div class="member_name">Full Name</div></li>--}}
                                     @endforeach
                                 </ul>
                             </div>
@@ -62,7 +61,6 @@
                                 <ul class="members_list">
                                     @foreach($content['translators'] as $translator)
                                     <li><button class="member_name popup_btn" data-popup="{{$translator->id}}" data-type="translator">{{$translator->full_name}}</button></li>
-{{--                                    <li><div class="member_name">Full Name</div></li>--}}
                                     @endforeach
                                 </ul>
                             </div>
@@ -73,7 +71,6 @@
                                 <ul class="members_list">
                                     @foreach($content['photographers'] as $photographer)
                                     <li><button class="member_name popup_btn" data-popup="{{$photographer->id}}" data-type="photographer">{{$photographer->full_name}}</button></li>
-{{--                                    <li><div class="member_name">Full Name</div></li>--}}
                                     @endforeach
                                 </ul>
                             </div>
@@ -83,9 +80,7 @@
                                 <div class="team_name">Donors</div>
                                 <ul class="members_list">
                                     @foreach($content['donors'] as $donor)
-                                    <li><button class="member_name popup_btn" data-popup="{{$donor->id}}" data-type="donor">{{$donor->full_name}}</button></li>
-{{--                                    <li><button class="member_name popup_btn" data-popup="member_popup">Full Name</button></li>--}}
-{{--                                    <li><div class="member_name">Full Name</div></li>--}}
+                                    <li><div class="member_name">{{$donor->full_name}}</div></li>
                                     @endforeach
                                 </ul>
                             </div>

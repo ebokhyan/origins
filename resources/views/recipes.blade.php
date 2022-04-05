@@ -31,9 +31,9 @@
                                         <div class="title_block">
                                             <a href="{{url('recipes/'.$recipe->slug)}}">{{$recipe->title}}</a>
                                         </div>
-                                        @if($recipe->auther)
+                                        @if(!empty($recipe->author))
                                         <div class="author_block">
-                                            Created by  <span class="author_name">{{$recipe->auther}}</span>
+                                            Created by  <span class="author_name">{{$recipe->author}}</span>
                                         </div>
                                         @endif
                                         <div class="description_block">{{$recipe->short_description}}</div>

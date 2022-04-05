@@ -16,9 +16,9 @@
                         <div class="info_block">
                             <div class="date_block">{{$topNews[0]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[0]['slug']])}}">{{$topNews[0]['title']['en']}}</a>
+                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[0]['slug']])}}">{{@$topNews[0]['title']['en']}}</a>
                             </div>
-                            <div class="description_block">{{$topNews[0]['short_description']['en']}}</div>
+                            <div class="description_block">{{@$topNews[0]['short_description']['en']}}</div>
                         </div>
                     </div>
                 </li>
@@ -34,9 +34,9 @@
                         <div class="info_block">
                             <div class="date_block">{{$topNews[1]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[1]['slug']])}}">{{$topNews[1]['title']['en']}}</a>
+                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[1]['slug']])}}">{{@$topNews[1]['title']['en']}}</a>
                             </div>
-                            <div class="description_block">{{$topNews[1]['short_description']['en']}}</div>
+                            <div class="description_block">{{@$topNews[1]['short_description']['en']}}</div>
                         </div>
                     </div>
                 </li>
@@ -52,9 +52,9 @@
                         <div class="info_block">
                             <div class="date_block">{{$topNews[2]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[2]['slug']])}}">{{$topNews[2]['title']['en']}}</a>
+                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[2]['slug']])}}">{{@$topNews[2]['title']['en']}}</a>
                             </div>
-                            <div class="description_block">{{$topNews[2]['short_description']['en']}}</div>
+                            <div class="description_block">{{@$topNews[2]['short_description']['en']}}</div>
                         </div>
                     </div>
                 </li>
@@ -70,9 +70,9 @@
                         <div class="info_block">
                             <div class="date_block">{{$topNews[3]['created_at']}}</div>
                             <div class="title_block">
-                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[3]['slug']])}}">{{$topNews[3]['title']['en']}}</a>
+                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $topNews[3]['slug']])}}">{{@$topNews[3]['title']['en']}}</a>
                             </div>
-                            <div class="description_block">{{$topNews[3]['short_description']['en']}}</div>
+                            <div class="description_block">{{@$topNews[3]['short_description']['en']}}</div>
                         </div>
                     </div>
                 </li>

@@ -48,7 +48,9 @@
     </div>
 
     <div class="footer_logo">
-        <img width="303" height="99" src="{{asset("css/images/main_logo.svg")}}" alt="" title=""/>
+        <a href="{{route('main-home')}}">
+            <img width="303" height="99" src="{{asset("css/images/main_logo.svg")}}" alt="" title=""/>
+        </a>
     </div>
 
     <x-social-lists></x-social-lists>
@@ -63,7 +65,7 @@
                 <li><a href="guides.php">Guides</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="wine_club.php">Wine Club</a></li>
-                <li><a href="about_us.php">About</a></li>
+                <li><a href="{{route('about')}}">About</a></li>
                 <li><a href="contacts.php">Contact Us</a></li>
             </ul>
         </div>

@@ -15,7 +15,7 @@ class AddColumnsRecipesTbl extends Migration
     {
         Schema::table('recipes', function (Blueprint $table) {
             $table->longText('description')->nullable()->after('short_description');
-            $table->integer('saves')->nullable()->after('description');
+            $table->integer('serves')->nullable()->after('description');
             $table->text('cooks_in')->nullable()->after('saves');
             $table->text('difficulty')->nullable()->after('cooks_in');
             $table->text('type')->nullable()->after('difficulty');

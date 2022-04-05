@@ -34,7 +34,7 @@
                                     <div class="date_block">{{$article['created_at']}}</div>
                                     <div class="title_block">
 {{--                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $article['slug']])}}">{{$article['title']['en']}}</a>--}}
-                                        <a href="#">{{ !empty($article['title']['en']) ? $article['title']['en'] : '' }}</a>
+                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $article['slug']])}}">{{ !empty($article['title']['en']) ? $article['title']['en'] : '' }}</a>
                                     </div>
                                     <div class="author_block">
                                         By <span class="author_name">{{ !empty($article['author']['en']) ? $article['author']['en'] : ""}}</span>
@@ -61,7 +61,7 @@
         <div class="page_container">
             <div class="section_head">
                 <h2 class="section_title">News</h2>
-                <a href="news_listing.php" class="view_all">View All</a>
+                <a href="{{route('news')}}" class="view_all">View All</a>
             </div>
 
             <div class="news_list">
@@ -73,9 +73,9 @@
                                 <div class="info_block">
                                     <div class="date_block">{{$news['created_at']}}</div>
                                     <div class="title_block">
-                                        <a href="news_inner.php">{{$news['title']['en']}}</a></div>
+                                        <a href="{{route('news_inner',['locale' => 'en', 'slug' => $news['slug']])}}">{{$news['title']['en']}}</a></div>
                                 </div>
-                                <a href="news_inner.php" class="image_block">
+                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $news['slug']])}}" class="image_block">
                                     <img src="{{asset('storage/'.$news['image'])}}" alt="" title="" width="316" height="140"/>
                                     news title
                                 </a>
@@ -117,7 +117,7 @@
                                         <div class="author_block">By <span class="author_name">{{@$recipe['author']['en']}}</span></div>
                                     @endif
                                     <div class="description_block">{{@$recipe['short_description']['en']}}</div>
-                                    <a href="{{url('recipes/'.$recipe['slug'])}}" class="secondary_btn light_btn">View Recipe</a>
+                                    <a href="{{route('recipes.inner',['locale' => 'en', 'slug' => $recipe['slug']])}}" class="secondary_btn light_btn">View Recipe</a>
                                 </div>
                             </div>
                         </li>

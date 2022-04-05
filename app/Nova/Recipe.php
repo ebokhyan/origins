@@ -8,6 +8,7 @@ use Infinety\Filemanager\FilemanagerField;
 use Kongulov\NovaTabTranslatable\NovaTabTranslatable;
 use Kongulov\NovaTabTranslatable\TranslatableTabToRowTrait;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\KeyValue;
@@ -61,9 +62,9 @@ class Recipe extends Resource
     public function generalFields(){
         return [
             Slug::make(__('Slug'),'slug')
+                ->from('title')
                 ->separator('-')
                 ->rules('required', 'max:255','alpha_dash')
-                ->from('title')
                 ->hideFromIndex(),
             NovaTabTranslatable::make([
                 Text::make(__('Title'),'title')
@@ -99,8 +100,9 @@ class Recipe extends Resource
                 ->filterBy('Image')
                 ->hideFromIndex()
                 ->displayAsImage(),
-            Text::make(__('Saves'),'saves')
+            Text::make(__('Serves'),'serves')
                 ->hideFromIndex(),
+            Date::make(__('Date'),'created_at'),
             Boolean::make('Published')
                 ->trueValue('1')
                 ->falseValue('0')
