@@ -7,6 +7,7 @@ use App\Nova\Article;
 use App\Nova\Banner;
 use App\Nova\Contributor;
 use App\Nova\Donor;
+use App\Nova\News;
 use App\Nova\Photographer;
 use App\Nova\Recipe;
 use App\Nova\Setting;
@@ -14,6 +15,7 @@ use App\Nova\Sponsor;
 use App\Nova\Subscription;
 use App\Nova\Team;
 use App\Nova\Translator;
+use App\Nova\User;
 use DigitalCreative\CollapsibleResourceManager\CollapsibleResourceManager;
 use DigitalCreative\CollapsibleResourceManager\Resources\TopLevelResource;
 use Illuminate\Support\Facades\Gate;
@@ -100,13 +102,14 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                     TopLevelResource::make([
                         'label' => 'Resources',
                         'resources' => [
-                            \App\Nova\User::class,
                             Ad::class,
-                            Article::class,
                             Banner::class,
+                            Article::class,
+                            News::class,
                             Recipe::class,
                             Setting::class,
-                            Subscription::class
+                            Subscription::class,
+                            User::class,
                         ]
                     ]),
                     TopLevelResource::make([
