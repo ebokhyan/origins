@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\EloquentSortable\Sortable;
 use Spatie\EloquentSortable\SortableTrait;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 use Spatie\Translatable\HasTranslations;
 
 class News extends Model implements Sortable
 {
-    use HasFactory,HasTranslations,SortableTrait;
+    use HasSlug,HasFactory,HasTranslations,SortableTrait;
 
     protected $table = 'news';
     public $translatable = ['title', 'author', 'photographer', 'translator', 'short_description','description','seo_title','seo_description'];
@@ -21,6 +23,12 @@ class News extends Model implements Sortable
         'sort_when_creating' => true,
     ];
 
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('title')
+            ->saveSlugsTo('slug');
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES

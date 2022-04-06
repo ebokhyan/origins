@@ -26,17 +26,16 @@
                 </div>
                 <div class="right_col">
                     @if(!empty($top))
-                        <div class="col_subtitle">Top Stories</div>
+                        <div class="col_subtitle">{{__('features.top_stories')}}</div>
                         <ul class="stories_list">
                             @foreach($top as $item)
                                 <li>
                                     <div class="title_block">
                                         @if($type == 'news_inner')
-                                            <a href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}
+                                            <a href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title'][app()->getLocale()]}}</a>
                                         @else
-                                            <a href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}
+                                            <a href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title'][app()->getLocale()]}}</a>
                                         @endif
-                                        </a>
                                     </div>
                                     <div class="date_block">{{$item['created_at']}}</div>
                                 </li>
@@ -49,7 +48,7 @@
             @if(!empty($similar))
             <div class="similar_features">
                 <div class="section_head">
-                    <h2 class="section_title">Similar Stories</h2>
+                    <h2 class="section_title">{{__('features.similar')}}</h2>
                 </div>
                 <div class="features_list">
                     <ul>
@@ -57,31 +56,31 @@
                             <li>
                                 <div class="feature_block">
                                     @if($type == 'news_inner')
-                                        <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">
+                                        <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}"></a>
                                     @else
-                                        <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">
+                                        <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}"></a>
                                     @endif
                                         <img src="{{asset('storage/'.$item['image'])}}" width="530" height="250" alt="" title=""/>
                                         article title
-                                    </a>
                                     <div class="info_block">
                                         <div class="date_block">{{$item['created_at']}}</div>
                                         <div class="title_block">
                                             @if($type == 'news_inner')
-                                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
+                                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title'][app()->getLocale()]}}</a>
                                             @else
-                                                <a href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title']['en']}}</a>
+                                                <a href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title'][app()->getLocale()]}}</a>
                                             @endif
                                         </div>
                                         <div class="author_block">
-                                            By <span class="author_name">{{@$item['author']['en']}}</span>
+                                            {{__('main.by')}} <span class="author_name">{{@$item['author'][app()->getLocale()]}}</span>
                                         </div>
-                                        <div class="description_block">{{@$item['short_description']['en']}}</div>
+                                        <div class="description_block">{{@$item['short_description'][app()->getLocale()]}}</div>
                                     </div>
                                 </div>
                             </li>
                         @endforeach
                     </ul>
+
                 </div>
             </div>
             @endif

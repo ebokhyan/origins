@@ -283,7 +283,6 @@ $(document).ready(function(){
 	$('.popup_btn').click(openPopup);
     $(document).on('click', '.popup_close',closePopup);
 
-
 	if(!document.cookie.toString().includes('visited=true') && $('.subscribe_popup').length > 0) {
 		setTimeout(function(){
 			$('body').addClass('popup_opened');
@@ -293,5 +292,37 @@ $(document).ready(function(){
 	} else {
 		$('.subscribe_popup').remove();
 	}
+
+    $('form[name="footerSubscriptionForm"]').submit(function (event) {
+        event.preventDefault();
+        setTimeout(()=>{
+            if($("input[name='email']").hasClass('valid')) {
+                const _token = $("input[name='_token']").val();
+                const email = $("input[name='email']").val();
+                $.ajax({
+                    url: "/subscribe",
+                    type: "POST",
+                    data: {_token: _token, email: email},
+                    success: function (response) {
+                        $('#email_label').removeClass('has-error');
+                        $("input[name='email']").remove('error').addClass('valid');
+                        if (response.success) {
+                            $('form[name="footerSubscriptionForm"]').trigger("reset");
+                            $('#success_msg').html(response.success);
+                            setTimeout(() => {
+                                $('#success_msg').html('');
+                            },4000);
+                        }
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        // console.log(XMLHttpRequest.responseJSON.errors);
+                        $('#email_label').addClass('has-error');
+                        $("input[name='email']").removeClass('valid').addClass('error');
+                    }
+                })
+            }
+        },200);
+    })
+
 });
 

@@ -17,6 +17,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Panel;
 use OptimistDigital\NovaSortable\Traits\HasSortableRows;
+use Spatie\Sluggable\HasSlug;
 
 class Recipe extends Resource
 {
@@ -61,10 +62,9 @@ class Recipe extends Resource
 
     public function generalFields(){
         return [
-            Slug::make(__('Slug'),'slug')
+            Slug::make('Slug')
                 ->from('title')
                 ->separator('-')
-                ->rules('required', 'max:255','alpha_dash')
                 ->hideFromIndex(),
             NovaTabTranslatable::make([
                 Text::make(__('Title'),'title')

@@ -63,7 +63,6 @@ class Article extends Resource
         return [
             Slug::make(__('Slug'),'slug')
                 ->separator('-')
-                ->rules('required', 'max:255','alpha_dash')
                 ->hideFromIndex(),
             NovaTabTranslatable::make([
                 Text::make(__('Title'),'title')

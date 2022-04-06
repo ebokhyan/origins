@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\EloquentSortable\Sortable;
 use Spatie\EloquentSortable\SortableTrait;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
 use Spatie\Translatable\HasTranslations;
 
 class Recipe extends Model implements Sortable
 {
-    use HasFactory, SortableTrait,HasTranslations;
+    use HasFactory,SortableTrait,HasTranslations,HasSlug;
 
     protected $casts = ['created_at' => 'date:d F, Y'];
     public $translatable = ['title',
@@ -24,6 +26,16 @@ class Recipe extends Model implements Sortable
         'description',
         'seo_title',
         'seo_description'];
+
+    /**
+     * Get the options for generating the slug.
+     */
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('title')
+            ->saveSlugsTo('slug');
+    }
 
     public $sortable = [
         'order_column_name' => 'sort_order',

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class PrivacyController extends Controller
 {
-    public function getTerm() {
-        $data = nova_page_manager_get_page_by_path('terms', null, 'en');
+    public function getTerm($locale) {
+        $data = nova_page_manager_get_page_by_path('terms', null, $locale);
         if($data) {
             $content = [
                 'slug' => $data['slug'],
@@ -25,8 +25,8 @@ class PrivacyController extends Controller
         return abort(404);
     }
 
-    public function getPolicy() {
-        $data = nova_page_manager_get_page_by_path('policy', null, 'en');
+    public function getPolicy($locale) {
+        $data = nova_page_manager_get_page_by_path('policy', null, $locale);
         if($data) {
             $content = [
                 'slug' => $data['slug'],

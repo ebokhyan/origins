@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 
 class FeaturesController extends Controller
 {
-    public function getFeatures(){
-        $content = nova_page_manager_get_page_by_path('features', null, 'en');
+    public function getFeatures($locale){
+        $content = nova_page_manager_get_page_by_path('features', null, $locale);
         if($content){
             $topFeatures= Article::top()
                 ->whereIn('id',json_decode($content['data']->top_features))
@@ -48,7 +48,7 @@ class FeaturesController extends Controller
         }
         return response()->json(['status' => 'page_not_found'], 404);
     }
-    public function getFeature($slug){
+    public function getFeature($locale,$slug){
         $feature = Article::published()->where('slug',$slug)->first();
         if($feature){
             $topFeatures = Article::top()->latest()->take(4)->get()->toArray();

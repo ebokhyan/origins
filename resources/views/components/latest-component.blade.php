@@ -1,10 +1,10 @@
 <div class="latest_features">
     <div class="section_head">
-        <h2 class="section_title">Latest</h2>
+        <h2 class="section_title">{{__('main.latest')}}</h2>
         <form class="inner_search">
             <label>
-                <span class="label">search</span>
-                <input type="text" name="search[]" placeholder="Search"/>
+                <span class="label">{{__('main.search')}}</span>
+                <input type="text" name="search[]" placeholder="{{__('main.form.placeholders.search')}}"/>
             </label>
             <button type="submit" class="icon_search" aria-label="search"></button>
         </form>
@@ -16,9 +16,9 @@
                     <li>
                         <div class="feature_block">
                             @if($type == 'news_inner')
-                                <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $item->slug])}}">
+                                <a class="image_block" href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">
                             @else
-                                <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $item->slug])}}">
+                                <a class="image_block" href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">
                             @endif
                                 <img src="{{asset('storage/'.$item->image)}}" width="390" height="250" alt="" title=""/>
                                 article title
@@ -27,9 +27,9 @@
                                 <div class="date_block">{{$item->date}}</div>
                                 <div class="title_block">
                                     @if($type == 'news_inner')
-                                        <a href="{{route('news_inner',['locale' => 'en', 'slug' => $item->slug])}}">{{@$item->title}}</a>
+                                        <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">{{@$item->title}}</a>
                                     @else
-                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $item->slug])}}">{{@$item->title}}</a>
+                                        <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">{{@$item->title}}</a>
                                     @endif
                                 </div>
                                 <div class="author_block">

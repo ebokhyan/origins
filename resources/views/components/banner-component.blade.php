@@ -5,6 +5,6 @@
     <div class="info_block">
         <div class="inner_title">{{$details->title}}</div>
         <div class="description_block">{!! $details->short_description !!}</div>
-        <a href="{{!empty($details->cta_action) ? $details->cta_action : ''}}" class="primary_btn dark_btn">Explore</a>
+        <a href="{{!empty($details->cta_action) ? $details->cta_action : ''}}" class="primary_btn dark_btn">{{__('main.explore')}}</a>
     </div>
 </div>

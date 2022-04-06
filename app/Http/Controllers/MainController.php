@@ -67,6 +67,7 @@ class MainController extends Controller
 
 
     public function subscribe(EmailSubscriptionRequest $request){
+
         // The incoming request is valid...
         // Retrieve the validated input data...
         $validated = $request->validated();
@@ -92,7 +93,9 @@ class MainController extends Controller
             };
             throw ValidationException::withMessages(['email' => $message]);
         }
-
+        if($request->ajax()){
+            return response()->json(['success' => 'We have sent to your email verification request, please confirm your Origins subscription']);
+        }
         return redirect()->back()->with(['success' => 'We have sent to your email verification request, please confirm your Origins subscription']);
     }
 

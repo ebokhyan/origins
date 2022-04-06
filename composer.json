@@ -24,6 +24,7 @@
         "optimistdigital/nova-page-manager": "^4.0",
         "optimistdigital/nova-sortable": "^2.4",
         "owenmelbz/nova-radio-field": "^1.0",
+        "spatie/laravel-sluggable": "^2.6",
         "unisharp/laravel-filemanager": "^2.4"
     },
     "require-dev": {

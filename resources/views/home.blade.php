@@ -18,8 +18,8 @@
     <div class="articles_section">
         <div class="page_container">
             <div class="section_head">
-                <h2 class="section_title">Latest Articles</h2>
-                <a href="{{route('features')}}" class="view_all">View All</a>
+                <h2 class="section_title">{{__('main.latest_articles')}}</h2>
+                <a href="{{route('features',['locale' => app()->getLocale()])}}" class="view_all">{{__('main.viewAll')}}</a>
             </div>
 
             @if(!empty($content['latestArticles']['articles']))
@@ -27,19 +27,19 @@
                     @foreach($content['latestArticles']['articles'] as $article)
                         <li>
                             <div class="article_block">
-                                <a  class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $article['slug']])}}">
+                                <a  class="image_block" href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $article['slug']])}}">
                                     <img src="{{asset('storage/'.$article['image'])}}" width="400" height="250" alt="" title=""/> article title
                                 </a>
                                 <div class="info_block">
                                     <div class="date_block">{{$article['created_at']}}</div>
                                     <div class="title_block">
-{{--                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $article['slug']])}}">{{$article['title']['en']}}</a>--}}
-                                        <a href="{{route('feature',['locale' => 'en', 'slug' => $article['slug']])}}">{{ !empty($article['title']['en']) ? $article['title']['en'] : '' }}</a>
+{{--                                        <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $article['slug']])}}">{{$article['title'][app()->getLocale()]}}</a>--}}
+                                        <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $article['slug']])}}">{{ !empty($article['title'][app()->getLocale()]) ? $article['title'][app()->getLocale()] : '' }}</a>
                                     </div>
                                     <div class="author_block">
-                                        By <span class="author_name">{{ !empty($article['author']['en']) ? $article['author']['en'] : ""}}</span>
+                                        {{__('main.by')}} <span class="author_name">{{ !empty($article['author'][app()->getLocale()]) ? $article['author'][app()->getLocale()] : ""}}</span>
                                     </div>
-                                    <div class="description_block">{{!empty($article['short_description']['en']) ? $article['short_description']['en'] : ''}}</div>
+                                    <div class="description_block">{{!empty($article['short_description'][app()->getLocale()]) ? $article['short_description'][app()->getLocale()] : ''}}</div>
                                 </div>
                             </div>
                         </li>
@@ -60,8 +60,8 @@
     <div class="news_section">
         <div class="page_container">
             <div class="section_head">
-                <h2 class="section_title">News</h2>
-                <a href="{{route('news')}}" class="view_all">View All</a>
+                <h2 class="section_title">{{__('main.news')}}</h2>
+                <a href="{{route('news',['locale' => app()->getLocale()])}}" class="view_all">{{__('main.viewAll')}}</a>
             </div>
 
             <div class="news_list">
@@ -73,9 +73,9 @@
                                 <div class="info_block">
                                     <div class="date_block">{{$news['created_at']}}</div>
                                     <div class="title_block">
-                                        <a href="{{route('news_inner',['locale' => 'en', 'slug' => $news['slug']])}}">{{$news['title']['en']}}</a></div>
+                                        <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $news['slug']])}}">{{$news['title'][app()->getLocale()]}}</a></div>
                                 </div>
-                                <a href="{{route('news_inner',['locale' => 'en', 'slug' => $news['slug']])}}" class="image_block">
+                                <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $news['slug']])}}" class="image_block">
                                     <img src="{{asset('storage/'.$news['image'])}}" alt="" title="" width="316" height="140"/>
                                     news title
                                 </a>
@@ -96,8 +96,8 @@
     <div class="recipes_section">
         <div class="page_container">
             <div class="section_head">
-                <h2 class="section_title">Recipes</h2>
-                <a href="{{route('recipes')}}" class="view_all">View All</a>
+                <h2 class="section_title">{{__('main.recipes')}}</h2>
+                <a href="{{route('recipes',['locale' => app()->getLocale()])}}" class="view_all">{{__('main.viewAll')}}</a>
             </div>
             @if(!empty($content['latestRecipes']['banner']))
                 <x-banner-component :details="$content['latestRecipes']['banner']"></x-banner-component>
@@ -112,12 +112,12 @@
                                 </div>
                                 <div class="info_block">
                                     <div class="date_block">{{$recipe['created_at']}}</div>
-                                    <div class="inner_title">{{@$recipe['title']['en']}}</div>
-                                    @if(isset($recipe['author']['en']))
-                                        <div class="author_block">By <span class="author_name">{{@$recipe['author']['en']}}</span></div>
+                                    <div class="inner_title">{{@$recipe['title'][app()->getLocale()]}}</div>
+                                    @if(isset($recipe['author'][app()->getLocale()]))
+                                        <div class="author_block">{{__('main.by')}} <span class="author_name">{{@$recipe['author'][app()->getLocale()]}}</span></div>
                                     @endif
-                                    <div class="description_block">{{@$recipe['short_description']['en']}}</div>
-                                    <a href="{{route('recipes.inner',['locale' => 'en', 'slug' => $recipe['slug']])}}" class="secondary_btn light_btn">View Recipe</a>
+                                    <div class="description_block">{{@$recipe['short_description'][app()->getLocale()]}}</div>
+                                    <a href="{{route('recipes.inner',['locale' => app()->getLocale(), 'slug' => $recipe['slug']])}}" class="secondary_btn light_btn">{{__('main.view_recipe')}}</a>
                                 </div>
                             </div>
                         </li>

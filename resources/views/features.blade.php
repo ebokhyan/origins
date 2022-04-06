@@ -4,11 +4,11 @@
     <div class="inner_page">
         <div class="page_container">
             <div class="page_head">
-                <h1 class="page_title">Features</h1>
+                <h1 class="page_title">{{__('features.title')}}</h1>
                 <form class="inner_search">
                     <label>
-                        <span class="label">search</span>
-                        <input type="text" name="search[]" placeholder="Search Features"/>
+                        <span class="label">{{__('main.search')}}</span>
+                        <input type="text" name="search[]" placeholder="{{__('features.search')}}"/>
                     </label>
                     <button type="submit" class="icon_search" aria-label="search"></button>
                 </form>

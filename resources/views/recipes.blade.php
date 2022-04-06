@@ -4,18 +4,18 @@
     <div class="inner_page">
         <div class="page_container">
             <div class="page_head">
-                <h1 class="page_title">Recipes</h1>
+                <h1 class="page_title">{{__('recipes.title')}}</h1>
                 <form class="inner_search">
                     <label>
-                        <span class="label">search</span>
-                        <input type="text" name="search[]" placeholder="Search Recipes"/>
+                        <span class="label">{{__('main.search')}}</span>
+                        <input type="text" name="search[]" placeholder="{{__('recipes.search')}}"/>
                     </label>
                     <button type="submit" class="icon_search" aria-label="search"></button>
                 </form>
             </div>
             <div class="latest_recipes">
                 <div class="section_head">
-                    <h2 class="section_title">Latest Recipes</h2>
+                    <h2 class="section_title">{{__('recipes.latest_recipes')}}</h2>
                 </div>
                 @if(!empty($content['recipes']))
                 <div class="recipes_list">
@@ -23,20 +23,20 @@
                         @foreach($content['recipes'] as $recipe)
                             <li>
                                 <div class="recipe_block">
-                                    <a  class="image_block" href="{{url('recipes/'.$recipe->slug)}}">
+                                    <a  class="image_block" href="{{route('recipes.inner',['locale' => app()->getLocale(), 'slug' => $recipe->slug])}}">
                                         <img src="{{asset('storage/'.$recipe->image)}}" width="536" height="500" alt="" title=""/>
                                         article title
                                     </a>
                                     <div class="info_block">
                                         <div class="title_block">
-                                            <a href="{{url('recipes/'.$recipe->slug)}}">{{$recipe->title}}</a>
+                                            <a href="{{route('recipes.inner',['locale' => app()->getLocale(), 'slug' => $recipe->slug])}}">{{$recipe->title}}</a>
                                         </div>
                                         @if(!empty($recipe->author))
                                         <div class="author_block">
-                                            Created by  <span class="author_name">{{$recipe->author}}</span>
+                                            {{__('recipes.created_by')}}  <span class="author_name">{{$recipe->author}}</span>
                                         </div>
                                         @endif
-                                        <div class="description_block">{{$recipe->short_description}}</div>
+                                        <div class="description_block">{{@$recipe->short_description}}</div>
                                     </div>
                                 </div>
                             </li>

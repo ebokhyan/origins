@@ -4,7 +4,7 @@
         <div class="inner_page">
             <div class="page_container">
                 <div class="page_head">
-                    <h1 class="page_title">About Us</h1>
+                    <h1 class="page_title">{{__('about.title')}}</h1>
                 </div>
                 <div class="about_inner">
                     <div class="about_main">
@@ -18,7 +18,7 @@
 
                     <div class="staff_section">
                         <div class="section_head">
-                            <h2 class="section_title">Our Team</h2>
+                            <h2 class="section_title">{{__('about.team')}}</h2>
                         </div>
                         @csrf
                         @if(!empty($content['team']))
@@ -47,7 +47,7 @@
                         <div class="coworkers">
                             @if(!empty($content['contributors']))
                             <div class="sub_team">
-                                <div class="team_name">Contributors</div>
+                                <div class="team_name">{{__('about.contributors')}}</div>
                                 <ul class="members_list">
                                     @foreach($content['contributors'] as $contributor)
                                     <li><button class="member_name popup_btn" data-popup="{{$contributor->id}}" data-type="contributor">{{$contributor->full_name}}</button></li>
@@ -57,7 +57,7 @@
                             @endif
                             @if(!empty($content['translators']))
                             <div class="sub_team">
-                                <div class="team_name">Translators</div>
+                                <div class="team_name">{{__('about.translators')}}</div>
                                 <ul class="members_list">
                                     @foreach($content['translators'] as $translator)
                                     <li><button class="member_name popup_btn" data-popup="{{$translator->id}}" data-type="translator">{{$translator->full_name}}</button></li>
@@ -67,7 +67,7 @@
                             @endif
                             @if(!empty($content['photographers']))
                             <div class="sub_team">
-                                <div class="team_name">Photographers</div>
+                                <div class="team_name">{{__('about.photographers')}}</div>
                                 <ul class="members_list">
                                     @foreach($content['photographers'] as $photographer)
                                     <li><button class="member_name popup_btn" data-popup="{{$photographer->id}}" data-type="photographer">{{$photographer->full_name}}</button></li>
@@ -77,7 +77,7 @@
                             @endif
                             @if(!empty($content['donors']))
                             <div class="sub_team">
-                                <div class="team_name">Donors</div>
+                                <div class="team_name">{{__('about.donors')}}</div>
                                 <ul class="members_list">
                                     @foreach($content['donors'] as $donor)
                                     <li><div class="member_name">{{$donor->full_name}}</div></li>
@@ -90,12 +90,12 @@
                     @if(!empty($content['sponsors']))
                     <div class="sponsors_section">
                         <div class="section_head">
-                            <h2 class="section_title">Sponsors</h2>
+                            <h2 class="section_title">{{__('about.sponsors')}}</h2>
                         </div>
                         <ul class="sponsors_list">
                             @foreach($content['sponsors'] as $sponsor)
                             <li>
-                                <a href="#" target="_blank" class="sponsor_block">
+                                <a target="_blank" class="sponsor_block">
                                     <img src="{{asset('storage/'.$sponsor->logo)}}" alt="" title="" width="400" height="200"/>
                                     Sponsor name
                                 </a>

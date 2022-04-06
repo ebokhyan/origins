@@ -11,8 +11,8 @@ use App\Models\Recipe;
 
 class HomeController extends Controller
 {
-    public function getHome(){
-        $content = nova_page_manager_get_page_by_path('home', null, 'en');
+    public function getHome($locale){
+        $content = nova_page_manager_get_page_by_path('home', null, $locale);
         if($content){
             $topBanner = Ad::published()->where('id',$content['data']->top_ad)->first();
             $latestArticlesBanner = Banner::published()->where('id',$content['data']->latest_articles_banner)->first();

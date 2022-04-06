@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 
 class RecipesController extends Controller
 {
-    public function getRecipes(){
-        $content = nova_page_manager_get_page_by_path('recipes', null, 'en');
+    public function getRecipes($locale){
+        $content = nova_page_manager_get_page_by_path('recipes', null, $locale);
         if($content){
             $recipes = Recipe::published()->paginate(6);
             $content = [
@@ -28,7 +28,7 @@ class RecipesController extends Controller
         return response()->json(['status' => 'page_not_found'], 404);
     }
 
-    public function getRecipeBySlug($slug){
+    public function getRecipeBySlug($locale,$slug){
         $recipe = Recipe::published()->where('slug',$slug)->first();
         if($recipe){
             $otherRecipes = Recipe::published()->where('id','<>',$recipe->id)->orderBy('id','DESC')->take(20)->get()->random(3);

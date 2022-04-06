@@ -7,8 +7,8 @@ use App\Models\News;
 
 class NewsController extends Controller
 {
-    public function getNews(){
-        $content = nova_page_manager_get_page_by_path('news', null, 'en');
+    public function getNews($locale){
+        $content = nova_page_manager_get_page_by_path('news', null, $locale);
         $topNews_array = !empty($content['data']->top_news) ? json_decode($content['data']->top_news) : [];
         $addBanner = [];
         $verticalBanners = [];
@@ -62,7 +62,7 @@ class NewsController extends Controller
         return response()->json(['status' => 'page_not_found'], 404);
     }
 
-    public function getNewsBySlug($slug){
+    public function getNewsBySlug($locale,$slug){
         $news = News::published()->where('slug',$slug)->first();
         if($news){
             $topNews = News::top()->latest()->take(4)->get()->toArray();
