@@ -19,7 +19,7 @@
         <div class="page_container">
             <div class="section_head">
                 <h2 class="section_title">{{__('main.latest_articles')}}</h2>
-                <a href="{{route('features',['locale' => app()->getLocale()])}}" class="view_all">{{__('main.viewAll')}}</a>
+                <a href="{{route('features',['locale' => app()->getLocale()])}}" class="view_all">{{__('main.view_all')}}</a>
             </div>
 
             @if(!empty($content['latestArticles']['articles']))
@@ -33,11 +33,16 @@
                                 <div class="info_block">
                                     <div class="date_block">{{$article['created_at']}}</div>
                                     <div class="title_block">
-{{--                                        <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $article['slug']])}}">{{$article['title'][app()->getLocale()]}}</a>--}}
                                         <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $article['slug']])}}">{{ !empty($article['title'][app()->getLocale()]) ? $article['title'][app()->getLocale()] : '' }}</a>
                                     </div>
                                     <div class="author_block">
-                                        {{__('main.by')}} <span class="author_name">{{ !empty($article['author'][app()->getLocale()]) ? $article['author'][app()->getLocale()] : ""}}</span>
+                                        @if(app()->getLocale() == 'en')
+                                            {{Str::ucfirst(__('main.by'))}}
+                                        @endif
+                                            <span class="author_name">{{ !empty($article['author'][app()->getLocale()]) ? $article['author'][app()->getLocale()] : ""}}</span>
+                                        @if(app()->getLocale() == 'hy')
+                                            {{Str::lower(__('main.by'))}}
+                                        @endif
                                     </div>
                                     <div class="description_block">{{!empty($article['short_description'][app()->getLocale()]) ? $article['short_description'][app()->getLocale()] : ''}}</div>
                                 </div>
@@ -61,7 +66,7 @@
         <div class="page_container">
             <div class="section_head">
                 <h2 class="section_title">{{__('main.news')}}</h2>
-                <a href="{{route('news',['locale' => app()->getLocale()])}}" class="view_all">{{__('main.viewAll')}}</a>
+                <a href="{{route('news',['locale' => app()->getLocale()])}}" class="view_all">{{__('main.view_all')}}</a>
             </div>
 
             <div class="news_list">
@@ -97,7 +102,7 @@
         <div class="page_container">
             <div class="section_head">
                 <h2 class="section_title">{{__('main.recipes')}}</h2>
-                <a href="{{route('recipes',['locale' => app()->getLocale()])}}" class="view_all">{{__('main.viewAll')}}</a>
+                <a href="{{route('recipes',['locale' => app()->getLocale()])}}" class="view_all">{{__('main.view_all')}}</a>
             </div>
             @if(!empty($content['latestRecipes']['banner']))
                 <x-banner-component :details="$content['latestRecipes']['banner']"></x-banner-component>
@@ -114,7 +119,15 @@
                                     <div class="date_block">{{$recipe['created_at']}}</div>
                                     <div class="inner_title">{{@$recipe['title'][app()->getLocale()]}}</div>
                                     @if(isset($recipe['author'][app()->getLocale()]))
-                                        <div class="author_block">{{__('main.by')}} <span class="author_name">{{@$recipe['author'][app()->getLocale()]}}</span></div>
+                                        <div class="author_block">
+                                            @if(app()->getLocale() == 'en')
+                                                {{Str::ucfirst(__('main.by'))}}
+                                            @endif
+                                            <span class="author_name">{{@$recipe['author'][app()->getLocale()]}}</span>
+                                            @if(app()->getLocale() == 'hy')
+                                                {{Str::lower(__('main.by'))}}
+                                            @endif
+                                        </div>
                                     @endif
                                     <div class="description_block">{{@$recipe['short_description'][app()->getLocale()]}}</div>
                                     <a href="{{route('recipes.inner',['locale' => app()->getLocale(), 'slug' => $recipe['slug']])}}" class="secondary_btn light_btn">{{__('main.view_recipe')}}</a>

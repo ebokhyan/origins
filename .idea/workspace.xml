@@ -2,60 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/images/climate.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/images/elevation.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/images/grape.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/images/map.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/images/soil.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/images/varieties.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/about.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/features.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/main.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/news.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/recipes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/hy/about.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/hy/features.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/hy/main.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/hy/news.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/hy/recipes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/originsMagazin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/originsMagazin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FeaturesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FeaturesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PrivacyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PrivacyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RecipesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RecipesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about_us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/banner-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/banner-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/features.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/features.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/recipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/recipes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/hy/features.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/hy/features.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/hy/recipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/hy/recipes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/top-news-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-news-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/features.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/features.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/info_popup.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/info_popup.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/terms.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,12 +211,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/france-formation-main (1)/france-formation-main" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -303,7 +267,7 @@
       <workItem from="1648726536373" duration="1124000" />
       <workItem from="1648797522872" duration="1216000" />
       <workItem from="1648799272839" duration="742000" />
-      <workItem from="1649057389226" duration="54360000" />
+      <workItem from="1649057389226" duration="67411000" />
     </task>
     <servers />
   </component>

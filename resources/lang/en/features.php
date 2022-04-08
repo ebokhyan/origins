@@ -6,4 +6,6 @@ return [
     'similar'     => 'Similar Stories',
     'search'      => 'Search Features',
     'top_features_title' => 'Wine, Food & People',
+    'photography' => 'Photography',
+    'translated' => 'Translated'
 ];
