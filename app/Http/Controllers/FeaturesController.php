@@ -18,17 +18,22 @@ class FeaturesController extends Controller
                 ->toArray();
             $addBanner = Ad::published()
                 ->where('id',$content['data']->horizontal_ad)
-                ->first()
-//                ->makeHidden(['published','created_at','updated_at','sort_order'])
-                ->toArray();
+                ->first();
+            if($addBanner) {
+                $addBanner->makeHidden(['published','created_at','updated_at','sort_order'])
+                    ->toArray();
+            }
+
             $latestFeatures = Article::published()
                 ->whereNotIn('id', json_decode($content['data']->top_features))
                 ->paginate(6);
             $verticalBanners = Ad::published()
                 ->whereIn('id',json_decode($content['data']->vertical_adds))
-                ->get()
-                ->makeHidden(['published','created_at','updated_at','sort_order'])
-                ->toArray();
+                ->get();
+            if($verticalBanners) {
+                $verticalBanners->makeHidden(['published','created_at','updated_at','sort_order'])
+                    ->toArray();
+            }
             $content = [
                 'slug' => $content['slug'],
                 'template' => $content['template'],
