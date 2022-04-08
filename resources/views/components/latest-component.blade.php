@@ -21,7 +21,6 @@
                                 <a class="image_block" href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">
                             @endif
                                 <img src="{{asset('storage/'.$item->image)}}" width="390" height="250" alt="" title=""/>
-                                article title
                                 </a>
                             <div class="info_block">
                                 <div class="date_block">{{$item->date}}</div>
@@ -33,7 +32,13 @@
                                     @endif
                                 </div>
                                 <div class="author_block">
-                                    By <span class="author_name">{{@$item->author}}</span>
+                                    @if(app()->getLocale() == 'en')
+                                        {{Str::ucfirst(__('main.by'))}}
+                                    @endif
+                                        <span class="author_name">{{@$item->author}}</span>
+                                    @if(app()->getLocale() == 'hy')
+                                        {{Str::lower(__('main.by'))}}
+                                    @endif
                                 </div>
                                 <div class="description_block">{{@$item->short_description}}</div>
                             </div>

@@ -11,7 +11,15 @@
                     <div class="info_block">
                         <h1 class="inner_title">{{$recipe->title}}</h1>
                         @if($recipe->author)
-                            <div class="author_block">{{__('recipes.created_by')}} <span class="author_name">{{$recipe->author}}</span></div>
+                            <div class="author_block">
+                                @if(app()->getLocale() == 'en')
+                                    {{Str::ucfirst(__('recipes.created'))}} {{Str::lower(__('main.by'))}}
+                                    <span class="author_name">{{$recipe->author}}</span>
+                                @endif
+                                @if(app()->getLocale() == 'hy')
+                                    {{Str::ucfirst(__('recipes.created'))}} <span class="author_name">{{$recipe->author}}</span> {{Str::lower(__('main.by'))}}
+                                @endif
+                            </div>
                         @endif
                         @if($recipe->type)
                             <div class="category_block">{{$recipe->type}}</div>
@@ -90,7 +98,13 @@
                                     </div>
                                     @if(!empty($recipe->author))
                                     <div class="author_block">
-                                        {{__('recipes.created_by')}} <span class="author_name">{{$recipe->author}}</span>
+                                        @if(app()->getLocale() == 'en')
+                                            {{Str::ucfirst(__('recipes.created'))}} {{Str::lower(__('main.by'))}}
+                                            <span class="author_name">{{$recipe->author}}</span>
+                                        @endif
+                                        @if(app()->getLocale() == 'hy')
+                                            {{Str::ucfirst(__('recipes.created'))}} <span class="author_name">{{$recipe->author}}</span> {{Str::lower(__('main.by'))}}
+                                        @endif
                                     </div>
                                     @endif
                                     <div class="description_block">{{$recipe->short_description}}</div>

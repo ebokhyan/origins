@@ -11,10 +11,32 @@
                     <div class="details_block">
                         <h2 class="details_title">{{$content->short_description}}</h2>
                         <ul class="details_list">
-                            <li>By {{$content->author}}</li>
-                            <li>Photography by {{$content->photographer}}</li>
-                            <li>Translated by {{$content->translator}}</li>
-                            <li>{{$content->created_at}}</li>
+                            <li>
+                                @if(app()->getLocale() == 'en')
+                                    {{Str::ucfirst(__('main.by'))}}
+                                @endif
+                                    {{$content->author}}
+                                @if(app()->getLocale() == 'hy')
+                                    {{Str::lower(__('main.by'))}}
+                                @endif
+                            </li>
+                            <li>
+                                @if(app()->getLocale() == 'en')
+                                    {{Str::ucfirst(__('features.photography'))}} {{Str::ucfirst(__('main.by'))}} {{$content->photographer}}
+                                @endif
+                                @if(app()->getLocale() == 'hy')
+                                    {{Str::ucfirst(__('features.photography'))}} {{$content->photographer}} {{Str::lower(__('main.by'))}}
+                                @endif
+                            </li>
+                            <li>
+                                @if(app()->getLocale() == 'en')
+                                    {{Str::ucfirst(__('features.translated'))}} {{Str::ucfirst(__('main.by'))}} {{$content->translator}}
+                                @endif
+                                @if(app()->getLocale() == 'hy')
+                                    {{Str::ucfirst(__('features.translated'))}} {{$content->translator}} {{Str::lower(__('main.by'))}}
+                                @endif
+                            </li>
+                            <li>{{$content->date}}</li>
                         </ul>
                         <div class="share_btns">
                             <div class="addthis_inline_share_toolbox_dg5a"></div>
@@ -61,7 +83,6 @@
                                         <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}"></a>
                                     @endif
                                         <img src="{{asset('storage/'.$item['image'])}}" width="530" height="250" alt="" title=""/>
-                                        article title
                                     <div class="info_block">
                                         <div class="date_block">{{$item['created_at']}}</div>
                                         <div class="title_block">
@@ -72,7 +93,13 @@
                                             @endif
                                         </div>
                                         <div class="author_block">
-                                            {{__('main.by')}} <span class="author_name">{{@$item['author'][app()->getLocale()]}}</span>
+                                            @if(app()->getLocale() == 'en')
+                                                {{Str::ucfirst(__('main.by'))}}
+                                            @endif
+                                            <span class="author_name">{{@$item['author'][app()->getLocale()]}}</span>
+                                            @if(app()->getLocale() == 'hy')
+                                                {{Str::lower(__('main.by'))}}
+                                            @endif
                                         </div>
                                         <div class="description_block">{{@$item['short_description'][app()->getLocale()]}}</div>
                                     </div>
