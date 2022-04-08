@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/features.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/features.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/recipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/recipes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/hy/features.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/hy/features.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/hy/recipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/hy/recipes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipes.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -267,7 +255,7 @@
       <workItem from="1648726536373" duration="1124000" />
       <workItem from="1648797522872" duration="1216000" />
       <workItem from="1648799272839" duration="742000" />
-      <workItem from="1649057389226" duration="67411000" />
+      <workItem from="1649057389226" duration="68038000" />
     </task>
     <servers />
   </component>

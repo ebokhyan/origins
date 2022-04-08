@@ -19,7 +19,7 @@ class FeaturesController extends Controller
             $addBanner = Ad::published()
                 ->where('id',$content['data']->horizontal_ad)
                 ->first()
-                ->makeHidden(['published','created_at','updated_at','sort_order'])
+//                ->makeHidden(['published','created_at','updated_at','sort_order'])
                 ->toArray();
             $latestFeatures = Article::published()
                 ->whereNotIn('id', json_decode($content['data']->top_features))
