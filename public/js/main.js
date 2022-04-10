@@ -295,6 +295,8 @@ $(document).ready(function(){
 
     $('form[name="footerSubscriptionForm"]').submit(function (event) {
         event.preventDefault();
+        // $('.field_block').removeClass('has-error').children().remove('.error_hint');
+        // var data = $(this).serializeArray();
         setTimeout(()=>{
             if($("input[name='email']").hasClass('valid')) {
                 const _token = $("input[name='_token']").val();
@@ -307,11 +309,12 @@ $(document).ready(function(){
                         $('#email_label').removeClass('has-error');
                         $("input[name='email']").remove('error').addClass('valid');
                         if (response.success) {
+                            console.log(response.success);
                             $('form[name="footerSubscriptionForm"]').trigger("reset");
                             $('#success_msg').html(response.success);
                             setTimeout(() => {
                                 $('#success_msg').html('');
-                            },4000);
+                            },5000);
                         }
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) {

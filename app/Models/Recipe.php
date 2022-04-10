@@ -26,7 +26,6 @@ class Recipe extends Model implements Sortable
         'description',
         'seo_title',
         'seo_description'];
-
     /**
      * Get the options for generating the slug.
      */
