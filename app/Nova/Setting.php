@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\KeyValue;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
@@ -45,7 +46,20 @@ class Setting extends Resource
             Text::make('Facebook link','facebook'),
             Text::make('Instagram link','instagram'),
             Text::make('Twitter link','twitter'),
+            KeyValue::make('contacts','contacts')
+                ->rules('json')
+                ->keyLabel('Department')
+                ->valueLabel('Email')
+                ->actionText('Add contact')
+                ->disableEditingKeys()
+                ->disableAddingRows()
+                ->disableDeletingRows(),
         ];
+    }
+
+    public static function authorizedToCreate(Request $request)
+    {
+        return false;
     }
 
     /**

@@ -21,16 +21,24 @@ Route::get('/', function () { return redirect(App::getLocale()); })->name('home'
 Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'en|hy']],function (){
     Route::get('/','MainController@getIndex');
     Route::get('/home','HomeController@getHome')->name('main-home');
+
     Route::get('/features','FeaturesController@getFeatures')->name('features');
     Route::get('/features/{slug}','FeaturesController@getFeature')->name('feature');
+
     Route::get('/news','NewsController@getNews')->name('news');
     Route::get('/news/{slug}','NewsController@getNewsBySlug')->name('news_inner');
+
     Route::get('/recipes','RecipesController@getRecipes')->name('recipes');
     Route::get('/recipes/{slug}','RecipesController@getRecipeBySlug')->name('recipes.inner');
+
     Route::get('/about-us','AboutController@getAboutPage')->name('about');
     Route::post('/get-info','AboutController@getDetails')->name('about.popup');
+
     Route::get('/terms','PrivacyController@getTerm')->name('term');
     Route::get('/policy','PrivacyController@getPolicy')->name('policy');
+
+    Route::get('/contacts','ContactsController@getContacts')->name('contacts');
+
 });
 
 Route::post('/subscribe','MainController@subscribe')->name('subscribe');

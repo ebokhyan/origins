@@ -44,7 +44,7 @@
                     <li><a href="shop.php">{{__('main.menu.shop')}}</a></li>
                     <li><a href="wine_club.php">{{__('main.menu.wine_club')}}</a></li>
                     <li><a href="{{route('about',['locale' => app()->getLocale()])}}">{{__('main.menu.about')}}</a></li>
-                    <li><a href="contacts.php">{{__('main.menu.contact_us')}}</a></li>
+                    <li><a href="{{route('contacts',['locale' => app()->getLocale()])}}"> {{__('main.menu.contact_us')}}</a></li>
                 </ul>
             </div>
         </div>

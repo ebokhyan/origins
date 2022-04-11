@@ -44,6 +44,11 @@ class Article extends Resource
         'id','title'
     ];
 
+//    public static function authorizedToCreate(Request $request)
+//    {
+//        return false;
+//    }
+
     /**
      * Get the fields displayed by the resource.
      *
