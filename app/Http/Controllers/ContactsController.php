@@ -9,9 +9,16 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Validation\ValidationException;
 use App\Models\ContactRequest as Contact;
 
+
 class ContactsController extends Controller
 {
-    private $to_email = 'emma2@wedo.design';
+    private $to_email;
+
+    public function __construct()
+    {
+        $this->to_email = config('notify.to_email');
+    }
+
 
     public function getContacts($locale){
         return view('contacts');

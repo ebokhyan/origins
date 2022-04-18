@@ -17,8 +17,12 @@ use Illuminate\Validation\ValidationException;
 
 class MainController extends Controller
 {
-     private $notifiableEmail = "emma@wedo.design";
-//    private $notifiableEmail = "info@originswinemag.com";
+    private $to_email;
+
+    public function __construct()
+    {
+        $this->to_email = config('notify.to_email');
+    }
 
     public function getIndex(){
         $settings = Setting::first();
@@ -31,7 +35,7 @@ class MainController extends Controller
             try{
                 $subscriber = $newsletter->subscribe($subscribed->email);
 
-                Notification::route('mail', $this->notifiableEmail)
+                Notification::route('mail', $this->to_email)
                     ->notify(new \App\Notifications\Subscription($subscriber->email_address));
 
                 Notification::route('mail', $subscriber->email_address)
