@@ -10,17 +10,18 @@
                 <h2 class="section_title">Get in Touch</h2>
             </div>
             <div class="contacts_inner">
-                <form class="contact_form">
+                <form name="sendContact" class="contact_form">
+                    @csrf
                     <div class="form_fields">
                         <div class="field_block">
-                            <label>
+                            <label id="name_lb">
                                 <span class="label">Full Name</span>
-                                <input type="text" name="fullname" placeholder="Full Name" data-validation="required"/>
+                                <input type="text" name="name" placeholder="Full Name" data-validation="required"/>
                             </label>
                             <span class="error_hint">mandatory field</span>
                         </div>
                         <div class="field_block">
-                            <label>
+                            <label id="user_email_lb">
                                 <span class="label">email address</span>
                                 <input type="text" name="user_email" data-validation="email" placeholder="Email Address">
                             </label>
@@ -30,23 +31,24 @@
 									</span>
                         </div>
                         <div class="field_block">
-                            <label>
+                            <label id="subject_lb">
                                 <span class="label">Subject</span>
                                 <input type="text" name="subject" placeholder="Subject" data-validation="required"/>
                             </label>
                             <span class="error_hint">mandatory field</span>
                         </div>
                         <div class="field_block">
-                            <label class="textarea_block">
+                            <label id="message_lb" class="textarea_block">
                                 <span class="label">Message</span>
                                 <textarea  name="message" placeholder="Message" data-validation="required"></textarea>
                             </label>
                             <span class="error_hint">mandatory field</span>
                         </div>
                         <div class="btn_block">
-                            <button type="submit" class="validate_btn primary_btn main_btn" aria-label="send">Send</button>
+                            <button type="submit" id='sendContactBtn' class="validate_btn primary_btn main_btn" aria-label="send">Send</button>
                         </div>
                     </div>
+                    <div id="success_msg" class="description_block"></div>
                 </form>
                 <div class="or_label">or</div>
                 <div class="contacts_list">

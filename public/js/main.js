@@ -295,8 +295,6 @@ $(document).ready(function(){
 
     $('form[name="footerSubscriptionForm"]').submit(function (event) {
         event.preventDefault();
-        // $('.field_block').removeClass('has-error').children().remove('.error_hint');
-        // var data = $(this).serializeArray();
         setTimeout(()=>{
             if($("input[name='email']").hasClass('valid')) {
                 const _token = $("input[name='_token']").val();
@@ -322,6 +320,61 @@ $(document).ready(function(){
                         $('#email_label').addClass('has-error');
                         $("input[name='email']").removeClass('valid').addClass('error');
                     }
+                })
+            }
+        },200);
+    })
+
+    $('form[name="sendContact"]').submit(function (event) {
+        event.preventDefault();
+        setTimeout(()=>{
+            const _token = $("input[name='_token']");
+            const name = $("input[name='name']");
+            const email = $("input[name='user_email']");
+            const subject = $("input[name='subject']");
+            const message = $("textarea[name='message']");
+            if(name.hasClass('valid')
+                && email.hasClass('valid')
+                && subject.hasClass('valid')
+                && message.hasClass('valid'))
+            {
+                $.ajax({
+                    url: "/send-contact",
+                    type: "POST",
+                    data: {_token: _token.val(), email: email.val(), name: name.val(), subject: subject.val(), message: message.val()},
+                    beforeSend: function () { // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+                        $('#sendContactBtn').addClass('loading')
+                    },
+                    success: function (response) {
+                        $('#name_lb').removeClass('has-error');
+                        $('#user_email_lb').removeClass('has-error');
+                        $('#subject_lb').removeClass('has-error');
+                        $('#message_lb').removeClass('has-error');
+                        $("input[name='name']").remove('error').addClass('valid');
+                        $("input[name='user_email']").remove('error').addClass('valid');
+                        $("input[name='subject']").remove('error').addClass('valid');
+                        $("textarea[name='message']").remove('error').addClass('valid');
+                        if (response.success) {
+                            $('form[name="sendContact"]').trigger("reset");
+                            $('#success_msg').html(response.success);
+                            setTimeout(() => {
+                                $('#success_msg').html('');
+                            },5000);
+                        }else{
+                            if (response.error) {
+                                $('#success_msg').addClass("error-msg").html(response.error);
+                                setTimeout(() => {
+                                    $('#success_msg').html('').removeClass("error-msg");
+                                },5000);
+                            }
+                        }
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        // console.log(XMLHttpRequest.responseJSON.errors);
+                    },
+                    complete: function () { // Set our complete callback, adding the .hidden class and hiding the spinner.
+                        $('#sendContactBtn').removeClass('loading')
+                    },
                 })
             }
         },200);

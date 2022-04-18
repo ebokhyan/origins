@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Nova\Ad;
 use App\Nova\Article;
 use App\Nova\Banner;
+use App\Nova\ContactRequest;
 use App\Nova\Contributor;
 use App\Nova\Donor;
 use App\Nova\News;
@@ -109,6 +110,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                             Recipe::class,
                             Setting::class,
                             Subscription::class,
+                            ContactRequest::class,
                             User::class,
                         ]
                     ]),
