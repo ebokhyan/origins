@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/guides.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +211,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../uex" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -258,7 +257,8 @@
       <workItem from="1648726536373" duration="1124000" />
       <workItem from="1648797522872" duration="1216000" />
       <workItem from="1648799272839" duration="742000" />
-      <workItem from="1649057389226" duration="85412000" />
+      <workItem from="1649057389226" duration="87109000" />
+      <workItem from="1649832115277" duration="3440000" />
     </task>
     <servers />
   </component>
