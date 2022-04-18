@@ -9,31 +9,31 @@
             <div class="region_params">
                 <ul>
                     <li>
-                        <img src="css/images/grape.svg" alt="" title="" width="23" height="34"/>
+                        <img src="{{asset('css/images/grape.svg')}}" alt="" title="" width="23" height="34"/>
                         Vineyard Surface
                     </li>
                     <li>
-                        <img src="css/images/soil.svg" alt="" title="" width="25" height="25"/>
+                        <img src="{{asset('css/images/soil.svg')}}" alt="" title="" width="25" height="25"/>
                         Soil
                     </li>
                     <li>
-                        <img src="css/images/climate.svg" alt="" title="" width="23" height="19"/>
+                        <img src="{{asset('css/images/climate.svg')}}" alt="" title="" width="23" height="19"/>
                         Climate
                     </li>
                     <li>
-                        <img src="css/images/elevation.svg" alt="" title="" width="24" height="12"/>
+                        <img src="{{asset('css/images/elevation.svg')}}" alt="" title="" width="24" height="12"/>
                         Elevation
                     </li>
                     <li>
-                        <img src="css/images/varieties.svg" alt="" title="" width="24" height="24"/>
+                        <img src="{{asset('css/images/varieties.svg')}}" alt="" title="" width="24" height="24"/>
                         Varieties
                     </li>
                 </ul>
             </div>
             <div class="guide_main_image">
                 <picture>
-                    <source media="(min-width:960px)" srcset="images/guide_top_image.jpg" width="1640" height="400">
-                    <img src="images/guide_inner_image.jpg" alt="" title="" width="960" height="480"/>
+                    <source media="(min-width:960px)" srcset="{{asset('images/guide_top_image.jpg')}}" width="1640" height="400">
+                    <img src="{{asset('images/guide_inner_image.jpg')}}" alt="" title="" width="960" height="480"/>
                 </picture>
 
             </div>
@@ -52,8 +52,8 @@
                             <div class="small_bnner">
                                 <a href="#" class="bnner_inner">
                                     <picture>
-                                        <source media="(min-width:960px)" srcset="images/wide_bnner.jpg" width="300" height="250">
-                                        <img src="images/h_bnner.jpg" alt="" title="" width="728" height="90"/>
+                                        <source media="(min-width:960px)" srcset="{{asset('images/wide_bnner.jpg')}}" width="300" height="250">
+                                        <img src="{{asset('images/h_bnner.jpg')}}" alt="" title="" width="728" height="90"/>
                                     </picture>
 
                                     bnner title here
@@ -81,7 +81,7 @@
                         At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
                         <h2>Geography</h2>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.
-                        <img src="css/images/map.svg" alt="" title="" width="977" height="915"/>
+                        <img src="{{asset('css/images/map.svg')}}" alt="" title="" width="977" height="915"/>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                         invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
                         et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
@@ -113,7 +113,7 @@
                         Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
                         voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                         no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                        <img src="images/guide_inner_image.jpg" alt="" title="" width="1191" height="600"/>
+                        <img src="{{asset('images/guide_inner_image.jpg')}}" alt="" title="" width="1191" height="600"/>
                         <h2>Winemaking</h2>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                         invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
@@ -137,7 +137,7 @@
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
                         <div class="horizontal_bnner">
                             <a href="#" class="bnner_inner">
-                                <img src="images/h_bnner.jpg" alt="" title="" width="728" height="90"/>
+                                <img src="{{asset('images/h_bnner.jpg')}}" alt="" title="" width="728" height="90"/>
                                 bnner title here
                             </a>
                         </div>
@@ -159,7 +159,7 @@
                 <div class="right_col">
                     <div class="vertical_bnners">
                         <a href="#" target="_blank" class="bnner_inner">
-                            <img src="images/v_banner.jpg" alt="" title="" width="300" height="600"/>
+                            <img src="{{asset('images/v_banner.jpg')}}" alt="" title="" width="300" height="600"/>
                             banner title
                         </a>
                     </div>
@@ -174,7 +174,7 @@
                         <li>
                             <div class="feature_block">
                                 <a  class="image_block" href="feature_inner.php">
-                                    <img src="images/article_image2.jpg" width="530" height="250" alt="" title=""/>
+                                    <img src="{{asset('images/article_image2.jpg')}}" width="530" height="250" alt="" title=""/>
                                     article title
                                 </a>
                                 <div class="info_block">
@@ -192,7 +192,7 @@
                         <li>
                             <div class="feature_block">
                                 <a  class="image_block" href="feature_inner.php">
-                                    <img src="images/article_image3.jpg" width="530" height="250" alt="" title=""/>
+                                    <img src="{{asset('images/article_image3.jpg')}}" width="530" height="250" alt="" title=""/>
                                     article title
                                 </a>
                                 <div class="info_block">
@@ -210,7 +210,7 @@
                         <li>
                             <div class="feature_block">
                                 <a  class="image_block" href="feature_inner.php">
-                                    <img src="images/article_image3.jpg" width="530" height="250" alt="" title=""/>
+                                    <img src="{{asset('images/article_image3.jpg')}}" width="530" height="250" alt="" title=""/>
                                     article title
                                 </a>
                                 <div class="info_block">
