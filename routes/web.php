@@ -38,8 +38,9 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'en|hy']],function
     Route::get('/policy','PrivacyController@getPolicy')->name('policy');
 
     Route::get('/contacts','ContactsController@getContacts')->name('contacts');
-
 });
+
+Route::post('/send-contact','ContactsController@sendContact')->name('contacts.request');
 
 Route::post('/subscribe','MainController@subscribe')->name('subscribe');
 Route::get('/verify-subscription','MainController@verifySubscription')->name('verify-subscribe');

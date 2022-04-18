@@ -7,21 +7,30 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Subscription extends Resource
+class ContactRequest extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Subscription::class;
+    public static $model = \App\Models\ContactRequest::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
+
+    /**
+     * The columns that should be searched.
+     *
+     * @var array
+     */
+    public static $search = [
+        'id','name','email','subject'
+    ];
 
     public static function authorizedToCreate(Request $request)
     {
@@ -37,14 +46,6 @@ class Subscription extends Resource
     {
         return false;
     }
-    /**
-     * The columns that should be searched.
-     *
-     * @var array
-     */
-    public static $search = [
-        'id','email'
-    ];
 
     /**
      * Get the fields displayed by the resource.
@@ -56,11 +57,10 @@ class Subscription extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Email')
-                ->sortable()
-                ->rules('required', 'email', 'max:255')
-                ->creationRules('unique:subscriptions,email')
-                ->updateRules('unique:subscriptions,email,{{resourceId}}'),
+            Text::make('Name'),
+            Text::make('Email'),
+            Text::make('Subject'),
+            Text::make('Message')->hideFromIndex(),
         ];
     }
 
