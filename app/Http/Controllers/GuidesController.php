@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ad;
 use App\Models\Article;
 use App\Models\Guide;
+use App\Models\News;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
 
@@ -34,6 +35,7 @@ class GuidesController extends Controller
     public function getGuidesBySlug($locale,$slug) {
         $guide = Guide::published()->where('slug',$slug)->first();
         if($guide){
+            $v_adds = Ad::published()->where('guides','1')->get();
             $similarFeatures = Article::published()
                 ->whereIn('id', json_decode($guide->similar))
                 ->latest()
@@ -43,6 +45,7 @@ class GuidesController extends Controller
             return view('guides_inner', [
                 'similarFeatures' => !empty($similarFeatures) ? $similarFeatures : [],
                 'add' => $add,
+                'v_ads' => $v_adds,
                 'guide' => $guide
             ]);
         }
