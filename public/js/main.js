@@ -324,6 +324,36 @@ $(document).ready(function(){
             }
         },200);
     })
+    $('form[name="innerSubscriptionForm"]').submit(function (event) {
+        event.preventDefault();
+        setTimeout(()=>{
+            if($("input[name='inner_subscribe_email']").hasClass('valid')) {
+                const _token = $("input[name='_token']").val();
+                const email = $("input[name='inner_subscribe_email']").val();
+                $.ajax({
+                    url: "/subscribe",
+                    type: "POST",
+                    data: {_token: _token, email: email},
+                    success: function (response) {
+                        $('#inner_email_label').removeClass('has-error');
+                        $("input[name='inner_subscribe_email']").remove('error').addClass('valid');
+                        if (response.success) {
+                            $('form[name="innerSubscriptionForm"]').trigger("reset");
+                            $('#inner_success_msg').html(response.success);
+                            setTimeout(() => {
+                                $('#inner_success_msg').html('');
+                            },8000);
+                        }
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        // console.log(XMLHttpRequest.responseJSON.errors);
+                        $('#inner_email_label').addClass('has-error');
+                        $("input[name='inner_subscribe_email']").removeClass('valid').addClass('error');
+                    }
+                })
+            }
+        },200);
+    })
 
     $('form[name="sendContact"]').submit(function (event) {
         event.preventDefault();
