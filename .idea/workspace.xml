@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+    <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="Changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FeaturesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FeaturesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GuidesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GuidesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RecipesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RecipesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Guide.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Guide.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Recipe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Components/LatestComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/LatestComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/features.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/features.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/guides.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guides.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipes.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -271,7 +283,7 @@
       <workItem from="1648799272839" duration="742000" />
       <workItem from="1649057389226" duration="87109000" />
       <workItem from="1649832115277" duration="3440000" />
-      <workItem from="1650269689351" duration="20091000" />
+      <workItem from="1650269689351" duration="33652000" />
     </task>
     <servers />
   </component>
@@ -291,10 +303,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1650352293677">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1650366099396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650352293677" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650366099396" />
+    <state x="556" y="0" width="745" height="1018" key="CommitChangelistDialog2" timestamp="1650355086510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="556" y="0" width="745" height="1018" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1650355086510" />
+    <state x="153" y="74" key="DiffContextDialog" timestamp="1650355082920">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="153" y="74" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650355082920" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1650353145034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -303,10 +323,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650351265898" />
-    <state x="666" y="224" width="587" height="592" key="find.popup" timestamp="1650283096183">
+    <state x="666" y="224" width="587" height="592" key="find.popup" timestamp="1650366566394">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="224" width="587" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1650283096183" />
+    <state x="666" y="224" width="587" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1650366566394" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -9,10 +9,17 @@ use Illuminate\Http\Request;
 
 class RecipesController extends Controller
 {
-    public function getRecipes($locale){
+    public function getRecipes(Request $request, $locale){
         $content = nova_page_manager_get_page_by_path('recipes', null, $locale);
         if($content){
-            $recipes = Recipe::published()->paginate(6);
+            if($request->has('search')){
+                $recipes = Recipe::published()
+                    ->where('title', 'LIKE', "%{$request->search}%")
+                    ->orWhere('short_description', 'LIKE', "%{$request->search}%")
+                    ->paginate(6);
+            }else{
+                $recipes = Recipe::published()->paginate(6);
+            }
             $content = [
                 'slug' => $content['slug'],
                 'template' => $content['template'],
@@ -21,6 +28,7 @@ class RecipesController extends Controller
                     'description' => $content['seo_description'],
                     'image' => $content['seo_image'],
                 ],
+                'search' => $request->has('search') ? $request->search : '',
                 'recipes' => $recipes
             ];
             return view('recipes', ['content' => $content]);

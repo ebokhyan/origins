@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class FeaturesController extends Controller
 {
-    public function getFeatures($locale){
+    public function getFeatures(Request $request,$locale){
         $content = nova_page_manager_get_page_by_path('features', null, $locale);
         if($content){
             $topFeatures= Article::top()
@@ -24,6 +24,7 @@ class FeaturesController extends Controller
                     ->toArray();
             }
 
+
             $latestFeatures = Article::published()
                 ->whereNotIn('id', json_decode($content['data']->top_features))
                 ->paginate(6);
@@ -34,21 +35,45 @@ class FeaturesController extends Controller
                 $verticalBanners->makeHidden(['published','created_at','updated_at','sort_order'])
                     ->toArray();
             }
-            $content = [
-                'slug' => $content['slug'],
-                'template' => $content['template'],
-                'seo' => [
-                    'title' => $content['seo_title'],
-                    'description' => $content['seo_description'],
-                    'image' => $content['seo_image'],
-                ],
-                'topFeatures' => $topFeatures,
-                'banner' => $addBanner,
-                'latestFeatures' => [
-                    'articles' => $latestFeatures,
-                    'banners' => $verticalBanners,
-                ],
-            ];
+
+            /*
+            * Search
+            */
+            if($request->has('search')){
+                $features = Article::where('title', 'LIKE', "%{$request->search}%")
+                    ->orWhere('short_description', 'LIKE', "%{$request->search}%")
+                    ->paginate(8);
+                $content = [
+                    'slug' => $content['slug'],
+                    'template' => $content['template'],
+                    'seo' => [
+                        'title' => $content['seo_title'],
+                        'description' => $content['seo_description'],
+                        'image' => $content['seo_image'],
+                    ],
+                    'search' => $request->search,
+                    'searchFeatures' => [
+                        'articles' => $features,
+                        'banners' => $verticalBanners,
+                    ],
+                ];
+            }else{
+                $content = [
+                    'slug' => $content['slug'],
+                    'template' => $content['template'],
+                    'seo' => [
+                        'title' => $content['seo_title'],
+                        'description' => $content['seo_description'],
+                        'image' => $content['seo_image'],
+                    ],
+                    'topFeatures' => $topFeatures,
+                    'banner' => $addBanner,
+                    'latestFeatures' => [
+                        'articles' => $latestFeatures,
+                        'banners' => $verticalBanners,
+                    ],
+                ];
+            }
             return view('features', ['content' => $content]);
         }
         return response()->json(['status' => 'page_not_found'], 404);

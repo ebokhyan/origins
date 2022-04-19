@@ -45,6 +45,8 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'en|hy']],function
     Route::get('/wines','HomeController@getWines')->name('wines');
     Route::get('/shop','HomeController@getShop')->name('shop');
     Route::get('/wine-club','HomeController@getWineClub')->name('wine-club');
+
+    Route::get('/search','HomeController@getWineClub')->name('search');
 });
 
 Route::post('/send-contact','ContactsController@sendContact')->name('contacts.request');

@@ -24,7 +24,7 @@
                 @endswitch
             </div>
             <div class="search_block" data-type="close">
-                <form class="search_form">
+                <form class="search_form" method="GET" action="{{route('search',['locale' => app()->getLocale()])}}">
                     <label>
                         <span class="label">Search</span>
                         <input type="text" name="search" placeholder="Search" autocomplete="off"/>
