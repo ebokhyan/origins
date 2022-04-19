@@ -8,6 +8,7 @@ use App\Nova\Banner;
 use App\Nova\ContactRequest;
 use App\Nova\Contributor;
 use App\Nova\Donor;
+use App\Nova\Guide;
 use App\Nova\News;
 use App\Nova\Photographer;
 use App\Nova\Recipe;
@@ -108,6 +109,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                             Article::class,
                             News::class,
                             Recipe::class,
+                            Guide::class,
                             Setting::class,
                             Subscription::class,
                             ContactRequest::class,

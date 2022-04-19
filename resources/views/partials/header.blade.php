@@ -40,7 +40,7 @@
                     <li><a href="{{route('news',['locale' => app()->getLocale()])}}">{{__('main.menu.news')}}</a></li>
                     <li><a href="{{route('recipes',['locale' => app()->getLocale()])}}">{{__('main.menu.recipes')}}</a></li>
                     <li><a href="wines.php">{{__('main.menu.wines')}}</a></li>
-                    <li><a href="guides.php">{{__('main.menu.guides')}}</a></li>
+                    <li><a href="{{route('guides',['locale' => app()->getLocale()])}}">{{__('main.menu.guides')}}</a></li>
                     <li><a href="shop.php">{{__('main.menu.shop')}}</a></li>
                     <li><a href="wine_club.php">{{__('main.menu.wine_club')}}</a></li>
                     <li><a href="{{route('about',['locale' => app()->getLocale()])}}">{{__('main.menu.about')}}</a></li>

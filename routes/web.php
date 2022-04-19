@@ -31,6 +31,9 @@ Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'en|hy']],function
     Route::get('/recipes','RecipesController@getRecipes')->name('recipes');
     Route::get('/recipes/{slug}','RecipesController@getRecipeBySlug')->name('recipes.inner');
 
+    Route::get('/guides','GuidesController@getGuides')->name('guides');
+    Route::get('/guides/{slug}','GuidesController@getGuidesBySlug')->name('guides.inner');
+
     Route::get('/about-us','AboutController@getAboutPage')->name('about');
     Route::post('/get-info','AboutController@getDetails')->name('about.popup');
 
