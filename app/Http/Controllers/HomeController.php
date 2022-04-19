@@ -66,4 +66,14 @@ class HomeController extends Controller
         return response()->json(['status' => 'page_not_found'], 404);
     }
 
+
+    public function getWines() {
+            return view('welcome');
+    }
+    public function getShop() {
+            return view('welcome');
+    }
+    public function getWineClub() {
+            return view('welcome');
+    }
 }
