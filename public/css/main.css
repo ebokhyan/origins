@@ -822,6 +822,13 @@ button {
   }
 }
 
+.contact_form .description_block {
+  margin-top: 10px;
+}
+.contact_form .error-msg {
+  color: #dd3232;
+}
+
 a.bnner_inner {
   display: inline-block;
   vertical-align: top;
