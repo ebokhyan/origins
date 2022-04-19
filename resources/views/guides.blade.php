@@ -15,82 +15,30 @@
             </div>
             <div class="guides_section">
                 <div class="section_head">
-                    <h2 class="section_title">Armenian Winemaking Regions</h2>
+                    <h2 class="section_title">{{@$content['title']}}</h2>
                 </div>
-                <div class="guides_list">
-                    <ul>
-                        <li>
-                            <div class="guide_block">
-                                <a  class="image_block" href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">
-                                    <img src="{{asset('images/guide_image.jpg')}}" width="536" height="500" alt="" title=""/>
-                                    article title
-                                </a>
-                                <div class="info_block">
-                                    <div class="title_block">
-                                        <a href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">Lorem ipsum dolor sit amet.</a>
+                @if(!empty($content['guides']))
+                    <div class="guides_list">
+                        <ul>
+                            @foreach($content['guides'] as $guide)
+                            <li>
+                                <div class="guide_block">
+                                    <a  class="image_block" href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => $guide->slug])}}">
+                                        <img src="{{asset('storage/'.$guide->image)}}" width="536" height="500" alt="" title=""/>
+                                        article title
+                                    </a>
+                                    <div class="info_block">
+                                        <div class="title_block">
+                                            <a href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => $guide->slug])}}">{{$guide->title}}</a>
+                                        </div>
+                                        <div class="description_block">{{$guide->short_description}}</div>
                                     </div>
-                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="guide_block">
-                                <a  class="image_block" href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">
-                                    <img src="{{asset('images/guide_image.jpg')}}" width="536" height="500" alt="" title=""/>
-                                    article title
-                                </a>
-                                <div class="info_block">
-                                    <div class="title_block">
-                                        <a href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">Lorem ipsum dolor sit amet.</a>
-                                    </div>
-                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="guide_block">
-                                <a  class="image_block" href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">
-                                    <img src="{{asset('images/guide_image.jpg')}}" width="536" height="500" alt="" title=""/>
-                                    article title
-                                </a>
-                                <div class="info_block">
-                                    <div class="title_block">
-                                        <a href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">Lorem ipsum dolor sit amet.</a>
-                                    </div>
-                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="guide_block">
-                                <a  class="image_block" href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">
-                                    <img src="{{asset('images/guide_image.jpg')}}" width="536" height="500" alt="" title=""/>
-                                    article title
-                                </a>
-                                <div class="info_block">
-                                    <div class="title_block">
-                                        <a href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">Lorem ipsum dolor sit amet.</a>
-                                    </div>
-                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="guide_block">
-                                <a  class="image_block" href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">
-                                    <img src="{{asset('images/guide_image.jpg')}}" width="536" height="500" alt="" title=""/>
-                                    article title
-                                </a>
-                                <div class="info_block">
-                                    <div class="title_block">
-                                        <a href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => 'inner'])}}">Lorem ipsum dolor sit amet.</a>
-                                    </div>
-                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

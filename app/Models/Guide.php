@@ -14,7 +14,14 @@ class Guide extends Model implements Sortable
 {
     use HasSlug,HasFactory,HasTranslations,SortableTrait;
 
-    public $translatable = ['title', 'short_description','content','seo_title','seo_description'];
+    public $translatable = ['title', 'short_description',
+        'description_1',
+        'description_2',
+        'description_3',
+        'subscription_title',
+        'subscription_text',
+        'seo_title',
+        'seo_description'];
     public $sortable = [
         'order_column_name' => 'sort_order',
         'sort_when_creating' => true,

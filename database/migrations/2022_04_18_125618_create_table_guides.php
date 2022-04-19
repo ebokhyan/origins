@@ -13,7 +13,7 @@ class CreateTableGuides extends Migration
      */
     public function up()
     {
-        Schema::create('table_guides', function (Blueprint $table) {
+        Schema::create('guides', function (Blueprint $table) {
             $table->id();
             $table->integer('sort_order')->default(0);
             $table->text('title')->nullable();
@@ -38,6 +38,6 @@ class CreateTableGuides extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_guides');
+        Schema::dropIfExists('guides');
     }
 }

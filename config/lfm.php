@@ -60,6 +60,7 @@ return [
                 'image/gif',
                 'application/pdf',
                 'text/plain',
+                'image/svg+xml',
             ],
         ],
         'image' => [
@@ -74,6 +75,7 @@ return [
                 'image/pjpeg',
                 'image/png',
                 'image/gif',
+                'image/svg+xml',
             ],
         ],
     ],
@@ -106,7 +108,7 @@ return [
 
     'should_validate_size'     => false,
 
-    'should_validate_mime'     => true,
+    'should_validate_mime'     => false,
 
     // behavior on files with identical name
     // setting it to true cause old file replace with new one
@@ -132,6 +134,7 @@ return [
         'image/jpeg',
         'image/pjpeg',
         'image/png',
+        'image/svg+xml',
     ],
 
     'thumb_img_width'          => 200, // px
@@ -155,6 +158,7 @@ return [
         'jpg'  => 'JPEG Image',
         'jpeg' => 'JPEG Image',
         'png'  => 'PNG Image',
+        'ico' => 'ICON Image',
         'ppt'  => 'Microsoft PowerPoint',
         'pptx' => 'Microsoft PowerPoint',
     ],

@@ -32,22 +32,15 @@
             </div>
             <div class="guide_main_image">
                 <picture>
-                    <source media="(min-width:960px)" srcset="{{asset('images/guide_top_image.jpg')}}" width="1640" height="400">
-                    <img src="{{asset('images/guide_inner_image.jpg')}}" alt="" title="" width="960" height="480"/>
+                    <source media="(min-width:960px)" srcset="{{asset('storage/'.$guide->cover_image)}}" width="1640" height="400">
+                    <img src="{{asset('storage/'.$guide->cover_image_mobile)}}" alt="" title="" width="960" height="480"/>
                 </picture>
 
             </div>
             <div class="feature_inner">
                 <div class="article_col">
                     <div class="article_content">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                        <br/>
-                        <br/>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                        <br/>
-                        <br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                        <h2>History</h2>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        {!! $guide->description_1 !!}
                         <div class="inner_subscribe">
                             <div class="small_bnner">
                                 <a href="#" class="bnner_inner">
@@ -75,85 +68,16 @@
                                 </form>
                             </div>
                         </div>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.
-                        <br/>
-                        <br/>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        <h2>Geography</h2>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.
-                        <img src="{{asset('css/images/map.svg')}}" alt="" title="" width="977" height="915"/>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.
-                        <br/>
-                        <br/>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elit.
-                        <h2>Appellations</h2>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        takimata sanctus est Lorem ipsum dolor sit amet.
-                        <br/>
-                        <br/>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                        <br/>
-                        <br/>
-                        Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                        <img src="{{asset('images/guide_inner_image.jpg')}}" alt="" title="" width="1191" height="600"/>
-                        <h2>Winemaking</h2>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        takimata sanctus est Lorem ipsum dolor sit amet.
-                        <br/>
-                        <br/>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-                        et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                        <br/>
-                        <br/>
-                        Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                        no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                        <h2>Grape Varieties</h2>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                       {!! $guide->description_2 !!}
+                        @if($add)
                         <div class="horizontal_bnner">
                             <a href="#" class="bnner_inner">
-                                <img src="{{asset('images/h_bnner.jpg')}}" alt="" title="" width="728" height="90"/>
+                                <img src="{{asset('storage/'.$add->image)}}" alt="" title="" width="728" height="90"/>
                                 bnner title here
                             </a>
                         </div>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.
-                        <br/>
-                        <br/>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        <br/>
-                        <br/>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        <br/>
-                        <br/>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                        <br/>
-                        <br/>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                        @endif
+                       {!! $guide->description_3 !!}
                     </div>
                 </div>
                 <div class="right_col">
@@ -165,69 +89,39 @@
                     </div>
                 </div>
             </div>
+            @if(!empty($similarFeatures))
             <div class="similar_features">
                 <div class="section_head">
                     <h2 class="section_title">Similar Stories</h2>
                 </div>
                 <div class="features_list">
                     <ul>
-                        <li>
-                            <div class="feature_block">
-                                <a  class="image_block" href="feature_inner.php">
-                                    <img src="{{asset('images/article_image2.jpg')}}" width="530" height="250" alt="" title=""/>
-                                    article title
-                                </a>
-                                <div class="info_block">
-                                    <div class="date_block">18 March, 2021</div>
-                                    <div class="title_block">
-                                        <a href="feature_inner.php">Lorem ipsum dolor sit amet.</a>
+                        @foreach($similarFeatures as $feature)
+                            <li>
+                                <div class="feature_block">
+                                    <a  class="image_block" href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $feature->slug])}}">
+                                        <img src="{{asset('storage/'.$feature->image)}}" width="530" height="250" alt="" title=""/>
+                                        article title
+                                        article title
+                                    </a>
+                                    <div class="info_block">
+                                        <div class="date_block">{{$feature->date}}</div>
+                                        <div class="title_block">
+                                            <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $feature->slug])}}">
+                                                {{$feature->title}}</a>
+                                        </div>
+                                        <div class="author_block">
+                                            By <span class="author_name">{{@$feature->author}}</span>
+                                        </div>
+                                        <div class="description_block">{{$feature->short_description}}</div>
                                     </div>
-                                    <div class="author_block">
-                                        By <span class="author_name">Tina B.</span>
-                                    </div>
-                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature_block">
-                                <a  class="image_block" href="feature_inner.php">
-                                    <img src="{{asset('images/article_image3.jpg')}}" width="530" height="250" alt="" title=""/>
-                                    article title
-                                </a>
-                                <div class="info_block">
-                                    <div class="date_block">18 March, 2021</div>
-                                    <div class="title_block">
-                                        <a href="feature_inner.php">Lorem ipsum dolor sit amet.</a>
-                                    </div>
-                                    <div class="author_block">
-                                        By <span class="author_name">Tina B.</span>
-                                    </div>
-                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature_block">
-                                <a  class="image_block" href="feature_inner.php">
-                                    <img src="{{asset('images/article_image3.jpg')}}" width="530" height="250" alt="" title=""/>
-                                    article title
-                                </a>
-                                <div class="info_block">
-                                    <div class="date_block">18 March, 2021</div>
-                                    <div class="title_block">
-                                        <a href="feature_inner.php">Lorem ipsum dolor sit amet.</a>
-                                    </div>
-                                    <div class="author_block">
-                                        By <span class="author_name">Tina B.</span>
-                                    </div>
-                                    <div class="description_block">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</div>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
+            @endif
         </div>
     </div>
 </div>
