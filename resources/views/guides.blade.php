@@ -5,19 +5,22 @@
         <div class="page_container">
             <div class="page_head">
                 <h1 class="page_title">Guides</h1>
-                <form class="inner_search">
+                <form class="inner_search" method="GET" action="{{route('guides',['locale' => app()->getLocale()])}}">
                     <label>
                         <span class="label">search</span>
-                        <input type="text" name="search[]" placeholder="Search Guides"/>
+                        <input type="text" name="search" placeholder="Search Guides"
+                               value="{{!empty($content['search']) ? $content['search'] : ''}}"/>
                     </label>
                     <button type="submit" class="icon_search" aria-label="search"></button>
                 </form>
             </div>
             <div class="guides_section">
-                <div class="section_head">
-                    <h2 class="section_title">{{@$content['title']}}</h2>
-                </div>
-                @if(!empty($content['guides']))
+                @if(empty($content['search']))
+                    <div class="section_head">
+                        <h2 class="section_title">{{@$content['title']}}</h2>
+                    </div>
+                @endif
+                @if($content['guides']->total() > 0)
                     <div class="guides_list">
                         <ul>
                             @foreach($content['guides'] as $guide)
@@ -37,6 +40,10 @@
                             </li>
                             @endforeach
                         </ul>
+                    </div>
+                @else
+                    <div class="guides_list">
+                        <div class="description_block ">No results found</div>
                     </div>
                 @endif
             </div>

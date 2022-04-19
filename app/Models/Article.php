@@ -15,7 +15,7 @@ class Article extends Model implements Sortable
     use HasSlug,HasFactory, SortableTrait,HasTranslations;
     public $translatable = ['title', 'author', 'photographer', 'translator', 'short_description','description','seo_title','seo_description'];
     protected $casts = ['created_at' => 'date:d F, Y'];
-    protected $appends = ["date"];
+    protected $appends = ["date","type"];
     public $sortable = [
         'order_column_name' => 'sort_order',
         'sort_when_creating' => true,
@@ -46,5 +46,9 @@ class Article extends Model implements Sortable
 
     public function getDateAttribute(){
         return date('d F, Y', strtotime($this->created_at));
+    }
+
+    public function getTypeAttribute(){
+        return 'feature';
     }
 }

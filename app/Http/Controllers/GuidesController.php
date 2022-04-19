@@ -11,11 +11,17 @@ use Illuminate\Http\Request;
 
 class GuidesController extends Controller
 {
-    public function getGuides($locale) {
+    public function getGuides(Request $request, $locale) {
         $content = nova_page_manager_get_page_by_path('guides', null, $locale);
         if($content){
-            $guides = Guide::published()->paginate(8);
-
+            if($request->has('search')){
+                $guides = Guide::published()
+                    ->where('title', 'LIKE', "%{$request->search}%")
+                    ->orWhere('short_description', 'LIKE', "%{$request->search}%")
+                    ->paginate(8);
+            }else{
+                $guides = Guide::published()->paginate(8);
+            }
             $content = [
                 'slug' => $content['slug'],
                 'template' => $content['template'],
@@ -24,6 +30,7 @@ class GuidesController extends Controller
                     'description' => $content['seo_description'],
                     'image' => $content['seo_image'],
                 ],
+                'search' => $request->has('search') ? $request->search : '',
                 'title' => $content->data->title,
                 'guides' => $guides
             ];

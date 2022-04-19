@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ad;
+use App\Models\Article;
 use App\Models\News;
+use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
-    public function getNews($locale){
+    public function getNews(Request $request, $locale){
         $content = nova_page_manager_get_page_by_path('news', null, $locale);
         $topNews_array = !empty($content['data']->top_news) ? json_decode($content['data']->top_news) : [];
         $addBanner = [];
@@ -41,22 +43,51 @@ class NewsController extends Controller
                     ->makeHidden(['published','created_at','updated_at','sort_order'])
                     ->toArray();
             }
-            $content = [
-                'slug' => $content['slug'],
-                'template' => $content['template'],
-                'seo' => [
-                    'title' => $content['seo_title'],
-                    'description' => $content['seo_description'],
-                    'image' => $content['seo_image'],
-                ],
-                'topNews' => $topNews,
-                'banner' => $addBanner,
-                'latestNews' => [
-                    'latest3' => $latest3News,
-                    'news' => $latestNews,
-                    'banners' => $verticalBanners,
-                ],
-            ];
+            /*
+           * Search
+           */
+//            $search = json_encode($request->search);
+//            $search = mb_substr($search,1,mb_strlen($search,"utf8")-2,"utf8");
+//            $search = str_replace("\", "\\",$search);
+//            $search = mysqli_real_escape_string($search);
+//            dd(mb_substr($search,1,mb_strlen($search,"utf8")-2,"utf8"));
+//            dd($search);
+            if($request->has('search')){
+                $news = News::where('title', 'LIKE', "%$request->search%")
+                    ->orWhere('short_description', 'LIKE', "%$request->search%")
+                    ->paginate(8);
+                $content = [
+                    'slug' => $content['slug'],
+                    'template' => $content['template'],
+                    'seo' => [
+                        'title' => $content['seo_title'],
+                        'description' => $content['seo_description'],
+                        'image' => $content['seo_image'],
+                    ],
+                    'search' => $request->search,
+                    'searchNews' => [
+                        'news' => $news,
+                        'banners' => $verticalBanners,
+                    ],
+                ];
+            }else{
+                $content = [
+                    'slug' => $content['slug'],
+                    'template' => $content['template'],
+                    'seo' => [
+                        'title' => $content['seo_title'],
+                        'description' => $content['seo_description'],
+                        'image' => $content['seo_image'],
+                    ],
+                    'topNews' => $topNews,
+                    'banner' => $addBanner,
+                    'latestNews' => [
+                        'latest3' => $latest3News,
+                        'news' => $latestNews,
+                        'banners' => $verticalBanners,
+                    ],
+                ];
+            }
             return view('news', ['content' => $content]);
         }
         return response()->json(['status' => 'page_not_found'], 404);
