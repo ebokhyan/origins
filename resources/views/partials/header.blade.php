@@ -19,7 +19,7 @@
                       <a href="{{route('lang',['locale' => 'en'])}}">EN</a>
                     @break
                     @case('en')
-                      <a href="{{route('lang',['locale' => 'hy'])}}">HY</a>
+                      <a href="{{route('lang',['locale' => 'hy'])}}">AM</a>
                     @break
                 @endswitch
             </div>

@@ -410,5 +410,25 @@ $(document).ready(function(){
         },200);
     })
 
+    // --------------------------------------------------------------------------------
+    // pagination
+    //--------------------------------------------------------------------------------
+    var $search_results = $(".search_listing");
+    var $ul = $("ul.pagination");
+
+    $ul.hide(); // Prevent the default Laravel paginator from showing, but we need the links...
+    $(document).on('click','#loadBtn',function(){
+        var search =  $("#search").val();
+        console.log(search);
+        var url = $(this).attr('data-load-url');
+        if(search){
+            url = url + '&search='+search;
+            console.log(url);
+        }
+        $.get(url, function(response) {
+            $('#loadBtn').remove();
+            $search_results.append(response);
+        });
+    })
 });
 

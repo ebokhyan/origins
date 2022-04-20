@@ -8,7 +8,7 @@
                     <form class="inner_search" method="GET" action="{{route('news',['locale' => app()->getLocale()])}}">
                         <label>
                             <span class="label">{{__('main.search')}}</span>
-                            <input type="text" name="search" placeholder="{{__('news.search')}}"
+                            <input type="text" id="search" name="search" placeholder="{{__('news.search')}}"
                                    value="{{isset($content['search']) ? $content['search'] : ''}}"/>
                         </label>
                         <button type="submit" class="icon_search" aria-label="search"></button>

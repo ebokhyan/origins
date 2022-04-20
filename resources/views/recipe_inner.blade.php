@@ -76,6 +76,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="article_content">
+                    {!! $recipe->credits !!}
+                </div>
             </div>
 
             <div class="latest_recipes">
