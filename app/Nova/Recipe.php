@@ -89,6 +89,8 @@ class Recipe extends Resource
                     ->actionText('Add ingredient'),
                 NovaTinyMCE::make(__('Instruction'),'instruction')
                     ->hideFromIndex(),
+                NovaTinyMCE::make(__('Credits'),'credits')
+                    ->hideFromIndex(),
             ]),
             FilemanagerField::make('Image (536 x 500)', "image")
                 ->filterBy('Image')

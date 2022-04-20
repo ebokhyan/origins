@@ -9,7 +9,9 @@
             <div class="feature_inner">
                 <div class="article_col">
                     <div class="details_block">
-                        <h2 class="details_title">{{$content->short_description}}</h2>
+                        @if($content->type != 'feature')
+                            <h2 class="details_title">{{$content->short_description}}</h2>
+                        @endif
                         <ul class="details_list">
                             <li>
                                 @if(app()->getLocale() == 'en')
@@ -78,11 +80,12 @@
                             <li>
                                 <div class="feature_block">
                                     @if($type == 'news_inner')
-                                        <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}"></a>
+                                        <a class="image_block" href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">
                                     @else
-                                        <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}"></a>
+                                        <a class="image_block" href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">
                                     @endif
                                         <img src="{{asset('storage/'.$item['image'])}}" width="530" height="250" alt="" title=""/>
+                                        </a>
                                     <div class="info_block">
                                         <div class="date_block">{{$item['created_at']}}</div>
                                         <div class="title_block">

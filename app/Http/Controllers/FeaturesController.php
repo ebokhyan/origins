@@ -23,11 +23,9 @@ class FeaturesController extends Controller
                 $addBanner->makeHidden(['published','created_at','updated_at','sort_order'])
                     ->toArray();
             }
-
-
             $latestFeatures = Article::published()
                 ->whereNotIn('id', json_decode($content['data']->top_features))
-                ->paginate(6);
+                ->paginate(4);
             $verticalBanners = Ad::published()
                 ->whereIn('id',json_decode($content['data']->vertical_adds))
                 ->get();
@@ -40,9 +38,15 @@ class FeaturesController extends Controller
             * Search
             */
             if($request->has('search')){
-                $features = Article::where('title', 'LIKE', "%{$request->search}%")
-                    ->orWhere('short_description', 'LIKE', "%{$request->search}%")
-                    ->paginate(8);
+                $features = Article::published()
+                    ->where('title->en', 'LIKE', "%$request->search%")
+                    ->orWhere('title->hy', 'LIKE', "%$request->search%")
+                    ->orWhere('short_description->en', 'LIKE', "%$request->search%")
+                    ->orWhere('short_description->hy', 'LIKE', "%$request->search%")
+                    ->paginate(6);
+                if ($request->ajax()) {
+                    return view('pagination_partials.search',['items' => $features])->render();
+                }
                 $content = [
                     'slug' => $content['slug'],
                     'template' => $content['template'],

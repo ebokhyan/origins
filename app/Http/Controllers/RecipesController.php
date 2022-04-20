@@ -14,12 +14,19 @@ class RecipesController extends Controller
         if($content){
             if($request->has('search')){
                 $recipes = Recipe::published()
-                    ->where('title', 'LIKE', "%{$request->search}%")
-                    ->orWhere('short_description', 'LIKE', "%{$request->search}%")
+                    ->where('title->en', 'LIKE', "%$request->search%")
+                    ->orWhere('title->hy', 'LIKE', "%$request->search%")
+                    ->orWhere('short_description->en', 'LIKE', "%$request->search%")
+                    ->orWhere('short_description->hy', 'LIKE', "%$request->search%")
                     ->paginate(6);
+                if ($request->ajax()) {
+//                    dd(view('pagination_partials.recipes',['recipes' => $recipes])->render());
+                    return view('pagination_partials.recipes',['recipes' => $recipes])->render();
+                }
             }else{
                 $recipes = Recipe::published()->paginate(6);
             }
+
             $content = [
                 'slug' => $content['slug'],
                 'template' => $content['template'],

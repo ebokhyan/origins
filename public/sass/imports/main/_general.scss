@@ -1073,6 +1073,16 @@ a.image_block {
     color: $siteColor;
 }
 
+#loadBtn {
+    width: 500px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fff;
+    border: 1px solid;
+    border-radius: 20px;
+}
+
 .share_btns {
     height: 45px;
     .at-share-btn-elements {

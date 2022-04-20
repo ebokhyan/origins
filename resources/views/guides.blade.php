@@ -8,7 +8,7 @@
                 <form class="inner_search" method="GET" action="{{route('guides',['locale' => app()->getLocale()])}}">
                     <label>
                         <span class="label">search</span>
-                        <input type="text" name="search" placeholder="Search Guides"
+                        <input type="text" id="search" name="search" placeholder="Search Guides"
                                value="{{!empty($content['search']) ? $content['search'] : ''}}"/>
                     </label>
                     <button type="submit" class="icon_search" aria-label="search"></button>
@@ -22,23 +22,8 @@
                 @endif
                 @if($content['guides']->total() > 0)
                     <div class="guides_list">
-                        <ul>
-                            @foreach($content['guides'] as $guide)
-                            <li>
-                                <div class="guide_block">
-                                    <a  class="image_block" href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => $guide->slug])}}">
-                                        <img src="{{asset('storage/'.$guide->image)}}" width="536" height="500" alt="" title=""/>
-                                        article title
-                                    </a>
-                                    <div class="info_block">
-                                        <div class="title_block">
-                                            <a href="{{route('guides.inner',['locale' => app()->getLocale(), 'slug' => $guide->slug])}}">{{$guide->title}}</a>
-                                        </div>
-                                        <div class="description_block">{{$guide->short_description}}</div>
-                                    </div>
-                                </div>
-                            </li>
-                            @endforeach
+                        <ul class="search_listing">
+                            @include('pagination_partials.guieds',['guides' => $content['guides']])
                         </ul>
                     </div>
                 @else

@@ -22,6 +22,7 @@ class Recipe extends Model implements Sortable
         'type',
         'ingredients',
         'instruction',
+        'credits',
         'short_description',
         'description',
         'seo_title',

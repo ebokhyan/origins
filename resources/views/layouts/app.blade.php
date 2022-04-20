@@ -28,7 +28,8 @@
     <script src="{{asset("js/jquery-3.6.0.min.js")}}"></script>
     <script src="{{asset("js/jquery.form-validator.js")}}"></script>
     <script src="{{asset("js/main.js")}}"></script>
-    @if(Route::currentRouteName() == 'guides.inner' || Route::currentRouteName() == 'about')
+    @if(Route::currentRouteName() == 'guides.inner' || Route::currentRouteName() == 'about'
+        || Route::currentRouteName() == 'feature' || Route::currentRouteName() == 'recipes.inner')
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-589071e66b72346f"></script>
     @endif
 </body>

@@ -46,16 +46,16 @@ class NewsController extends Controller
             /*
            * Search
            */
-//            $search = json_encode($request->search);
-//            $search = mb_substr($search,1,mb_strlen($search,"utf8")-2,"utf8");
-//            $search = str_replace("\", "\\",$search);
-//            $search = mysqli_real_escape_string($search);
-//            dd(mb_substr($search,1,mb_strlen($search,"utf8")-2,"utf8"));
-//            dd($search);
             if($request->has('search')){
-                $news = News::where('title', 'LIKE', "%$request->search%")
-                    ->orWhere('short_description', 'LIKE', "%$request->search%")
-                    ->paginate(8);
+                $news = News::published()
+                    ->where('title->en', 'LIKE', "%$request->search%")
+                    ->orWhere('title->hy', 'LIKE', "%$request->search%")
+                    ->orWhere('short_description->en', 'LIKE', "%$request->search%")
+                    ->orWhere('short_description->hy', 'LIKE', "%$request->search%")
+                    ->paginate(6);
+                if ($request->ajax()) {
+                    return view('pagination_partials.search',['items' => $news])->render();
+                }
                 $content = [
                     'slug' => $content['slug'],
                     'template' => $content['template'],
