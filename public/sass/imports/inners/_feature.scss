@@ -36,6 +36,9 @@
         li {
             padding-top: 15px;
         }
+        li:first-child {
+            padding-top: 0;
+        }
     }
     .share_btns {
         margin-top: 30px;
@@ -64,13 +67,16 @@
             li {
                 padding-top: 10px;
             }
+            li:first-child {
+                padding-top: 0;
+            }
         }
         .share_btns {
             margin-top: 20px;
         }
     }
     @include mediaRange($size576, $size768) {
-        padding: 10px 0;
+        padding: 10px 0 20px;
         .details_block {
             width: 180px;
             margin-right: 20px;
@@ -89,7 +95,7 @@
         }
     }
     @include mediaTo($size576) {
-        padding: 0;
+        padding: 0 0 20px;
         .details_block {
             width: 100%;
             margin-right: 0;
@@ -131,7 +137,7 @@
         .title_block {
             display: flex;
             justify-content: flex-start;
-            
+
             a {
                 color: inherit;
                 @include textOverflow(2, relative);
@@ -162,6 +168,7 @@
         height: auto !important;
         max-width: 100%;
         margin: 40px 0;
+        display: block;
         &[style*="float: right"],
         &[style*="float:right"] {
             margin-left: 30px;
@@ -177,7 +184,7 @@
         &:not([style*="float"]) + .styled_block {
             margin-top: 0;
         }
-        
+
     }
     h2 {
         font-size: 127.3%;
@@ -194,6 +201,9 @@
         font-family: $semibold;
         font-weight: 500;
         color: inherit;
+    }
+    > *:first-child {
+        margin-top: 0;
     }
     .styled_block {
         font-family: $semibold;
@@ -239,6 +249,15 @@
             font-size: 2.0rem;
         }
     }
+    .horizontal_bnner{
+        &:before,
+        &:after {
+            display: block;
+            content: "";
+            margin: 0 -15px;
+            border-top: 1px solid $black;
+        }
+    }
 }
 
 .similar_features {
@@ -277,6 +296,8 @@
             display: flex;
             justify-content: flex-start;
             margin-top: 10px;
+            max-width: 400px;
+            width: 90%;
             a {
                 @include textOverflow(2, relative);
                 max-width: 100%;
@@ -291,6 +312,7 @@
             margin-top: 15px;
             color: $secondTextColor;
             opacity: 0.6;
+            max-width: 90%;
             @include textOverflow(2, relative);
         }
         @include mediaRange($size1200, $size1440) {
@@ -324,15 +346,13 @@
             .date_block {
                 margin-top: 10px;
             }
-            .description_block {
-                -webkit-line-clamp: 3;
-            }
         }
         @include mediaTo($size576) {
             padding-top: 0;
             .description_block {
                 font-size: 120%;
                 line-height: 15px;
+                max-width: 80%;
             }
             .date_block {
                 font-size: 80%;
@@ -343,7 +363,7 @@
             }
         }
     }
-   
+
 }
 
 @include mediaRange($size1200, $size1440) {
@@ -383,7 +403,7 @@
             &[style*="float: left"],
             &[style*="float:left"] {
                 max-width: 66.67%;
-            } 
+            }
         }
     }
 }
@@ -429,7 +449,7 @@
             &[style*="float:left"] {
                 margin-right: 20px;
                 max-width: 60%;
-            } 
+            }
         }
         h2 {
             margin: 30px 0 25px;
@@ -479,7 +499,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 display: block;
-            } 
+            }
         }
         h2 {
             margin: 20px 0;
