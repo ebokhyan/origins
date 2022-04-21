@@ -1355,6 +1355,7 @@ a.banner_inner,
   background-color: #fff;
   border: 1px solid;
   border-radius: 20px;
+  margin: auto;
 }
 
 .share_btns {
@@ -1659,7 +1660,7 @@ a.banner_inner,
   }
 }
 
-.member_articles ul, .member_popup .socials_list, .coworkers .members_list, .managament_staff .socials_list, .ingredients_list, .recipe_main .stats_list ul, .right_col .stories_list, .latest_news ul, .latest_features ul, .news_section .news_list ul, .footer .terms_menu, .header .main_menu, .socials_list, .content .terms_menu ul {
+.region_params ul, .member_articles ul, .member_popup .socials_list, .coworkers .members_list, .managament_staff .socials_list, .ingredients_list, .recipe_main .stats_list ul, .right_col .stories_list, .latest_news ul, .latest_features ul, .news_section .news_list ul, .footer .terms_menu, .header .main_menu, .socials_list, .content .terms_menu ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -3673,6 +3674,10 @@ a.banner_inner,
   font-size: 160%;
   line-height: 25px;
   margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .recipes_section .recipe_block .description_block {
   position: relative;
@@ -3681,6 +3686,7 @@ a.banner_inner,
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  height: 66px;
   margin-bottom: 40px;
   color: rgba(37, 37, 41, 0.6);
 }
@@ -3757,6 +3763,7 @@ a.banner_inner,
   }
   .recipes_section .recipe_block .description_block {
     margin-bottom: 20px;
+    height: 54px;
   }
   .recipes_section .recipe_block .author_block {
     font-size: 140%;
@@ -3856,6 +3863,9 @@ a.banner_inner,
   }
   .recipes_section .recipe_block .description_block {
     margin-bottom: 0;
+    height: 48px;
+    font-size: 120%;
+    line-height: 16px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -5193,6 +5203,9 @@ a.banner_inner,
 .feature_inner .details_list li {
   padding-top: 15px;
 }
+.feature_inner .details_list li:first-child {
+  padding-top: 0;
+}
 .feature_inner .share_btns {
   margin-top: 30px;
 }
@@ -5224,6 +5237,9 @@ a.banner_inner,
   }
   .feature_inner .details_list li {
     padding-top: 10px;
+  }
+  .feature_inner .details_list li:first-child {
+    padding-top: 0;
   }
   .feature_inner .share_btns {
     margin-top: 20px;
@@ -5356,6 +5372,9 @@ a.banner_inner,
   font-weight: 500;
   color: inherit;
 }
+.article_content > *:first-child {
+  margin-top: 0;
+}
 .article_content .styled_block {
   font-family: "poppins-semibold";
   font-style: italic;
@@ -5453,6 +5472,8 @@ a.banner_inner,
   display: flex;
   justify-content: flex-start;
   margin-top: 10px;
+  max-width: 400px;
+  width: 90%;
 }
 .similar_features .features_list .title_block a {
   position: relative;
@@ -5470,6 +5491,7 @@ a.banner_inner,
   margin-top: 15px;
   color: #252529;
   opacity: 0.6;
+  max-width: 90%;
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -5514,9 +5536,6 @@ a.banner_inner,
   .similar_features .features_list .date_block {
     margin-top: 10px;
   }
-  .similar_features .features_list .description_block {
-    -webkit-line-clamp: 3;
-  }
 }
 @media screen and (max-width: 575px) {
   .similar_features .features_list {
@@ -5525,6 +5544,7 @@ a.banner_inner,
   .similar_features .features_list .description_block {
     font-size: 120%;
     line-height: 15px;
+    max-width: 80%;
   }
   .similar_features .features_list .date_block {
     font-size: 80%;
@@ -6063,7 +6083,6 @@ a.banner_inner,
 
 .instructions {
   margin-top: 50px;
-  margin-bottom: 50px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
