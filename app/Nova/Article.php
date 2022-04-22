@@ -59,12 +59,13 @@ class Article extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            new Panel(__('General'), $this->generalFields()),
+            new Panel(__('General'), $this->generalFields($request)),
             new Panel(__('SEO'), $this->seoFields()),
         ];
     }
 
-    public function generalFields(){
+    public function generalFields($request){
+        $resourceId = $request->route('resourceId');
         return [
             Slug::make(__('Slug'),'slug')
                 ->separator('-')
@@ -76,9 +77,9 @@ class Article extends Resource
                 Text::make(__('Author'),'author')
                     ->rules('max:255')
                     ->sortable(),
-                Text::make(__('Photographer'),'photographer')
-                    ->rules('max:255')
-                    ->sortable(),
+//                Text::make(__('Photographer'),'photographer')
+//                    ->rules('max:255')
+//                    ->sortable(),
                 Text::make(__('Translator'),'translator')
                     ->rules('max:255')
                     ->sortable(),
@@ -96,7 +97,7 @@ class Article extends Resource
                 ->falseValue('0')
                 ->sortable(),
             Multiselect::make(__('Similar features'),'similar')
-                ->options($this->getFeatures())
+                ->options($this->getFeatures($resourceId))
                 ->max(3)
                 ->reorderable(),
             Boolean::make('Published')
@@ -164,8 +165,8 @@ class Article extends Resource
         return [];
     }
 
-    public function getFeatures(){
-        $features = \App\Models\Article::published()->pluck('title', 'id');
+    public function getFeatures($id){
+        $features = \App\Models\Article::published()->where('id','<>',$id)->pluck('title', 'id');
         return $features;
     }
 }

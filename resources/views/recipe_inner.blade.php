@@ -76,9 +76,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="article_content">
-                    {!! $recipe->credits !!}
-                </div>
+                @if(!empty($recipe->credits))
+                    <div class="article_content" style="margin-top: 75px;">
+                        {!! $recipe->credits !!}
+                    </div>
+                @endif
             </div>
 
             <div class="latest_recipes">

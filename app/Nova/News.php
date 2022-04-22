@@ -54,11 +54,12 @@ class News extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            new Panel(__('General'), $this->generalFields()),
+            new Panel(__('General'), $this->generalFields($request)),
             new Panel(__('SEO'), $this->seoFields()),
         ];
     }
-    public function generalFields(){
+    public function generalFields($request){
+        $resourceId = $request->route('resourceId');
         return [
             Slug::make(__('Slug'),'slug')
                 ->separator('-')
@@ -70,10 +71,10 @@ class News extends Resource
                 Text::make(__('Author'),'author')
                     ->rules('max:255')
                     ->sortable(),
-                Text::make(__('Photographer'),'photographer')
-                    ->rules('max:255')
-                    ->sortable()
-                    ->hideFromIndex(),
+//                Text::make(__('Photographer'),'photographer')
+//                    ->rules('max:255')
+//                    ->sortable()
+//                    ->hideFromIndex(),
                 Text::make(__('Translator'),'translator')
                     ->rules('max:255')
                     ->sortable()
@@ -92,7 +93,7 @@ class News extends Resource
                 ->falseValue('0')
                 ->sortable(),
             Multiselect::make(__('Similar news'),'similar')
-                ->options($this->getNews())
+                ->options($this->getNews($resourceId))
                 ->max(3)
                 ->reorderable()
                 ->hideFromIndex(),
@@ -159,8 +160,10 @@ class News extends Resource
         return [];
     }
 
-    public function getNews(){
-        $news = \App\Models\News::published()->pluck('title', 'id');
+    public function getNews($id){
+        $news = \App\Models\News::published()
+            ->where('id','<>',$id)
+            ->pluck('title', 'id');
         return $news;
     }
 

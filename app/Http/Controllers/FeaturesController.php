@@ -85,11 +85,13 @@ class FeaturesController extends Controller
         }
         return response()->json(['status' => 'page_not_found'], 404);
     }
+
+
     public function getFeature($locale,$slug){
         $feature = Article::published()->where('slug',$slug)->first();
 
         if($feature){
-            $topFeatures = Article::top()->latest()->take(4)->get()->toArray();
+            $topFeatures = Article::top()->where('id','<>',$feature->id)->latest()->take(4)->get()->toArray();
             $adds = Ad::published()->where('features','1')->get()->toArray();
             $sf_ids = !is_null($feature->similar) ? json_decode($feature->similar) : [];
             $similarFeatures = Article::published()

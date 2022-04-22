@@ -1,6 +1,3 @@
-{{--@php--}}
-{{--dd($items);--}}
-{{--@endphp--}}
 @foreach($items as $item)
     <li>
         <div class="feature_block">

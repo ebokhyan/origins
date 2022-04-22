@@ -99,7 +99,7 @@
                                     <div class="title_block">
                                         <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $news->slug])}}">{{$news->title}}</a>
                                     </div>
-                                    <div class="description_block">{{$news->short_descrtion}}</div>
+                                    <div class="description_block">{{$news->short_description}}</div>
                                 </div>
                             </div>
                         </li>
@@ -117,7 +117,7 @@
                                     <div class="title_block">
                                         <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $news->slug])}}">{{$news->title}}</a>
                                     </div>
-                                    <div class="description_block">{{$news->short_descrtion}}</div>
+                                    <div class="description_block">{{$news->short_description}}</div>
                                 </div>
                             </div>
                         </li>

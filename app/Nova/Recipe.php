@@ -55,12 +55,13 @@ class Recipe extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
-            new Panel(__('General'), $this->generalFields()),
+            new Panel(__('General'), $this->generalFields($request)),
             new Panel(__('SEO'), $this->seoFields()),
         ];
     }
 
-    public function generalFields(){
+    public function generalFields($request){
+        $resourceId = $request->route('resourceId');
         return [
             Slug::make('Slug')
                 ->from('title')
