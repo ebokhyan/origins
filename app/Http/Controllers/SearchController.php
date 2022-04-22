@@ -14,24 +14,24 @@ class SearchController extends Controller
     public function getResults(Request $request, $locale) {
 //        dd($request->search);
         $news = News::published()
-                ->select('id','slug','title','short_description', 'image','author','created_at')
-                ->where('title->en', 'LIKE', "%$request->search%")
-                ->orWhere('title->hy', 'LIKE', "%$request->search%")
-                ->orWhere('short_description->en', 'LIKE', "%$request->search%")
-                ->orWhere('short_description->hy', 'LIKE', "%$request->search%");
+            ->select('id','slug','title','short_description', 'image','author','created_at')
+            ->whereRaw('LOWER(JSON_EXTRACT(title, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+            ->orWhereRaw('LOWER(JSON_EXTRACT(title, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
+            ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+            ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"']);
         $recipes = Recipe::published()
             ->select('id','slug','title','short_description', 'image','author','created_at')
-            ->where('title->en', 'LIKE', "%$request->search%")
-            ->orWhere('title->hy', 'LIKE', "%$request->search%")
-            ->orWhere('short_description->en', 'LIKE', "%$request->search%")
-            ->orWhere('short_description->hy', 'LIKE', "%$request->search%");
+            ->whereRaw('LOWER(JSON_EXTRACT(title, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+            ->orWhereRaw('LOWER(JSON_EXTRACT(title, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
+            ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+            ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"']);
 
         $results = Article::published()
             ->select('id','slug','title','short_description', 'image','author','created_at')
-            ->where('title->en', 'LIKE', "%$request->search%")
-            ->orWhere('title->hy', 'LIKE', "%$request->search%")
-            ->orWhere('short_description->en', 'LIKE', "%$request->search%")
-            ->orWhere('short_description->hy', 'LIKE', "%$request->search%")
+            ->whereRaw('LOWER(JSON_EXTRACT(title, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+            ->orWhereRaw('LOWER(JSON_EXTRACT(title, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
+            ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+            ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
             ->union($news)
             ->union($recipes)
             ->orderBy('created_at')

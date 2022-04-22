@@ -14,10 +14,10 @@ class RecipesController extends Controller
         if($content){
             if($request->has('search')){
                 $recipes = Recipe::published()
-                    ->where('title->en', 'LIKE', "%$request->search%")
-                    ->orWhere('title->hy', 'LIKE', "%$request->search%")
-                    ->orWhere('short_description->en', 'LIKE', "%$request->search%")
-                    ->orWhere('short_description->hy', 'LIKE', "%$request->search%")
+                    ->whereRaw('LOWER(JSON_EXTRACT(title, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+                    ->orWhereRaw('LOWER(JSON_EXTRACT(title, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
+                    ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+                    ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
                     ->paginate(8);
             }else{
                 $recipes = Recipe::published()->paginate(8);

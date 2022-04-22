@@ -39,10 +39,10 @@ class FeaturesController extends Controller
             */
             if($request->has('search')){
                 $features = Article::published()
-                    ->where('title->en', 'LIKE', "%$request->search%")
-                    ->orWhere('title->hy', 'LIKE', "%$request->search%")
-                    ->orWhere('short_description->en', 'LIKE', "%$request->search%")
-                    ->orWhere('short_description->hy', 'LIKE', "%$request->search%")
+                    ->whereRaw('LOWER(JSON_EXTRACT(title, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+                    ->orWhereRaw('LOWER(JSON_EXTRACT(title, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
+                    ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+                    ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
                     ->paginate(6);
                 if ($request->ajax()) {
                     return view('pagination_partials.search',['items' => $features])->render();
