@@ -15,5 +15,7 @@
     </li>
 @endforeach
 @if($guides->currentPage() != $guides->lastPage())
-    <button class="btn" id="loadBtn" data-load-url='{{$guides->nextPageUrl()}}'>Load more</button>
+    <li  style="flex: 0 0 100%; max-width: 100%">
+        <button class="btn" id="loadBtn" data-load-url='{{$guides->nextPageUrl()}}'>Load more</button>
+    </li>
 @endif

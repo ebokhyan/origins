@@ -62,6 +62,9 @@ class FeaturesController extends Controller
                     ],
                 ];
             }else{
+                if ($request->ajax()) {
+                    return view('pagination_partials.search',['items' => $latestFeatures])->render();
+                }
                 $content = [
                     'slug' => $content['slug'],
                     'template' => $content['template'],
@@ -84,11 +87,13 @@ class FeaturesController extends Controller
     }
     public function getFeature($locale,$slug){
         $feature = Article::published()->where('slug',$slug)->first();
+
         if($feature){
             $topFeatures = Article::top()->latest()->take(4)->get()->toArray();
             $adds = Ad::published()->where('features','1')->get()->toArray();
+            $sf_ids = !is_null($feature->similar) ? json_decode($feature->similar) : [];
             $similarFeatures = Article::published()
-                ->whereIn('id', json_decode($feature->similar))
+                ->whereIn('id', $sf_ids)
                 ->latest()
                 ->take(4)
                 ->get()
@@ -98,7 +103,7 @@ class FeaturesController extends Controller
                 'type' => 'features',
                 'content' => $feature,
                 'top' =>!empty($topFeatures) ? $topFeatures : [],
-                'similar' => !empty($similarFeatures) ? $similarFeatures : [],
+                'similar' => $similarFeatures,
                 'adds' => !empty($adds) ? $adds : []
             ]);
         }

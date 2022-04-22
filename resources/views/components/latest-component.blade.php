@@ -19,7 +19,7 @@
                     <input type="text" name="search" placeholder="{{__('main.form.placeholders.search')}}"/>
                 </label>
                 <button type="submit" class="icon_search" aria-label="search"></button>
-            </form>s
+            </form>
     </div>
     @endif
     @if(!empty($items))
