@@ -103,7 +103,7 @@ class NewsController extends Controller
     public function getNewsBySlug($locale,$slug){
         $news = News::published()->where('slug',$slug)->first();
         if($news){
-            $topNews = News::top()->latest()->take(4)->get()->toArray();
+            $topNews = News::top()->where('id','<>',$news->id)->latest()->take(4)->get()->toArray();
             $adds = Ad::published()->where('features','1')->get()->toArray();
             $similarNews = News::published()
                 ->whereIn('id', json_decode($news->similar))

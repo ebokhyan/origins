@@ -39,7 +39,7 @@
                         </div>
                     @endif
                     @if(!empty($results_html))
-                        <div class="features_list">
+                        <div class="features_list" style="{{$search ? "padding-top: 0;" : '' }}">
                             <ul class="search_listing">
                                {!! $results_html !!}
                             </ul>

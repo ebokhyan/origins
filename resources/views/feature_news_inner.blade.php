@@ -22,14 +22,6 @@
                             </li>
                             <li>
                                 @if(app()->getLocale() == 'en')
-                                    {{Str::ucfirst(__('features.photography'))}} {{Str::ucfirst(__('main.by'))}} {{$content->photographer}}
-                                @endif
-                                @if(app()->getLocale() == 'hy')
-                                    {{Str::ucfirst(__('features.photography'))}} {{$content->photographer}} {{Str::lower(__('main.by'))}}
-                                @endif
-                            </li>
-                            <li>
-                                @if(app()->getLocale() == 'en')
                                     {{Str::ucfirst(__('features.translated'))}} {{Str::ucfirst(__('main.by'))}} {{$content->translator}}
                                 @endif
                                 @if(app()->getLocale() == 'hy')

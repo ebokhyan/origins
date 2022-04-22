@@ -44,7 +44,11 @@ class RecipesController extends Controller
     public function getRecipeBySlug($locale,$slug){
         $recipe = Recipe::published()->where('slug',$slug)->first();
         if($recipe){
-            $otherRecipes = Recipe::published()->where('id','<>',$recipe->id)->orderBy('id','DESC')->take(20)->get();
+            $otherRecipes = Recipe::published()
+                ->where('id','<>',$recipe->id)
+                ->orderBy('id','DESC')
+                ->take(20)
+                ->get();
             if($otherRecipes && count($otherRecipes) >= 3 ) {
                 $otherRecipes = $otherRecipes->random(3);
             }

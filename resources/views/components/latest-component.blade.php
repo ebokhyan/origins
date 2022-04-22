@@ -23,7 +23,7 @@
     </div>
     @endif
     @if(!empty($items))
-        <div class="features_list">
+        <div class="features_list" style="{{$search ? "padding-top: 0;" : '' }}">
             <ul class="search_listing">
                 @include('pagination_partials.search',['items' => $items])
             </ul>
