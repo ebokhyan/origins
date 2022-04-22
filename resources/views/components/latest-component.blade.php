@@ -22,7 +22,7 @@
             </form>
     </div>
     @endif
-    @if(!empty($items))
+    @if($items->total() > 0)
         <div class="features_list" style="{{$search ? "padding-top: 0;" : '' }}">
             <ul class="search_listing">
                 @include('pagination_partials.search',['items' => $items])
@@ -30,6 +30,10 @@
             @if(!empty($banners))
                 <x-vertical_banner-component :banners="$banners"></x-vertical_banner-component>
             @endif
+        </div>
+    @else
+        <div class="guides_list">
+            <div class="description_block ">No results found</div>
         </div>
     @endif
 </div>

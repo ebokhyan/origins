@@ -48,7 +48,9 @@
                             @endif
                         </div>
                     @else
-                            {{-- TODO:: show empty results text--}}
+                        <div class="guides_list">
+                            <div class="description_block ">No results found</div>
+                        </div>
                     @endif
                 </div>
             </div>

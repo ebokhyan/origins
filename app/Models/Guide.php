@@ -22,7 +22,6 @@ class Guide extends Model implements Sortable
         'subscription_text',
         'seo_title',
         'seo_description'];
-    protected $appends = ["type"];
     public $sortable = [
         'order_column_name' => 'sort_order',
         'sort_when_creating' => true,
@@ -45,7 +44,4 @@ class Guide extends Model implements Sortable
         return $query->where('published', '1')->orderBy('sort_order', 'ASC');
     }
 
-    public function getTypeAttribute(){
-        return 'guide';
-    }
 }
