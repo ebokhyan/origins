@@ -12,22 +12,22 @@ class SearchController extends Controller
 {
 
     public function getResults(Request $request, $locale) {
+//        dd($request->search);
         $news = News::published()
-                ->select('slug','title','short_description', 'image','author','created_at')
+                ->select('id','slug','title','short_description', 'image','author','created_at')
                 ->where('title->en', 'LIKE', "%$request->search%")
                 ->orWhere('title->hy', 'LIKE', "%$request->search%")
                 ->orWhere('short_description->en', 'LIKE', "%$request->search%")
                 ->orWhere('short_description->hy', 'LIKE', "%$request->search%");
-
         $recipes = Recipe::published()
-            ->select('slug','title','short_description', 'image','author','created_at')
+            ->select('id','slug','title','short_description', 'image','author','created_at')
             ->where('title->en', 'LIKE', "%$request->search%")
             ->orWhere('title->hy', 'LIKE', "%$request->search%")
             ->orWhere('short_description->en', 'LIKE', "%$request->search%")
             ->orWhere('short_description->hy', 'LIKE', "%$request->search%");
 
         $results = Article::published()
-            ->select('slug','title','short_description', 'image','author','created_at')
+            ->select('id','slug','title','short_description', 'image','author','created_at')
             ->where('title->en', 'LIKE', "%$request->search%")
             ->orWhere('title->hy', 'LIKE', "%$request->search%")
             ->orWhere('short_description->en', 'LIKE', "%$request->search%")
@@ -36,10 +36,11 @@ class SearchController extends Controller
             ->union($recipes)
             ->orderBy('created_at')
             ->paginate(4);
+
         $html = view('pagination_partials.search',['items' => $results])->render();
 
         if ($request->ajax()) {
-            return view('pagination_partials.search', ['items' => $results])->render();
+            return $html;
         }
         return view('search_results',['results' => $results,'results_html' => $html,'search' => $request->search]);
     }

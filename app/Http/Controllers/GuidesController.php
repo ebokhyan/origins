@@ -19,11 +19,11 @@ class GuidesController extends Controller
                     ->where('title', 'LIKE', "%{$request->search}%")
                     ->orWhere('short_description', 'LIKE', "%{$request->search}%")
                     ->paginate(8);
-                if ($request->ajax()) {
-                    return view('pagination_partials.guides',['guides' => $guides])->render();
-                }
             }else{
                 $guides = Guide::published()->paginate(8);
+            }
+            if ($request->ajax()) {
+                return view('pagination_partials.guides',['guides' => $guides])->render();
             }
             $content = [
                 'slug' => $content['slug'],

@@ -25,5 +25,7 @@
     </li>
 @endforeach
 @if($recipes->currentPage() != $recipes->lastPage())
-    <button class="btn" id="loadBtn" data-load-url='{{$recipes->nextPageUrl()}}'>Load more</button>
+    <li  style="flex: 0 0 100%; max-width: 100%">
+        <button class="btn" id="loadBtn" data-load-url='{{$recipes->nextPageUrl()}}'>Load more</button>
+    </li>
 @endif

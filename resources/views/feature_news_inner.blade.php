@@ -9,9 +9,7 @@
             <div class="feature_inner">
                 <div class="article_col">
                     <div class="details_block">
-                        @if($content->type != 'feature')
-                            <h2 class="details_title">{{$content->short_description}}</h2>
-                        @endif
+{{--                    <h2 class="details_title">{{$content->short_description}}</h2>--}}
                         <ul class="details_list">
                             <li>
                                 @if(app()->getLocale() == 'en')

@@ -1,3 +1,6 @@
+{{--@php--}}
+{{--dd($items);--}}
+{{--@endphp--}}
 @foreach($items as $item)
     <li>
         <div class="feature_block">
@@ -51,5 +54,7 @@
     </li>
 @endforeach
 @if($items->currentPage() != $items->lastPage())
-    <button class="btn" id="loadBtn" data-load-url='{{$items->nextPageUrl()}}'>Load more</button>
+    <li  style="flex: 0 0 100%; max-width: 100%">
+        <button class="btn" id="loadBtn" data-load-url='{{$items->nextPageUrl()}}'>Load more</button>
+    </li>
 @endif

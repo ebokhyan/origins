@@ -71,6 +71,9 @@ class NewsController extends Controller
                     ],
                 ];
             }else{
+                if ($request->ajax()) {
+                    return view('pagination_partials.search',['items' => $latestNews])->render();
+                }
                 $content = [
                     'slug' => $content['slug'],
                     'template' => $content['template'],
