@@ -104,7 +104,7 @@ class NewsController extends Controller
         $news = News::published()->where('slug',$slug)->first();
         if($news){
             $topNews = News::top()->where('id','<>',$news->id)->latest()->take(4)->get()->toArray();
-            $adds = Ad::published()->where('features','1')->get()->toArray();
+            $adds = Ad::published()->where('news','1')->get()->toArray();
             $similarNews = News::published()
                 ->whereIn('id', json_decode($news->similar))
                 ->latest()

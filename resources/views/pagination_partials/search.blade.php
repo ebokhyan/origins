@@ -1,7 +1,7 @@
 @foreach($items as $item)
     <li>
         <div class="feature_block">
-            @switch($item->type)
+            @switch($item->resource_type)
                 @case('news')
                 <a class="image_block"
                    href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">
@@ -16,7 +16,7 @@
                 @break
                 @case('recipe')
                 <a class="image_block"
-                   href="{{route('recipe',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">
+                   href="{{route('recipes.inner',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">
                     <img src="{{asset('storage/'.$item->image)}}" width="390" height="250" alt="" title=""/>
                 </a>
                 @break
@@ -24,7 +24,7 @@
             <div class="info_block">
                 <div class="date_block">{{$item->date}}</div>
                 <div class="title_block">
-                    @switch($item->type)
+                    @switch($item->resource_type)
                         @case('news')
                         <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">{{@$item->title}}</a>
                         @break
@@ -32,7 +32,7 @@
                         <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">{{@$item->title}}</a>
                         @break
                         @case('recipe')
-                        <a href="{{route('recipe',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">{{@$item->title}}</a>
+                        <a href="{{route('recipes',['locale' => app()->getLocale(), 'slug' => $item->slug])}}">{{@$item->title}}</a>
                         @break
                     @endswitch
                 </div>

@@ -20,7 +20,7 @@
                         <h2 class="section_title">{{__('recipes.latest_recipes')}}</h2>
                     </div>
                 @endif
-                @if(!empty($content['recipes']))
+                @if($content['recipes']->total() > 0)
                 <div class="recipes_list">
                     <ul class="search_listing">
                         @include('pagination_partials.recipes',['recipes' => $content['recipes']])

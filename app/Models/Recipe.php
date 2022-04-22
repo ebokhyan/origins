@@ -27,7 +27,6 @@ class Recipe extends Model implements Sortable
         'description',
         'seo_title',
         'seo_description'];
-    protected $appends = ["type"];
 
     /**
      * Get the options for generating the slug.
@@ -53,9 +52,5 @@ class Recipe extends Model implements Sortable
     public function scopePublished($query)
     {
         return $query->where('published', '1')->orderBy('sort_order', 'ASC');
-    }
-
-    public function getTypeAttribute(){
-        return 'recipe';
     }
 }

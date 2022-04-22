@@ -17,7 +17,7 @@ class News extends Model implements Sortable
     protected $table = 'news';
     public $translatable = ['title', 'author', 'photographer', 'translator', 'short_description','description','seo_title','seo_description'];
     protected $casts = ['created_at' => 'date:d F, Y','title' => 'json'];
-    protected $appends = ["date","type"];
+    protected $appends = ["date"];
     public $sortable = [
         'order_column_name' => 'sort_order',
         'sort_when_creating' => true,
@@ -49,7 +49,4 @@ class News extends Model implements Sortable
         return date('d F, Y', strtotime($this->created_at));
     }
 
-    public function getTypeAttribute(){
-        return 'news';
-    }
 }

@@ -56,6 +56,10 @@ class Ad extends Resource
                 ->trueValue('1')
                 ->falseValue('0')
                 ->sortable(),
+            Boolean::make('Show on news inner page','news')
+                ->trueValue('1')
+                ->falseValue('0')
+                ->sortable(),
             Boolean::make('Show on guides inner page','guides')
                 ->trueValue('1')
                 ->falseValue('0')
