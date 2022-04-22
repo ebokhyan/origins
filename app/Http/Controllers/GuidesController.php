@@ -16,8 +16,10 @@ class GuidesController extends Controller
         if($content){
             if($request->has('search')){
                 $guides = Guide::published()
-                    ->where('title', 'LIKE', "%{$request->search}%")
-                    ->orWhere('short_description', 'LIKE', "%{$request->search}%")
+                    ->whereRaw('LOWER(JSON_EXTRACT(title, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+                    ->orWhereRaw('LOWER(JSON_EXTRACT(title, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
+                    ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
+                    ->orWhereRaw('LOWER(JSON_EXTRACT(short_description, "$.hy")) like ?', ['"%' . strtolower($request->search) . '%"'])
                     ->paginate(8);
             }else{
                 $guides = Guide::published()->paginate(8);

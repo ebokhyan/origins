@@ -16,7 +16,7 @@ class News extends Model implements Sortable
 
     protected $table = 'news';
     public $translatable = ['title', 'author', 'photographer', 'translator', 'short_description','description','seo_title','seo_description'];
-    protected $casts = ['created_at' => 'date:d F, Y'];
+    protected $casts = ['created_at' => 'date:d F, Y','title' => 'json'];
     protected $appends = ["date","type"];
     public $sortable = [
         'order_column_name' => 'sort_order',
