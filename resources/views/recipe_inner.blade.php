@@ -5,9 +5,11 @@
         <div class="page_container">
             <div class="recipe_inner">
                 <div class="recipe_main">
-                    <div class="image_block">
-                        <img src="{{asset('storage/'.$recipe->inner_main_image)}}" alt="" title="" width="800" height="630"/>
-                    </div>
+                    @if(!empty($recipe->inner_main_image))
+                        <div class="image_block">
+                            <img src="{{asset('storage/'.$recipe->inner_main_image)}}" alt="" title="" width="800" height="630"/>
+                        </div>
+                    @endif
                     <div class="info_block">
                         <h1 class="inner_title">{{$recipe->title}}</h1>
                         @if($recipe->author)
@@ -61,9 +63,11 @@
                 </div>
 
                 <div class="instructions">
-                    <div class="image_block">
-                        <img src="{{asset('storage/'.$recipe->instruction_image)}}" alt="" title="" width="784" height="1035"/>
-                    </div>
+                    @if(!empty($recipe->instruction_image))
+                        <div class="image_block">
+                            <img src="{{asset('storage/'.$recipe->instruction_image)}}" alt="" title="" width="784" height="1035"/>
+                        </div>
+                    @endif
                     <div class="info_block">
                         <div class="section_head">
                             <h2 class="section_title">{{__('recipes.instructions')}}</h2>
