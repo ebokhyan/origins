@@ -5,6 +5,7 @@
         <div class="page_container">
             <div class="page_head">
                 <h1 class="page_title">{{__('recipes.title')}}</h1>
+                <h1 class="page_title">{{$content['name']}}</h1>
                 <form class="inner_search" method="GET" action="{{route('recipes',['locale' => app()->getLocale()])}}">
                     <label>
                         <span class="label">{{__('main.search')}}</span>

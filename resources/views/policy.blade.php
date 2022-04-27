@@ -4,7 +4,8 @@
         <div class="inner_page">
             <div class="page_container">
                 <div class="page_head">
-                    <h1 class="page_title">{{@$content['title']}}</h1>
+{{--                    <h1 class="page_title">{{@$content['title']}}</h1>--}}
+                    <h1 class="page_title">{{$content['name']}}</h1>
                 </div>
                 <div class="standard_textpage">
                     {!! $content['content']!!}

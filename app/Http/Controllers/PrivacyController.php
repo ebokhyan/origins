@@ -10,6 +10,7 @@ class PrivacyController extends Controller
         $data = nova_page_manager_get_page_by_path('terms', null, $locale);
         if($data) {
             $content = [
+                'name' => $data['name'],
                 'slug' => $data['slug'],
                 'template' => $data['template'],
                 'seo' => [
@@ -29,6 +30,7 @@ class PrivacyController extends Controller
         $data = nova_page_manager_get_page_by_path('policy', null, $locale);
         if($data) {
             $content = [
+                'name' => $data['name'],
                 'slug' => $data['slug'],
                 'template' => $data['template'],
                 'seo' => [

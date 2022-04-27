@@ -61,6 +61,7 @@ class NewsController extends Controller
                     return view('pagination_partials.search',['items' => $news])->render();
                 }
                 $content = [
+                    'name' => $content['name'],
                     'slug' => $content['slug'],
                     'template' => $content['template'],
                     'seo' => [
@@ -79,6 +80,7 @@ class NewsController extends Controller
                     return view('pagination_partials.search',['items' => $latestNews])->render();
                 }
                 $content = [
+                    'name' => $content['name'],
                     'slug' => $content['slug'],
                     'template' => $content['template'],
                     'seo' => [

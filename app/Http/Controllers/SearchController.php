@@ -6,13 +6,11 @@ use App\Models\Article;
 use App\Models\News;
 use App\Models\Recipe;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class SearchController extends Controller
 {
 
     public function getResults(Request $request, $locale) {
-//        dd($request->search);
         $news = News::published()
             ->select('id','slug','title','short_description', 'image','author','created_at','resource_type')
             ->whereRaw('LOWER(JSON_EXTRACT(title, "$.en")) like ?', ['"%' . strtolower($request->search) . '%"'])
