@@ -26,6 +26,7 @@ class RecipesController extends Controller
                 return view('pagination_partials.recipes',['recipes' => $recipes])->render();
             }
             $content = [
+                'name' => $content['name'],
                 'slug' => $content['slug'],
                 'template' => $content['template'],
                 'seo' => [

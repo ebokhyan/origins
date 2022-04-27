@@ -18,6 +18,7 @@ class AboutController extends Controller
 
         if($page) {
             $content = [
+                'name' => $page['name'],
                 'slug' => $page['slug'],
                 'template' => $page['template'],
                 'seo' => [

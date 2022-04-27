@@ -19,6 +19,7 @@ class HomeController extends Controller
             $latestNewsBanner = Ad::published()->where('id',$content['data']->latest_news_banner)->first();
             $latestRecipesBanner = Banner::published()->where('id',$content['data']->recipes_banner)->first();
             $content = [
+                'name' => $content['name'],
                 'slug' => $content['slug'],
                 'template' => $content['template'],
                 'seo' => [

@@ -9,6 +9,7 @@ use App\Nova\ContactRequest;
 use App\Nova\Contributor;
 use App\Nova\Donor;
 use App\Nova\Guide;
+use App\Nova\Menu;
 use App\Nova\News;
 use App\Nova\Photographer;
 use App\Nova\Recipe;
@@ -102,6 +103,13 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 'remember_menu_state' => true, // default
                 'navigation' => [
                     TopLevelResource::make([
+                        'label' => 'General',
+                        'resources' => [
+                            Menu::class,
+                            User::class,
+                        ]
+                    ]),
+                    TopLevelResource::make([
                         'label' => 'Resources',
                         'resources' => [
                             Ad::class,
@@ -113,7 +121,6 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                             Setting::class,
                             Subscription::class,
                             ContactRequest::class,
-                            User::class,
                         ]
                     ]),
                     TopLevelResource::make([

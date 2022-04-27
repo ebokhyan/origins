@@ -28,6 +28,7 @@ class GuidesController extends Controller
                 return view('pagination_partials.guides',['guides' => $guides])->render();
             }
             $content = [
+                'name' => $content['name'],
                 'slug' => $content['slug'],
                 'template' => $content['template'],
                 'seo' => [

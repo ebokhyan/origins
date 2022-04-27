@@ -48,6 +48,7 @@ class FeaturesController extends Controller
                     return view('pagination_partials.search',['items' => $features])->render();
                 }
                 $content = [
+                    'name' => $content['name'],
                     'slug' => $content['slug'],
                     'template' => $content['template'],
                     'seo' => [
@@ -66,6 +67,7 @@ class FeaturesController extends Controller
                     return view('pagination_partials.search',['items' => $latestFeatures])->render();
                 }
                 $content = [
+                    'name' => $content['name'],
                     'slug' => $content['slug'],
                     'template' => $content['template'],
                     'seo' => [

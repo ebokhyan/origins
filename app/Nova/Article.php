@@ -21,6 +21,7 @@ use OptimistDigital\NovaSortable\Traits\HasSortableRows;
 class Article extends Resource
 {
     use HasSortableRows,TranslatableTabToRowTrait;
+
     /**
      * The model the resource corresponds to.
      *

@@ -4,7 +4,8 @@
     <div class="inner_page">
         <div class="page_container">
             <div class="page_head">
-                <h1 class="page_title">{{__('features.title')}}</h1>
+{{--                <h1 class="page_title">{{__('features.title')}}</h1>--}}
+                <h1 class="page_title">{{$content['name']}}</h1>
                 <form class="inner_search" method="GET" action="{{route('features',['locale' => app()->getLocale()])}}">
                     <label>
                         <span class="label">{{__('main.search')}}</span>

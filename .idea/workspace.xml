@@ -7,16 +7,25 @@
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FeaturesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FeaturesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GuidesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GuidesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PrivacyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PrivacyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RecipesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RecipesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Guide.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Guide.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Recipe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Recipe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Ad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pagination_partials/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination_partials/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/search_results.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search_results.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/NovaServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/ViewServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ViewServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Composers/MenuComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Composers/MenuComposer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about_us.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/features.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/features.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/guides.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guides.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/policy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/policy.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipes.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +242,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../franceformation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WeDO" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -284,7 +293,11 @@
       <workItem from="1650269689351" duration="61151000" />
       <workItem from="1650529363387" duration="5637000" />
       <workItem from="1650540213798" duration="2962000" />
-      <workItem from="1650605682332" duration="13974000" />
+      <workItem from="1650605682332" duration="14312000" />
+      <workItem from="1650638061057" duration="1873000" />
+      <workItem from="1650870771781" duration="11584000" />
+      <workItem from="1650983028024" duration="513000" />
+      <workItem from="1651041437982" duration="4507000" />
     </task>
     <servers />
   </component>
@@ -344,10 +357,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1650440122879">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1651044989106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650440122879" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1651044989106" />
     <state x="556" y="0" width="745" height="1018" key="CommitChangelistDialog2" timestamp="1650465466095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -356,10 +369,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="153" y="74" width="1536" height="861" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650465764514" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1650538326911">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1650969605564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1650538326911" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1650969605564" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1650458691568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -368,10 +381,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650525129399" />
-    <state x="666" y="224" width="587" height="592" key="find.popup" timestamp="1650614918686">
+    <state x="666" y="224" width="587" height="592" key="find.popup" timestamp="1651045605610">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="224" width="587" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1650614918686" />
+    <state x="666" y="224" width="587" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1651045605610" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1650453824721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -390,7 +403,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Nova/Article.php</url>
-          <line>66</line>
+          <line>67</line>
           <properties>
             <option name="className" value="\App\Nova\Article" />
             <option name="methodName" value="generalFields" />

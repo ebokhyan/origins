@@ -43,15 +43,15 @@
     <div class="footer_menu">
         <div class="page_container">
             <ul>
-                <li><a href="{{route('features',['locale' => app()->getLocale()])}}"> {{__('main.menu.features')}}  </a></li>
-                <li><a href="{{route('news',['locale' => app()->getLocale()])}}">     {{__('main.menu.news')}}      </a></li>
-                <li><a href="{{route('recipes',['locale' => app()->getLocale()])}}">  {{__('main.menu.recipes')}}    </a></li>
-                <li><a href="{{route('wines',['locale' => app()->getLocale()])}}">    {{__('main.menu.wines')}}      </a></li>
-                <li><a href="{{route('guides',['locale' => app()->getLocale()])}}">   {{__('main.menu.guides')}}     </a></li>
-                <li><a href="{{route('shop',['locale' => app()->getLocale()])}}">     {{__('main.menu.shop')}}       </a></li>
-                <li><a href="{{route('wine-club',['locale' => app()->getLocale()])}}">{{__('main.menu.wine_club')}}  </a></li>
-                <li><a href="{{route('about',['locale' => app()->getLocale()])}}">    {{__('main.menu.about')}}      </a></li>
-                <li><a href="{{route('contacts',['locale' => app()->getLocale()])}}"> {{__('main.menu.contact_us')}} </a></li>
+                <li><a href="{{route('features',['locale' => app()->getLocale()])}}"> {{$menu['features']}}  </a></li>
+                <li><a href="{{route('news',['locale' => app()->getLocale()])}}">     {{$menu['news']}}      </a></li>
+                <li><a href="{{route('recipes',['locale' => app()->getLocale()])}}">  {{$menu['recipes']}}    </a></li>
+                <li><a href="{{route('wines',['locale' => app()->getLocale()])}}">    {{$menu['wines']}}      </a></li>
+                <li><a href="{{route('guides',['locale' => app()->getLocale()])}}">   {{$menu['guides']}}     </a></li>
+                <li><a href="{{route('shop',['locale' => app()->getLocale()])}}">     {{$menu['shop']}}       </a></li>
+                <li><a href="{{route('wine-club',['locale' => app()->getLocale()])}}">{{$menu['wine_club']}}  </a></li>
+                <li><a href="{{route('about',['locale' => app()->getLocale()])}}">    {{$menu['about_us']}}      </a></li>
+                <li><a href="{{route('contacts',['locale' => app()->getLocale()])}}"> {{$menu['contact_us']}} </a></li>
             </ul>
         </div>
     </div>
@@ -59,8 +59,8 @@
     <div class="footer_bottom">
         <div class="page_container">
             <ul class="terms_menu">
-                <li><a href="{{route('term',['locale' => app()->getLocale()])}}">{{__('main.menu.terms_of_service')}}</a></li>
-                <li><a href="{{route('policy',['locale' => app()->getLocale()])}}">{{__('main.menu.privacy_policy')}}</a></li>
+                <li><a href="{{route('term',['locale' => app()->getLocale()])}}">   {{$menu['terms']}} </a></li>
+                <li><a href="{{route('policy',['locale' => app()->getLocale()])}}"> {{$menu['policy']}} </a></li>
             </ul>
             <div class="copyrights">{{__('main.copyright')}}</div>
         </div>
