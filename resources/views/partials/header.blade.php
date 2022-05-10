@@ -9,9 +9,9 @@
                         <img width="303" height="99" src="{{asset("css/images/main_logo.svg")}}" alt="" title=""/>
                     </a>
             </div>
-            <div class="sign_block">
-                <a href="login.php" class="icon_user primary_btn main_btn">{{ __('main.login') }}</a>
-            </div>
+            <!--<div class="sign_block">-->
+            <!--    <a href="login.php" class="icon_user primary_btn main_btn">{{ __('main.login') }}</a>-->
+            <!--</div>-->
            <x-social-lists></x-social-lists>
             <div class="lg_block">
                 @switch(app()->getLocale())

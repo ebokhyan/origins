@@ -1,6 +1,6 @@
 <?php
 return [
-  'title'        => 'About us',
+  'title'        => 'About Us',
   'team'         => 'Our Team',
   'contributors' => 'Contributors',
   'translators'  => 'Translators',
