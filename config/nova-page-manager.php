@@ -30,6 +30,7 @@ return [
         \App\Nova\Templates\PrivacyTemplate::class,
         \App\Nova\Templates\AboutUsTemplate::class,
         \App\Nova\Templates\GuideTemplate::class,
+        \App\Nova\Templates\CommingSoon::class
     ],
 
 

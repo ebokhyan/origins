@@ -68,13 +68,66 @@ class HomeController extends Controller
     }
 
 
-    public function getWines() {
-            return view('welcome');
+    public function getWines($locale) {
+        $content = nova_page_manager_get_page_by_path('wines', null, $locale);
+        if($content){
+            $content = [
+                'name' => $content['name'],
+                'slug' => $content['slug'],
+                'template' => $content['template'],
+                'seo' => [
+                    'title' => $content['seo_title'],
+                    'description' => $content['seo_description'],
+                    'image' => $content['seo_image'],
+                ],
+                'image' => $content['data']->image,
+                'title' => $content['data']->title,
+                'short_description' => $content['data']->short_description,
+            ];
+            return view('comming_soon', ['content' => $content]);
+        }
+        return response()->json(['status' => 'page_not_found'], 404);
     }
-    public function getShop() {
-            return view('welcome');
+
+    public function getShop($locale) {
+        $content = nova_page_manager_get_page_by_path('wines', null, $locale);
+        if($content){
+            $content = [
+                'name' => $content['name'],
+                'slug' => $content['slug'],
+                'template' => $content['template'],
+                'seo' => [
+                    'title' => $content['seo_title'],
+                    'description' => $content['seo_description'],
+                    'image' => $content['seo_image'],
+                ],
+                'image' => $content['data']->image,
+                'title' => $content['data']->title,
+                'short_description' => $content['data']->short_description,
+            ];
+            return view('comming_soon', ['content' => $content]);
+        }
+        return response()->json(['status' => 'page_not_found'], 404);
     }
-    public function getWineClub() {
-            return view('welcome');
+
+    public function getWineClub($locale) {
+        $content = nova_page_manager_get_page_by_path('wines', null, $locale);
+        if($content){
+            $content = [
+                'name' => $content['name'],
+                'slug' => $content['slug'],
+                'template' => $content['template'],
+                'seo' => [
+                    'title' => $content['seo_title'],
+                    'description' => $content['seo_description'],
+                    'image' => $content['seo_image'],
+                ],
+                'image' => $content['data']->image,
+                'title' => $content['data']->title,
+                'short_description' => $content['data']->short_description,
+            ];
+            return view('comming_soon', ['content' => $content]);
+        }
+        return response()->json(['status' => 'page_not_found'], 404);
     }
 }
