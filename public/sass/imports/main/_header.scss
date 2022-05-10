@@ -127,7 +127,7 @@
         display: flex;
         justify-content: flex-end;
         border-top: 1px solid $black;
-        font-size: 250%;
+        font-size: 200%;
         line-height: 35px;
         font-family: $medium;
         > li {
@@ -265,7 +265,7 @@
             font-size: 160%;
             line-height: 24px;
         }
-        
+
     }
     @include mediaRange($size576, $size768) {
         .main_logo {

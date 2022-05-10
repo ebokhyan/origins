@@ -10,13 +10,7 @@
                 </div>
                 @if(!empty($recipe->author))
                     <div class="author_block">
-                        @if(app()->getLocale() == 'en')
-                            {{Str::ucfirst(__('recipes.created'))}} {{Str::lower(__('main.by'))}}
-                            <span class="author_name">{{@$recipe->author}}</span>
-                        @endif
-                        @if(app()->getLocale() == 'hy')
-                            {{Str::ucfirst(__('recipes.created'))}}  <span class="author_name">{{$recipe->author}}</span> {{Str::lower(__('main.by'))}}
-                        @endif
+                       {{Str::ucfirst(__('main.by'))}} <span class="author_name">{{ @$recipe->author}}</span>
                     </div>
                 @endif
                 <div class="description_block">{{@$recipe->short_description}}</div>

@@ -14,7 +14,7 @@
                             article title
                         </a>
                         <div class="info_block">
-                            <div class="date_block">{{$topNews[0]['created_at']}}</div>
+                            <div class="date_block">{{$topNews[0]['date']}}</div>
                             <div class="title_block">
                                 <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[0]['slug']])}}">{{@$topNews[0]['title'][app()->getLocale()]}}</a>
                             </div>
@@ -32,7 +32,7 @@
                             article title
                         </a>
                         <div class="info_block">
-                            <div class="date_block">{{$topNews[1]['created_at']}}</div>
+                            <div class="date_block">{{$topNews[1]['date']}}</div>
                             <div class="title_block">
                                 <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[1]['slug']])}}">{{@$topNews[1]['title'][app()->getLocale()]}}</a>
                             </div>
@@ -50,7 +50,7 @@
                             article title
                         </a>
                         <div class="info_block">
-                            <div class="date_block">{{$topNews[2]['created_at']}}</div>
+                            <div class="date_block">{{$topNews[2]['date']}}</div>
                             <div class="title_block">
                                 <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[2]['slug']])}}">{{@$topNews[2]['title'][app()->getLocale()]}}</a>
                             </div>
@@ -68,7 +68,7 @@
                             article title
                         </a>
                         <div class="info_block">
-                            <div class="date_block">{{$topNews[3]['created_at']}}</div>
+                            <div class="date_block">{{$topNews[3]['date']}}</div>
                             <div class="title_block">
                                 <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[3]['slug']])}}">{{@$topNews[3]['title'][app()->getLocale()]}}</a>
                             </div>

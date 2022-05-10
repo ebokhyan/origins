@@ -15,6 +15,7 @@ class Recipe extends Model implements Sortable
     use HasFactory,SortableTrait,HasTranslations,HasSlug;
 
     protected $casts = ['created_at' => 'date:d F, Y'];
+    protected $appends = ["date"];
     public $translatable = ['title',
         'author',
         'cooks_in',
@@ -52,5 +53,17 @@ class Recipe extends Model implements Sortable
     public function scopePublished($query)
     {
         return $query->where('published', '1')->orderBy('sort_order', 'ASC');
+    }
+
+    public function getDateAttribute(){
+        $day = date('d', strtotime($this->created_at));
+        $year = date('Y', strtotime($this->created_at));
+        $month_hy = \Lang::get('main.months.'.date('m', strtotime($this->created_at)));
+        switch (app()->getLocale()) {
+            case('hy'):
+                return $day." ".$month_hy.", ".$year;
+            default:
+                return date('d F, Y', strtotime($this->created_at));
+        }
     }
 }

@@ -2011,7 +2011,7 @@ a.banner_inner,
   display: flex;
   justify-content: flex-end;
   border-top: 1px solid #000000;
-  font-size: 250%;
+  font-size: 200%;
   line-height: 35px;
   font-family: "poppins-medium";
 }

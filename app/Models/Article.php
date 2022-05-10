@@ -45,7 +45,15 @@ class Article extends Model implements Sortable
     }
 
     public function getDateAttribute(){
-        return date('d F, Y', strtotime($this->created_at));
+        $day = date('d', strtotime($this->created_at));
+        $year = date('Y', strtotime($this->created_at));
+        $month_hy = \Lang::get('main.months.'.date('m', strtotime($this->created_at)));
+        switch (app()->getLocale()) {
+            case('hy'):
+                return $day." ".$month_hy.", ".$year;
+            default:
+                return date('d F, Y', strtotime($this->created_at));
+        }
     }
 
 }

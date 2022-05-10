@@ -31,18 +31,13 @@
                                     <img src="{{asset('storage/'.$article['image'])}}" width="400" height="250" alt="" title=""/> article title
                                 </a>
                                 <div class="info_block">
-                                    <div class="date_block">{{$article['created_at']}}</div>
+                                    <div class="date_block">{{$article['date']}}</div>
                                     <div class="title_block">
                                         <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $article['slug']])}}">{{ !empty($article['title'][app()->getLocale()]) ? $article['title'][app()->getLocale()] : '' }}</a>
                                     </div>
                                     <div class="author_block">
-                                        @if(app()->getLocale() == 'en')
-                                            {{Str::ucfirst(__('main.by'))}}
-                                        @endif
-                                            <span class="author_name">{{ !empty($article['author'][app()->getLocale()]) ? $article['author'][app()->getLocale()] : ""}}</span>
-                                        @if(app()->getLocale() == 'hy')
-                                            {{Str::lower(__('main.by'))}}
-                                        @endif
+                                        {{Str::ucfirst(__('main.by'))}}
+                                        <span class="author_name">{{ !empty($article['author'][app()->getLocale()]) ? $article['author'][app()->getLocale()] : ""}}</span>
                                     </div>
                                     <div class="description_block">{{!empty($article['short_description'][app()->getLocale()]) ? $article['short_description'][app()->getLocale()] : ''}}</div>
                                 </div>
@@ -76,7 +71,7 @@
                         <li>
                             <div class="news_block">
                                 <div class="info_block">
-                                    <div class="date_block">{{$news['created_at']}}</div>
+                                    <div class="date_block">{{$news['date']}}</div>
                                     <div class="title_block">
                                         <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $news['slug']])}}">{{$news['title'][app()->getLocale()]}}</a></div>
                                 </div>
@@ -116,17 +111,12 @@
                                     <img src="{{asset('storage/'.$recipe['image'])}}" alt="" title="" width="400" height="400"/>
                                 </div>
                                 <div class="info_block">
-                                    <div class="date_block">{{$recipe['created_at']}}</div>
+                                    <div class="date_block">{{$recipe['date']}}</div>
                                     <div class="inner_title">{{@$recipe['title'][app()->getLocale()]}}</div>
                                     @if(isset($recipe['author'][app()->getLocale()]))
                                         <div class="author_block">
-                                            @if(app()->getLocale() == 'en')
-                                                {{Str::ucfirst(__('main.by'))}}
-                                            @endif
+                                            {{Str::ucfirst(__('main.by'))}}
                                             <span class="author_name">{{@$recipe['author'][app()->getLocale()]}}</span>
-                                            @if(app()->getLocale() == 'hy')
-                                                {{Str::lower(__('main.by'))}}
-                                            @endif
                                         </div>
                                     @endif
                                     <div class="description_block">{{@$recipe['short_description'][app()->getLocale()]}}</div>
