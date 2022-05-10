@@ -12,21 +12,12 @@
 {{--                    <h2 class="details_title">{{$content->short_description}}</h2>--}}
                         <ul class="details_list">
                             <li>
-                                @if(app()->getLocale() == 'en')
-                                    {{Str::ucfirst(__('main.by'))}}
-                                @endif
-                                    {{$content->author}}
-                                @if(app()->getLocale() == 'hy')
-                                    {{Str::lower(__('main.by'))}}
-                                @endif
+                               {{Str::ucfirst(__('main.by'))}} {{$content->author}}
                             </li>
                             <li>
-                                @if(app()->getLocale() == 'en')
-                                    {{Str::ucfirst(__('features.translated'))}} {{Str::ucfirst(__('main.by'))}} {{$content->translator}}
-                                @endif
-                                @if(app()->getLocale() == 'hy')
-                                    {{Str::ucfirst(__('features.translated'))}} {{$content->translator}} {{Str::lower(__('main.by'))}}
-                                @endif
+                                {{Str::ucfirst(__('features.translated'))}}
+                                {{app()->getLocale() == 'en' ? Str::lower(__('main.by')) : ''}}
+                                {{$content->translator}}
                             </li>
                             <li>{{$content->date}}</li>
                         </ul>
@@ -51,7 +42,7 @@
                                             <a href="{{route('feature',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title'][app()->getLocale()]}}</a>
                                         @endif
                                     </div>
-                                    <div class="date_block">{{$item['created_at']}}</div>
+                                    <div class="date_block">{{$item['date']}}</div>
                                 </li>
                             @endforeach
                         </ul>
@@ -77,7 +68,7 @@
                                         <img src="{{asset('storage/'.$item['image'])}}" width="530" height="250" alt="" title=""/>
                                         </a>
                                     <div class="info_block">
-                                        <div class="date_block">{{$item['created_at']}}</div>
+                                        <div class="date_block">{{$item['date']}}</div>
                                         <div class="title_block">
                                             @if($type == 'news_inner')
                                                 <a href="{{route('news_inner',['locale' => 'en', 'slug' => $item['slug']])}}">{{$item['title'][app()->getLocale()]}}</a>
@@ -86,13 +77,8 @@
                                             @endif
                                         </div>
                                         <div class="author_block">
-                                            @if(app()->getLocale() == 'en')
-                                                {{Str::ucfirst(__('main.by'))}}
-                                            @endif
+                                            {{Str::ucfirst(__('main.by'))}}
                                             <span class="author_name">{{@$item['author'][app()->getLocale()]}}</span>
-                                            @if(app()->getLocale() == 'hy')
-                                                {{Str::lower(__('main.by'))}}
-                                            @endif
                                         </div>
                                         <div class="description_block">{{@$item['short_description'][app()->getLocale()]}}</div>
                                     </div>

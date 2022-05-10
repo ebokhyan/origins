@@ -37,13 +37,8 @@
                     @endswitch
                 </div>
                 <div class="author_block">
-                    @if(app()->getLocale() == 'en')
-                        {{Str::ucfirst(__('main.by'))}}
-                    @endif
+                    {{Str::ucfirst(__('main.by'))}}
                     <span class="author_name">{{@$item->author}}</span>
-                    @if(app()->getLocale() == 'hy')
-                        {{Str::lower(__('main.by'))}}
-                    @endif
                 </div>
                 <div class="description_block">{{@$item->short_description}}</div>
             </div>
