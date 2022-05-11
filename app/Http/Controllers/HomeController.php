@@ -133,4 +133,26 @@ class HomeController extends Controller
         }
         return response()->json(['status' => 'page_not_found'], 404);
     }
+
+    public function getNewslatter($locale) {
+        $content = nova_page_manager_get_page_by_path('newslatter', null, $locale);
+        if($content){
+            $content = [
+                'name' => $content['name'],
+                'slug' => $content['slug'],
+                'template' => $content['template'],
+                'seo' => [
+                    'title' => $content['seo_title'],
+                    'description' => $content['seo_description'],
+                    'image' => $content['seo_image'],
+                ],
+                'image' => $content['data']->image,
+                'title' => $content['data']->title,
+                'short_description' => $content['data']->short_description,
+                'position' => $content['data']->position ? $content['data']->position : 'right',
+            ];
+            return view('comming_soon', ['content' => $content]);
+        }
+        return response()->json(['status' => 'page_not_found'], 404);
+    }
 }

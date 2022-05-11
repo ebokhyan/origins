@@ -27,7 +27,7 @@
             <div class="section_inner">
                 <h2 class="inner_title">{{__('main.join_club.title')}}</h2>
                 <div class="description_block">{{__('main.join_club.description')}}</div>
-                <a href="registration.php" class="primary_btn light_btn">{{__('main.join_club.button')}}</a>
+                <a href="{{route('newslatter_cs',['locale' => app()->getLocale()])}}" class="primary_btn light_btn">{{__('main.join_club.button')}}</a>
             </div>
         </div>
     </div>

@@ -6,22 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/public/images/cs_image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/stock_image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/wall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sass/comingsoon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sass/imports/cs/_inner.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/cs_app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Donor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Donor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Templates/CommingSoon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Templates/CommingSoon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/imports/about/_inner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/about/_inner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about_us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/comming_soon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/comming_soon.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guides_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guides_inner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +287,7 @@
       <workItem from="1651132103290" duration="353000" />
       <workItem from="1651219122889" duration="405000" />
       <workItem from="1652176645682" duration="9796000" />
-      <workItem from="1652248582306" duration="4928000" />
+      <workItem from="1652248582306" duration="6053000" />
     </task>
     <servers />
   </component>
