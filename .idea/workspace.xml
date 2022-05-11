@@ -6,9 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/public/css/images/OriginsLogo-Black.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/images/favicons/favicon-16x16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/cs_app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/cs_app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/favicons.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/favicons.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +227,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css/images/favicons" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -237,11 +239,11 @@
       <recent name="C:\xampp\htdocs\originsMagazin\resources\views\vendor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\originsMagazin\public\css\images\favicons" />
       <recent name="C:\xampp\htdocs\originsMagazin\public\css\images" />
       <recent name="C:\xampp\htdocs\originsMagazin\public\images" />
       <recent name="C:\xampp\htdocs\originsMagazin\public\sass" />
       <recent name="C:\xampp\htdocs\originsMagazin\resources\lang\hy" />
-      <recent name="C:\xampp\htdocs\originsMagazin\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -286,7 +288,7 @@
       <workItem from="1651132103290" duration="353000" />
       <workItem from="1651219122889" duration="405000" />
       <workItem from="1652176645682" duration="9796000" />
-      <workItem from="1652248582306" duration="6453000" />
+      <workItem from="1652248582306" duration="7110000" />
     </task>
     <servers />
   </component>

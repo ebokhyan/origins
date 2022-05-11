@@ -8,7 +8,7 @@
     <title>{{__('main.meta_title')}}</title>
     <link rel="stylesheet" href="{{asset("css/main.css")}}">
     <link rel="stylesheet" href="{{asset("css/comingsoon.css")}}">
-    {{-- @include('partials.favicons') --}}
+     @include('partials.favicons')
     @include('partials.google_analitics')
 </head>
 <body>
