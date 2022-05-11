@@ -34,7 +34,7 @@
 
     <div class="footer_logo">
         <a href="{{route('main-home',['locale' => app()->getLocale()])}}">
-            <img width="303" height="99" src="{{asset("css/images/main_logo.svg")}}" alt="" title=""/>
+            <img width="303" height="99" src="{{asset("css/images/OriginsLogo-Black.png")}}" alt="" title=""/>
         </a>
     </div>
 
