@@ -1859,6 +1859,7 @@ a.image_block img {
   font-family: "poppins-medium";
 }
 .header .main_menu > li {
+  z-index: 23;
   padding: 25px 0;
 }
 .header .main_menu > li:not(:first-child) {

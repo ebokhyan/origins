@@ -131,6 +131,7 @@
         line-height: 35px;
         font-family: $medium;
         > li {
+            z-index: 23;
             padding: 25px 0;
             &:not(:first-child) {
                 margin-left: 50px;
