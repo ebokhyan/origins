@@ -1,0 +1,106 @@
+.footer {
+    padding-top: 0;
+}
+.cs_inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$containerPadding;
+    margin-right: -$containerPadding;
+    .info_block {
+        flex: 0 0 50%;
+        max-width: 680px;
+        padding: 0 $containerPadding;
+        align-self: center;
+    }
+    .cs_title {
+        font-family: $playfairSb;
+        font-size: 720%;
+        line-height: 1.51em;
+        margin-top: 0;
+        margin-bottom: 35px;
+        color: inherit;
+    }
+    &.reverse {
+        @include mediaFrom($size768) {
+            .info_block {
+                order: 2;
+                margin: 0 auto;
+            }
+            .image_block {
+                justify-content: flex-end;
+                margin-left: 0;
+            }
+        }
+    }
+    .image_block {
+        @include colSize(6);
+        display: flex;
+        margin-left: auto;
+        img {
+            display: block;
+            flex: 0 0 50vw;
+            max-width: 50vw;
+            height: auto;
+        }
+    }
+    .text_block {
+        font-size: 200%;
+        line-height: 28px;
+        color: $descriptionColor;
+    }
+    @include mediaRange($size1200,$size1440) {
+        .text_block {
+            font-size: 180%;
+            line-height: 25px;
+        }
+        .cs_title {
+            font-size: 600%;
+            margin-bottom: 30px;
+        }
+        .info_block {
+            max-width: 600px;
+        }
+    }
+    @include mediaRange($size960, $size1200) {
+        .text_block {
+            font-size: 160%;
+            line-height: 22px;
+        }
+        .cs_title {
+            font-size: 480%;
+            margin-bottom: 25px;
+        }
+        .info_block {
+            max-width: 520px;
+        }
+    }
+    @include mediaTo($size960) {
+        .text_block {
+            font-size: 130%;
+            line-height: 18px;
+            margin-top: 15px;
+        }
+        .cs_title {
+            font-size: 360%;
+            margin-bottom: 20px;
+        }
+        .info_block {
+            max-width: 430px;
+        }
+    }
+    @include mediaTo($size768) {
+        .info_block {
+            flex: 0 0 100%;
+            padding-top: 6.25%;
+            padding-bottom: 6.25%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .image_block {
+            @include colSize(12);
+            img {
+                @include colSize(12);
+            }
+        }
+    }
+}

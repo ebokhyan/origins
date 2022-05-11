@@ -52,6 +52,7 @@ class Donor extends Resource
                     ->rules('required', 'max:255')
                     ->sortable(),
             ]),
+            Text::make('href')->hideFromIndex(),
             Boolean::make('Published')
                 ->trueValue('1')
                 ->falseValue('0')

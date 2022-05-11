@@ -83,6 +83,7 @@ class HomeController extends Controller
                 'image' => $content['data']->image,
                 'title' => $content['data']->title,
                 'short_description' => $content['data']->short_description,
+                'position' => $content['data']->position ? $content['data']->position : 'right',
             ];
             return view('comming_soon', ['content' => $content]);
         }
@@ -90,7 +91,7 @@ class HomeController extends Controller
     }
 
     public function getShop($locale) {
-        $content = nova_page_manager_get_page_by_path('wines', null, $locale);
+        $content = nova_page_manager_get_page_by_path('shop', null, $locale);
         if($content){
             $content = [
                 'name' => $content['name'],
@@ -104,6 +105,7 @@ class HomeController extends Controller
                 'image' => $content['data']->image,
                 'title' => $content['data']->title,
                 'short_description' => $content['data']->short_description,
+                'position' => $content['data']->position ? $content['data']->position : 'right',
             ];
             return view('comming_soon', ['content' => $content]);
         }
@@ -111,7 +113,7 @@ class HomeController extends Controller
     }
 
     public function getWineClub($locale) {
-        $content = nova_page_manager_get_page_by_path('wines', null, $locale);
+        $content = nova_page_manager_get_page_by_path('wine-club', null, $locale);
         if($content){
             $content = [
                 'name' => $content['name'],
@@ -125,6 +127,7 @@ class HomeController extends Controller
                 'image' => $content['data']->image,
                 'title' => $content['data']->title,
                 'short_description' => $content['data']->short_description,
+                'position' => $content['data']->position ? $content['data']->position : 'right',
             ];
             return view('comming_soon', ['content' => $content]);
         }

@@ -6,30 +6,30 @@
             <div class="page_head">
                 <h1 class="page_title">{{$guide->title}}</h1>
             </div>
-            <div class="region_params">
-                <ul>
-                    <li>
-                        <img src="{{asset('css/images/grape.svg')}}" alt="" title="" width="23" height="34"/>
-                        {{__('guides.vineyard_surface')}}
-                    </li>
-                    <li>
-                        <img src="{{asset('css/images/soil.svg')}}" alt="" title="" width="25" height="25"/>
-                        {{__('guides.soil')}}
-                    </li>
-                    <li>
-                        <img src="{{asset('css/images/climate.svg')}}" alt="" title="" width="23" height="19"/>
-                        {{__('guides.climate')}}
-                    </li>
-                    <li>
-                        <img src="{{asset('css/images/elevation.svg')}}" alt="" title="" width="24" height="12"/>
-                        {{__('guides.elevation')}}
-                    </li>
-                    <li>
-                        <img src="{{asset('css/images/varieties.svg')}}" alt="" title="" width="24" height="24"/>
-                        {{__('guides.varieties')}}
-                    </li>
-                </ul>
-            </div>
+{{--            <div class="region_params">--}}
+{{--                <ul>--}}
+{{--                    <li>--}}
+{{--                        <img src="{{asset('css/images/grape.svg')}}" alt="" title="" width="23" height="34"/>--}}
+{{--                        {{__('guides.vineyard_surface')}}--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <img src="{{asset('css/images/soil.svg')}}" alt="" title="" width="25" height="25"/>--}}
+{{--                        {{__('guides.soil')}}--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <img src="{{asset('css/images/climate.svg')}}" alt="" title="" width="23" height="19"/>--}}
+{{--                        {{__('guides.climate')}}--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <img src="{{asset('css/images/elevation.svg')}}" alt="" title="" width="24" height="12"/>--}}
+{{--                        {{__('guides.elevation')}}--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <img src="{{asset('css/images/varieties.svg')}}" alt="" title="" width="24" height="24"/>--}}
+{{--                        {{__('guides.varieties')}}--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
             <div class="guide_main_image">
                 <picture>
                     <source media="(min-width:960px)" srcset="{{asset('storage/'.$guide->cover_image)}}" width="1640" height="400">

@@ -15,7 +15,7 @@
                             article title
                         </a>
                         <div class="info_block">
-                            <div class="date_block">{{$topFeatures[0]['created_at']}}</div>
+                            <div class="date_block">{{$topFeatures[0]['date']}}</div>
                             <div class="title_block">
                                 <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $topFeatures[0]['slug']])}}">{{$topFeatures[0]['title'][app()->getLocale()]}}</a>
                             </div>
@@ -36,7 +36,7 @@
                             article title
                         </a>
                         <div class="info_block">
-                            <div class="date_block">{{$topFeatures[1]['created_at']}}</div>
+                            <div class="date_block">{{$topFeatures[1]['date']}}</div>
                             <div class="title_block">
                                 <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $topFeatures[1]['slug']])}}">{{@$topFeatures[1]['title'][app()->getLocale()]}}</a>
                             </div>
@@ -56,9 +56,11 @@
                             article title
                         </a>
                         <div class="info_block">
-                            <div class="date_block">{{$topFeatures[2]['created_at']}}</div>
+                            <div class="date_block">{{$topFeatures[2]['date']}}</div>
                             <div class="title_block">
-                                <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $topFeatures[2]['slug']])}}">{{@$topFeatures[2]['title'][app()->getLocale()]}}.</a>
+                                <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $topFeatures[2]['slug']])}}">
+                                    {{@$topFeatures[2]['title'][app()->getLocale()]}}
+                                </a>
                             </div>
                             <div class="author_block">
                                 {{__('main.by')}}  <span class="author_name">{{@$topFeatures[2]['author'][app()->getLocale()]}}</span>

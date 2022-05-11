@@ -4,6 +4,7 @@ namespace App\Nova\Templates;
 
 use Illuminate\Http\Request;
 use Infinety\Filemanager\FilemanagerField;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use OptimistDigital\NovaPageManager\Template;
@@ -23,7 +24,11 @@ class CommingSoon extends Template
                 ->displayAsImage(),
             Text::make(__('Title'),'title')
                 ->sortable(),
-            Textarea::make(__('Short description'),'short_description')
+            Textarea::make(__('Short description'),'short_description'),
+            Select::make('Image position','position')->options([
+                'left'  => 'Left',
+                'right' => 'Right'
+            ])->default('left')
         ];
     }
 }

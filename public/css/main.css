@@ -6212,9 +6212,11 @@ a.banner_inner,
   height: auto;
 }
 .about_main .info_block {
-  padding-top: 27px;
   font-size: 250%;
   line-height: 37px;
+}
+.about_main .info_block p:first-child {
+  margin-top: 0;
 }
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
   .about_main .info_block {
@@ -6271,6 +6273,9 @@ a.banner_inner,
 }
 .staff_section .member_name.popup_btn {
   text-align: left;
+}
+.staff_section .member_name a {
+  color: #000;
 }
 @media screen and (min-width: 1440px) {
   .staff_section {

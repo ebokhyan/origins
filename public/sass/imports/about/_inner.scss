@@ -18,16 +18,20 @@
         }
     }
     .info_block {
-        padding-top: 27px;
+        //padding-top: 27px;
         font-size: 250%;
         line-height: 37px;
+
+        p:first-child {
+            margin-top: 0;
+        }
     }
     @include mediaRange($size1200,$size1440) {
         .info_block {
             font-size: 220%;
             line-height: 31px;
             padding-top: 20px;
-        } 
+        }
     }
     @include mediaRange($size960, $size1200) {
         padding-top: 30px;
@@ -77,6 +81,9 @@
             @include siteColorHover;
             text-align: left;
         }
+        a {
+            color: #000;
+        }
     }
     @include mediaFrom($size1440) {
         padding-top: 80px;
@@ -96,7 +103,7 @@
     }
     @include mediaRange($size576, $size960) {
         padding-top: 30px;
-        
+
 
     }
     @include mediaTo($size960) {
@@ -219,7 +226,7 @@
             padding: 8px 0;
         }
     }
-   
+
     .member_post {
         margin-top: 10px;
         font-size: 220%;
@@ -356,7 +363,7 @@
             }
         }
     }
-    
+
     @include mediaRange($size1200, $size1440) {
         margin-top: 40px;
         .team_name {

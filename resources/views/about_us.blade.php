@@ -80,7 +80,15 @@
                                 <div class="team_name">{{__('about.donors')}}</div>
                                 <ul class="members_list">
                                     @foreach($content['donors'] as $donor)
-                                    <li><div class="member_name">{{$donor->full_name}}</div></li>
+                                    <li>
+                                        <div class="member_name">
+                                            @if(!empty($donor->href))
+                                                <a href="{{$donor->href}}">{{$donor->full_name}} </a>
+                                            @else
+                                                {{$donor->full_name}}
+                                            @endif
+                                        </div>
+                                    </li>
                                     @endforeach
                                 </ul>
                             </div>
