@@ -7,13 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/comingsoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/comingsoon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/imports/main/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/main/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/hy/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/hy/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +287,7 @@
       <workItem from="1651219122889" duration="405000" />
       <workItem from="1652176645682" duration="9796000" />
       <workItem from="1652248582306" duration="9302000" />
-      <workItem from="1652339715917" duration="1366000" />
+      <workItem from="1652339715917" duration="1694000" />
     </task>
     <servers />
   </component>
@@ -376,10 +371,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1650525129399" />
-    <state x="666" y="224" width="587" height="592" key="find.popup" timestamp="1652264876956">
+    <state x="666" y="224" width="587" height="592" key="find.popup" timestamp="1652341061050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="224" width="587" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1652264876956" />
+    <state x="666" y="224" width="587" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1652341061050" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1650453824721">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

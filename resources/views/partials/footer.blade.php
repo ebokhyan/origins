@@ -46,10 +46,14 @@
                 <li><a href="{{route('features',['locale' => app()->getLocale()])}}"> {{$menu['features']}}  </a></li>
                 <li><a href="{{route('news',['locale' => app()->getLocale()])}}">     {{$menu['news']}}      </a></li>
                 <li><a href="{{route('recipes',['locale' => app()->getLocale()])}}">  {{$menu['recipes']}}    </a></li>
-                <!--<li><a href="{{route('wines',['locale' => app()->getLocale()])}}">    {{$menu['wines']}}      </a></li>-->
+                @if(app()->getLocale() == 'en')
+                    <li><a href="{{route('wines',['locale' => app()->getLocale()])}}">    {{$menu['wines']}}      </a></li>
+                @endif
                 <li><a href="{{route('guides',['locale' => app()->getLocale()])}}">   {{$menu['guides']}}     </a></li>
-                <!--<li><a href="{{route('shop',['locale' => app()->getLocale()])}}">     {{$menu['shop']}}       </a></li>-->
-                <!--<li><a href="{{route('wine-club',['locale' => app()->getLocale()])}}">{{$menu['wine_club']}}  </a></li>-->
+                @if(app()->getLocale() == 'en')
+                    <li><a href="{{route('shop',['locale' => app()->getLocale()])}}">     {{$menu['shop']}}       </a></li>
+                    <li><a href="{{route('wine-club',['locale' => app()->getLocale()])}}">{{$menu['wine_club']}}  </a></li>
+                @endif
                 <li><a href="{{route('about',['locale' => app()->getLocale()])}}">    {{$menu['about_us']}}      </a></li>
                 <li><a href="{{route('contacts',['locale' => app()->getLocale()])}}"> {{$menu['contact_us']}} </a></li>
             </ul>
