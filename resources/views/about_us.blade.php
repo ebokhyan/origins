@@ -82,11 +82,13 @@
                                     @foreach($content['donors'] as $donor)
                                     <li>
                                         <div class="member_name">
-                                            @if(!empty($donor->href))
-                                                <a href="{{$donor->href}}">{{$donor->full_name}} </a>
-                                            @else
-                                                {{$donor->full_name}}
-                                            @endif
+                                            <a href="{{!empty($donor->href) ? $donor->href : "#"}}">
+                                                @if(!empty($donor->image))
+                                                    <img src="{{asset('storage/'.$donor->image)}}" width="180px" height="60px" alt="{{$donor->full_name}}">
+                                                @else
+                                                    {{$donor->full_name}}
+                                                @endif
+                                            </a>
                                         </div>
                                     </li>
                                     @endforeach

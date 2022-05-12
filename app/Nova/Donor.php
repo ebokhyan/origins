@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use Illuminate\Http\Request;
+use Infinety\Filemanager\FilemanagerField;
 use Kongulov\NovaTabTranslatable\NovaTabTranslatable;
 use Kongulov\NovaTabTranslatable\TranslatableTabToRowTrait;
 use Laravel\Nova\Fields\Boolean;
@@ -53,6 +54,9 @@ class Donor extends Resource
                     ->sortable(),
             ]),
             Text::make('href')->hideFromIndex(),
+            FilemanagerField::make('Image')
+                ->filterBy('Image')
+                ->displayAsImage(),
             Boolean::make('Published')
                 ->trueValue('1')
                 ->falseValue('0')

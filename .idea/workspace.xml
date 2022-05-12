@@ -6,7 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/resources/lang/hy/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/hy/main.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/keush_logo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/wineworks_logo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/zulal_logo.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Nova/Donor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Donor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about_us.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,23 +228,23 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/css/images/favicons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\originsMagazin\public\images" />
+      <recent name="C:\xampp\htdocs\originsMagazin\public\css\images\favicons" />
+      <recent name="C:\xampp\htdocs\originsMagazin\public\css\images" />
+      <recent name="C:\xampp\htdocs\originsMagazin\public\sass" />
+      <recent name="C:\xampp\htdocs\originsMagazin\resources\lang\hy" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\originsMagazin\app\View\Composers" />
       <recent name="C:\xampp\htdocs\originsMagazin\resources\views\partials" />
       <recent name="C:\xampp\htdocs\originsMagazin\resources\views\vendor" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\originsMagazin\public\css\images\favicons" />
-      <recent name="C:\xampp\htdocs\originsMagazin\public\css\images" />
-      <recent name="C:\xampp\htdocs\originsMagazin\public\images" />
-      <recent name="C:\xampp\htdocs\originsMagazin\public\sass" />
-      <recent name="C:\xampp\htdocs\originsMagazin\resources\lang\hy" />
     </key>
   </component>
   <component name="RunManager">
@@ -285,7 +290,7 @@
       <workItem from="1651219122889" duration="405000" />
       <workItem from="1652176645682" duration="9796000" />
       <workItem from="1652248582306" duration="9302000" />
-      <workItem from="1652339715917" duration="2043000" />
+      <workItem from="1652339715917" duration="6150000" />
     </task>
     <servers />
   </component>
@@ -345,10 +350,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1652185011593">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1652343928102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1652185011593" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1652343928102" />
     <state x="556" y="0" width="745" height="1018" key="CommitChangelistDialog2" timestamp="1650465466095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
