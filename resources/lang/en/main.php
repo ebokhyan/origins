@@ -29,12 +29,13 @@ return [
     'copyright' => "COPYRIGHT ©2022 | ORIGINS",
 
     'subscription' => [
-          'title'  => 'Subscribe to our newsletter',
-          'description' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat'
+          'title'  => 'Subscribe to Our Newsletter',
+          'description' => 'Stay up-to-date with the latest news, posts, and wines from Origins Magazine straight to your inbox.',
+          'success_mgs' => "Thanks for signing up. Please check your email and verify your Origins subscription to get our newsletter."
     ],
     'join_club' => [
         'title'       => 'Join Our Wine Club',
-        'description' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,',
+        'description' => 'Subscribe to receive a diverse and curated selection of Armenia’s best wines to your home.',
         'button'      => 'Sign up'
     ],
     'form' => [

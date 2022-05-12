@@ -98,7 +98,7 @@ class MainController extends Controller
             throw ValidationException::withMessages(['email' => $message]);
         }
         if($request->ajax()){
-            return response()->json(['success' => 'We have sent to your email verification request, please confirm your Origins subscription']);
+            return response()->json(['success' => Lang::get('main.subscription.success_mgs')]);
         }
         return redirect()->back()->with(['success' => 'We have sent to your email verification request, please confirm your Origins subscription']);
     }

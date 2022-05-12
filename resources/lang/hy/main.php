@@ -29,13 +29,14 @@ return [
 
 
     'subscription' => [
-        'title'  => 'Միացեք մեր ամսագրին',
-        'description' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat'
+        'title'  => 'Բաժանորդագրվեք մեր ամսագրին',
+        'description' => 'Stay up-to-date with the latest news, posts, and wines from Origins Magazine straight to your inbox.',
+        'success_mgs' => "Thanks for signing up. Please check your email and verify your Origins subscription to get our newsletter."
     ],
     'join_club' => [
-        'title'       => 'Միացեք մեր գինու ակումբին',
-        'description' => 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,',
-        'button'      => 'Գրանցվել'
+        'title'       => 'Join Our Wine Club',
+        'description' => 'Subscribe to receive a diverse and curated selection of Armenia’s best wines to your home.',
+        'button'      => 'Sign up'
     ],
     'form' => [
         'placeholders' => [

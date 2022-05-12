@@ -1854,7 +1854,7 @@ a.image_block img {
   display: flex;
   justify-content: flex-end;
   border-top: 1px solid #000000;
-  font-size: 200%;
+  font-size: 280%;
   line-height: 35px;
   font-family: "poppins-medium";
 }
