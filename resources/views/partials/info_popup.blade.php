@@ -16,32 +16,32 @@
                 <div class="about_member">
                     {!! $details->bio !!}
                 </div>
-                @if(!empty($details->similar_stories))
-                <div class="member_articles">
-                    <div class="section_head">
-                        <h2 class="section_title">Similar Stories</h2>
-                    </div>
-                    <ul>
-                        @foreach($details->similar_stories as $story)
-                        <li>
-                            <div class="member_article">
-                                <a class="image_block" href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $story->slug])}}">
-                                    <img src="{{asset('storage/'.$story->image)}}" width="280" height="100" alt="" title=""/>
-                                    article title
-                                </a>
-                                <div class="info_block">
-                                    <div class="date_block">{{$story->date}}</div>
-                                    <div class="title_block">
-                                        <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $story->slug])}}">{{@$story->title}}</a>
-                                    </div>
-                                    <div class="description_block">{{@$story->short_description}}</div>
-                                </div>
-                            </div>
-                        </li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
+{{--                @if(!empty($details->similar_stories))--}}
+{{--                <div class="member_articles">--}}
+{{--                    <div class="section_head">--}}
+{{--                        <h2 class="section_title">Similar Stories</h2>--}}
+{{--                    </div>--}}
+{{--                    <ul>--}}
+{{--                        @foreach($details->similar_stories as $story)--}}
+{{--                        <li>--}}
+{{--                            <div class="member_article">--}}
+{{--                                <a class="image_block" href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $story->slug])}}">--}}
+{{--                                    <img src="{{asset('storage/'.$story->image)}}" width="280" height="100" alt="" title=""/>--}}
+{{--                                    article title--}}
+{{--                                </a>--}}
+{{--                                <div class="info_block">--}}
+{{--                                    <div class="date_block">{{$story->date}}</div>--}}
+{{--                                    <div class="title_block">--}}
+{{--                                        <a href="{{route('feature',['locale' => app()->getLocale(), 'slug' => $story->slug])}}">{{@$story->title}}</a>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="description_block">{{@$story->short_description}}</div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        @endforeach--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--                @endif--}}
             </div>
         </div>
     </div>

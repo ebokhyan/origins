@@ -12,7 +12,10 @@
 {{--                    <h2 class="details_title">{{$content->short_description}}</h2>--}}
                         <ul class="details_list">
                             <li>
-                               {{Str::ucfirst(__('main.by'))}} {{$content->author}}
+                                {{Str::ucfirst(__('main.by'))}}
+                              <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
+                                   {{$content->author}}
+                              </a>
                             </li>
                             <li>
                                 {{Str::ucfirst(__('features.translated'))}}
@@ -78,7 +81,9 @@
                                         </div>
                                         <div class="author_block">
                                             {{Str::ucfirst(__('main.by'))}}
+                                            <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
                                             <span class="author_name">{{@$item['author'][app()->getLocale()]}}</span>
+                                            </a>
                                         </div>
                                         <div class="description_block">{{@$item['short_description'][app()->getLocale()]}}</div>
                                     </div>

@@ -5204,6 +5204,9 @@ a.banner_inner,
 .feature_inner .details_list li {
   padding-top: 15px;
 }
+.feature_inner .details_list li a {
+  color: black;
+}
 .feature_inner .details_list li:first-child {
   padding-top: 0;
 }
@@ -5839,7 +5842,7 @@ a.banner_inner,
   line-height: 1.5em;
 }
 .recipe_main .stats_list ul li {
-  padding: 5px 20px;
+  padding: 5px 10px;
   display: flex;
 }
 .recipe_main .stats_list ul li:not(:first-child) {
@@ -5853,7 +5856,7 @@ a.banner_inner,
 }
 .recipe_main .stats_list .stat_type {
   font-family: "poppins-medium";
-  padding-right: 20px;
+  padding-right: 10px;
 }
 .recipe_main .stats_list .stat_info {
   color: #A7AE9E;
@@ -6019,8 +6022,8 @@ a.banner_inner,
   display: flex;
   justify-content: space-between;
   color: #A7AE9E;
-  flex: 0 0 120px;
-  max-width: 120px;
+  flex: 0 0 200px;
+  max-width: 200px;
   margin-right: 25px;
 }
 .ingredients_list .info_block {
@@ -6107,7 +6110,6 @@ a.banner_inner,
 .instructions .text_block {
   font-size: 250%;
   line-height: 37px;
-  padding-top: 50px;
 }
 .instructions .text_block ul {
   margin: 0;
@@ -7398,7 +7400,7 @@ button.loading:after {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   color: rgba(83, 84, 70, 0.6);
 }

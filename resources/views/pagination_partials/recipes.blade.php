@@ -10,7 +10,10 @@
                 </div>
                 @if(!empty($recipe->author))
                     <div class="author_block">
-                       {{Str::ucfirst(__('main.by'))}} <span class="author_name">{{ @$recipe->author}}</span>
+                       {{Str::ucfirst(__('main.by'))}}
+                        <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
+                        <span class="author_name">{{ @$recipe->author}}</span>
+                        </a>
                     </div>
                 @endif
                 <div class="description_block">{{@$recipe->short_description}}</div>

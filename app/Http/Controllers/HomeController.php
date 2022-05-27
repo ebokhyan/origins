@@ -27,7 +27,7 @@ class HomeController extends Controller
                     'description' => $content['seo_description'],
                     'image' => $content['seo_image'],
                 ],
-                'top_ad' => $topBanner ? $topBanner->image : null,
+                'top_ad' => $topBanner,
                 'mainBanner' => [
                     'image_1440' => $content['data']->main_banner_image_1440,
                     'image_960' => $content['data']->main_banner_image_960,

@@ -49,6 +49,8 @@ class Ad extends Resource
             Text::make(__('Title'),'title')
                 ->rules('required', 'max:255')
                 ->sortable(),
+            Text::make('href')
+                ->hideFromIndex(),
             FilemanagerField::make('Image (300 x 600)','image')
                 ->filterBy('Image')
                 ->displayAsImage(),

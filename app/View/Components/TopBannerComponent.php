@@ -7,15 +7,15 @@ use Illuminate\View\Component;
 class TopBannerComponent extends Component
 {
 
-    public $image;
+    public $banner;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($image)
+    public function __construct($banner)
     {
-        $this->image = $image;
+        $this->banner = $banner;
     }
 
     /**

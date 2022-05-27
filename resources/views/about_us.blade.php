@@ -44,13 +44,13 @@
                             </div>
                         @endif
 
-                        <div class="coworkers">
+                        <div class="coworkers" id="coworkers">
                             @if(!empty($content['contributors']))
                             <div class="sub_team">
                                 <div class="team_name">{{__('about.contributors')}}</div>
                                 <ul class="members_list">
                                     @foreach($content['contributors'] as $contributor)
-                                    <li><button class="member_name popup_btn" data-popup="{{$contributor->id}}" data-type="contributor">{{$contributor->full_name}}</button></li>
+                                    <li><button class="member_name popup_btn" >{{$contributor->full_name}}</button></li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -60,7 +60,7 @@
                                 <div class="team_name">{{__('about.translators')}}</div>
                                 <ul class="members_list">
                                     @foreach($content['translators'] as $translator)
-                                    <li><button class="member_name popup_btn" data-popup="{{$translator->id}}" data-type="translator">{{$translator->full_name}}</button></li>
+                                    <li><button class="member_name popup_btn" >{{$translator->full_name}}</button></li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -70,7 +70,7 @@
                                 <div class="team_name">{{__('about.photographers')}}</div>
                                 <ul class="members_list">
                                     @foreach($content['photographers'] as $photographer)
-                                    <li><button class="member_name popup_btn" data-popup="{{$photographer->id}}" data-type="photographer">{{$photographer->full_name}}</button></li>
+                                    <li><button class="member_name popup_btn" >{{$photographer->full_name}}</button></li>
                                     @endforeach
                                 </ul>
                             </div>

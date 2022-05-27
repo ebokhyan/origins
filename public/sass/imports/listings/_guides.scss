@@ -49,7 +49,7 @@
         }
         .description_block {
             margin-top: 15px;
-            @include textOverflow(1,relative);
+            @include textOverflow(3,relative);
             color: rgba($descriptionColor, 0.6);
             @include mediaFrom($size960) {
                 font-size: 150%;
@@ -100,7 +100,7 @@
             .image_block:before {
                 padding-bottom: 62.5%;
             }
-            
+
         }
     }
     @include mediaTo($size960) {
@@ -119,7 +119,7 @@
                 max-width: 100%;
             }
         }
-        
+
     }
     @include mediaTo($size576) {
         .guides_list {

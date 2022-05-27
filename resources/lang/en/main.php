@@ -57,5 +57,8 @@ return [
         '10' => 'October',
         '11' => 'November',
         '12' => 'December',
-    ]
+    ],
+
+    'contact_success_msg' => 'Thank you! Your request was successfully submitted.',
+    'smt_went_wrong' => 'Something went wrong.'
 ];

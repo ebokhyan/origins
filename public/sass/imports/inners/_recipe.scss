@@ -10,21 +10,21 @@
     @include mediaFrom($size1440) {
         padding-top: 80px;
         padding-bottom: 40px;
-        ~ .latest_recipes { 
+        ~ .latest_recipes {
             padding-top: 80px;
         }
     }
     @include mediaRange($size1200, $size1440) {
         padding-top: 60px;
         padding-bottom: 35px;
-        ~ .latest_recipes { 
+        ~ .latest_recipes {
             padding-top: 70px;
         }
     }
     @include mediaRange($size960, $size1200) {
         padding-top: 45px;
         padding-bottom: 30px;
-        ~ .latest_recipes { 
+        ~ .latest_recipes {
             padding-top: 60px;
         }
         .share_btns {
@@ -34,7 +34,7 @@
     @include mediaRange($size576, $size960) {
         padding-top: 30px;
         padding-bottom: 25px;
-        ~ .latest_recipes { 
+        ~ .latest_recipes {
             padding-top: 50px;
         }
     }
@@ -49,7 +49,7 @@
     @include mediaTo($size576) {
         padding-top: 15px;
         padding-bottom: 20px;
-        ~ .latest_recipes { 
+        ~ .latest_recipes {
             padding-top: 40px;
         }
     }
@@ -125,7 +125,7 @@
             font-size: 200%;
             line-height: 1.5em;
             li {
-                padding: 5px 20px;
+                padding: 5px 10px;
                 display: flex;
                 &:not(:first-child) {
                     border-left: 1px solid;
@@ -140,7 +140,7 @@
         }
         .stat_type {
             font-family: $medium;
-            padding-right: 20px;
+            padding-right: 10px;
         }
         .stat_info {
             color: $siteColor;
@@ -212,7 +212,7 @@
             font-size: 130%;
             line-height: 18px;
         }
-        
+
     }
     @include mediaRange($size576, $size768) {
         .author_block {
@@ -302,8 +302,8 @@
             display: flex;
             justify-content: space-between;
             color: $siteColor;
-            flex: 0 0 120px;
-            max-width: 120px;
+            flex: 0 0 200px;
+            max-width: 200px;
             margin-right: 25px;
         }
         .info_block {
@@ -336,7 +336,7 @@
                 margin-right: 15px;
             }
         }
-        
+
     }
     @include mediaTo($size960) {
         margin-top: 20px;
@@ -380,12 +380,12 @@
     .text_block {
         font-size: 250%;
         line-height: 37px;
-        padding-top: 50px;
+        //padding-top: 50px;
         ul {
             margin: 0;
             padding: 0;
             list-style-type: decimal;
-            list-style-position: inside; 
+            list-style-position: inside;
             li:not(:last-child):after {
                 display: block;
                 font-size: inherit;
@@ -421,7 +421,7 @@
             padding-top: 30px;
         }
     }
-        
+
     @include mediaTo($size960) {
         margin-top: 40px;
         position: relative;

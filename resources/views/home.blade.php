@@ -37,7 +37,11 @@
                                     </div>
                                     <div class="author_block">
                                         {{Str::ucfirst(__('main.by'))}}
-                                        <span class="author_name">{{ !empty($article['author'][app()->getLocale()]) ? $article['author'][app()->getLocale()] : ""}}</span>
+                                        <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
+                                            <span class="author_name">
+                                                {{ !empty($article['author'][app()->getLocale()]) ? $article['author'][app()->getLocale()] : ""}}
+                                            </span>
+                                        </a>
                                     </div>
                                     <div class="description_block">{{!empty($article['short_description'][app()->getLocale()]) ? $article['short_description'][app()->getLocale()] : ''}}</div>
                                 </div>
@@ -116,7 +120,9 @@
                                     @if(isset($recipe['author'][app()->getLocale()]))
                                         <div class="author_block">
                                             {{Str::ucfirst(__('main.by'))}}
-                                            <span class="author_name">{{@$recipe['author'][app()->getLocale()]}}</span>
+                                            <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
+                                                <span class="author_name">{{@$recipe['author'][app()->getLocale()]}}</span>
+                                            </a>
                                         </div>
                                     @endif
                                     <div class="description_block">{{@$recipe['short_description'][app()->getLocale()]}}</div>

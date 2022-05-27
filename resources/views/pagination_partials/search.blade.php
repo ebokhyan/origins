@@ -38,7 +38,9 @@
                 </div>
                 <div class="author_block">
                     {{Str::ucfirst(__('main.by'))}}
+                    <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
                     <span class="author_name">{{@$item->author}}</span>
+                    </a>
                 </div>
                 <div class="description_block">{{@$item->short_description}}</div>
             </div>

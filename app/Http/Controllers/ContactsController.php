@@ -34,10 +34,10 @@ class ContactsController extends Controller
 
                 Contact::create(array_except($request->all(),['_token']));
 
-                return response()->json(['success' => 'Thank you! Your request has successfully sent.']);
+                return response()->json(['success' => trans('main.contact_success_msg')]);
             }
             catch (\Exception $e) {
-                return response()->json(['error' => "Something went wrong."]);
+                return response()->json(['error' => trans('main.smt_went_wrong')]);
             }
         }
     }

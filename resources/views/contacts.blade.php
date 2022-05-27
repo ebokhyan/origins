@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_without_footer')
 @section('content')
 <div class="content">
     <div class="sign_page">
@@ -53,7 +53,7 @@
                 <div class="or_label">or</div>
                 <div class="contacts_list">
                     <div class="contact_block">
-                        For Marketing inquiries: <a href="mailto:{{$settings->contacts['Marketing']}}">{{$settings->contacts['Marketing']}}</a>
+                        For marketing inquiries: <a href="mailto:{{$settings->contacts['Marketing']}}">{{$settings->contacts['Marketing']}}</a>
                     </div>
                     <div class="contact_block">
                         For editorial inquiries: <a href="mailto:{{$settings->contacts['Editorial']}}">{{$settings->contacts['Editorial']}}</a>
@@ -76,8 +76,8 @@
     <div class="terms_menu">
         <div class="page_container">
             <ul class="terms_menu">
-                <li><a href="{{route('term',['locale' => app()->getLocale()])}}">{{__('main.menu.terms_of_service')}}</a></li>
-                <li><a href="{{route('policy',['locale' => app()->getLocale()])}}">{{__('main.menu.privacy_policy')}}</a></li>
+                <li><a href="{{route('term',['locale' => app()->getLocale()])}}">{{$menu['terms']}}</a></li>
+                <li><a href="{{route('policy',['locale' => app()->getLocale()])}}">{{$menu['policy']}}</a></li>
             </ul>
         </div>
     </div>

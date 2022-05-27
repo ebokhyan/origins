@@ -35,6 +35,9 @@
         opacity: 0.4;
         li {
             padding-top: 15px;
+            a {
+                color: black;
+            }
         }
         li:first-child {
             padding-top: 0;
