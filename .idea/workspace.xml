@@ -6,34 +6,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/app_without_footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Nova/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Nova/Ad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Components/TopBannerComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/TopBannerComponent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/imports/inners/_feature.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/inners/_feature.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/imports/inners/_recipe.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/inners/_recipe.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/imports/listings/_guides.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/listings/_guides.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/hy/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/hy/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about_us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/add-banner-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/add-banner-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/horizontal-banner-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/horizontal-banner-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/top-banner-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-banner-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/social-lists.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/social-lists.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/top-news-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-news-component.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/vertical-banner-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/vertical-banner-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/contacts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guides_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guides_inner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/features.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/features.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/guides.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guides.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pagination_partials/guieds.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination_partials/guieds.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pagination_partials/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination_partials/recipes.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pagination_partials/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination_partials/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/info_popup.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/info_popup.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipes.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/search_results.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search_results.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +309,8 @@
       <workItem from="1652418947907" duration="12000" />
       <workItem from="1653468106987" duration="119000" />
       <workItem from="1653636882719" duration="24000" />
-      <workItem from="1653636916873" duration="10875000" />
+      <workItem from="1653636916873" duration="11762000" />
+      <workItem from="1653890488199" duration="4046000" />
     </task>
     <servers />
   </component>

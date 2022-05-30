@@ -52,7 +52,8 @@ class MainController extends Controller
             catch (\Exception $e){
                 switch ($e->getCode()){
                     case(400) :
-                        $message = "You have already signed up.";
+                    case(422):
+                        $message = "You’re already subscribed!";
                         return redirect('/')->with(['success' => $message]);
                         break;
                     case(503) :

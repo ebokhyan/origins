@@ -60,5 +60,23 @@ return [
     ],
 
     'contact_success_msg' => 'Thank you! Your request was successfully submitted.',
-    'smt_went_wrong' => 'Something went wrong.'
+    'smt_went_wrong' => 'Something went wrong.',
+    'empty_data' => 'No results found',
+    'load_more' => "Load more",
+    'search_results' => 'Results',
+
+    'contact' => [
+        'title' => 'Contact Us',
+        'get_in_touch' => 'Get in Touch',
+        'full_name' => 'Full Name',
+        'email' => 'Email Address',
+        'subject' => 'Subject',
+        'message' => 'Message',
+        'send_btn' => 'Send',
+        'or' => 'or',
+        'marketing' => 'For marketing inquiries',
+        'editorial' => 'For editorial inquiries',
+        'general' => 'For general inquiries',
+        'stay_connected' => 'Stay Connected',
+    ]
 ];

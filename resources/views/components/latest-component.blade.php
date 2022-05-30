@@ -33,7 +33,7 @@
         </div>
     @else
         <div class="guides_list">
-            <div class="description_block ">No results found</div>
+            <div class="description_block ">@lang('main.empty_data')</div>
         </div>
     @endif
 </div>

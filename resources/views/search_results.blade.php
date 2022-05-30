@@ -4,11 +4,11 @@
         <div class="inner_page">
             <div class="page_container">
                 <div class="page_head">
-                    <h1 class="page_title">Results</h1>
+                    <h1 class="page_title">@lang('main.search_results')</h1>
                     <form class="inner_search" method="GET" action="{{route('search',['locale' => app()->getLocale()])}}">
                         <label>
                             <span class="label">{{__('main.search')}}</span>
-                            <input type="text" id="search" name="search" placeholder="Search"
+                            <input type="text" id="search" name="search" placeholder="{{__('main.search')}}"
                                    value="{{isset($search) ? $search : ''}}"/>
                         </label>
                         <button type="submit" class="icon_search" aria-label="search"></button>
@@ -49,7 +49,7 @@
                         </div>
                     @else
                         <div class="guides_list">
-                            <div class="description_block ">No results found</div>
+                            <div class="description_block ">@lang('main.empty_data')</div>
                         </div>
                     @endif
                 </div>

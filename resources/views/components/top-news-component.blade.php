@@ -9,14 +9,14 @@
                 <li>
                     <div class="news_block">
                         <a class="image_block" href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[0]['slug']])}}">
-                            <img src="{{asset('storage/'.$topNews[0]['image'])}}" width="750" height="519" alt=""
-                                 title=""/>
-                            article title
+                            <img src="{{asset('storage/'.$topNews[0]['image'])}}" width="750" height="519" alt="" title=""/>
                         </a>
                         <div class="info_block">
                             <div class="date_block">{{$topNews[0]['date']}}</div>
                             <div class="title_block">
-                                <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[0]['slug']])}}">{{@$topNews[0]['title'][app()->getLocale()]}}</a>
+                                <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[0]['slug']])}}">
+                                    {{@$topNews[0]['title'][app()->getLocale()]}}
+                                </a>
                             </div>
                             <div class="description_block">{{@$topNews[0]['short_description'][app()->getLocale()]}}</div>
                         </div>
@@ -27,14 +27,14 @@
                 <li>
                     <div class="news_block">
                         <a class="image_block" href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[1]['slug']])}}">
-                            <img src="{{asset('storage/'.$topNews[1]['image'])}}" width="393" height="519" alt=""
-                                 title=""/>
-                            article title
+                            <img src="{{asset('storage/'.$topNews[1]['image'])}}" width="393" height="519" alt="" title=""/>
                         </a>
                         <div class="info_block">
                             <div class="date_block">{{$topNews[1]['date']}}</div>
                             <div class="title_block">
-                                <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[1]['slug']])}}">{{@$topNews[1]['title'][app()->getLocale()]}}</a>
+                                <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[1]['slug']])}}">
+                                    {{@$topNews[1]['title'][app()->getLocale()]}}
+                                </a>
                             </div>
                             <div class="description_block">{{@$topNews[1]['short_description'][app()->getLocale()]}}</div>
                         </div>
@@ -45,14 +45,14 @@
                 <li>
                     <div class="news_block">
                         <a class="image_block" href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[2]['slug']])}}">
-                            <img src="{{asset('storage/'.$topNews[2]['image'])}}" width="345" height="122" alt=""
-                                 title=""/>
-                            article title
+                            <img src="{{asset('storage/'.$topNews[2]['image'])}}" width="345" height="122" alt="" title=""/>
                         </a>
                         <div class="info_block">
                             <div class="date_block">{{$topNews[2]['date']}}</div>
                             <div class="title_block">
-                                <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[2]['slug']])}}">{{@$topNews[2]['title'][app()->getLocale()]}}</a>
+                                <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[2]['slug']])}}">
+                                    {{@$topNews[2]['title'][app()->getLocale()]}}
+                                </a>
                             </div>
                             <div class="description_block">{{@$topNews[2]['short_description'][app()->getLocale()]}}</div>
                         </div>
@@ -63,14 +63,14 @@
                 <li>
                     <div class="news_block">
                         <a class="image_block" href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[3]['slug']])}}">
-                            <img src="{{asset('storage/'.$topNews[3]['image'])}}" width="345" height="122" alt=""
-                                 title=""/>
-                            article title
+                            <img src="{{asset('storage/'.$topNews[3]['image'])}}" width="345" height="122" alt="" title=""/>
                         </a>
                         <div class="info_block">
                             <div class="date_block">{{$topNews[3]['date']}}</div>
                             <div class="title_block">
-                                <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[3]['slug']])}}">{{@$topNews[3]['title'][app()->getLocale()]}}</a>
+                                <a href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $topNews[3]['slug']])}}">
+                                    {{@$topNews[3]['title'][app()->getLocale()]}}
+                                </a>
                             </div>
                             <div class="description_block">{{@$topNews[3]['short_description'][app()->getLocale()]}}</div>
                         </div>
@@ -90,9 +90,7 @@
                         <li>
                             <div class="news_block">
                                 <a class="image_block" href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $news->slug])}}">
-                                    <img src="{{asset('storage/'.$news->image)}}" width="750" height="300" alt=""
-                                         title=""/>
-                                    article title
+                                    <img src="{{asset('storage/'.$news->image)}}" width="750" height="300" alt="" title=""/>
                                 </a>
                                 <div class="info_block">
                                     <div class="date_block">{{$news->date}}</div>
@@ -108,9 +106,7 @@
                         <li>
                             <div class="news_block">
                                 <a class="image_block" href="{{route('news_inner',['locale' => app()->getLocale(), 'slug' => $news->slug])}}">
-                                    <img src="{{asset('storage/'.$news->image)}}" width="395" height="300" alt=""
-                                         title=""/>
-                                    article title
+                                    <img src="{{asset('storage/'.$news->image)}}" width="395" height="300" alt="" title=""/>
                                 </a>
                                 <div class="info_block">
                                     <div class="date_block">{{$news->date}}</div>

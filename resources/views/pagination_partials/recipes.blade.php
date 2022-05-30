@@ -23,6 +23,6 @@
 @endforeach
 @if($recipes->currentPage() != $recipes->lastPage())
     <li  style="flex: 0 0 100%; max-width: 100%">
-        <button class="btn" id="loadBtn" data-load-url='{{$recipes->nextPageUrl()}}'>Load more</button>
+        <button class="btn" id="loadBtn" data-load-url='{{$recipes->nextPageUrl()}}'>@lang('main.load_more')</button>
     </li>
 @endif

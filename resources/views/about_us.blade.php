@@ -107,7 +107,6 @@
                             <li>
                                 <a target="_blank" class="sponsor_block">
                                     <img src="{{asset('storage/'.$sponsor->logo)}}" alt="" title="" width="400" height="200"/>
-                                    Sponsor name
                                 </a>
                             </li>
                             @endforeach

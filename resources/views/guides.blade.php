@@ -29,7 +29,7 @@
                     </div>
                 @else
                     <div class="guides_list">
-                        <div class="description_block ">No results found</div>
+                        <div class="description_block ">@lang('mian.empty_data')</div>
                     </div>
                 @endif
             </div>

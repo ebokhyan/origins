@@ -49,6 +49,6 @@
 @endforeach
 @if($items->currentPage() != $items->lastPage())
     <li  style="flex: 0 0 100%; max-width: 100%">
-        <button class="btn" id="loadBtn" data-load-url='{{$items->nextPageUrl()}}'>Load more</button>
+        <button class="btn" id="loadBtn" data-load-url='{{$items->nextPageUrl()}}'>@lang('main.load_more')</button>
     </li>
 @endif

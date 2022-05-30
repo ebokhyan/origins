@@ -13,7 +13,7 @@
                                 <input type="text" name="email" data-validation="email" placeholder="{{__('main.form.placeholders.email')}}">
                                 <span class="error_hint">
                                     <span class="standard_hint">mandatory field</span>
-                                    <span class="individual_hint">wrong email address</span>
+                                    <span class="individual_hint">Wrong email address</span>
                                 </span>
                             </label>
                             <button class="validate_btn icon_arrow dark_btn" type="submit" aria-label="subscribe"></button>
@@ -43,18 +43,18 @@
     <div class="footer_menu">
         <div class="page_container">
             <ul>
-                <li><a href="{{route('features',['locale' => app()->getLocale()])}}"> {{$menu['features']}}  </a></li>
-                <li><a href="{{route('news',['locale' => app()->getLocale()])}}">     {{$menu['news']}}      </a></li>
-                <li><a href="{{route('recipes',['locale' => app()->getLocale()])}}">  {{$menu['recipes']}}    </a></li>
+                <li><a href="{{route('features',['locale' => app()->getLocale()])}}"> {{$menu['features']}} </a></li>
+                <li><a href="{{route('news',['locale' => app()->getLocale()])}}"> {{$menu['news']}} </a></li>
+                <li><a href="{{route('recipes',['locale' => app()->getLocale()])}}"> {{$menu['recipes']}} </a></li>
                 @if(app()->getLocale() == 'en')
-                    <li><a href="{{route('wines',['locale' => app()->getLocale()])}}">    {{$menu['wines']}}      </a></li>
+                    <li><a href="{{route('wines',['locale' => app()->getLocale()])}}"> {{$menu['wines']}} </a></li>
                 @endif
-                <li><a href="{{route('guides',['locale' => app()->getLocale()])}}">   {{$menu['guides']}}     </a></li>
+                <li><a href="{{route('guides',['locale' => app()->getLocale()])}}"> {{$menu['guides']}} </a></li>
                 @if(app()->getLocale() == 'en')
-                    <li><a href="{{route('shop',['locale' => app()->getLocale()])}}">     {{$menu['shop']}}       </a></li>
-                    <li><a href="{{route('wine-club',['locale' => app()->getLocale()])}}">{{$menu['wine_club']}}  </a></li>
+                    <li><a href="{{route('shop',['locale' => app()->getLocale()])}}"> {{$menu['shop']}} </a></li>
+                    <li><a href="{{route('wine-club',['locale' => app()->getLocale()])}}"> {{$menu['wine_club']}} </a></li>
                 @endif
-                <li><a href="{{route('about',['locale' => app()->getLocale()])}}">    {{$menu['about_us']}}      </a></li>
+                <li><a href="{{route('about',['locale' => app()->getLocale()])}}"> {{$menu['about_us']}} </a></li>
                 <li><a href="{{route('contacts',['locale' => app()->getLocale()])}}"> {{$menu['contact_us']}} </a></li>
             </ul>
         </div>
@@ -63,7 +63,7 @@
     <div class="footer_bottom">
         <div class="page_container">
             <ul class="terms_menu">
-                <li><a href="{{route('term',['locale' => app()->getLocale()])}}">   {{$menu['terms']}} </a></li>
+                <li><a href="{{route('term',['locale' => app()->getLocale()])}}"> {{$menu['terms']}} </a></li>
                 <li><a href="{{route('policy',['locale' => app()->getLocale()])}}"> {{$menu['policy']}} </a></li>
             </ul>
             <div class="copyrights">{{__('main.copyright')}}</div>
