@@ -60,6 +60,8 @@ return [
     ],
 
     'contact_success_msg' => 'Thank you! Your request was successfully submitted.',
+    'subscription_success' => 'Thank you for subscribing to Origins Magazine and welcome to our community!',
+    'subscription_verify_msg' => 'We have sent to your email verification request, please confirm your Origins subscription',
     'smt_went_wrong' => 'Something went wrong.',
     'empty_data' => 'No results found',
     'load_more' => "Load more",
@@ -86,7 +88,10 @@ return [
         ],
         'email' => [
             'required' => "Email field is required.",
-            'email' => "Incorrect email address."
+            'email' => "Incorrect email address.",
+            'already_subscribed' => "You’re already subscribed!",
+            'error_sending' => "Can't send E-mail to provided email address.Can't send E-mail to provided email address.",
+            'cant_add' => "This email could not be added to our subscribers list",
         ],
         'subject' => [
             'required' => "Subject field is required.",

@@ -53,18 +53,18 @@ class MainController extends Controller
                 switch ($e->getCode()){
                     case(400) :
                     case(422):
-                        $message = "You’re already subscribed!";
+                        $message = trans('main.validation.email.already_subscribed');
                         return redirect('/')->with(['success' => $message]);
                         break;
                     case(503) :
-                        $message = "Can't send E-mail to provided email address.";
+                        $message = trans('main.validation.email.error_sending');
                         break;
                     default :
-                        $message = 'Something went wrong!';
+                        $message = trans('main.smt_went_wrong');
                 };
                 throw ValidationException::withMessages(['email' => $message]);
             }
-            return redirect('/')->with(['success' => 'Thank you for subscribing to Origins Magazine and welcome to our community!']);
+            return redirect('/')->with(['success' => trans('main.subscription_success')]);
         }else{
             abort(404);
         }
@@ -88,20 +88,21 @@ class MainController extends Controller
         catch (\Exception $e){
             switch ($e->getCode()){
                 case(400) :
-                    $message = "This email has already signed up.";
+                case(422):
+                    $message = trans('main.validation.email.already_subscribed');
                     break;
                 case(503) :
-                    $message = "Can't send E-mail to provided email address.";
+                    $message = trans('main.validation.email.error_sending');
                     break;
                 default :
-                    $message = 'This email could not be added to our subscribers list';
+                    $message = trans('main.cant_add');
             };
             throw ValidationException::withMessages(['email' => $message]);
         }
         if($request->ajax()){
             return response()->json(['success' => Lang::get('main.subscription.success_mgs')]);
         }
-        return redirect()->back()->with(['success' => 'We have sent to your email verification request, please confirm your Origins subscription']);
+        return redirect()->back()->with(['success' => trans('main.subscription_verify_msg')]);
     }
 
     public function unsubscribe($email){}

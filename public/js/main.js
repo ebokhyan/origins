@@ -306,7 +306,7 @@ $(document).ready(function(){
                     success: function (response) {
                         $('#email_label').removeClass('has-error');
                         $("input[name='email']").remove('error').addClass('valid');
-                        $(".error_hint").children('.standard_hint').text('');
+                        $(".error_hint").children('.individual_hint').text('');
                         if (response.success) {
                             $('form[name="footerSubscriptionForm"]').trigger("reset");
                             $('#success_msg').html(response.success);
@@ -318,7 +318,7 @@ $(document).ready(function(){
                     error: function(XMLHttpRequest, textStatus, errorThrown) {
                         console.log(XMLHttpRequest.responseJSON.errors);
                         var err = XMLHttpRequest.responseJSON.errors;
-                        $(".error_hint").children('.standard_hint').text(err.email);
+                        $(".error_hint").children('.individual_hint').text(err.email);
                         $('#email_label').addClass('has-error');
                         $("input[name='email']").removeClass('valid').addClass('error');
                     }

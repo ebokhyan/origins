@@ -15,7 +15,7 @@
                                 </label>
                                 <span class="error_hint">
                                         <span class="standard_hint"></span>
-                                        <span class="individual_hint">Wrong email address</span>
+                                        <span class="individual_hint">@lang('main.validation.email.email')</span>
                                 </span>
                             </div>
                             <button class="validate_btn icon_arrow dark_btn" type="submit" aria-label="subscribe"></button>
