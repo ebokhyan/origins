@@ -7,22 +7,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/comingsoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/comingsoon.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/comingsoon.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/comingsoon.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/imports/home/_mainscreen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/home/_mainscreen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/imports/home/_recipes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/home/_recipes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/imports/inners/_feature.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/inners/_feature.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sass/imports/main/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/main/_general.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contacts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guides_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guides_inner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pagination_partials/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination_partials/recipes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pagination_partials/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination_partials/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/recipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/recipes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +295,7 @@
       <workItem from="1653636882719" duration="24000" />
       <workItem from="1653636916873" duration="11762000" />
       <workItem from="1653890488199" duration="4846000" />
-      <workItem from="1654065219562" duration="3532000" />
+      <workItem from="1654065219562" duration="8146000" />
     </task>
     <servers />
   </component>

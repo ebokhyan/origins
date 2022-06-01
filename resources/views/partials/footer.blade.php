@@ -12,7 +12,7 @@
                                 <span class="label">subscribe</span>
                                 <input type="text" name="email" data-validation="email" placeholder="{{__('main.form.placeholders.email')}}">
                                 <span class="error_hint">
-                                    <span class="standard_hint">mandatory field</span>
+                                    <span class="standard_hint"></span>
                                     <span class="individual_hint">Wrong email address</span>
                                 </span>
                             </label>

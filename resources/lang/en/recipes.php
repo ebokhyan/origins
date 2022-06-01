@@ -10,5 +10,4 @@ return [
     'ingredients'    => 'Ingredients',
     'instructions'   => 'Instructions',
     'other_recipes'  => 'Other Recipes',
-
 ];
