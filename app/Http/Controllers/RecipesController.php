@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class RecipesController extends Controller
 {
     public function getRecipes(Request $request, $locale){
-        $content = nova_page_manager_get_page_by_path('recipes', null, $locale);
+        $content = nova_page_manager_get_page_by_path('recipes', null, app()->getLocale());
         if($content){
             if($request->has('search')){
                 $recipes = Recipe::published()

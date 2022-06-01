@@ -12,7 +12,7 @@ use App\Models\Recipe;
 class HomeController extends Controller
 {
     public function getHome($locale){
-        $content = nova_page_manager_get_page_by_path('home', null, $locale);
+        $content = nova_page_manager_get_page_by_path('home', null, app()->getLocale());
         if($content){
             $topBanner = Ad::published()->where('id',$content['data']->top_ad)->first();
             $latestArticlesBanner = Banner::published()->where('id',$content['data']->latest_articles_banner)->first();
@@ -69,7 +69,7 @@ class HomeController extends Controller
 
 
     public function getWines($locale) {
-        $content = nova_page_manager_get_page_by_path('wines', null, $locale);
+        $content = nova_page_manager_get_page_by_path('wines', null, app()->getLocale());
         if($content){
             $content = [
                 'name' => $content['name'],
@@ -91,7 +91,7 @@ class HomeController extends Controller
     }
 
     public function getShop($locale) {
-        $content = nova_page_manager_get_page_by_path('shop', null, $locale);
+        $content = nova_page_manager_get_page_by_path('shop', null, app()->getLocale());
         if($content){
             $content = [
                 'name' => $content['name'],
@@ -113,7 +113,7 @@ class HomeController extends Controller
     }
 
     public function getWineClub($locale) {
-        $content = nova_page_manager_get_page_by_path('wine-club', null, $locale);
+        $content = nova_page_manager_get_page_by_path('wine-club', null, app()->getLocale());
         if($content){
             $content = [
                 'name' => $content['name'],
@@ -135,7 +135,7 @@ class HomeController extends Controller
     }
 
     public function getNewslatter($locale) {
-        $content = nova_page_manager_get_page_by_path('newslatter', null, $locale);
+        $content = nova_page_manager_get_page_by_path('newslatter', null, app()->getLocale());
         if($content){
             $content = [
                 'name' => $content['name'],

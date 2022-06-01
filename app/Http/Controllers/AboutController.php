@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 class AboutController extends Controller
 {
     public function getAboutPage($locale) {
-        $page = nova_page_manager_get_page_by_path('about-us', null, $locale);
+        $page = nova_page_manager_get_page_by_path('about-us', null, app()->getLocale());
 
         if($page) {
             $content = [

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class FeaturesController extends Controller
 {
     public function getFeatures(Request $request,$locale){
-        $content = nova_page_manager_get_page_by_path('features', null, $locale);
+        $content = nova_page_manager_get_page_by_path('features', null, app()->getLocale());
         if($content){
             $topFeatures= Article::top()
                 ->whereIn('id',json_decode($content['data']->top_features))

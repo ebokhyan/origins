@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class GuidesController extends Controller
 {
     public function getGuides(Request $request, $locale) {
-        $content = nova_page_manager_get_page_by_path('guides', null, $locale);
+        $content = nova_page_manager_get_page_by_path('guides', null, app()->getLocale());
         if($content){
             if($request->has('search')){
                 $guides = Guide::published()

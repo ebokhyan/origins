@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class PrivacyController extends Controller
 {
     public function getTerm($locale) {
-        $data = nova_page_manager_get_page_by_path('terms', null, $locale);
+        $data = nova_page_manager_get_page_by_path('terms', null, app()->getLocale());
         if($data) {
             $content = [
                 'name' => $data['name'],
@@ -27,7 +27,7 @@ class PrivacyController extends Controller
     }
 
     public function getPolicy($locale) {
-        $data = nova_page_manager_get_page_by_path('policy', null, $locale);
+        $data = nova_page_manager_get_page_by_path('policy', null, app()->getLocale());
         if($data) {
             $content = [
                 'name' => $data['name'],
