@@ -24,7 +24,6 @@ class NewsController extends Controller
                 $addBanner = Ad::published()
                     ->where('id',$content['data']->horizontal_ad)
                     ->first()
-                    ->makeHidden(['published','created_at','updated_at','sort_order'])
                     ->toArray();
             }
             $latest3News = News::published()
