@@ -8,14 +8,16 @@
                         <div class="description_block">{{__('main.subscription.description')}}</div>
                         <form class="subscribe_form" name="footerSubscriptionForm" id="footerSubscriptionForm">
                             @csrf
-                            <label id="email_label">
-                                <span class="label">subscribe</span>
-                                <input type="text" name="email" data-validation="email" placeholder="{{__('main.form.placeholders.email')}}">
+                            <div class="field_block">
+                                <label id="email_label">
+                                    <span class="label">subscribe</span>
+                                    <input type="text" name="email" data-validation="email" placeholder="{{__('main.form.placeholders.email')}}">
+                                </label>
                                 <span class="error_hint">
-                                    <span class="standard_hint"></span>
-                                    <span class="individual_hint">Wrong email address</span>
+                                        <span class="standard_hint"></span>
+                                        <span class="individual_hint">Wrong email address</span>
                                 </span>
-                            </label>
+                            </div>
                             <button class="validate_btn icon_arrow dark_btn" type="submit" aria-label="subscribe"></button>
                         </form>
                         <div id="success_msg" class="description_block"></div>

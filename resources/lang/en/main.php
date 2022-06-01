@@ -78,5 +78,21 @@ return [
         'editorial' => 'For editorial inquiries',
         'general' => 'For general inquiries',
         'stay_connected' => 'Stay Connected',
+    ],
+
+    'validation' => [
+        'full_name' => [
+            'required' => "Full name field is required.",
+        ],
+        'email' => [
+            'required' => "Email field is required.",
+            'email' => "Incorrect email address."
+        ],
+        'subject' => [
+            'required' => "Subject field is required.",
+        ],
+        'message' => [
+            'required' => "Message field is required.",
+        ],
     ]
 ];

@@ -18,7 +18,7 @@
                                 <span class="label">@lang('main.contact.full_name')</span>
                                 <input type="text" name="name" placeholder="@lang('main.contact.full_name')" data-validation="required"/>
                             </label>
-                            <span class="error_hint">mandatory field</span>
+                            <span class="error_hint">@lang('main.validation.full_name.required')</span>
                         </div>
                         <div class="field_block">
                             <label id="user_email_lb">
@@ -26,8 +26,8 @@
                                 <input type="text" name="user_email" data-validation="email" placeholder="@lang('main.contact.email')">
                             </label>
                             <span class="error_hint">
-                                <span class="standard_hint">mandatory field</span>
-                                <span class="individual_hint">wrong email address</span>
+                                <span class="standard_hint">@lang('main.validation.email.required')</span>
+                                <span class="individual_hint">@lang('main.validation.email.email')</span>
                             </span>
                         </div>
                         <div class="field_block">
@@ -35,14 +35,14 @@
                                 <span class="label">@lang('main.contact.subject')</span>
                                 <input type="text" name="subject" placeholder="@lang('main.contact.subject')" data-validation="required"/>
                             </label>
-                            <span class="error_hint">mandatory field</span>
+                            <span class="error_hint">@lang('main.validation.subject.required')</span>
                         </div>
                         <div class="field_block">
                             <label id="message_lb" class="textarea_block">
                                 <span class="label">@lang('main.contact.message')</span>
                                 <textarea  name="message" placeholder="@lang('main.contact.message')" data-validation="required"></textarea>
                             </label>
-                            <span class="error_hint">mandatory field</span>
+                            <span class="error_hint">@lang('main.validation.message.required')</span>
                         </div>
                         <div class="btn_block">
                             <button type="submit" id='sendContactBtn' class="validate_btn primary_btn main_btn" aria-label="send">@lang('main.contact.send_btn')</button>
