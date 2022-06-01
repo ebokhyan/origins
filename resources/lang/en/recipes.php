@@ -1,7 +1,7 @@
 <?php
 return [
     'title'          =>'Recipes',
-    'search'         => 'Search Recipes',
+    'search'         => 'Search',
     'latest_recipes' => 'Latest Recipes',
     'created'     => 'Created',
     'serves'         => 'Serves',

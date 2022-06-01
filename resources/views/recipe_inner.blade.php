@@ -15,8 +15,8 @@
                         @if($recipe->author)
                             <div class="author_block">
                                 {{Str::ucfirst(__('main.by'))}}
-                                <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
-                                    <span class="author_name">{{$recipe->author}}</span>
+                                <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}"> class="author_name">
+                                    {{$recipe->author}}
                                 </a>
                             </div>
                         @endif
@@ -63,6 +63,7 @@
                     @if(!empty($recipe->instruction_image))
                         <div class="image_block">
                             <img src="{{asset('storage/'.$recipe->instruction_image)}}" alt="" title="" width="784" height="1035"/>
+                            <span class="image_title">{!! @$recipe->credits !!}</span>
                         </div>
                     @endif
                     <div class="info_block">
@@ -77,11 +78,11 @@
                         </div>
                     </div>
                 </div>
-                @if(!empty($recipe->credits))
-                    <div class="article_content" style="margin-top: 75px;">
-                        {!! $recipe->credits !!}
-                    </div>
-                @endif
+    {{--                @if(!empty($recipe->credits))--}}
+    {{--                    <div class="article_content" style="margin-top: 75px;">--}}
+    {{--                        {!! $recipe->credits !!}--}}
+    {{--                    </div>--}}
+    {{--                @endif--}}
             </div>
 
             <div class="latest_recipes">
@@ -105,8 +106,8 @@
                                     @if(!empty($recipe->author))
                                     <div class="author_block">
                                         {{Str::ucfirst(__('main.by'))}}
-                                        <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
-                                        <span class="author_name">{{$recipe->author}}</span>
+                                        <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}" class="author_name">
+                                            {{$recipe->author}}
                                         </a>
                                     </div>
                                     @endif

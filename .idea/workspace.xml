@@ -7,25 +7,22 @@
   <component name="ChangeListManager">
     <list default="true" id="0b98c268-4855-424f-a395-cd0c68c52d96" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/hy/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/hy/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/about_us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/about_us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/latest-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/social-lists.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/social-lists.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/comingsoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/comingsoon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/comingsoon.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/comingsoon.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sass/imports/home/_mainscreen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/home/_mainscreen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sass/imports/home/_recipes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/home/_recipes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sass/imports/inners/_feature.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/inners/_feature.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sass/imports/main/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/sass/imports/main/_general.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-features-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/top-news-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/top-news-component.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/vertical-banner-component.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/vertical-banner-component.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/contacts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/features.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/features.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guides.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guides.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pagination_partials/guieds.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination_partials/guieds.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/feature_news_inner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/guides_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guides_inner.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pagination_partials/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination_partials/recipes.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pagination_partials/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pagination_partials/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/recipes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/search_results.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/search_results.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/recipe_inner.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +239,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../origins-win-mag-front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wow-glamping" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -310,7 +307,8 @@
       <workItem from="1653468106987" duration="119000" />
       <workItem from="1653636882719" duration="24000" />
       <workItem from="1653636916873" duration="11762000" />
-      <workItem from="1653890488199" duration="4046000" />
+      <workItem from="1653890488199" duration="4846000" />
+      <workItem from="1654065219562" duration="3532000" />
     </task>
     <servers />
   </component>

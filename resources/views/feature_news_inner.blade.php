@@ -4,7 +4,7 @@
     <div class="inner_page">
         <div class="page_container">
             <div class="page_head">
-                <h1 class="page_title">{{$content->title}}</h1>
+                <h1 class="page_title article_title">{{$content->title}}</h1>
             </div>
             <div class="feature_inner">
                 <div class="article_col">
@@ -81,8 +81,8 @@
                                         </div>
                                         <div class="author_block">
                                             {{Str::ucfirst(__('main.by'))}}
-                                            <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
-                                            <span class="author_name">{{@$item['author'][app()->getLocale()]}}</span>
+                                            <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}" class="author_name">
+                                                {{@$item['author'][app()->getLocale()]}}
                                             </a>
                                         </div>
                                         <div class="description_block">{{@$item['short_description'][app()->getLocale()]}}</div>

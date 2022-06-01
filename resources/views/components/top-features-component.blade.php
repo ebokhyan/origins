@@ -23,10 +23,8 @@
                                 </div>
                                 <div class="author_block">
                                     {{__('main.by')}}
-                                    <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
-                                        <span class="author_name">
-                                            {{@$topFeatures[0]['author'][app()->getLocale()]}}
-                                        </span>
+                                    <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}" class="author_name">
+                                       {{@$topFeatures[0]['author'][app()->getLocale()]}}
                                     </a>
                                 </div>
                                 <div class="description_block">
@@ -53,10 +51,8 @@
                                 </div>
                                 <div class="author_block">
                                     {{__('main.by')}}
-                                    <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
-                                        <span
-                                            class="author_name">{{@$topFeatures[1]['author'][app()->getLocale()]}}
-                                        </span>
+                                    <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}" class="author_name">
+                                        {{@$topFeatures[1]['author'][app()->getLocale()]}}
                                     </a>
                                 </div>
                                 <div class="description_block">
@@ -82,8 +78,8 @@
                                 </div>
                                 <div class="author_block">
                                     {{__('main.by')}}
-                                    <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
-                                        <span class="author_name">{{@$topFeatures[2]['author'][app()->getLocale()]}}</span>
+                                    <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}" class="author_name">
+                                        {{@$topFeatures[2]['author'][app()->getLocale()]}}
                                     </a>
                                 </div>
                                 <div class="description_block">{{@$topFeatures[2]['short_description'][app()->getLocale()]}}</div>

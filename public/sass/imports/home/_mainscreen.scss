@@ -76,9 +76,13 @@
         }
     }
     @include mediaTo($size960) {
+        img {
+            min-height: 80vh;
+            object-fit: cover;
+        }
         .text_block {
             font-size: 400%;
             max-width: 800px;
         }
     }
-} 
+}

@@ -75,6 +75,11 @@
     </div>
     <div class="terms_menu">
         <div class="page_container">
+            <ul class="socials_list">
+                <li><a href="{{$settings->facebook}}" target="_blank" class="icon_facebook">facebook</a></li>
+                <li><a href="{{$settings->twitter}}" target="_blank" class="icon_twitter">twitter</a></li>
+                <li><a href="{{$settings->instagram}}" target="_blank" class="icon_instagram">instagram</a></li>
+            </ul>
             <ul class="terms_menu">
                 <li><a href="{{route('term',['locale' => app()->getLocale()])}}">{{$menu['terms']}}</a></li>
                 <li><a href="{{route('policy',['locale' => app()->getLocale()])}}">{{$menu['policy']}}</a></li>

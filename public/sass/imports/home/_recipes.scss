@@ -41,6 +41,13 @@
         .image_block {
             @include colSize(6);
             @extend %square;
+            img {
+                @extend %noBlink;
+                @include animStyle(transform 0.3s);
+                &:hover {
+                    @include transStyle(scale(1.05));
+                }
+            }
         }
         .info_block {
             @include colSize(6);

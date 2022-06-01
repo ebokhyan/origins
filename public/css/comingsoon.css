@@ -1327,7 +1327,7 @@ a.bnner_inner {
 }
 
 a.banner_inner,
-.image_block {
+a.image_block {
   font-size: 0;
   line-height: 0;
 }
@@ -1346,7 +1346,6 @@ a.banner_inner,
 .author_block .author_name {
   color: #A7AE9E;
 }
-
 #loadBtn {
   width: 500px;
   height: 50px;
@@ -1607,21 +1606,50 @@ a.banner_inner,
   }
 }
 
+.content .terms_menu .page_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content .terms_menu .page_container:before {
+  flex: 0 0 100%;
+  max-width: 100%;
+  content: "";
+  display: block;
+  border-top: 1px solid #000000;
+}
 .content .terms_menu ul {
   display: flex;
   justify-content: flex-end;
+}
+.content .terms_menu ul.socials_list {
+  font-size: 0;
+}
+.content .terms_menu ul.socials_list li {
+  margin-right: 30px;
+}
+.content .terms_menu ul.socials_list a {
+  color: #000000;
+}
+.content .terms_menu ul.socials_list a:before {
+  font-size: 2rem;
+}
+.content .terms_menu ul.terms_menu {
   font-size: 200%;
   line-height: 1.5em;
-  border-top: 1px solid #000000;
+  margin-left: auto;
+}
+.content .terms_menu ul.terms_menu li {
+  margin-left: 40px;
+}
+.content .terms_menu ul.terms_menu a {
+  color: rgba(0, 0, 0, 0.4);
 }
 .content .terms_menu li {
   padding: 30px 0 40px;
 }
-.content .terms_menu li:not(:first-child) {
-  margin-left: 40px;
-}
 .content .terms_menu a {
-  color: #000000;
   display: block;
   font-family: "poppins-medium";
 }
@@ -1629,34 +1657,53 @@ a.banner_inner,
   .content .terms_menu li {
     padding: 20px 0 35px;
   }
-  .content .terms_menu ul {
+  .content .terms_menu ul.terms_menu {
     font-size: 160%;
+  }
+  .content .terms_menu ul.socials_list a:before {
+    font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 959px) {
   .content .terms_menu li {
     padding: 15px 0 30px;
   }
-  .content .terms_menu li:not(:first-child) {
-    margin-left: 35px;
-  }
-  .content .terms_menu ul {
+  .content .terms_menu ul.terms_menu {
     font-size: 120%;
+  }
+  .content .terms_menu ul.socials_list a:before {
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 575px) {
   .content .terms_menu li {
     padding: 10px 0 25px;
   }
-  .content .terms_menu li:not(:first-child) {
-    margin-left: 30px;
-  }
-  .content .terms_menu ul {
+  .content .terms_menu ul.terms_menu {
     font-size: 100%;
     line-height: 1.6em;
   }
+  .content .terms_menu ul.terms_menu li {
+    margin-left: 30px;
+  }
+  .content .terms_menu ul.socials_list {
+    display: none;
+  }
   .content .terms_menu a {
     font-family: "poppins";
+  }
+}
+
+.image_title {
+  display: block;
+  color: #252529;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+@media screen and (max-width: 959px) {
+  .image_title {
+    padding: 0 20px;
+    margin-top: 10px;
   }
 }
 
@@ -1700,6 +1747,35 @@ a.image_block img {
 .standard_text {
   font-size: 140%;
   line-height: 20px;
+}
+
+.image_title {
+  font-size: 160%;
+  line-height: 25px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .image_title {
+    font-size: 150%;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+  .image_title {
+    font-size: 140%;
+    line-height: 21px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 959px) {
+  .image_title {
+    font-size: 120%;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .image_title {
+    font-size: 100%;
+    line-height: 16px;
+  }
 }
 
 .header {
@@ -2900,7 +2976,7 @@ a.image_block img {
   transition: opacity 0.3s;
 }
 
-.web .view_all, .web .standard_textpage a, .standard_textpage .web a, .web .field_block .check_btn, .field_block .web .check_btn, .web .field_block .check_btn a, .field_block .check_btn .web a, .web .light_btn, .web .socials_list a, .socials_list .web a, .web .inner_search button, .inner_search .web button, .web .content .terms_menu a, .content .terms_menu .web a, .web .header .lg_block a, .header .lg_block .web a, .web .header .search_form button, .header .search_form .web button, .web .header .main_menu > li > a, .header .web .main_menu > li > a, .web .footer_menu ul a, .footer_menu ul .web a, .web .footer .terms_menu a, .footer .terms_menu .web a, .error_hint {
+.web .view_all, .web .standard_textpage a, .standard_textpage .web a, .web .author_block a.author_name, .author_block .web a.author_name, .web .field_block .check_btn, .field_block .web .check_btn, .web .field_block .check_btn a, .field_block .check_btn .web a, .web .light_btn, .web .socials_list a, .socials_list .web a, .web .inner_search button, .inner_search .web button, .web .content .terms_menu a, .content .terms_menu .web a, .web .header .lg_block a, .header .lg_block .web a, .web .header .search_form button, .header .search_form .web button, .web .header .main_menu > li > a, .header .web .main_menu > li > a, .web .footer_menu ul a, .footer_menu ul .web a, .web .footer .terms_menu a, .footer .terms_menu .web a, .error_hint {
   -o-transition: color 0.3s;
   -ms-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -2932,7 +3008,7 @@ a.image_block img {
   transition: opacity 0.15s;
 }
 
-.touch .view_all, .touch .standard_textpage a, .standard_textpage .touch a, .touch .field_block .check_btn, .field_block .touch .check_btn, .touch .field_block .check_btn a, .field_block .check_btn .touch a, .touch .light_btn, .touch .socials_list a, .socials_list .touch a, .touch .inner_search button, .inner_search .touch button, .touch .content .terms_menu a, .content .terms_menu .touch a, .touch .header .lg_block a, .header .lg_block .touch a, .touch .header .search_form button, .header .search_form .touch button, .touch .header .main_menu > li > a, .header .touch .main_menu > li > a, .touch .footer_menu ul a, .footer_menu ul .touch a, .touch .footer .terms_menu a, .footer .terms_menu .touch a {
+.touch .view_all, .touch .standard_textpage a, .standard_textpage .touch a, .touch .author_block a.author_name, .author_block .touch a.author_name, .touch .field_block .check_btn, .field_block .touch .check_btn, .touch .field_block .check_btn a, .field_block .check_btn .touch a, .touch .light_btn, .touch .socials_list a, .socials_list .touch a, .touch .inner_search button, .inner_search .touch button, .touch .content .terms_menu a, .content .terms_menu .touch a, .touch .header .lg_block a, .header .lg_block .touch a, .touch .header .search_form button, .header .search_form .touch button, .touch .header .main_menu > li > a, .header .touch .main_menu > li > a, .touch .footer_menu ul a, .footer_menu ul .touch a, .touch .footer .terms_menu a, .footer .terms_menu .touch a {
   -o-transition: color 0.15s;
   -ms-transition: color 0.15s;
   -moz-transition: color 0.15s;
@@ -2972,6 +3048,9 @@ a.image_block img {
 .web .dark_btn:hover, .web a.bnner_inner:hover, .web .header .main_logo a:hover, .header .main_logo .web a:hover {
   opacity: 0.7;
 }
+.web .author_block a.author_name:hover, .author_block .web a.author_name:hover {
+  color: #000000;
+}
 .web .view_all:hover, .web .standard_textpage a:hover, .standard_textpage .web a:hover {
   color: #C9C8BF;
 }
@@ -2984,6 +3063,9 @@ a.image_block img {
 }
 .touch .dark_btn:active, .touch a.bnner_inner:active, .touch .header .main_logo a:active, .header .main_logo .touch a:active {
   opacity: 0.7;
+}
+.touch .author_block a.author_name:active, .author_block .touch a.author_name:active {
+  color: #000000;
 }
 .touch .view_all:active, .touch .standard_textpage a:active, .standard_textpage .touch a:active {
   color: #C9C8BF;

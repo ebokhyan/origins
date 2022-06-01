@@ -102,15 +102,10 @@
                                                 {{$feature->title}}</a>
                                         </div>
                                         <div class="author_block">
-                                            @if(app()->getLocale() == 'en')
-                                                {{Str::ucfirst(__('main.by'))}}
-                                            @endif
-                                                <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}">
-                                                <span class="author_name">{{@$feature->author}}</span>
-                                                </a>
-                                            @if(app()->getLocale() == 'hy')
-                                                {{Str::lower(__('main.by'))}}
-                                            @endif
+                                            {{Str::ucfirst(__('main.by'))}}
+                                            <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}" class="author_name">
+                                                {{@$feature->author}}
+                                            </a>
                                         </div>
                                         <div class="description_block">{{@$feature->short_description}}</div>
                                     </div>

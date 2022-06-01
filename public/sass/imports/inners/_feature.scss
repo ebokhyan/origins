@@ -118,6 +118,11 @@
     }
 }
 
+.article_title {
+    max-width: 1190px;
+    margin-right: 320px;
+}
+
 .right_col {
     flex: 0 0 300px;
     max-width: 300px;
@@ -370,6 +375,9 @@
 }
 
 @include mediaRange($size1200, $size1440) {
+    .article_title {
+        margin-right: 260px;
+    }
     .right_col {
         flex: 0 0 240px;
         max-width: 240px;
@@ -412,6 +420,9 @@
 }
 
 @include mediaRange($size960, $size1200) {
+    .article_title {
+        margin-right: 200px;
+    }
     .right_col {
         flex: 0 0 180px;
         max-width: 180px;
@@ -477,6 +488,9 @@
 }
 
 @include mediaTo($size960) {
+    .article_title {
+        margin-right: 0;
+    }
     .right_col {
         display: none;
     }

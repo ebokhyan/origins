@@ -1327,7 +1327,7 @@ a.bnner_inner {
 }
 
 a.banner_inner,
-.image_block {
+a.image_block {
   font-size: 0;
   line-height: 0;
 }
@@ -1346,7 +1346,6 @@ a.banner_inner,
 .author_block .author_name {
   color: #A7AE9E;
 }
-
 #loadBtn {
   width: 500px;
   height: 50px;
@@ -1607,21 +1606,50 @@ a.banner_inner,
   }
 }
 
+.content .terms_menu .page_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content .terms_menu .page_container:before {
+  flex: 0 0 100%;
+  max-width: 100%;
+  content: "";
+  display: block;
+  border-top: 1px solid #000000;
+}
 .content .terms_menu ul {
   display: flex;
   justify-content: flex-end;
+}
+.content .terms_menu ul.socials_list {
+  font-size: 0;
+}
+.content .terms_menu ul.socials_list li {
+  margin-right: 30px;
+}
+.content .terms_menu ul.socials_list a {
+  color: #000000;
+}
+.content .terms_menu ul.socials_list a:before {
+  font-size: 2rem;
+}
+.content .terms_menu ul.terms_menu {
   font-size: 200%;
   line-height: 1.5em;
-  border-top: 1px solid #000000;
+  margin-left: auto;
+}
+.content .terms_menu ul.terms_menu li {
+  margin-left: 40px;
+}
+.content .terms_menu ul.terms_menu a {
+  color: rgba(0, 0, 0, 0.4);
 }
 .content .terms_menu li {
   padding: 30px 0 40px;
 }
-.content .terms_menu li:not(:first-child) {
-  margin-left: 40px;
-}
 .content .terms_menu a {
-  color: #000000;
   display: block;
   font-family: "poppins-medium";
 }
@@ -1629,34 +1657,53 @@ a.banner_inner,
   .content .terms_menu li {
     padding: 20px 0 35px;
   }
-  .content .terms_menu ul {
+  .content .terms_menu ul.terms_menu {
     font-size: 160%;
+  }
+  .content .terms_menu ul.socials_list a:before {
+    font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 959px) {
   .content .terms_menu li {
     padding: 15px 0 30px;
   }
-  .content .terms_menu li:not(:first-child) {
-    margin-left: 35px;
-  }
-  .content .terms_menu ul {
+  .content .terms_menu ul.terms_menu {
     font-size: 120%;
+  }
+  .content .terms_menu ul.socials_list a:before {
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 575px) {
   .content .terms_menu li {
     padding: 10px 0 25px;
   }
-  .content .terms_menu li:not(:first-child) {
-    margin-left: 30px;
-  }
-  .content .terms_menu ul {
+  .content .terms_menu ul.terms_menu {
     font-size: 100%;
     line-height: 1.6em;
   }
+  .content .terms_menu ul.terms_menu li {
+    margin-left: 30px;
+  }
+  .content .terms_menu ul.socials_list {
+    display: none;
+  }
   .content .terms_menu a {
     font-family: "poppins";
+  }
+}
+
+.image_title {
+  display: block;
+  color: #252529;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+@media screen and (max-width: 959px) {
+  .image_title {
+    padding: 0 20px;
+    margin-top: 10px;
   }
 }
 
@@ -1725,7 +1772,7 @@ a.banner_inner,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.guides_section .guides_list .image_block img, .member_articles .image_block img, .sponsors_list .sponsor_block img, .latest_recipes .recipes_list .image_block img, .top_news .news_block .image_block img, .top_features .feature_block .image_block img, .news_section .news_block .image_block img, .article_block img, a.image_block img {
+.guides_section .guides_list .image_block img, .member_articles .image_block img, .sponsors_list .sponsor_block img, .latest_recipes .recipes_list .image_block img, .top_news .news_block .image_block img, .top_features .feature_block .image_block img, .recipes_section .recipe_block .image_block img, .news_section .news_block .image_block img, .article_block img, a.image_block img {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
@@ -1830,30 +1877,30 @@ a.banner_inner,
   }
 }
 
-.similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block {
+.similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block, .image_title {
   font-size: 160%;
   line-height: 25px;
 }
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
-  .similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block {
+  .similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block, .image_title {
     font-size: 150%;
     line-height: 24px;
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1199px) {
-  .similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block {
+  .similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block, .image_title {
     font-size: 140%;
     line-height: 21px;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 959px) {
-  .similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block {
+  .similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block, .image_title {
     font-size: 120%;
     line-height: 18px;
   }
 }
 @media screen and (max-width: 575px) {
-  .similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block {
+  .similar_features .features_list .author_block, .latest_news .author_block, .latest_features .author_block, .article_block .author_block, .image_title {
     font-size: 100%;
     line-height: 16px;
   }
@@ -3019,6 +3066,10 @@ a.banner_inner,
   }
 }
 @media screen and (max-width: 959px) {
+  .main_screen img {
+    min-height: 80vh;
+    object-fit: cover;
+  }
   .main_screen .text_block {
     font-size: 400%;
     max-width: 800px;
@@ -3649,6 +3700,20 @@ a.banner_inner,
 .recipes_section .recipe_block .image_block {
   flex: 0 0 50%;
   max-width: 50%;
+}
+.recipes_section .recipe_block .image_block img {
+  -o-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+.recipes_section .recipe_block .image_block img:hover {
+  transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
 }
 .recipes_section .recipe_block .info_block {
   flex: 0 0 50%;
@@ -5292,6 +5357,11 @@ a.banner_inner,
   }
 }
 
+.article_title {
+  max-width: 1190px;
+  margin-right: 320px;
+}
+
 .right_col {
   flex: 0 0 300px;
   max-width: 300px;
@@ -5561,6 +5631,10 @@ a.banner_inner,
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
+  .article_title {
+    margin-right: 260px;
+  }
+
   .right_col {
     flex: 0 0 240px;
     max-width: 240px;
@@ -5597,6 +5671,10 @@ a.banner_inner,
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1199px) {
+  .article_title {
+    margin-right: 200px;
+  }
+
   .right_col {
     flex: 0 0 180px;
     max-width: 180px;
@@ -5657,6 +5735,10 @@ a.banner_inner,
   }
 }
 @media screen and (max-width: 959px) {
+  .article_title {
+    margin-right: 0;
+  }
+
   .right_col {
     display: none;
   }
@@ -8312,7 +8394,7 @@ button.loading:after {
   transition: opacity 0.3s;
 }
 
-.web .view_all, .web .standard_textpage a, .standard_textpage .web a, .web .subscribe_popup .subscribe_status .home_btn, .subscribe_popup .subscribe_status .web .home_btn, .web .contacts_inner .contact_block a, .contacts_inner .contact_block .web a, .web .field_block .check_btn, .field_block .web .check_btn, .web .field_block .check_btn a, .field_block .check_btn .web a, .web .light_btn, .web .socials_list a, .socials_list .web a, .web .inner_search button, .inner_search .web button, .web .content .terms_menu a, .content .terms_menu .web a, .web .header .lg_block a, .header .lg_block .web a, .web .header .search_form button, .header .search_form .web button, .web .header .main_menu > li > a, .header .web .main_menu > li > a, .web .footer_menu ul a, .footer_menu ul .web a, .web .footer .terms_menu a, .footer .terms_menu .web a, .web .right_col .stories_list .title_block a, .right_col .stories_list .title_block .web a, .web .staff_section .member_name.popup_btn, .staff_section .web .member_name.popup_btn, .web .popup_close, .web .sign_page .subtitle_block a, .sign_page .subtitle_block .web a, .web .sign_page .agreement a, .sign_page .agreement .web a, .error_hint, .article_block .title_block a, .news_section .news_block .title_block a, .top_features .features_list ul li:not(:first-child) .title_block a, .top_features .feature_block .title_block a, .latest_features .title_block a, .top_news .news_list ul.top_list li:not(:first-child) .title_block a, .top_news .news_list ul.bottom_list .title_block a, .top_news .news_block .title_block a, .latest_news .title_block a, .latest_recipes .recipes_list .title_block a, .similar_features .features_list .title_block a, .member_articles .title_block a, .guides_section .guides_list .title_block a {
+.web .view_all, .web .standard_textpage a, .standard_textpage .web a, .web .subscribe_popup .subscribe_status .home_btn, .subscribe_popup .subscribe_status .web .home_btn, .web .contacts_inner .contact_block a, .contacts_inner .contact_block .web a, .web .author_block a.author_name, .author_block .web a.author_name, .web .field_block .check_btn, .field_block .web .check_btn, .web .field_block .check_btn a, .field_block .check_btn .web a, .web .light_btn, .web .socials_list a, .socials_list .web a, .web .inner_search button, .inner_search .web button, .web .content .terms_menu a, .content .terms_menu .web a, .web .header .lg_block a, .header .lg_block .web a, .web .header .search_form button, .header .search_form .web button, .web .header .main_menu > li > a, .header .web .main_menu > li > a, .web .footer_menu ul a, .footer_menu ul .web a, .web .footer .terms_menu a, .footer .terms_menu .web a, .web .right_col .stories_list .title_block a, .right_col .stories_list .title_block .web a, .web .staff_section .member_name.popup_btn, .staff_section .web .member_name.popup_btn, .web .popup_close, .web .sign_page .subtitle_block a, .sign_page .subtitle_block .web a, .web .sign_page .agreement a, .sign_page .agreement .web a, .error_hint, .article_block .title_block a, .news_section .news_block .title_block a, .top_features .features_list ul li:not(:first-child) .title_block a, .top_features .feature_block .title_block a, .latest_features .title_block a, .top_news .news_list ul.top_list li:not(:first-child) .title_block a, .top_news .news_list ul.bottom_list .title_block a, .top_news .news_block .title_block a, .latest_news .title_block a, .latest_recipes .recipes_list .title_block a, .similar_features .features_list .title_block a, .member_articles .title_block a, .guides_section .guides_list .title_block a {
   -o-transition: color 0.3s;
   -ms-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -8344,7 +8426,7 @@ button.loading:after {
   transition: opacity 0.15s;
 }
 
-.touch .view_all, .touch .standard_textpage a, .standard_textpage .touch a, .touch .subscribe_popup .subscribe_status .home_btn, .subscribe_popup .subscribe_status .touch .home_btn, .touch .contacts_inner .contact_block a, .contacts_inner .contact_block .touch a, .touch .field_block .check_btn, .field_block .touch .check_btn, .touch .field_block .check_btn a, .field_block .check_btn .touch a, .touch .light_btn, .touch .socials_list a, .socials_list .touch a, .touch .inner_search button, .inner_search .touch button, .touch .content .terms_menu a, .content .terms_menu .touch a, .touch .header .lg_block a, .header .lg_block .touch a, .touch .header .search_form button, .header .search_form .touch button, .touch .header .main_menu > li > a, .header .touch .main_menu > li > a, .touch .footer_menu ul a, .footer_menu ul .touch a, .touch .footer .terms_menu a, .footer .terms_menu .touch a, .touch .right_col .stories_list .title_block a, .right_col .stories_list .title_block .touch a, .touch .staff_section .member_name.popup_btn, .staff_section .touch .member_name.popup_btn, .touch .popup_close, .touch .sign_page .subtitle_block a, .sign_page .subtitle_block .touch a, .touch .sign_page .agreement a, .sign_page .agreement .touch a {
+.touch .view_all, .touch .standard_textpage a, .standard_textpage .touch a, .touch .subscribe_popup .subscribe_status .home_btn, .subscribe_popup .subscribe_status .touch .home_btn, .touch .contacts_inner .contact_block a, .contacts_inner .contact_block .touch a, .touch .author_block a.author_name, .author_block .touch a.author_name, .touch .field_block .check_btn, .field_block .touch .check_btn, .touch .field_block .check_btn a, .field_block .check_btn .touch a, .touch .light_btn, .touch .socials_list a, .socials_list .touch a, .touch .inner_search button, .inner_search .touch button, .touch .content .terms_menu a, .content .terms_menu .touch a, .touch .header .lg_block a, .header .lg_block .touch a, .touch .header .search_form button, .header .search_form .touch button, .touch .header .main_menu > li > a, .header .touch .main_menu > li > a, .touch .footer_menu ul a, .footer_menu ul .touch a, .touch .footer .terms_menu a, .footer .terms_menu .touch a, .touch .right_col .stories_list .title_block a, .right_col .stories_list .title_block .touch a, .touch .staff_section .member_name.popup_btn, .staff_section .touch .member_name.popup_btn, .touch .popup_close, .touch .sign_page .subtitle_block a, .sign_page .subtitle_block .touch a, .touch .sign_page .agreement a, .sign_page .agreement .touch a {
   -o-transition: color 0.15s;
   -ms-transition: color 0.15s;
   -moz-transition: color 0.15s;
@@ -8384,6 +8466,9 @@ button.loading:after {
 .web .dark_btn:hover, .web a.bnner_inner:hover, .web .header .main_logo a:hover, .header .main_logo .web a:hover {
   opacity: 0.7;
 }
+.web .author_block a.author_name:hover, .author_block .web a.author_name:hover {
+  color: #000000;
+}
 .web .view_all:hover, .web .standard_textpage a:hover, .standard_textpage .web a:hover, .web .subscribe_popup .subscribe_status .home_btn:hover, .subscribe_popup .subscribe_status .web .home_btn:hover, .web .contacts_inner .contact_block a:hover, .contacts_inner .contact_block .web a:hover {
   color: #C9C8BF;
 }
@@ -8396,6 +8481,9 @@ button.loading:after {
 }
 .touch .dark_btn:active, .touch a.bnner_inner:active, .touch .header .main_logo a:active, .header .main_logo .touch a:active {
   opacity: 0.7;
+}
+.touch .author_block a.author_name:active, .author_block .touch a.author_name:active {
+  color: #000000;
 }
 .touch .view_all:active, .touch .standard_textpage a:active, .standard_textpage .touch a:active, .touch .subscribe_popup .subscribe_status .home_btn:active, .subscribe_popup .subscribe_status .touch .home_btn:active, .touch .contacts_inner .contact_block a:active, .contacts_inner .contact_block .touch a:active {
   color: #C9C8BF;
