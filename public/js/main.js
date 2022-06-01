@@ -316,7 +316,6 @@ $(document).ready(function(){
                         }
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) {
-                        console.log(XMLHttpRequest.responseJSON.errors);
                         var err = XMLHttpRequest.responseJSON.errors;
                         $(".error_hint").children('.individual_hint').text(err.email);
                         $('#email_label').addClass('has-error');

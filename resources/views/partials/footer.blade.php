@@ -8,7 +8,6 @@
                         <div class="description_block">{{__('main.subscription.description')}}</div>
                         <form class="subscribe_form" name="footerSubscriptionForm" id="footerSubscriptionForm">
                             @csrf
-
                                 <label id="email_label">
                                     <span class="label">subscribe</span>
                                     <span>

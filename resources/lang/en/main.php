@@ -90,7 +90,7 @@ return [
             'required' => "Email field is required.",
             'email' => "Incorrect email address.",
             'already_subscribed' => "You’re already subscribed!",
-            'error_sending' => "Can't send E-mail to provided email address.Can't send E-mail to provided email address.",
+            'error_sending' => "Can't send E-mail to provided email address.",
             'cant_add' => "This email could not be added to our subscribers list",
         ],
         'subject' => [
