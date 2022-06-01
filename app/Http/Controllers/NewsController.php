@@ -23,8 +23,10 @@ class NewsController extends Controller
             if(isset($content['data']->horizontal_ad)){
                 $addBanner = Ad::published()
                     ->where('id',$content['data']->horizontal_ad)
-                    ->first()
-                    ->toArray();
+                    ->first();
+                if($addBanner) {
+                    $addBanner->toArray();
+                }
             }
             $latest3News = News::published()
                 ->whereNotIn('id', $topNews_array)
