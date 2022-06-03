@@ -19,8 +19,9 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 Route::get('/', function () { return redirect(App::getLocale()); })->name('home');
 
 Route::group(['prefix' => '{locale}', 'where' => ['locale' => 'en|hy']],function (){
-    Route::get('/','MainController@getIndex');
-    Route::get('/home','HomeController@getHome')->name('main-home');
+//    Route::get('/','MainController@getIndex');
+    Route::get('/','HomeController@getHome')->name('main-home');
+//    Route::get('/home','HomeController@getHome')->name('main-home');
 
     Route::get('/features','FeaturesController@getFeatures')->name('features');
     Route::get('/features/{slug}','FeaturesController@getFeature')->name('feature');
