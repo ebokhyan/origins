@@ -15,7 +15,7 @@
                         @if($recipe->author)
                             <div class="author_block">
                                 {{Str::ucfirst(__('main.by'))}}
-                                <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}"> class="author_name">
+                                <a href="{{route('about',['locale' => app()->getLocale(),'#coworkers'])}}" class="author_name">
                                     {{$recipe->author}}
                                 </a>
                             </div>
